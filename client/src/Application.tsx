@@ -44,8 +44,6 @@ export function Application() {
   };
 
   const renderApplication = () => {
-
-    console.log({ env: process.env })
     
     if (window.innerWidth <= 600) {
       return (
