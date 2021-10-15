@@ -287,7 +287,6 @@ module.exports = function (webpackEnv) {
                     },
                   ],
                 ],
-
                 plugins: [
                   [
                     require.resolve('babel-plugin-named-asset-import'),
@@ -323,6 +322,7 @@ module.exports = function (webpackEnv) {
                     { helpers: true },
                   ],
                 ],
+                ignore: [ './node_modules/mapbox-gl/dist/mapbox-gl.js' ],
                 cacheDirectory: true,
                 cacheCompression: false,
 
