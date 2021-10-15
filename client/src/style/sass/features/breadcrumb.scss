@@ -1,0 +1,19 @@
+.breadcrumb {
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-M;
+    margin: 20px 0;
+    padding: 0 20px;
+    width: 200px;
+    box-sizing: border-box;
+  }
+  &-text {
+    // font-family: 'Force-Shadow';
+  }
+  &-icon {
+    padding-right: 10px;
+    font-size: $font-XL;
+  }
+}

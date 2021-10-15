@@ -1,0 +1,155 @@
+.expenses-wrapper {
+  display: flex;
+}
+
+.expenses-container-1 {
+  background: $white;
+  border: $light-grey-border;
+  width: 50%;
+  margin-right: 20px;
+
+  &-content {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  &-title-container {
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-title-tag {
+      font-size: $font-XXL;
+      font-family: 'Force-Shadow';
+    }
+  }
+
+  &-form-inputs-container {
+  }
+
+  &-form-input-container {
+    position: relative;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &-form-input-label {
+    background: $white;
+    padding: 0 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: -18px;
+    left: 12px;
+    &-select {
+      top: -12px;
+    }
+  }
+
+  &-form-input-tag-input {
+    flex: 1;
+    height: 100%;
+    padding: 5px 15px;
+    border: $light-grey-border;
+    border-radius: 5px;
+
+    &-select {
+      // code ...
+    }
+  }
+
+  &-form-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &-form-errors-container {
+    color: $pale-red;
+  }
+}
+
+.expenses-container-2 {
+  width: 50%;
+
+  &-expenses-container {
+    &-title {
+      font-size: $font-XXL;
+      font-family: 'Force-Shadow';
+      margin: 10px 0 10px 0;
+      padding: 0 10px;
+    }
+    &-select-container {
+      margin: 10px 0 10px 0;
+      padding: 0 10px;
+    }
+  }
+
+  &-expense-container {
+    position: relative;
+    background: $white;
+    border: $light-grey-border;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
+  }
+
+  &-expense-container:last-child {
+    margin: 0;
+  }
+
+  &-expense-output {
+    background: $white;
+    // border: $light-grey-border;
+    padding: 5px 20px;
+    margin-bottom: 5px;
+    z-index: 2;
+
+    &--label {
+      font-size: $font-XL;
+      margin-bottom: 0;
+    }
+    &--price {
+      color: $pale-red;
+      font-size: $font-XXL;
+      text-align: right;
+    }
+
+    &--website {
+      cursor: pointer;
+      font-size: $font-S;
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    &--period {
+      width: 80px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 1;
+      color: $white;
+      position: absolute;
+      top: 0;
+      right: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+      &-1 {
+        background: $grey;
+      }
+
+      &-2 {
+        background: $pale-blue;
+      }
+    }
+  }
+  &-expense-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

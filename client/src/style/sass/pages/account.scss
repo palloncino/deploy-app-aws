@@ -1,0 +1,36 @@
+.account-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.account-information-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-1 {
+
+    &-title-tag {
+      font-size: $font-XXL;
+      font-family: 'force-shadow';
+    }
+
+    &-informations {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  }
+
+
+  &-2 {
+    
+  }
+
+}

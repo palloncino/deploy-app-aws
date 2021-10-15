@@ -1,0 +1,26 @@
+.profile {
+  // code..
+
+  &-container {
+    //code..
+  }
+
+  &-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-textual {
+      margin-right: 10px;
+    }
+
+    &-logo {
+      height: 30px;
+
+      &-img {
+        border-radius: 3px;
+        height: 100%;
+      }
+    }
+  }
+}
