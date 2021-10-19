@@ -372,6 +372,43 @@
   justify-content: center;
   align-items: center;
 }
+.content-editable-summary-container {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 20px 0 40px 0;
+}
+
+.content-editable-summary {
+  box-sizing: border-box;
+  height: 200px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.content-editable-summary-container {
+  display: flex;
+}
+.content-editable-summary-commands-container-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.content-editable-summary-code-container {
+  flex: 1;
+  margin-left: 20px;
+}
+.content-editable-summary-code-container-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.content-editable-summary-output-container {
+  margin-top: 20px;
+}
+.content-editable-summary-output-container-title {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
 @font-face {
   font-family: "Force-Shadow";
   src: url("../../fonts/ForceShadow/font.woff") format("truetype"), url("../../fonts/ForceShadow/font.woff") format("woff");
@@ -451,43 +488,6 @@ body {
   min-height: 100px;
 }
 
-.content-editable-summary-container {
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin: 20px 0 40px 0;
-}
-
-.content-editable-summary {
-  box-sizing: border-box;
-  height: 200px;
-  width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 10px;
-}
-.content-editable-summary-container {
-  display: flex;
-}
-.content-editable-summary-commands-container-title {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-.content-editable-summary-code-container {
-  flex: 1;
-  margin-left: 20px;
-}
-.content-editable-summary-code-container-title {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-.content-editable-summary-output-container {
-  margin-top: 20px;
-}
-.content-editable-summary-output-container-title {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-}
-
 .error-page-wrapper {
   height: 50vh;
   width: 100%;
@@ -559,6 +559,39 @@ body {
   justify-content: space-between;
   height: 100%;
   max-height: 60px;
+}
+
+.wip-box-container {
+  padding: 20px;
+  max-width: 400px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: #fff;
+  position: absolute;
+  z-index: 999;
+  top: 50px;
+  left: 0;
+}
+
+.wip-box-title {
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.wip-box-ul {
+  padding: 0;
+  margin: 0;
+}
+
+.wip-box-li {
+  padding: 0 0 0 0;
+  margin: 0 0 0 20px;
+}
+
+.wip-box-p {
+  font-size: 0.8rem;
+  padding: 0;
+  margin: 0;
 }
 
 /*# sourceMappingURL=bundle.css.map */

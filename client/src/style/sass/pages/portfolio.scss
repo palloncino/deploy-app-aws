@@ -1,0 +1,44 @@
+.content-editable-summary-container {
+  background: $white;
+  border: $light-grey-border;
+  padding: 20px;
+  margin: 20px 0 40px 0;
+}
+.content-editable-summary {
+  // textarea
+  box-sizing: border-box;
+  height: 200px;
+  width: 100%;
+  border: $light-grey-border;
+  padding: 10px;
+
+  &-container {
+    display: flex;
+  }
+
+  &-commands-container {
+    &-title {
+      font-size: $font-L;
+      margin-bottom: 10px;
+    }
+  }
+
+  &-code-container {
+    flex: 1;
+    margin-left: 20px;
+    &-title {
+      font-size: $font-L;
+      margin-bottom: 10px;
+    }
+  }
+
+  &-output {
+    &-container {
+      margin-top: 20px;
+      &-title {
+        font-size: $font-L;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { Portfolio } from './features/pages/portfolio';
 import { Artworks } from './features/pages/artworks';
 import { Homepage } from './features/pages/homepage';
 import { Map } from './features/pages/map';
+import { Posts } from './features/pages/posts';
 import { Account } from './features/pages/account';
 import { Expenses } from './features/pages/expenses';
 import { Spinner } from './features/spinner';
@@ -70,8 +71,11 @@ export function Application() {
         case '/account':
           return <Account />;
 
-        case '/map':
-          return <Map />;
+          case '/map':
+            return <Map />;
+            
+        case '/posts':
+          return <Posts />;
 
         case '/404':
           return <ErrorPage />;
