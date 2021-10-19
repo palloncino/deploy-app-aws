@@ -409,6 +409,10 @@
   margin-bottom: 40px;
 }
 
+.post-container {
+  background: #fff;
+}
+
 @font-face {
   font-family: "Force-Shadow";
   src: url("../../fonts/ForceShadow/font.woff") format("truetype"), url("../../fonts/ForceShadow/font.woff") format("woff");
