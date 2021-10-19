@@ -1,7 +1,7 @@
 import { Button } from '../../button';
 import { IPostsProps } from './posts-interfaces';
 
-export const PostsContent = ({handleInputChange, handlePostPost, htmlInputValue}: IPostsProps) => {
+export const PostsContent = ({handleInputChange, handlePostPost, htmlInputValue, postsData}: IPostsProps) => {
   return (
     <div className="posts-container">
       <textarea
@@ -12,6 +12,16 @@ export const PostsContent = ({handleInputChange, handlePostPost, htmlInputValue}
         value={htmlInputValue}
       />
       <Button handleClick={handlePostPost} label="⚡️ SAVE"/>
+      <div className="posts-output-container">
+        {postsData.map((post: any) => {
+          return (
+            <div className="post-container">
+              {post.id}
+              <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+            </div>
+          )
+        })}
+      </div>
     </div>
   );
 };

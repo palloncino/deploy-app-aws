@@ -5,6 +5,7 @@ import { Singleton as Authorization } from '../../../auth';
 export const Posts = () => {
   const auth = Authorization.getInstance();
   const [htmlInputValue, setHtmlInputValue] = useState('<h1>hello</h1>')
+  const [postsData, setPostsData] = useState([])
 
   useEffect(() => {
     handleGetPosts();
@@ -30,6 +31,8 @@ export const Posts = () => {
 
       const json = await response.json();
 
+      return handleGetPosts()
+
     } catch (error) {
       console.error(error);
     }
@@ -51,8 +54,18 @@ export const Posts = () => {
     try {
       const response = await fetch(URL, options);
 
-      const json = await response.json();
-      
+      const posts = await response.json();
+
+      const ids = Object.keys(posts);
+
+      const postsArray: any = [];
+
+      ids.forEach((id) => {
+        postsArray.push({ id: id, html: posts[id] });
+      });
+
+      setPostsData(postsArray)
+
     } catch (error) {
       console.error(error);
     }
@@ -68,6 +81,7 @@ export const Posts = () => {
       handleInputChange={handleInputChange}
       handlePostPost={handlePostPost}
       htmlInputValue={htmlInputValue}
+      postsData={postsData}
     />
   );
 };
