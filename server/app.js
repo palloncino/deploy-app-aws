@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const { getBaseUrls, authenticateJWT } = require("./utils/getEnvBaseUrls");
 const { handleGetFields, handleEditField } = require("./controllers/portfolio");
+const { handleGetPosts, handlePostPost } = require("./controllers/posts");
 const {
   handleSignUp,
   handleSignIn,
@@ -34,6 +35,9 @@ app.use(express.urlencoded({ extended: true }));
 // PORTFOLIO FORM
 app.get("/api/portfolio/get-fields", authenticateJWT, handleGetFields);
 app.post("/api/portfolio/edit-field", authenticateJWT, handleEditField);
+// POSTS FORM
+app.get("/api/posts/get-posts", authenticateJWT, handleGetPosts);
+app.post("/api/posts/post-post", authenticateJWT, handlePostPost);
 // EXPENSES FORM
 app.post("/api/expenses/post-expense", authenticateJWT, handlePostExpense);
 app.post("/api/expenses/delete-expense", authenticateJWT, handleDeleteExpense);

@@ -1,15 +1,15 @@
 import { Button } from '../../button';
 import { IPostsProps } from './posts-interfaces';
 
-export const PostsContent = ({handlePostPost}: IPostsProps) => {
+export const PostsContent = ({handleInputChange, handlePostPost, htmlInputValue}: IPostsProps) => {
   return (
     <div className="posts-container">
       <textarea
         className="posts-editable-html"
         placeholder="write HTML code"
-        onChange={() => {}}
+        onChange={e => handleInputChange(e.target.value)}
         id="posts-editable-html-input"
-        value={''}
+        value={htmlInputValue}
       />
       <Button handleClick={handlePostPost} label="⚡️ SAVE"/>
     </div>
