@@ -20,6 +20,7 @@ export function Artworks() {
         <div className="artwork-summary-container">
           <div className="artwork-summary-container-img">
             <img
+              loading="lazy"
               className="artwork-summary-container-img"
               src="https://antonioguiotto-artworks.s3.amazonaws.com/images/me.png"
               alt="myself by A. Guiotto"
@@ -42,6 +43,7 @@ export function Artworks() {
       </div>
       <div className="artwork-items-title">🕰 2018</div>
       <img
+        loading="lazy"
         style={{ ...style.columnImg, maxWidth: '100%' }}
         src="https://antonioguiotto-artworks.s3.amazonaws.com/images/sho2.png"
         alt="art by A. Guiotto"
@@ -50,16 +52,19 @@ export function Artworks() {
         {/* COLUMN 1 */}
         <div style={style.column}>
           <img
+            loading="lazy"
             style={style.columnImg}
             src="https://antonioguiotto-artworks.s3.amazonaws.com/images/sho.png"
             alt="Sho by A. Guiotto"
           />
           <img
+            loading="lazy"
             style={style.columnImg}
             src="https://antonioguiotto-artworks.s3.amazonaws.com/images/brodas.png"
             alt="Broda by A. Guiotto"
           />
           <img
+            loading="lazy"
             style={style.columnImg}
             src="https://antonioguiotto-artworks.s3.amazonaws.com/images/james.png"
             alt="James by A. Guiotto"
@@ -68,16 +73,19 @@ export function Artworks() {
         {/* COLUMN 2 */}
         <div style={style.column}>
           <img
+            loading="lazy"
             style={style.columnImg}
             src="https://antonioguiotto-artworks.s3.amazonaws.com/images/conor.png"
             alt="Conor by A. Guiotto"
           />
           <img
+            loading="lazy"
             style={style.columnImg}
             src="https://antonioguiotto-artworks.s3.amazonaws.com/images/female.png"
             alt="female by A. Guiotto"
           />
           <img
+            loading="lazy"
             style={style.columnImg}
             src="https://antonioguiotto-artworks.s3.amazonaws.com/images/jp.png"
             alt="J.P. by A. Guiotto"
@@ -86,16 +94,19 @@ export function Artworks() {
         {/* COLUMN 3 */}
         <div style={style.column}>
           <img
+            loading="lazy"
             style={style.columnImg}
             src="https://antonioguiotto-artworks.s3.amazonaws.com/images/wes.png"
             alt="Wes Montgomery by A. Guiotto"
           />
           <img
+            loading="lazy"
             style={style.columnImg}
             src="https://antonioguiotto-artworks.s3.amazonaws.com/images/pablo.png"
             alt="Escobar P. by A. Guiotto"
           />
           <img
+            loading="lazy"
             style={style.columnImg}
             src="https://antonioguiotto-artworks.s3.amazonaws.com/images/trevor.png"
             alt="Trevor by A. Guiotto"

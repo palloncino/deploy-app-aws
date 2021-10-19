@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-CLIENT_APP=~/palloncino/app/client
-SERVER_APP=~/palloncino/app/server
+CLIENT_APP=~/palloncino/antonioguiotto/client
+SERVER_APP=~/palloncino/antonioguiotto/server
 
 # This script is ONLY for OSX using Terminal 
 

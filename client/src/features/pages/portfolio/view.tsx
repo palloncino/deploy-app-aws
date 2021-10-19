@@ -12,11 +12,11 @@ export const PortfolioContent = ({
   return (
     <div className="content-editable-summary-wrapper">
       <div className="content-editable-summary__button-container">
-        <Button
+        {/* <Button
           customStyle={{ width: '300px', marginRight: '20px' }}
           handleClick={() => handleDownloadFile('png')}
           label="⤵️ DOWNLOAD CARD 🖼"
-        />
+        /> */}
         <Button
           customStyle={{ width: '300px', marginRight: '20px' }}
           handleClick={() => handleDownloadFile('pdf')}

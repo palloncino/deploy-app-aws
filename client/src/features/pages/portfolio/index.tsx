@@ -26,12 +26,12 @@ export function Portfolio() {
 
   const handleDownloadFile = async (type: 'png' | 'pdf' | 'docx') => {
     switch (type) {
-      case 'png':
-        window.open(
-          `https://antonioguiotto-pdf-storage.s3.amazonaws.com/pdf/postcard.pdf`,
-          '_blank'
-        ); // TODO: env variable
-        break;
+      // case 'png':
+      //   window.open(
+      //     `https://antonioguiotto-pdf-storage.s3.amazonaws.com/pdf/postcard.pdf`,
+      //     '_blank'
+      //   ); // TODO: env variable
+      //   break;
 
       case 'pdf':
         window.open(

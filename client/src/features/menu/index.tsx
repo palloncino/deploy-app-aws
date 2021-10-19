@@ -65,7 +65,7 @@ export function Menu() {
       } else {
         menuItems = [
           { label: '🏠 Homepage', path: '/', disabled: false },
-          { label: '🗂 Portfolio', path: '/portfolio', disabled: true },
+          { label: '🗂 Portfolio', path: '/portfolio', disabled: false },
           { label: '💸 Expenses', path: '/expenses', disabled: true },
           { label: '📍 Map', path: '/map', disabled: true },
           { label: '🎨 Artworks', path: '/artwork', disabled: false },
