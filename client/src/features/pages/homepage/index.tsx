@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { selectAuth } from '../../../auth/authSlice';
+import { Carousel } from '../../carousel';
 import { Singleton as Authentication } from '../../../auth';
 
 export function Homepage() {
@@ -17,6 +18,7 @@ export function Homepage() {
             ⚠️ Work in progress, some features might be out of service.
           </h3>
         </div>
+        <Carousel />
       </div>
     );
   };

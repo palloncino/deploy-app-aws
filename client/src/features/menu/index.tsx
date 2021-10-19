@@ -70,7 +70,7 @@ export function Menu() {
           { label: '🗂 Portfolio', path: '/portfolio', disabled: false },
           { label: '💸 Expenses', path: '/expenses', disabled: true },
           { label: '📍 Map', path: '/map', disabled: true },
-          { label: '🏞 Posts', path: '/posts', disabled: false },
+          { label: '🏞 Posts', path: '/posts', disabled: true },
           { label: '🎨 Artworks', path: '/artwork', disabled: false },
           { label: '🙋🏻‍♂️ Account', path: '/account', disabled: true },
         ];
