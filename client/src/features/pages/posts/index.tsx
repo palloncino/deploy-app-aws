@@ -75,6 +75,7 @@ export const Posts = () => {
     console.log({ html });
     setHtmlInputValue(html)
   };
+  console.log({ postsData })
 
   return (
     <PostsContent

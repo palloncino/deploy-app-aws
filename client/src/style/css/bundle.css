@@ -175,11 +175,6 @@
   transition: 1s;
 }
 
-.menu-overlay:hover {
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.2);
-}
-
 .artwork-summary-container {
   padding: 20px 0;
   margin-bottom: 20px;
@@ -498,7 +493,6 @@
 
 body {
   background: #f0f0f0;
-  background-image: url(../../images/svg/bg.svg);
   background-attachment: fixed;
   background-position: fixed;
   background-size: cover;
