@@ -1,6 +1,6 @@
 export interface IPostsProps {
   handlePostPost: () => void;
-  handleInputChange: (event: any) => void;
-  htmlInputValue: string;
+  handleInputChange: (key: string, value: string) => void;
+  inputsValue: any;
   postsData: any;
 }

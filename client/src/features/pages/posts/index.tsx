@@ -4,8 +4,13 @@ import { Singleton as Authorization } from '../../../auth';
 
 export const Posts = () => {
   const auth = Authorization.getInstance();
-  const [htmlInputValue, setHtmlInputValue] = useState('<h1>hello</h1>')
-  const [postsData, setPostsData] = useState([])
+  const [inputsValue, setInputsValue] = useState({
+    title: '',
+    description: '',
+    image_url: '',
+    html: '',
+  });
+  const [postsData, setPostsData] = useState([]);
 
   useEffect(() => {
     handleGetPosts();
@@ -13,7 +18,7 @@ export const Posts = () => {
 
   const handlePostPost = async () => {
     const access_token = auth.getProp('token');
-    const email = auth.getProp('email');
+    const userEmail = auth.getProp('email');
     let defaultHeaders = {
       'Content-Type': 'application/json',
     };
@@ -24,14 +29,21 @@ export const Posts = () => {
         ...defaultHeaders,
         Authorization: `Bearer ${access_token}`,
       },
-      body: JSON.stringify({email, html: htmlInputValue})
+      body: JSON.stringify({
+        email: userEmail,
+        title: inputsValue.title,
+        description: inputsValue.description,
+        image_url: inputsValue.image_url,
+        html: inputsValue.html,
+      }),
     };
     try {
-      const response = await fetch(URL, options);
+      
+      await fetch(URL, options);
 
-      const json = await response.json();
+      await handleGetPosts();
 
-      return handleGetPosts()
+      return;
 
     } catch (error) {
       console.error(error);
@@ -56,32 +68,24 @@ export const Posts = () => {
 
       const posts = await response.json();
 
-      const ids = Object.keys(posts);
-
-      const postsArray: any = [];
-
-      ids.forEach((id) => {
-        postsArray.push({ id: id, html: posts[id] });
-      });
-
-      setPostsData(postsArray)
+      setPostsData(posts);
 
     } catch (error) {
+
       console.error(error);
+
     }
   };
 
-  const handleInputChange = (html: string) => {
-    console.log({ html });
-    setHtmlInputValue(html)
+  const handleInputChange = (key: string, value: string) => {
+    setInputsValue({ ...inputsValue, [key]: value });
   };
-  console.log({ postsData })
 
   return (
     <PostsContent
       handleInputChange={handleInputChange}
       handlePostPost={handlePostPost}
-      htmlInputValue={htmlInputValue}
+      inputsValue={inputsValue}
       postsData={postsData}
     />
   );

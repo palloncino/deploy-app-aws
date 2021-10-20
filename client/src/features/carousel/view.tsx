@@ -3,7 +3,7 @@ import Carousel from 'react-simply-carousel';
 import { useState } from 'react';
 import { ICarouselProps } from './carousel-interfaces';
 
-export const CarouselContent = ({ data }: ICarouselProps) => {
+export const CarouselContent = ({ handleRedirectToPost, data }: ICarouselProps) => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   return (
@@ -32,7 +32,7 @@ export const CarouselContent = ({ data }: ICarouselProps) => {
           border: 'none',
           background: 'transparent',
           fontSize: '2rem',
-          cursor: 'pointer'
+          cursor: 'pointer',
         },
       }}
       backwardBtnProps={{
@@ -45,7 +45,7 @@ export const CarouselContent = ({ data }: ICarouselProps) => {
           border: 'none',
           background: 'transparent',
           fontSize: '2rem',
-          cursor: 'pointer'
+          cursor: 'pointer',
         },
       }}
       itemsToShow={3}
@@ -59,12 +59,23 @@ export const CarouselContent = ({ data }: ICarouselProps) => {
             height: 300,
             border: '30px solid white',
             textAlign: 'center',
-            lineHeight: '240px',
+            // lineHeight: '240px',
             boxSizing: 'border-box',
           }}
           key={index}
         >
-          {item.id}
+          <div
+            onClick={handleRedirectToPost}
+            style={{
+              background: `url(${item.image_url})`,
+              height: '100%',
+              backgroundSize: 'cover',
+              cursor: 'pointer',
+            }}
+          >
+            <div>{item.title}</div>
+            <div>{item.description}</div>
+          </div>
         </div>
       ))}
     </Carousel>

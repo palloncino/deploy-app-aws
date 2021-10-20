@@ -46,7 +46,7 @@ async function handleGetPosts(req, res) {
 
 async function handlePostPost(req, res) {
   
-  const { email: userEmail, html } = req.body;
+  const { email: userEmail, title, description, image_url, html } = req.body;
   const id = v4();
 
   AWS.config.update({
@@ -72,11 +72,11 @@ async function handlePostPost(req, res) {
 
       if (retrievedPosts) {
 
-        posts = { [id]: html, ...retrievedPosts };
+        posts = [ ...retrievedPosts, { id: id, title: title, description: description, image_url: image_url, html: html } ]
 
       } else {
 
-        posts = { [id]: html }
+        posts = [ { id: id, title: title, description: description, image_url: image_url, html: html } ]
 
       }
 
