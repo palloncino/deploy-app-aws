@@ -1,78 +1,84 @@
 // @ts-ignore
-import Carousel from 'react-simply-carousel';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ICarouselProps } from './carousel-interfaces';
 
-export const CarouselContent = ({ handleRedirectToPost, data }: ICarouselProps) => {
-  const [activeSlide, setActiveSlide] = useState(0);
+export const CarouselContent = ({
+  handleRedirectToPost,
+  data,
+}: ICarouselProps) => {
+
+  useEffect(() => {
+
+    const _num = (data.length / itemsPerRow);
+    const num = Number(_num.toFixed(0)) - 1;
+    console.log({_num, num})
+    maxSetStep(num)
+
+  }, [data])
+
+  const [margin, setMargin] = useState(0)
+  const [step, setStep] = useState(0)
+  const [maxStep, maxSetStep] = useState(0)
+
+  const itemsPerRow = 3;
+
+  const handleMoveCarousel = (direction: number) => {
+    
+    switch (direction) {
+      case 0: // back
+        if (step===direction) break;
+        console.log('back')
+        setStep(step-1)
+        setMargin(margin + 600)
+        break;
+
+      case 1: // forward
+        if (step===maxStep) break;
+        setStep(step+1)
+        setMargin(margin - 600)
+        break;
+    
+      default:
+        break;
+    }
+  }
 
   return (
-    <Carousel
-      updateOnItemClick
-      containerProps={{
-        style: {
-          width: '70%',
-          margin: '0 auto',
-          justifyContent: 'space-between',
-        },
-      }}
-      activeSlideIndex={activeSlide}
-      activeSlideProps={{
-        style: {},
-      }}
-      onRequestChange={setActiveSlide}
-      forwardBtnProps={{
-        children: '➡️',
-        style: {
-          width: 60,
-          height: 60,
-          minWidth: 60,
-          alignSelf: 'center',
-          border: 'none',
-          background: 'transparent',
-          fontSize: '2rem',
-          cursor: 'pointer',
-        },
-      }}
-      backwardBtnProps={{
-        children: '⬅️',
-        style: {
-          width: 60,
-          height: 60,
-          minWidth: 60,
-          alignSelf: 'center',
-          border: 'none',
-          background: 'transparent',
-          fontSize: '2rem',
-          cursor: 'pointer',
-        },
-      }}
-      itemsToShow={3}
-      speed={300}
-    >
-      {data?.map((item, index) => (
-        <div
-          className="carousel-item-cell--box"
-          key={index}
-        >
-          <div
-            onClick={() => handleRedirectToPost(item.id)}
-            style={{
-              height: '100%',
-              width: '100%',
-              backgroundSize: 'cover',
-              cursor: 'pointer',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <div className="carousel-item-cell carousel-item-cell--title">{item.title}</div>
-            <div className="carousel-item-cell carousel-item-cell--description">{item.description}</div>
-          </div>
+    <div className="carousel-wrapper">
+
+      {console.log({step})}
+      
+      <div onClick={() => handleMoveCarousel(0)} className="carousel-item-cell-arrow carousel-item-cell-arrow--left">{'<'}</div>
+
+      <div className="carousel-items-viewable">
+
+        <div className="carousel-items-container" style={{ marginLeft: `${margin}px` }}>
+          
+          {data?.map((item, index) => {
+            return (
+              <div
+                className="carousel-item-cell--box"
+                key={index}
+                onClick={() => handleRedirectToPost(item.id)}
+              >
+                <div>
+                  <div className="carousel-item-cell carousel-item-cell--title">
+                    {item.title}
+                  </div>
+                  <div className="carousel-item-cell carousel-item-cell--description">
+                    {item.description}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+
         </div>
-      ))}
-    </Carousel>
+      
+      </div>
+      
+      <div onClick={() => handleMoveCarousel(1)} className="carousel-item-cell-arrow carousel-item-cell-arrow--right">{'>'}</div>
+    
+    </div>
   );
 };

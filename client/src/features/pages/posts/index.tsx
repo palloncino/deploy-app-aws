@@ -10,7 +10,7 @@ export const Posts = () => {
   const [inputsValue, setInputsValue] = useState({
     title: '',
     description: '',
-    image_url: '',
+    // image_url: '',
     html: '',
   });
 
@@ -35,7 +35,7 @@ export const Posts = () => {
         email: userEmail,
         title: inputsValue.title,
         description: inputsValue.description,
-        image_url: inputsValue.image_url,
+        // image_url: inputsValue.image_url,
         html: inputsValue.html,
       }),
     };

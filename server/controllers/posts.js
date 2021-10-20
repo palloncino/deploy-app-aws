@@ -39,7 +39,7 @@ async function handleGetPosts(req, res) {
 
 async function handlePostPost(req, res) {
   
-  const { email: userEmail, title, description, image_url, html } = req.body;
+  const { email: userEmail, title, description, html } = req.body;
   const id = v4();
 
   if (!userEmail===process.env.ADMIN_EMAIL) {
@@ -69,11 +69,11 @@ async function handlePostPost(req, res) {
 
       if (retrievedPosts) {
 
-        posts = [ ...retrievedPosts, { id: id, title: title, description: description, image_url: image_url, html: html } ]
+        posts = [ ...retrievedPosts, { id: id, title: title, description: description, html: html } ]
 
       } else {
 
-        posts = [ { id: id, title: title, description: description, image_url: image_url, html: html } ]
+        posts = [ { id: id, title: title, description: description, html: html } ]
 
       }
 

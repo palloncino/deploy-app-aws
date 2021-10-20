@@ -1,9 +1,8 @@
 export interface IPostItem {
-  ["id"]: string;
-  ["title"]: string;
-  ["description"]: string;
-  ["image_url"]: string;
-  ["html"]: string;
+  id: string;
+  title: string;
+  description: string;
+  html: string;
 }
 export interface ICarouselProps {
   data: Array<IPostItem>

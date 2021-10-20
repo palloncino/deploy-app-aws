@@ -99,26 +99,80 @@
   height: 60px;
   padding: 0px 20px;
 }
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-items-viewable {
+  position: relative;
+  height: 200px;
+  width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-items-container {
+  transition: 0.25s;
+  position: absolute;
+  top: 0;
+  display: flex;
+  background: red;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
 .carousel-item-cell--box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   transition: 0.5s;
   width: 200px;
   height: 200px;
   background: #fff;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+.carousel-item-cell--box:last-child {
+  margin-right: 0px;
 }
 .carousel-item-cell--box:hover {
   transform: scale(0.95);
 }
 .carousel-item-cell--title {
+  margin-bottom: 10px;
   font-family: "force-shadow";
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 .carousel-item-cell--description {
   font-size: 1rem;
+}
+.carousel-item-cell-arrow {
+  position: absolute;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-item-cell-arrow--left {
+  left: 0;
+  background: red;
+  padding: 20px;
+  transform: translateY(-50%);
+  top: 50%;
+}
+.carousel-item-cell-arrow--right {
+  right: 0;
+  background: red;
+  padding: 20px;
+  transform: translateY(-50%);
+  top: 50%;
 }
 
 .btn-grad {
@@ -434,6 +488,7 @@
 .post-container {
   background: #fff;
   margin: 0 0 20px 0;
+  padding: 20px;
 }
 
 .posts-form-container {
