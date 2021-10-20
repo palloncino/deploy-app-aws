@@ -4,6 +4,7 @@ import { Button } from '../../button';
 import { IPostsProps } from './posts-interfaces';
 import { selectPosts } from './postsSLice';
 import { selectFocusedItem } from '../../routes';
+import { NONAME } from 'dns';
 
 export const PostsContent = ({
   handleInputChange,
@@ -40,7 +41,7 @@ export const PostsContent = ({
           />
         </div>
 
-        <div className="posts-form-input-container">
+        {/* <div className="posts-form-input-container">
           <label htmlFor="image_url">Image URL</label>
           <input
             value={inputsValue?.image_url}
@@ -49,7 +50,7 @@ export const PostsContent = ({
             type="text"
             placeholder="https:// MUST BE VALID ⚠️"
           />
-        </div>
+        </div> */}
 
         <div className="posts-form-input-container">
           <label htmlFor="html">HTML</label>
@@ -70,35 +71,40 @@ export const PostsContent = ({
           data.map((post: any, index: number) => {
             return (
               <div id={post.id} key={index} className="post-container">
-                <div className="post-container-data-cell-container">
-                  <div className="post-container-data-cell-label">TITLE:</div>
-                  <div className="post-container-data-cell-value">
-                    {post.title}
+                <div className="post-container-data-cell-container-info">
+                  <div className="post-container-data-cell-container">
+                    {/* <div className="post-container-data-cell-label">TITLE:</div> */}
+                    <div className="post-container-data-cell-value post-container-data-cell-value--title">
+                      {post.title}
+                    </div>
                   </div>
-                </div>
-                <div className="post-container-data-cell-container">
-                  <div className="post-container-data-cell-label">
+                  <div className="post-container-data-cell-container">
+                    {/* <div className="post-container-data-cell-label">
                     DESCRIPTION:
+                  </div> */}
+                    <div className="post-container-data-cell-value post-container-data-cell-value--description">
+                      {post.description}
+                    </div>
                   </div>
-                  <div className="post-container-data-cell-value">
-                    {post.description}
-                  </div>
-                </div>
-                <div className="post-container-data-cell-container">
+                  {/* <div className="post-container-data-cell-container">
                   <div className="post-container-data-cell-value post-container-data-cell-value--img">
                     <img src={post.image_url} alt="post image" />
                   </div>
+                </div> */}
                 </div>
-                <hr />
+
                 <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-                <div className="">
-                  <Button handleClick={() => {}} label="❌ DELETE POST" />
+                
+                <div className="post-container-buttons-group">
+                  <Button customStyle={{ width: '150px', border: 'none', background: 'transparent' }} handleClick={() => {}} label="❌ DELETE POST" />
                   <Button
+                    customStyle={{ width: '150px', border: 'none', background: 'transparent' }}
                     disabled
                     handleClick={() => {}}
-                    label="❌ EDIT POST"
+                    label="✏️ EDIT POST"
                   />
                 </div>
+
               </div>
             );
           })}

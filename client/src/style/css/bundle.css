@@ -415,6 +415,7 @@
 
 .post-container {
   background: #fff;
+  margin: 0 0 20px 0;
 }
 
 .posts-form-container {
@@ -429,6 +430,24 @@
 
 .posts-editable-html {
   height: 200px;
+}
+
+.post-container-data-cell-container-info {
+  background: rgba(90, 0, 0, 0.1);
+}
+.post-container-data-cell-value--title {
+  font-family: "force-shadow";
+  font-size: 1.4rem;
+}
+.post-container-data-cell-value--description {
+  font-size: 1rem;
+}
+.post-container-buttons-group {
+  display: flex;
+}
+
+.posts-output-container {
+  margin: 40px 0;
 }
 
 .homepage-wrapper {

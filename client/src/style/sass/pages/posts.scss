@@ -1,5 +1,6 @@
 .post-container {
   background: $white;
+  margin: 0 0 20px 0;
 }
 .posts-form-container {
   width: 50%;
@@ -14,15 +15,37 @@
 }
 .post-container-data-cell {
   &-container {
-    
+    &-info {
+      background: rgba(90,0,0,0.1);
+    }
   }
   &-label {
     
   }
   &-value {
-   
-    &--image {
+
+    &--title {
+
+      font-family: 'force-shadow';
+      font-size: $font-XL;
       
     }
+
+    &--description {
+
+      font-size: $font-M;
+      
+    }
+   
+    &--image {
+
+    }
   }
+}
+
+.post-container-buttons-group {
+  display: flex;
+}
+.posts-output-container {
+  margin: 40px 0;
 }
