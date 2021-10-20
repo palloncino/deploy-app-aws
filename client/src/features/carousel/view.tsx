@@ -11,7 +11,8 @@ export const CarouselContent = ({ handleRedirectToPost, data }: ICarouselProps) 
       updateOnItemClick
       containerProps={{
         style: {
-          width: '100%',
+          width: '70%',
+          margin: '0 auto',
           justifyContent: 'space-between',
         },
       }}
@@ -64,7 +65,7 @@ export const CarouselContent = ({ handleRedirectToPost, data }: ICarouselProps) 
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
-              alignItems: 'center'
+              alignItems: 'center',
             }}
           >
             <div className="carousel-item-cell carousel-item-cell--title">{item.title}</div>

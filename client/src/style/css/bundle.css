@@ -478,7 +478,7 @@
 }
 
 .homepage-group {
-  margin: 0 0 40px 0;
+  margin: 0 0 60px 0;
 }
 .homepage-group-banner {
   padding: 10px;
@@ -487,15 +487,8 @@
   margin: 0;
   padding: 0;
 }
-.homepage-carousel-container {
-  margin-top: 20px;
-}
-
 .homepage-text-container-title--XXXL {
   border-radius: 5px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  background: #fff;
-  background: #fff;
   padding: 10px;
   font-family: "Force-Shadow";
   font-size: 3rem;
@@ -506,21 +499,20 @@
 }
 .homepage-text-container-title--XXL {
   border-radius: 5px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  background: #fff;
-  background: #fff;
   padding: 10px;
-  font-family: "Force-Shadow";
   font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .homepage-text-container-paragraph {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .homepage-big-buttons {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 10px;
@@ -543,7 +535,7 @@
 .homepage-big-button-container-image {
   display: flex;
   justify-content: center;
-  font-size: 6rem;
+  font-size: 4rem;
   cursor: pointer;
 }
 

@@ -15,9 +15,17 @@ export function Homepage() {
   const renderInsider = () => {
     return (
       <div className="homepage-container">
+
+<h3 style={{ textAlign: 'center', margin: '-30px 0 30px 0' }} className="homepage-group homepage-group-banner-h3">⚠️ Work in progress, some features might be out of service.</h3>
+
+        <div className="homepage-group homepage-group--2">
+          <div className="homepage-text-container-title--XXL force-shadow">Latest posts</div>
+          <div className="homepage-carousel-container">
+            <Carousel />
+          </div>
+        </div>
   
         <div className="homepage-group homepage-group--1">
-          <h3 className="homepage-group homepage-group-banner-h3">⚠️ Work in progress, some features might be out of service.</h3>
           <div className="homepage-text-container-title--XXXL">
             Welcome {name}
           </div>
@@ -26,15 +34,8 @@ export function Homepage() {
           </div>
         </div>
 
-        <div className="homepage-group homepage-group--2">
-          <div className="homepage-text-container-title--XXL">Latest posts</div>
-          <div className="homepage-carousel-container">
-            <Carousel />
-          </div>
-        </div>
-
         <div className="homepage-group homepage-group--3">
-          <div className="homepage-text-container-title--XXL">
+          <div className="homepage-text-container-title--XXL force-shadow">
             Take a look around
           </div>
           <div className="homepage-big-buttons">
