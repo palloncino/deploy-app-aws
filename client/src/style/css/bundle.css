@@ -184,11 +184,10 @@
 }
 
 .artwork-summary-container {
-  padding: 20px 0;
+  padding: 20px;
   margin-bottom: 20px;
   display: flex;
   align-items: start;
-  justify-content: center;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
