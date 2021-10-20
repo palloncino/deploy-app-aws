@@ -65,7 +65,7 @@ export const CarouselContent = ({ handleRedirectToPost, data }: ICarouselProps) 
           key={index}
         >
           <div
-            onClick={handleRedirectToPost}
+            onClick={() => handleRedirectToPost(item.id)}
             style={{
               background: `url(${item.image_url})`,
               height: '100%',

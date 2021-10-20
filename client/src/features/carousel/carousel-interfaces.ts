@@ -7,5 +7,5 @@ export interface IPostItem {
 }
 export interface ICarouselProps {
   data: Array<IPostItem>
-  handleRedirectToPost: () => void;
+  handleRedirectToPost: (id: string) => void;
 }

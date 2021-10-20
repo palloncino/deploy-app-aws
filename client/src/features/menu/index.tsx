@@ -46,32 +46,32 @@ export function Menu() {
     if (isAdmin()) {
       menuItems = [
         { label: '🏠 Homepage', path: '/', disabled: false },
+        { label: '🏞 Posts', path: '/posts', disabled: false },
         { label: '🗂 Portfolio', path: '/portfolio', disabled: false },
         { label: '💸 Expenses', path: '/expenses', disabled: false },
-        { label: '📍 Map', path: '/map', disabled: false },
-        { label: '🏞 Posts', path: '/posts', disabled: false },
         { label: '🎨 Artworks', path: '/artwork', disabled: false },
+        { label: '📍 Map', path: '/map', disabled: false },
         { label: '🙋🏻‍♂️ Account', path: '/account', disabled: false },
       ];
     } else {
       if (isAuthenticated) {
         menuItems = [
           { label: '🏠 Homepage', path: '/', disabled: false },
+          { label: '🏞 Posts', path: '/posts', disabled: false },
           { label: '🗂 Portfolio', path: '/portfolio', disabled: false },
           { label: '💸 Expenses', path: '/expenses', disabled: false },
-          { label: '📍 Map', path: '/map', disabled: false },
-          { label: '🏞 Posts', path: '/posts', disabled: false },
           { label: '🎨 Artworks', path: '/artwork', disabled: false },
+          { label: '📍 Map', path: '/map', disabled: false },
           { label: '🙋🏻‍♂️ Account', path: '/account', disabled: false },
         ];
       } else {
         menuItems = [
           { label: '🏠 Homepage', path: '/', disabled: false },
+          { label: '🏞 Posts', path: '/posts', disabled: true },
           { label: '🗂 Portfolio', path: '/portfolio', disabled: false },
           { label: '💸 Expenses', path: '/expenses', disabled: true },
-          { label: '📍 Map', path: '/map', disabled: true },
-          { label: '🏞 Posts', path: '/posts', disabled: true },
           { label: '🎨 Artworks', path: '/artwork', disabled: false },
+          { label: '📍 Map', path: '/map', disabled: true },
           { label: '🙋🏻‍♂️ Account', path: '/account', disabled: true },
         ];
       }

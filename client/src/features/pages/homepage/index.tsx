@@ -12,19 +12,17 @@ export function Homepage() {
   const renderInsider = () => {
     return (
       <div className="homepage-container">
+        <div>
+          <h3>⚠️ Work in progress, some features might be out of service.</h3>
+        </div>
         <div className="homepage-group homepage-group--1">
           <div className="homepage-text-container-title--XXXL">
             Welcome {name}
           </div>
-          <div>
-            <h3>⚠️ Work in progress, some features might be out of service.</h3>
-          </div>
         </div>
 
         <div className="homepage-group homepage-group--2">
-          <div className="homepage-text-container-title--XXL">
-            Latest posts
-          </div>
+          <div className="homepage-text-container-title--XXL">Latest posts</div>
           <Carousel />
         </div>
 
@@ -35,25 +33,19 @@ export function Homepage() {
           <div className="homepage-big-buttons">
             <div className="homepage-big-button-container">
               <div className="homepage-big-button-container-title">
-                <h3>
-                Manage your expenses
-                </h3>
+                <h3>Manage your expenses</h3>
               </div>
               <div className="homepage-big-button-container-image">💸</div>
             </div>
             <div className="homepage-big-button-container">
               <div className="homepage-big-button-container-title">
-                <h3>
-                Visited countries
-                </h3>
+                <h3>Visited countries</h3>
               </div>
               <div className="homepage-big-button-container-image">📍</div>
             </div>
             <div className="homepage-big-button-container">
               <div className="homepage-big-button-container-title">
-                <h3>
-                A. G. Artworks
-                </h3>
+                <h3>A. G. Artworks</h3>
               </div>
               <div className="homepage-big-button-container-image">🎨</div>
             </div>

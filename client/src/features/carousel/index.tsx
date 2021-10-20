@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { CarouselContent } from './view';
-import { changeRoute } from '../routes';
+import { changeRoute, setFocusItemId } from '../routes';
 import { getPosts } from '../pages/posts/postsSLice'
 import { useSelector } from 'react-redux';
 import { selectPosts } from '../pages/posts/postsSLice';
+import { Spinner } from '../spinner';
 
 export const Carousel = () => {
   
@@ -15,11 +16,20 @@ export const Carousel = () => {
     dispatch(getPosts())
   }, []);
 
-  const handleRedirectToPost = () => {
-    return dispatch(changeRoute('/posts'));
+  const renderSpinner = () => {
+    return (
+      <div className="spinner-container">
+        <Spinner />
+      </div>
+    );
+  };
+
+  const handleRedirectToPost = (id: string) => {
+    dispatch(changeRoute('/posts'));
+    dispatch(setFocusItemId(id))
   };
 
   return (
-    data.length > 0 ? <CarouselContent handleRedirectToPost={handleRedirectToPost} data={data} /> : <div>Loading</div>
+    data.length > 0 ? <CarouselContent handleRedirectToPost={handleRedirectToPost} data={data} /> : renderSpinner()
   );
 };
