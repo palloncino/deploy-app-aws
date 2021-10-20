@@ -102,14 +102,14 @@
 .carousel-wrapper {
   position: relative;
   display: flex;
-  width: 800px;
+  width: 820px;
   margin: 0 auto;
 }
 
 .carousel-items-viewable {
   position: relative;
   height: 200px;
-  width: 600px;
+  width: 620px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -119,7 +119,6 @@
   position: absolute;
   top: 0;
   display: flex;
-  background: red;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -135,6 +134,16 @@
   height: 200px;
   background: #fff;
   box-sizing: border-box;
+  border-radius: 3px;
+  padding: 10px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.carousel-item-cell--box--no-gap {
+  margin-right: 0;
+}
+.carousel-item-cell--box--content {
+  width: 180px;
 }
 .carousel-item-cell--box:last-child {
   margin-right: 0px;
@@ -154,22 +163,22 @@
   position: absolute;
   font-size: 2rem;
   cursor: pointer;
-  width: 50px;
+  width: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 2px solid #fff;
+  border-radius: 3px;
 }
 .carousel-item-cell-arrow--left {
   left: 0;
-  background: red;
   padding: 20px;
   transform: translateY(-50%);
   top: 50%;
 }
 .carousel-item-cell-arrow--right {
   right: 0;
-  background: red;
   padding: 20px;
   transform: translateY(-50%);
   top: 50%;
@@ -568,10 +577,13 @@
 
 .homepage-big-buttons {
   margin-top: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 10px;
-  column-gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.homepage-big-buttons__group {
+  display: flex;
+  justify-content: center;
+  height: 150px;
 }
 
 .homepage-big-button-container {
@@ -579,18 +591,26 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  width: 200px;
   transition: 0.5s;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 5px;
 }
 
 .homepage-big-button-container:hover {
+  background: rgba(255, 255, 255, 0.2);
   transform: scale(0.95);
+}
+
+.homepage-big-button-container-title {
+  text-align: center;
 }
 
 .homepage-big-button-container-image {
   display: flex;
   justify-content: center;
-  font-size: 4rem;
+  font-size: 3rem;
   cursor: pointer;
 }
 
@@ -616,7 +636,7 @@
 }
 
 body {
-  background: #D6D6D6;
+  background-image: url(../../images/svg/bg.svg);
   background-attachment: fixed;
   background-position: fixed;
   background-size: cover;

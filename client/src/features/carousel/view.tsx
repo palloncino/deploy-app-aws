@@ -9,7 +9,7 @@ export const CarouselContent = ({
 
   useEffect(() => {
 
-    const _num = (data.length / itemsPerRow);
+    const _num = (data.length / ITEMS_PER_ROW);
     const num = Number(_num.toFixed(0)) - 1;
     console.log({_num, num})
     maxSetStep(num)
@@ -17,10 +17,12 @@ export const CarouselContent = ({
   }, [data])
 
   const [margin, setMargin] = useState(0)
+
   const [step, setStep] = useState(0)
   const [maxStep, maxSetStep] = useState(0)
 
-  const itemsPerRow = 3;
+  const ITEMS_PER_ROW = 3;
+  const CONTAINER_WIDTH_WITH_GAPS = 620
 
   const handleMoveCarousel = (direction: number) => {
     
@@ -29,13 +31,13 @@ export const CarouselContent = ({
         if (step===direction) break;
         console.log('back')
         setStep(step-1)
-        setMargin(margin + 600)
+        setMargin(margin + CONTAINER_WIDTH_WITH_GAPS)
         break;
 
       case 1: // forward
         if (step===maxStep) break;
         setStep(step+1)
-        setMargin(margin - 600)
+        setMargin(margin - CONTAINER_WIDTH_WITH_GAPS)
         break;
     
       default:
@@ -57,11 +59,11 @@ export const CarouselContent = ({
           {data?.map((item, index) => {
             return (
               <div
-                className="carousel-item-cell--box"
+                className={ ((index+1) % ITEMS_PER_ROW === 0) ?  "carousel-item-cell--box carousel-item-cell--box--no-gap" : "carousel-item-cell--box"}
                 key={index}
                 onClick={() => handleRedirectToPost(item.id)}
               >
-                <div>
+                <div className="carousel-item-cell--box--content">
                   <div className="carousel-item-cell carousel-item-cell--title">
                     {item.title}
                   </div>

@@ -15,22 +15,31 @@ export function Homepage() {
   const renderInsider = () => {
     return (
       <div className="homepage-container">
-
-<h3 style={{ textAlign: 'center', margin: '-30px 0 30px 0' }} className="homepage-group homepage-group-banner-h3">⚠️ Work in progress, some features might be out of service.</h3>
+        <h3
+          style={{ textAlign: 'center', margin: '-30px 0 30px 0' }}
+          className="homepage-group homepage-group-banner-h3"
+        >
+          ⚠️ Work in progress, some features might be out of service.
+        </h3>
 
         <div className="homepage-group homepage-group--2">
-          <div className="homepage-text-container-title--XXL force-shadow">Latest posts</div>
+          <div className="homepage-text-container-title--XXL force-shadow">
+            Latest posts
+          </div>
           <div className="homepage-carousel-container">
             <Carousel />
           </div>
         </div>
-  
+
         <div className="homepage-group homepage-group--1">
           <div className="homepage-text-container-title--XXXL">
             Welcome {name}
           </div>
           <div className="homepage-text-container-paragraph">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id ea repellendus reiciendis voluptate quisquam. Saepe nobis quidem, aut velit minima atque error reprehenderit deleniti consectetur et commodi hic sequi blanditiis?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id ea
+            repellendus reiciendis voluptate quisquam. Saepe nobis quidem, aut
+            velit minima atque error reprehenderit deleniti consectetur et
+            commodi hic sequi blanditiis?
           </div>
         </div>
 
@@ -39,41 +48,63 @@ export function Homepage() {
             Take a look around
           </div>
           <div className="homepage-big-buttons">
-            <div onClick={() => dispatch(changeRoute('/expenses'))} className="homepage-big-button-container">
-              <div className="homepage-big-button-container-title">
-                <h3>My Montly Expenses</h3>
+            <div className="homepage-big-buttons__group">
+              <div
+                onClick={() => dispatch(changeRoute('/expenses'))}
+                className="homepage-big-button-container"
+              >
+                <div className="homepage-big-button-container-image">💸</div>
+                <div className="homepage-big-button-container-title">
+                  My Montly Expenses
+                </div>
               </div>
-              <div className="homepage-big-button-container-image">💸</div>
+              <div
+                onClick={() => dispatch(changeRoute('/map'))}
+                className="homepage-big-button-container"
+              >
+                <div className="homepage-big-button-container-image">📍</div>
+                <div className="homepage-big-button-container-title">
+                  My Visited Countries
+                </div>
+              </div>
+              <div
+                onClick={() => dispatch(changeRoute('/account'))}
+                className="homepage-big-button-container"
+              >
+                <div className="homepage-big-button-container-image">🙋🏻‍♂️</div>
+                <div className="homepage-big-button-container-title">
+                  My Account
+                </div>
+              </div>
             </div>
-            <div onClick={() => dispatch(changeRoute('/map'))} className="homepage-big-button-container">
-              <div className="homepage-big-button-container-title">
-                <h3>My Visited Countries</h3>
+            <div className="homepage-big-buttons__group">
+              <div
+                onClick={() => dispatch(changeRoute('/artworks'))}
+                className="homepage-big-button-container"
+              >
+                <div className="homepage-big-button-container-image">🎨</div>
+                <div className="homepage-big-button-container-title">
+                  A. Guiotto Artworks
+                </div>
               </div>
-              <div className="homepage-big-button-container-image">📍</div>
-            </div>
-            <div onClick={() => dispatch(changeRoute('/account'))} className="homepage-big-button-container">
-              <div className="homepage-big-button-container-title">
-                <h3>My Account</h3>
+              <div
+                onClick={() => dispatch(changeRoute('/posts'))}
+                className="homepage-big-button-container"
+              >
+                <div className="homepage-big-button-container-image">📝</div>
+                <div className="homepage-big-button-container-title">
+                  A. Guiotto Posts
+                </div>
               </div>
-              <div className="homepage-big-button-container-image">🙋🏻‍♂️</div>
-            </div>
-            <div onClick={() => dispatch(changeRoute('/artworks'))} className="homepage-big-button-container">
-              <div className="homepage-big-button-container-title">
-                <h3>A. Guiotto Artworks</h3>
+              <div
+                onClick={() => dispatch(changeRoute('/portfolio'))}
+                className="homepage-big-button-container"
+              >
+                <div className="homepage-big-button-container-image">🕰</div>
+                <div className="homepage-big-button-container-title">
+                  A. Guiotto - CV
+                </div>
               </div>
-              <div className="homepage-big-button-container-image">🎨</div>
-            </div>
-            <div onClick={() => dispatch(changeRoute('/posts'))} className="homepage-big-button-container">
-              <div className="homepage-big-button-container-title">
-                <h3>A. Guiotto Posts</h3>
-              </div>
-              <div className="homepage-big-button-container-image">📝</div>
-            </div>
-            <div onClick={() => dispatch(changeRoute('/portfolio'))} className="homepage-big-button-container">
-              <div className="homepage-big-button-container-title">
-                <h3>A. Guiotto - CV</h3>
-              </div>
-              <div className="homepage-big-button-container-image">🕰</div>
             </div>
           </div>
         </div>
