@@ -47,8 +47,6 @@ export const CarouselContent = ({
 
   return (
     <div className="carousel-wrapper">
-
-      {console.log({step})}
       
       <div onClick={() => handleMoveCarousel(0)} className="carousel-item-cell-arrow carousel-item-cell-arrow--left">{'<'}</div>
 

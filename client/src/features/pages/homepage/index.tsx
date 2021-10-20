@@ -4,6 +4,7 @@ import { Carousel } from '../../carousel';
 import { Singleton as Authentication } from '../../../auth';
 import { useDispatch } from 'react-redux';
 import { changeRoute } from '../../routes';
+import { useEffect } from 'react';
 
 export function Homepage() {
   const { isAuthenticated } = useSelector(selectAuth);
@@ -22,14 +23,7 @@ export function Homepage() {
           ⚠️ Work in progress, some features might be out of service.
         </h3>
 
-        <div className="homepage-group homepage-group--2">
-          <div className="homepage-text-container-title--XXL force-shadow">
-            Latest posts
-          </div>
-          <div className="homepage-carousel-container">
-            <Carousel />
-          </div>
-        </div>
+        
 
         <div className="homepage-group homepage-group--1">
           <div className="homepage-text-container-title--XXXL">
@@ -40,6 +34,15 @@ export function Homepage() {
             repellendus reiciendis voluptate quisquam. Saepe nobis quidem, aut
             velit minima atque error reprehenderit deleniti consectetur et
             commodi hic sequi blanditiis?
+          </div>
+        </div>
+
+        <div className="homepage-group homepage-group--2">
+          <div className="homepage-text-container-title--XXL force-shadow">
+            Latest posts
+          </div>
+          <div className="homepage-carousel-container">
+            <Carousel />
           </div>
         </div>
 

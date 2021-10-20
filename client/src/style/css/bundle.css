@@ -9,7 +9,7 @@
   align-items: center;
   height: 80px;
   padding: 0 20px;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   margin-bottom: 20px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-top: none;
@@ -80,7 +80,7 @@
 }
 
 .footer-container {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   position: fixed;
   bottom: 0;
   z-index: 95;
@@ -134,10 +134,9 @@
   height: 200px;
   box-sizing: border-box;
   border-radius: 3px;
-  padding: 10px;
   overflow: hidden;
   border: 2px solid rgba(0, 0, 0, 0.2);
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   box-sizing: border-box;
   margin-right: 10px;
 }
@@ -145,7 +144,9 @@
   margin-right: 0;
 }
 .carousel-item-cell--box--content {
-  width: 180px;
+  margin-top: 20px;
+  height: 100%;
+  width: 160px;
 }
 .carousel-item-cell--box:last-child {
   margin-right: 0px;
@@ -156,8 +157,7 @@
 }
 .carousel-item-cell--title {
   margin-bottom: 10px;
-  font-family: "force-shadow";
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .carousel-item-cell--description {
   font-size: 1rem;
@@ -171,8 +171,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  background: rgba(255, 255, 255, 0.75);
   border-radius: 3px;
 }
 .carousel-item-cell-arrow--left {
@@ -546,7 +544,7 @@
 }
 
 .homepage-group {
-  margin: 0 0 60px 0;
+  margin: 0 0 40px 0;
 }
 .homepage-group-banner {
   padding: 10px;
@@ -581,14 +579,13 @@
 }
 
 .homepage-big-buttons {
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
 }
 .homepage-big-buttons__group {
   display: flex;
   justify-content: center;
-  height: 150px;
+  height: 200px;
 }
 
 .homepage-big-button-container {
@@ -598,11 +595,12 @@
   justify-content: center;
   width: 200px;
   transition: 0.5s;
-  padding: 10px;
+  padding: 20px;
   box-sizing: border-box;
   margin: 5px;
   border: 2px solid rgba(0, 0, 0, 0.2);
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 1.2rem;
 }
 
 .homepage-big-button-container:hover {

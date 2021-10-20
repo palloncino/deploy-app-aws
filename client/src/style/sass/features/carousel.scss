@@ -32,7 +32,6 @@
     height: 200px;
     box-sizing: border-box;
     border-radius: 3px;
-    padding: 10px;
     overflow: hidden;
     border: $light-thick-grey-border;
     background: $seethrough-white;
@@ -46,7 +45,9 @@
     }
 
     &--content {
-      width: 180px;  
+      margin-top: 20px;
+      height: 100%;
+      width: 160px;  
     }
 
   }
@@ -59,8 +60,8 @@
   }
   &--title {
     margin-bottom: 10px;
-    font-family: 'force-shadow';
-    font-size: $font-L;
+    // font-family: 'force-shadow';
+    font-size: $font-XL;
   }
   &--description {
     font-size: $font-M;
@@ -74,8 +75,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: $light-thick-grey-border;
-    background: $seethrough-white;
+    // border: $light-thick-grey-border;
+    // background: $seethrough-white;
     border-radius: 3px;
 
     &--left {
