@@ -53,28 +53,35 @@ export const CarouselContent = ({ handleRedirectToPost, data }: ICarouselProps) 
     >
       {data?.map((item, index) => (
         <div
+          className="carousel-item-cell--box"
           style={{
             background: 'rgba(255,0,0,0.2)',
             width: 300,
             height: 300,
             border: '30px solid white',
-            textAlign: 'center',
-            // lineHeight: '240px',
             boxSizing: 'border-box',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center'
           }}
           key={index}
         >
           <div
             onClick={() => handleRedirectToPost(item.id)}
             style={{
-              background: `url(${item.image_url})`,
               height: '100%',
+              width: '100%',
               backgroundSize: 'cover',
               cursor: 'pointer',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center'
             }}
           >
-            <div>{item.title}</div>
-            <div>{item.description}</div>
+            <div className="carousel-item-cell carousel-item-cell--title">{item.title}</div>
+            <div className="carousel-item-cell carousel-item-cell--description">{item.description}</div>
           </div>
         </div>
       ))}

@@ -1,0 +1,11 @@
+.carousel-item-cell {
+  &--box {
+  }
+  &--title {
+    font-family: 'force-shadow';
+    font-size: $font-XL;
+  }
+  &--description {
+    font-size: $font-M;
+  }
+}

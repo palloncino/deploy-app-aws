@@ -49,6 +49,10 @@ async function handlePostPost(req, res) {
   const { email: userEmail, title, description, image_url, html } = req.body;
   const id = v4();
 
+  if (!userEmail===process.env.ADMIN_EMAIL) {
+    return res.json(403);
+  }
+
   AWS.config.update({
     region: `${process.env.AWS_REGION}`,
     accessKeyId: process.env.AWS_PROFILE_KEY,
