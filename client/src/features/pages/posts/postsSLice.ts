@@ -48,7 +48,6 @@ export const postsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getPosts.fulfilled, (state, action) => {
-      console.log({action})
       state.data = action.payload;
     });
   }

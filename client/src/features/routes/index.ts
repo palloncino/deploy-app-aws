@@ -24,6 +24,7 @@ export const routeSlice = createSlice({
 });
 
 export const selectRoute = (state: any) => state.route?.current;
+export const selectFocusedItem = (state: any) => state.route?.focusedItem ?? '';
 
 export const { changeRoute, setFocusItemId } = routeSlice.actions;
 
