@@ -51,7 +51,7 @@ export const CarouselContent = ({ handleRedirectToPost, data }: ICarouselProps) 
       itemsToShow={3}
       speed={300}
     >
-      {data.map((item, index) => (
+      {data?.map((item, index) => (
         <div
           style={{
             background: 'rgba(255,0,0,0.2)',

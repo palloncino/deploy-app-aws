@@ -1,5 +1,6 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import menuReducer from '../features/menu/menuSlice';
+import postsReducer from '../features/pages/posts/postsSLice';
 import routeReducer from '../features/routes';
 import authReducer from '../auth/authSlice';
 
@@ -8,6 +9,7 @@ export const store = configureStore({
     menu: menuReducer,
     route: routeReducer,
     auth: authReducer,
+    posts: postsReducer,
   },
 });
 

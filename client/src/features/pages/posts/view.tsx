@@ -1,12 +1,18 @@
+import { useSelector } from 'react-redux';
 import { Button } from '../../button';
 import { IPostsProps } from './posts-interfaces';
+import { selectPosts } from './postsSLice';
 
 export const PostsContent = ({
   handleInputChange,
   handlePostPost,
   inputsValue,
-  postsData,
 }: IPostsProps) => {
+
+  const data = useSelector(selectPosts);
+
+  console.log({data})
+  
   return (
     <div className="posts-wrapper">
       <div className="posts-form-container">
@@ -23,7 +29,7 @@ export const PostsContent = ({
 
         <div className="posts-form-input-container">
           <label htmlFor="image_url">Image URL</label>
-          <input value={inputsValue?.image_url} onChange={(e) => handleInputChange(e.target.name, e.target.value)} name="image_url" type="text" placeholder="https://" />
+          <input value={inputsValue?.image_url} onChange={(e) => handleInputChange(e.target.name, e.target.value)} name="image_url" type="text" placeholder="https:// MUST BE VALID ⚠️" />
         </div>
 
         <div className="posts-form-input-container">
@@ -41,7 +47,7 @@ export const PostsContent = ({
         <Button handleClick={handlePostPost} label="⚡️ SAVE" />
       </div>
       <div className="posts-output-container">
-        {postsData.map((post: any, index: number) => {
+        {data.length > 0 && data.map((post: any, index: number) => {
           return (
             <div key={index} className="post-container">
               <div>ID: {post.id}</div>

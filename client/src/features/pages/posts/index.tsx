@@ -1,19 +1,21 @@
 import { useEffect, useState } from 'react';
 import { PostsContent } from './view';
 import { Singleton as Authorization } from '../../../auth';
+import { useDispatch } from 'react-redux';
+import { getPosts } from './postsSLice'
 
 export const Posts = () => {
   const auth = Authorization.getInstance();
+  const dispatch = useDispatch();
   const [inputsValue, setInputsValue] = useState({
     title: '',
     description: '',
     image_url: '',
     html: '',
   });
-  const [postsData, setPostsData] = useState([]);
 
   useEffect(() => {
-    handleGetPosts();
+    dispatch(getPosts());
   }, []);
 
   const handlePostPost = async () => {
@@ -41,39 +43,12 @@ export const Posts = () => {
       
       await fetch(URL, options);
 
-      await handleGetPosts();
+      dispatch(getPosts());
 
       return;
 
     } catch (error) {
       console.error(error);
-    }
-  };
-
-  const handleGetPosts = async () => {
-    const access_token = auth.getProp('token');
-    let defaultHeaders = {
-      'Content-Type': 'application/json',
-    };
-    let URL = `${process.env.REACT_APP_SERVER_DOMAIN}/api/posts/get-posts`;
-    let options = {
-      method: 'GET',
-      headers: {
-        ...defaultHeaders,
-        Authorization: `Bearer ${access_token}`,
-      },
-    };
-    try {
-      const response = await fetch(URL, options);
-
-      const posts = await response.json();
-
-      setPostsData(posts);
-
-    } catch (error) {
-
-      console.error(error);
-
     }
   };
 
@@ -86,7 +61,6 @@ export const Posts = () => {
       handleInputChange={handleInputChange}
       handlePostPost={handlePostPost}
       inputsValue={inputsValue}
-      postsData={postsData}
     />
   );
 };
