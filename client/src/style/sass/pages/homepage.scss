@@ -6,47 +6,82 @@
   width: 80%;
 }
 .homepage-group {
-  margin: 0 0 40px 0;
+  margin: 0 0 80px 0;
+
+  &-banner {
+    // background: $white;
+    padding: 10px;
+
+    &-h3 {
+      margin: 0;
+      padding: 0;
+      // background: red;
+    }
+  }
   &--1 {}
   &--2 {}
   &--3 {}
 }
-.homepage-text-container-title {
-  padding: 20px;
-  border-radius: 5px;
-  border: $light-thick-grey-border;
-  background: $white;
-  margin: 0 0 20px 0;
-  &--XXXL {
-    font-family: 'Force-Shadow';
-    font-size: $font-XXXL;
+.homepage-carousel-container {
+  margin-top: 20px;
+}
+.homepage-text-container {
+  &-title {
+    &--XXXL {
+      border-radius: 5px;
+      border: $light-thick-grey-border;
+      background: $white;
+      background: $white;
+      padding: 10px;
+      font-family: 'Force-Shadow';
+      font-size: $font-XXXL;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+      // height: 100px;
+    }
+    &--XXL {
+      border-radius: 5px;
+      border: $light-thick-grey-border;
+      background: $white;
+      background: $white;
+      padding: 10px;
+      font-family: 'Force-Shadow';
+      font-size: $font-XXL;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // height: 40px;
+    }
   }
-  &--XXL {
-    font-family: 'Force-Shadow';
-    font-size: $font-XXL;
-  }
-  &--XL {
-    font-family: 'Force-Shadow';
+  
+  &-paragraph {
     font-size: $font-XL;
   }
 }
 .homepage-big-buttons {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
 }
 .homepage-big-button-container {
-  flex: 1;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 30%;
+  align-items: center;
+  transition: .5s;
+}
+.homepage-big-button-container:hover {
+  background: rgba(0,0,0,0.1);
 }
 .homepage-big-button-container-title {
 }
 .homepage-big-button-container-image {
   display: flex;
   justify-content: center;
-  font-size: 12rem;
-  background: rgba(0, 0, 0, 0.1);
+  font-size: 6rem;
   cursor: pointer;
 }

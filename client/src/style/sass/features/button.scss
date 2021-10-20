@@ -11,12 +11,9 @@
   color: $black;
   border: $light-grey-border;
   display: block;
-  // font-family: "Force-Shadow"
 }
 .btn-grad:hover {
-  background-position: top center; /* change the direction of the change here */
-  text-decoration: none;
-  border: $black-border;
+  background: rgba(0,0,0,0.1);
 }
 
 .btn-grad--disabled {

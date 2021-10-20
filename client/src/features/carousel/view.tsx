@@ -17,9 +17,7 @@ export const CarouselContent = ({ handleRedirectToPost, data }: ICarouselProps) 
       }}
       activeSlideIndex={activeSlide}
       activeSlideProps={{
-        style: {
-          background: 'rgba(0,255,0,0.2)',
-        },
+        style: {},
       }}
       onRequestChange={setActiveSlide}
       forwardBtnProps={{
@@ -55,7 +53,6 @@ export const CarouselContent = ({ handleRedirectToPost, data }: ICarouselProps) 
         <div
           className="carousel-item-cell--box"
           style={{
-            background: 'rgba(255,0,0,0.2)',
             width: 300,
             height: 300,
             border: '30px solid white',

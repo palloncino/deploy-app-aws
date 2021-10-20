@@ -99,6 +99,12 @@
   height: 60px;
   padding: 0px 20px;
 }
+.carousel-item-cell--box {
+  transition: 0.5s;
+}
+.carousel-item-cell--box:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
 .carousel-item-cell--title {
   font-family: "force-shadow";
   font-size: 1.4rem;
@@ -122,10 +128,7 @@
 }
 
 .btn-grad:hover {
-  background-position: top center;
-  /* change the direction of the change here */
-  text-decoration: none;
-  border: 1px solid #454749;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .btn-grad--disabled {
@@ -467,46 +470,72 @@
 }
 
 .homepage-group {
-  margin: 0 0 40px 0;
+  margin: 0 0 80px 0;
 }
-.homepage-text-container-title {
-  padding: 20px;
+.homepage-group-banner {
+  padding: 10px;
+}
+.homepage-group-banner-h3 {
+  margin: 0;
+  padding: 0;
+}
+.homepage-carousel-container {
+  margin-top: 20px;
+}
+
+.homepage-text-container-title--XXXL {
   border-radius: 5px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   background: #fff;
-  margin: 0 0 20px 0;
-}
-.homepage-text-container-title--XXXL {
+  background: #fff;
+  padding: 10px;
   font-family: "Force-Shadow";
   font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
 }
 .homepage-text-container-title--XXL {
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  background: #fff;
+  padding: 10px;
   font-family: "Force-Shadow";
   font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.homepage-text-container-title--XL {
-  font-family: "Force-Shadow";
+.homepage-text-container-paragraph {
   font-size: 1.4rem;
 }
 
 .homepage-big-buttons {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
 }
 
 .homepage-big-button-container {
-  flex: 1;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 30%;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.homepage-big-button-container:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .homepage-big-button-container-image {
   display: flex;
   justify-content: center;
-  font-size: 12rem;
-  background: rgba(0, 0, 0, 0.1);
+  font-size: 6rem;
   cursor: pointer;
 }
 
