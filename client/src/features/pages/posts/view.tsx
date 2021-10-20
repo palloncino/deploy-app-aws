@@ -104,7 +104,8 @@ export const PostsContent = ({
 
                 <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
 
-                <div className="post-container-buttons-group">
+                {isAdmin() && (
+                  <div className="post-container-buttons-group">
                   <Button
                     customStyle={{
                       width: '150px',
@@ -125,6 +126,7 @@ export const PostsContent = ({
                     label="✏️ EDIT POST"
                   />
                 </div>
+                )}
               </div>
             );
           })}

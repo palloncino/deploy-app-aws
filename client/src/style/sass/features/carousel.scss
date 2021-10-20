@@ -1,9 +1,17 @@
 .carousel-item-cell {
   &--box {
     transition: .5s;
+    width: 200px;
+    height: 200px;
+    background: $white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   &--box:hover {
-    background: rgba(0,0,0,0.1);
+    transform: scale(.95);
   }
   &--title {
     font-family: 'force-shadow';

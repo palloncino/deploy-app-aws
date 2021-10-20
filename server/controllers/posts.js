@@ -6,18 +6,11 @@ const { v4 } = require("uuid");
 // +----------------------+-------------------------+
 // | email                | posts                   |
 // +----------------------+-------------------------+
-// | powerhydratoni@gm... | { "hashId": html, "h... |
+// | example_email@gm...  | [ { "M" : { "descrip... |
 // +----------------------+-------------------------+
 
-// posts object:
-// {
-//   "d308fc21-ec5c-447f-b89a-796c2db87380": "<html><head><...",
-//   "0k08sv21-eqjc-142f-gsas-986cddb7c3v0": "<html><head><...",
-// }
 
 async function handleGetPosts(req, res) {
-
-  const userEmail = req.user.email
 
   AWS.config.update({
     region: `${process.env.AWS_REGION}`,
@@ -27,7 +20,7 @@ async function handleGetPosts(req, res) {
     const { Item } = await docClient
       .get({
         TableName: `${process.env.POSTS_TABLE_NAME}`,
-        Key: { email: userEmail },
+        Key: { email: `${process.env.ADMIN_EMAIL}` },
       })
       .promise();
 

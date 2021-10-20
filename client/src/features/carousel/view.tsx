@@ -52,16 +52,6 @@ export const CarouselContent = ({ handleRedirectToPost, data }: ICarouselProps) 
       {data?.map((item, index) => (
         <div
           className="carousel-item-cell--box"
-          style={{
-            width: 300,
-            height: 300,
-            border: '30px solid white',
-            boxSizing: 'border-box',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
           key={index}
         >
           <div
