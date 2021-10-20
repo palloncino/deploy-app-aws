@@ -9,7 +9,7 @@
   align-items: center;
   height: 80px;
   padding: 0 20px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.75);
   margin-bottom: 20px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-top: none;
@@ -80,7 +80,7 @@
 }
 
 .footer-container {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.75);
   position: fixed;
   bottom: 0;
   z-index: 95;
@@ -132,11 +132,13 @@
   transition: 0.5s;
   width: 200px;
   height: 200px;
-  background: #fff;
   box-sizing: border-box;
   border-radius: 3px;
   padding: 10px;
   overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.75);
+  box-sizing: border-box;
   margin-right: 10px;
 }
 .carousel-item-cell--box--no-gap {
@@ -150,6 +152,7 @@
 }
 .carousel-item-cell--box:hover {
   transform: scale(0.95);
+  background: #fff;
 }
 .carousel-item-cell--title {
   margin-bottom: 10px;
@@ -168,7 +171,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid #fff;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.75);
   border-radius: 3px;
 }
 .carousel-item-cell-arrow--left {
@@ -573,6 +577,7 @@
   font-size: 1.2rem;
   max-width: 80%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .homepage-big-buttons {
@@ -596,10 +601,12 @@
   padding: 10px;
   box-sizing: border-box;
   margin: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .homepage-big-button-container:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #fff;
   transform: scale(0.95);
 }
 
@@ -636,7 +643,7 @@
 }
 
 body {
-  background-image: url(../../images/svg/bg.svg);
+  background: #D6D6D6;
   background-attachment: fixed;
   background-position: fixed;
   background-size: cover;

@@ -123,7 +123,7 @@ export function Header() {
           </div>
         </div>
         <div className="header-container-hidden-twin">
-          I hope nobody sees me, I am the hidden twin
+          I
         </div>
       </>
     );

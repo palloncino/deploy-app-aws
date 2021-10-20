@@ -30,11 +30,13 @@
     transition: .5s;
     width: 200px;
     height: 200px;
-    background: $white;
     box-sizing: border-box;
     border-radius: 3px;
     padding: 10px;
     overflow: hidden;
+    border: $light-thick-grey-border;
+    background: $seethrough-white;
+    box-sizing: border-box;
 
 
     margin-right: 10px;
@@ -53,6 +55,7 @@
   }
   &--box:hover {
     transform: scale(.95);
+    background: $white;
   }
   &--title {
     margin-bottom: 10px;
@@ -71,7 +74,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid $white;
+    border: $light-thick-grey-border;
+    background: $seethrough-white;
     border-radius: 3px;
 
     &--left {
