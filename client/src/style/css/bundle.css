@@ -83,7 +83,7 @@
   background: #fff;
   position: fixed;
   bottom: 0;
-  z-index: 999;
+  z-index: 95;
   width: 1300px;
   font-size: 1rem;
   border: 2px solid rgba(0, 0, 0, 0.2);
@@ -155,6 +155,7 @@
 }
 
 .menu-items-container {
+  z-index: 105;
   background: white;
   position: absolute;
   top: 85px;
@@ -163,12 +164,20 @@
 }
 
 .menu-overlay {
+  z-index: 100;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -2000;
+  left: -2000;
   background: transparent;
-  width: 100%;
-  height: 100vh;
+  width: 500%;
+  height: 500vh;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.menu-overlay:hover {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.2);
 }
 
 .artwork-summary-container {
@@ -413,6 +422,59 @@
   background: #fff;
 }
 
+.homepage-wrapper {
+  margin: 40px 0 40px 0;
+}
+
+.homepage-container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.homepage-group {
+  margin: 0 0 40px 0;
+}
+.homepage-text-container-title {
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  margin: 0 0 20px 0;
+}
+.homepage-text-container-title--XXXL {
+  font-family: "Force-Shadow";
+  font-size: 3rem;
+}
+.homepage-text-container-title--XXL {
+  font-family: "Force-Shadow";
+  font-size: 2rem;
+}
+.homepage-text-container-title--XL {
+  font-family: "Force-Shadow";
+  font-size: 1.4rem;
+}
+
+.homepage-big-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.homepage-big-button-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 30%;
+}
+
+.homepage-big-button-container-image {
+  display: flex;
+  justify-content: center;
+  font-size: 12rem;
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
 @font-face {
   font-family: "Force-Shadow";
   src: url("../../fonts/ForceShadow/font.woff") format("truetype"), url("../../fonts/ForceShadow/font.woff") format("woff");
@@ -460,22 +522,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-}
-
-.homepage-container {
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.homepage-text-container-title {
-  font-size: 3rem;
-  font-family: "Force-Shadow";
-  padding: 20px;
-  border-radius: 5px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  background: #fff;
 }
 
 .spinner-container {

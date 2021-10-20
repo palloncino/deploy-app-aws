@@ -11,6 +11,7 @@
 @import './pages/account.scss';
 @import './pages/portfolio.scss';
 @import './pages/posts.scss';
+@import './pages/homepage.scss';
 
 @font-face {
   font-family: 'Force-Shadow';
@@ -68,22 +69,6 @@ body {
   align-items: center;
   justify-content: flex-start;
   // margin-bottom: 40px;
-}
-
-// home
-.homepage-container {
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.homepage-text-container-title {
-  font-size: $font-XXXL;
-  font-family: 'Force-Shadow';
-  padding: 20px;
-  border-radius: 5px;
-  border: $light-thick-grey-border;
-  background: $white;
 }
 
 // spinner
