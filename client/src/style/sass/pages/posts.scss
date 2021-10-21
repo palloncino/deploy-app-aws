@@ -7,11 +7,13 @@
   padding: 10px;
   border: $light-thick-grey-border;
   width: 50%;
+  margin: 20px 0;
 }
 .posts-editable-html {
   height: 200px;
 }
 .post-container-data-cell {
+
   &-container {
     &-info {
       display: flex;
@@ -24,6 +26,8 @@
   &-label {
   }
   &-value {
+    margin-bottom: 10px;
+
     &--title {
       font-family: 'force-shadow';
       font-size: $font-XL;
@@ -48,8 +52,13 @@
 
 .posts-output-wrapper {
   padding: 10px 10px;
-  background: rgba(104, 48, 48, 0.377);
+  border: $light-grey-border;
+  border-radius: 3px;
   display: none;
+  margin-bottom: 20px;
+}
+.posts-output-container {
+  
 }
 
 .posts-output-wrapper.is-open {

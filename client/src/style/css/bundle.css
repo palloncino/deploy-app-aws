@@ -506,6 +506,7 @@
   padding: 10px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   width: 50%;
+  margin: 20px 0;
 }
 
 .posts-editable-html {
@@ -518,6 +519,9 @@
   justify-content: center;
   align-items: center;
   padding: 10px 10px;
+}
+.post-container-data-cell-value {
+  margin-bottom: 10px;
 }
 .post-container-data-cell-value--title {
   font-family: "force-shadow";
@@ -532,8 +536,10 @@
 
 .posts-output-wrapper {
   padding: 10px 10px;
-  background: rgba(104, 48, 48, 0.377);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
   display: none;
+  margin-bottom: 20px;
 }
 
 .posts-output-wrapper.is-open {
