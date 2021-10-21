@@ -33,10 +33,10 @@ app.use(express.urlencoded({ extended: true }));
 // |  APIS                                          |
 // +------------------------------------------------+
 // PORTFOLIO FORM
-app.get("/api/portfolio/get-fields", authenticateJWT, handleGetFields);
+app.get("/api/portfolio/get-fields", handleGetFields);
 app.post("/api/portfolio/edit-field", authenticateJWT, handleEditField);
 // POSTS FORM
-app.get("/api/posts/get-posts", authenticateJWT, handleGetPosts);
+app.get("/api/posts/get-posts", handleGetPosts);
 app.post("/api/posts/post-post", authenticateJWT, handlePostPost);
 // EXPENSES FORM
 app.post("/api/expenses/post-expense", authenticateJWT, handlePostExpense);

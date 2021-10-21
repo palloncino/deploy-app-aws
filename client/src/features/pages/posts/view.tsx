@@ -5,7 +5,6 @@ import { IPostsProps } from './posts-interfaces';
 import { selectPosts } from './postsSLice';
 import { selectFocusedItem } from '../../routes';
 import { Singleton as Authorization } from '../../../auth';
-import { reduce } from 'lodash';
 
 export const PostsContent = ({
   handleInputChange,
@@ -19,7 +18,6 @@ export const PostsContent = ({
   useEffect(() => {
 
     setPostsData(data)
-    
     
     setTimeout(()=>{
       

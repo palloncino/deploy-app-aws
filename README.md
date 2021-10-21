@@ -213,11 +213,9 @@ For more information on the available scripts, refer to *./client/README.md*
 
 # 🔨 **WORK IN PROGRESS**
 
-  - 🚨 Use AWS Secret Manager
-
-  - 🔨 Find a font (Arial) 
-  - 🔨 Resize extremely large s3 hosted images 
-  - 🔨 Lazy load for large pictures
+  - Spinner while Loading Posts
+  - Add date to posts
+  - Map features
 
 
 <br>

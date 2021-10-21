@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { RootState } from '../../../app/store';
-import { Singleton as Authentication } from '../../../auth';
+// import { Singleton as Authentication } from '../../../auth';
 
 export interface PostsState {
   data: any
@@ -14,8 +14,8 @@ export const getPosts = createAsyncThunk(
   'POSTS/GET_DATA',
   async () => {
 
-    const auth = Authentication.getInstance();
-    const access_token = auth.getProp('token');
+    // const auth = Authentication.getInstance();
+    // const access_token = auth.getProp('token');
 
     let defaultHeaders = {
       'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export const getPosts = createAsyncThunk(
       method: 'GET',
       headers: {
         ...defaultHeaders,
-        Authorization: `Bearer ${access_token}`,
+        // Authorization: `Bearer ${access_token}`,
       },
     };
 

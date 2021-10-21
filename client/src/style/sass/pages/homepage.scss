@@ -46,7 +46,8 @@
   }
   
   &-paragraph {
-    font-size: $font-L;
+    font-size: $font-M;
+    line-height: 2rem;
     max-width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -79,6 +80,13 @@
   background: $seethrough-white;
   font-size: $font-L;
   
+}
+
+.homepage-big-button-container.disabled {
+  opacity: 0.5;
+}
+.homepage-big-button-container.disabled:hover {
+  transform: unset;
 }
 
 .homepage-big-button-container:hover {

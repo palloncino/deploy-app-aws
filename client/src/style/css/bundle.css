@@ -621,7 +621,8 @@
   align-items: center;
 }
 .homepage-text-container-paragraph {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  line-height: 2rem;
   max-width: 80%;
   margin: 0 auto;
   text-align: center;
@@ -650,6 +651,14 @@
   border: 2px solid rgba(0, 0, 0, 0.2);
   background: rgba(255, 255, 255, 0.85);
   font-size: 1.2rem;
+}
+
+.homepage-big-button-container.disabled {
+  opacity: 0.5;
+}
+
+.homepage-big-button-container.disabled:hover {
+  transform: unset;
 }
 
 .homepage-big-button-container:hover {
