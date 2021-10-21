@@ -160,9 +160,42 @@ For more information on the available scripts, refer to *./client/README.md*
 
 - `BE-1.4` - go in the `Configuration` section and edit `Load balancer`, we need to add a new listener which will listen port 443, with HTTPS method and our new certificate
 
-- `BE-1.5` - I tried to delete the Application versions
+- `BE-1.5` - Deployment Troubleshooting
+    
+  - I tried to delete the Application versions
 
-- `BE-1.6` - I tried to delete the zip in s3
+  - I tried to delete the Application
+
+  - I tried to delete related files on S3
+  
+  - I tried to `Heath > Reboot`
+
+  - I tried to `rebuild enironment`
+
+  - I tried to add this policy to my user, as it was mentioned in a AWS banner:
+
+      "*In September 2020, Elastic Beanstalk introduced the EnhancedHealthAuthEnabled option. It enables you to require authorization of instances that report enhanced health information. If you're using an Elastic Beanstalk managed policy for your environment's instance profile (the default when using Elastic Beanstalk console or EB CLI), you can safely enable this option.*"
+
+      "*On September, 2021, we are enabling this option by default for all new environments(no impact on existing environments)*"
+
+      "*If you are using a custom instance profile instead of a managed policy, your environment might show the No Data health status. This happens because the instances aren't authorized for the action that communicates enhanced health data to the service. To authorize the action, add permission to your instance profile according to Enhanced health authorization  in the Amazon Elastic Beanstalk Developer Guide.*"
+        
+      ```json
+      {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Sid": "ElasticBeanstalkHealthAccess",
+            "Action": ["elasticbeanstalk:PutInstanceStatistics"],
+            "Effect": "Allow",
+            "Resource": [
+              "arn:aws:elasticbeanstalk:*:*:application/*",
+              "arn:aws:elasticbeanstalk:*:*:environment/*"
+            ]
+          }
+        ]
+      }
+      ```
 
 <br><br>
 

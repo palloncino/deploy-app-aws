@@ -51,10 +51,12 @@ app.post("/auth/sign-up", handleSignUp);
 app.post("/auth/sign-in", handleSignIn);
 app.get("/auth/verify_email", handleVerificationLink);
 // REDIRECT
-app.get("/", (req, res) => res.redirect(`${baseUrls.ENV_CLIENT_URL}`));
+// app.get("/", (req, res) => res.redirect(`${baseUrls.ENV_CLIENT_URL}`));
+// PING
+app.get("/", (req, res) => res.send(ok));
 // 404
 app.use(function (error, req, res, next) {
-  res.status(error.status || 500).json({ err });
+  res.status(error.status || 500).json({ error });
 });
 
 app.listen(process.env.PORT);

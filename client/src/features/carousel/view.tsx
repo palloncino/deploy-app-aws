@@ -11,7 +11,6 @@ export const CarouselContent = ({
 
     const _num = (data.length / ITEMS_PER_ROW);
     const num = Number(_num.toFixed(0)) - 1;
-    console.log({_num, num})
     maxSetStep(num)
 
   }, [data])
@@ -29,7 +28,6 @@ export const CarouselContent = ({
     switch (direction) {
       case 0: // back
         if (step===direction) break;
-        console.log('back')
         setStep(step-1)
         setMargin(margin + CONTAINER_WIDTH_WITH_GAPS)
         break;

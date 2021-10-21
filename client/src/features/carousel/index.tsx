@@ -11,14 +11,10 @@ export const Carousel = () => {
   
   const dispatch = useDispatch();
   const data = useSelector(selectPosts);
-
-  console.log(1.1, {data})
   
   useEffect(() => {
     dispatch(getPosts())
   }, []);
-
-  console.log(1.2, {data})
 
   const renderSpinner = () => {
     return (
