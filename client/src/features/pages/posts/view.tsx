@@ -117,6 +117,12 @@ export const PostsContent = ({
                   </div>
 
                   <div className="post-container-data-cell-container">
+                    <div className="post-container-data-cell-value post-container-data-cell-value--description">
+                      {post.created ?? '01/01/2021'}
+                    </div>
+                  </div>
+
+                  <div className="post-container-data-cell-container">
                     <div className="post-container-data-cell-value post-container-data-cell-value--see-more">
                     <Button
                       customStyle={{

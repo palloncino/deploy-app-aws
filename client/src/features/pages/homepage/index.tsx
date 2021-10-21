@@ -82,7 +82,7 @@ export function Homepage() {
             </div>
             <div className="homepage-big-buttons__group">
               <div
-                onClick={() => dispatch(changeRoute('/artworks'))}
+                onClick={() => dispatch(changeRoute('/artwork'))}
                 className="homepage-big-button-container"
               >
                 <div className="homepage-big-button-container-image">🎨</div>
