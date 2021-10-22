@@ -5,6 +5,7 @@ import { IPostsProps } from './posts-interfaces';
 import { selectPosts } from './postsSLice';
 import { selectFocusedItem } from '../../routes';
 import { Singleton as Authorization } from '../../../auth';
+import { Spinner } from '../../spinner';
 
 export const PostsContent = ({
   handleInputChange,
@@ -13,23 +14,22 @@ export const PostsContent = ({
 }: IPostsProps) => {
   const data = useSelector(selectPosts);
   const focusedElement = useSelector(selectFocusedItem);
-  const [postsData, setPostsData] = useState([])
+  const [postsData, setPostsData] = useState([]);
 
   useEffect(() => {
+    setPostsData(data);
 
-    setPostsData(data)
-    
-    setTimeout(()=>{
-      
-      const postId = document.querySelector(`.selector-${focusedElement}`);
-      const postElement = document.querySelector(`.selector-${focusedElement} .posts-output-wrapper`);
-      postId?.scrollIntoView({ behavior: 'smooth' });
-      postElement?.classList.toggle("is-open");
-
-    }, 300)
-    
-
-  }, []);
+    const postId = document.querySelector(`.selector-${focusedElement}`);
+    if (postId) {
+      setTimeout(() => {
+        const postElement = document.querySelector(
+          `.selector-${focusedElement} .posts-output-wrapper`
+        );
+        postId?.scrollIntoView({ behavior: 'smooth' });
+        postElement?.classList.toggle('is-open');
+      }, 300);
+    }
+  }, [data]);
 
   const auth = Authorization.getInstance();
 
@@ -39,12 +39,95 @@ export const PostsContent = ({
     clientId === process.env.REACT_APP_ADMIN_EMAIL ? true : false;
 
   const handleTogglePost = (id: string) => {
-    const post = document.querySelector(`.selector-${id} .posts-output-wrapper`);
+    const post = document.querySelector(
+      `.selector-${id} .posts-output-wrapper`
+    );
 
-    post?.classList.toggle("is-open");
+    post?.classList.toggle('is-open');
+  };
 
-    
-  }
+  const renderPostsData = () => {
+    return postsData.map((post: any, index: number) => {
+      return (
+        <div
+          id={post.id}
+          key={index}
+          className={`post-container selector-${post.id}`}
+        >
+          <div className="post-container-data-cell-container-info">
+            <div className="post-container-data-cell-container">
+              <div className="post-container-data-cell-value post-container-data-cell-value--title">
+                {post.title}
+              </div>
+            </div>
+            <div className="post-container-data-cell-container">
+              <div className="post-container-data-cell-value post-container-data-cell-value--description">
+                {post.description}
+              </div>
+            </div>
+
+            <div className="post-container-data-cell-container">
+              <div className="post-container-data-cell-value post-container-data-cell-value--description">
+                {post.date}
+              </div>
+            </div>
+
+            <div className="post-container-data-cell-container">
+              <div className="post-container-data-cell-value post-container-data-cell-value--see-more">
+                <Button
+                  customStyle={{
+                    width: '150px',
+                    border: 'none',
+                    background: 'transparent',
+                  }}
+                  handleClick={() => handleTogglePost(post.id)}
+                  label={'👁 Toggle Post'}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="posts-output-wrapper">
+            <div
+              className="posts-output-container"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            ></div>
+          </div>
+
+          {isAdmin() && (
+            <div className="post-container-buttons-group">
+              <Button
+                customStyle={{
+                  width: '150px',
+                  border: 'none',
+                  background: 'transparent',
+                }}
+                handleClick={() => {}}
+                label="❌ DELETE POST"
+              />
+              <Button
+                customStyle={{
+                  width: '150px',
+                  border: 'none',
+                  background: 'transparent',
+                }}
+                disabled
+                handleClick={() => {}}
+                label="✏️ EDIT POST"
+              />
+            </div>
+          )}
+        </div>
+      );
+    });
+  };
+
+  const renderSpinner = () => {
+    return (
+      <div className="spinner-container" style={{ minHeight: '200px' }}>
+        <Spinner />
+      </div>
+    );
+  };
 
   return (
     <div className="posts-wrapper">
@@ -83,7 +166,12 @@ export const PostsContent = ({
           </div>
 
           <div className="posts-form-input-container">
-            <label className="posts-form-input-container-input-label" htmlFor="html">HTML</label>
+            <label
+              className="posts-form-input-container-input-label"
+              htmlFor="html"
+            >
+              HTML
+            </label>
             <textarea
               name="html"
               className="posts-editable-html posts-form-input-container-input posts-form-input-container-input--textarea"
@@ -98,76 +186,7 @@ export const PostsContent = ({
         </div>
       )}
       <div className="posts-output-container">
-        {postsData.length > 0 &&
-          postsData.map((post: any, index: number) => {
-            return (
-              <div id={post.id} key={index} className={`post-container selector-${post.id}`}>
-                <div className="post-container-data-cell-container-info">
-                  <div className="post-container-data-cell-container">
-                    <div className="post-container-data-cell-value post-container-data-cell-value--title">
-                      {post.title}
-                    </div>
-                  </div>
-                  <div className="post-container-data-cell-container">
-                    <div className="post-container-data-cell-value post-container-data-cell-value--description">
-                      {post.description}
-                    </div>
-                  </div>
-
-                  <div className="post-container-data-cell-container">
-                    <div className="post-container-data-cell-value post-container-data-cell-value--description">
-                      {post.date}
-                    </div>
-                  </div>
-
-                  <div className="post-container-data-cell-container">
-                    <div className="post-container-data-cell-value post-container-data-cell-value--see-more">
-                    <Button
-                      customStyle={{
-                        width: '150px',
-                        border: 'none',
-                        background: 'transparent',
-                      }}
-                      handleClick={(() => handleTogglePost(post.id))}
-                      label={"👁 Toggle Post"}
-                    />
-                    </div>
-                  </div>
-
-                </div>
-                <div className="posts-output-wrapper">
-                  <div
-                    className="posts-output-container"
-                    dangerouslySetInnerHTML={{ __html: post.html }}
-                  ></div>
-                </div>
-
-                {isAdmin() && (
-                  <div className="post-container-buttons-group">
-                    <Button
-                      customStyle={{
-                        width: '150px',
-                        border: 'none',
-                        background: 'transparent',
-                      }}
-                      handleClick={() => {}}
-                      label="❌ DELETE POST"
-                    />
-                    <Button
-                      customStyle={{
-                        width: '150px',
-                        border: 'none',
-                        background: 'transparent',
-                      }}
-                      disabled
-                      handleClick={() => {}}
-                      label="✏️ EDIT POST"
-                    />
-                  </div>
-                )}
-              </div>
-            );
-          })}
+        {postsData.length > 0 ? renderPostsData() : renderSpinner()}
       </div>
     </div>
   );

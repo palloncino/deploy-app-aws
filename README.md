@@ -10,6 +10,7 @@ This is an application to keep my works updated and available to the public.<br 
 In this application you can find my portfolio and download it.<br />
 Futhermore there is a form to keep track of monthly expenses, you can login and use it.<br />
 Various artworks made with Adobe Illustrator are also present in the website.<br />
+Other services might be available at this time.<br />
 
 <br><br>
 
@@ -24,9 +25,11 @@ Various artworks made with Adobe Illustrator are also present in the website.<br
 
 - **`Express`** : Express.js
 
-- **`AWS`** : Route53, s3, CloudFront, Elastic Beanstalk, Dynamodb, IAM
+- **`SSL & JWT`** : this application is secured by using the HTTPS protocol and JWTs for authentication.
 
-- **`JWT`** : this application is secure and uses JWTs
+- **`Amazon Web Services`** : Route53, s3, CloudFront, Elastic Beanstalk, Dynamodb, IAM
+
+- **`Google Cloud`** : Google SDK for nodemailer 
 
 <br><br>
 
@@ -40,9 +43,19 @@ Various artworks made with Adobe Illustrator are also present in the website.<br
 
 > ⚠️ If you're using OSX and Terminal, you can try this shell script from root:
 
+> ⚠️ You will need to modified to fit your paths!
+
 - `./osx-start-dev.sh`
 
+### **ABOUT THE CODE**
+
+The front-end application is inside of ./client folder, here we ll find a React application used with Typescript.
+
+Inside of ./server we - as you can imagine - find the server which is an express application.
+
 <br><br>
+
+
 
 # 🙋🏻‍♂️ **DEPLOYMENT 🚀 CLIENT APP**
 
