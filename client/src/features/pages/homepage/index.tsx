@@ -12,6 +12,19 @@ export function Homepage() {
   const name = String(clientId).split('@')[0];
   const dispatch = useDispatch();
 
+  const INITIAL_PARAGRAPH = `
+  This website was initially created as a CV public storage, only
+  later I started to add functionalities that I find useful myself.
+  Certain services can be used publicly: taking for example
+  expenses, where you can conviniently keep track of monthly
+  expenses and subsciptions that perhaps you might not want to keep
+  any more. I also post stuff about programming or just interesting piece 
+  of personal experience. \ Other services are in progress like the visited countries, 
+  where you can keep track of he countries you have been visiting. Finally I'm always up to make
+  new friends and I am open to work in new projects, so therefore
+  feel free to reach me anytime writing at my support email that you
+  can find on my footer. Stay cool 👋`
+
   const renderInsider = () => {
     return (
       <div className="homepage-container">
@@ -27,18 +40,7 @@ export function Homepage() {
             Welcome {name}
           </div>
           <div className="homepage-text-container-paragraph">
-            This website was initially created as a CV public storage, only
-            later I started to add functionalities that I find useful myself.
-            Certain services can be used publicly: taking for example expenses,
-            where you can conviniently keep track of monthly expenses an
-            subsciptions that perhaps you might not want to keep any more. I
-            also post stuff about programming that might be useful or just
-            interesting piece of personal experience. Other services are in
-            progress like the visited country, where you can keep track of he
-            countries you have been visiting. I am always glad to make new
-            friends and I am open to work in new projects, so therefore feel
-            free to reach me anytime writing at my support email that you can
-            find on my footer. Bye for now.
+            {INITIAL_PARAGRAPH}
           </div>
         </div>
 
@@ -137,18 +139,7 @@ export function Homepage() {
               Welcome guest
             </div>
             <div className="homepage-text-container-paragraph">
-              This website was initially created as a CV public storage, only
-              later I started to add functionalities that I find useful myself.
-              Certain services can be used publicly: taking for example
-              expenses, where you can conviniently keep track of monthly
-              expenses an subsciptions that perhaps you might not want to keep
-              any more. I also post stuff about programming that might be useful
-              or just interesting piece of personal experience. Other services
-              are in progress like the visited country, where you can keep track
-              of he countries you have been visiting. I am always glad to make
-              new friends and I am open to work in new projects, so therefore
-              feel free to reach me anytime writing at my support email that you
-              can find on my footer. Bye for now.
+              {INITIAL_PARAGRAPH}
             </div>
           </div>
         </div>

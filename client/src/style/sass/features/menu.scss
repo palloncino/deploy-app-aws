@@ -31,7 +31,8 @@
   position: absolute;
   top: -2000;
   left: -2000;
-  background: transparent;
+  transition: .5s;
+  background: $light-grey-seethrough;
   width: 500%;
   height: 500vh;
   cursor: pointer;

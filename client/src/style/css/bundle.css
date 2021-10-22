@@ -252,7 +252,8 @@
   position: absolute;
   top: -2000;
   left: -2000;
-  background: transparent;
+  transition: 0.5s;
+  background: rgba(0, 0, 0, 0.2);
   width: 500%;
   height: 500vh;
   cursor: pointer;
