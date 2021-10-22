@@ -4,9 +4,10 @@ import { Carousel } from '../../carousel';
 import { Singleton as Authentication } from '../../../auth';
 import { useDispatch } from 'react-redux';
 import { changeRoute } from '../../routes';
+import { Spinner } from '../../spinner';
 
 export function Homepage() {
-  const { isAuthenticated } = useSelector(selectAuth);
+  const { isAuthenticated, isLoading } = useSelector(selectAuth);
   const auth = Authentication.getInstance();
   const clientId = auth.getProp('email');
   const name = String(clientId).split('@')[0];
@@ -23,7 +24,15 @@ export function Homepage() {
   where you can keep track of he countries you have been visiting. Finally I'm always up to make
   new friends and I am open to work in new projects, so therefore
   feel free to reach me anytime writing at my support email that you
-  can find on my footer. Stay cool 👋`
+  can find on my footer. Stay cool`
+
+  const renderSpinner = () => {
+    return (
+      <div className="spinner-container">
+        <Spinner />
+      </div>
+    );
+  };
 
   const renderInsider = () => {
     return (
@@ -215,7 +224,7 @@ export function Homepage() {
 
   return (
     <div className="homepage-wrapper">
-      {isAuthenticated ? renderInsider() : renderOutsider()}
+      {isLoading ? renderSpinner() : isAuthenticated ? renderInsider() : renderOutsider()}
     </div>
   );
 }

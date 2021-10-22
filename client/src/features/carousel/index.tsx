@@ -18,7 +18,7 @@ export const Carousel = () => {
 
   const renderSpinner = () => {
     return (
-      <div className="spinner-container">
+      <div className="spinner-container" style={{ minHeight: '200px' }}>
         <Spinner />
       </div>
     );

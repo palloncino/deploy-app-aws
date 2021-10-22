@@ -31,7 +31,9 @@ export function Application() {
         dispatch(setAuthentication());
       }
 
-      dispatch(setAuthLoading(false));
+      setTimeout(()=> {
+        return dispatch(setAuthLoading(false));
+      }, 500)
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
