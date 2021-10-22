@@ -116,7 +116,7 @@ export const PostsContent = ({
 
                   <div className="post-container-data-cell-container">
                     <div className="post-container-data-cell-value post-container-data-cell-value--description">
-                      {post.created ?? '01/01/2021'}
+                      {post.date}
                     </div>
                   </div>
 

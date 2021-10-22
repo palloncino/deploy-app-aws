@@ -41,6 +41,7 @@ async function handlePostPost(req, res) {
   
   const { email: userEmail, title, description, html } = req.body;
   const id = v4();
+  const date = new Date().toISOString().split('T')[0]
 
   if (!userEmail===process.env.ADMIN_EMAIL) {
     return res.json(403);
@@ -69,11 +70,11 @@ async function handlePostPost(req, res) {
 
       if (retrievedPosts) {
 
-        posts = [ ...retrievedPosts, { id: id, title: title, description: description, html: html } ]
+        posts = [ ...retrievedPosts, { id: id, title: title, description: description, html: html, date } ]
 
       } else {
 
-        posts = [ { id: id, title: title, description: description, html: html } ]
+        posts = [ { id: id, title: title, description: description, html: html, date } ]
 
       }
 

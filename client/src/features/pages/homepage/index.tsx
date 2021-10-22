@@ -19,7 +19,7 @@ export function Homepage() {
   expenses, where you can conviniently keep track of monthly
   expenses and subsciptions that perhaps you might not want to keep
   any more. I also post stuff about programming or just interesting piece 
-  of personal experience. \ Other services are in progress like the visited countries, 
+  of personal experience. Other services are in progress like the visited countries, 
   where you can keep track of he countries you have been visiting. Finally I'm always up to make
   new friends and I am open to work in new projects, so therefore
   feel free to reach me anytime writing at my support email that you
