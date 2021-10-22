@@ -214,6 +214,7 @@ For more information on the available scripts, refer to *./client/README.md*
 # 🔨 **WORK IN PROGRESS**
 
   - Spinner while Loading Posts
+  - Posts page should be more readable, add a filter
   - Add date to posts
   - Map features
 

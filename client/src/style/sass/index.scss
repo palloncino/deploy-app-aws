@@ -109,9 +109,23 @@ body {
   border: $light-thick-grey-border;
   display: flex;
   flex-direction: column;
+  z-index: 105;
 }
 
 .custom-modal {
+
+  &-overlay {
+    z-index: 85;
+    position: absolute;
+    top: -2000px;
+    left: -2000px;
+    background: transparent;
+    width: 500%;
+    height: 500vh;
+    cursor: pointer;
+    background: $light-grey-seethrough;
+  }
+
   &-form {
     display: flex;
     flex-direction: column;

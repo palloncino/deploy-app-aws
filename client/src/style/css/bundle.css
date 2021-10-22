@@ -256,7 +256,6 @@
   width: 500%;
   height: 500vh;
   cursor: pointer;
-  transition: 1s;
 }
 
 .artwork-summary-container {
@@ -760,8 +759,20 @@ body {
   border: 2px solid rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+  z-index: 105;
 }
 
+.custom-modal-overlay {
+  z-index: 85;
+  position: absolute;
+  top: -2000px;
+  left: -2000px;
+  background: transparent;
+  width: 500%;
+  height: 500vh;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+}
 .custom-modal-form {
   display: flex;
   flex-direction: column;

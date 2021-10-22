@@ -6,14 +6,14 @@ $white: #fff;
 $seethrough-white: rgba(255, 255, 255, 0.85);
 $grey: #9e9e9e;
 $dark-white: rgb(240, 240, 240);
-$light-grey: rgba(0, 0, 0, 0.2);
+$light-grey-seethrough: rgba(0, 0, 0, 0.2);
 $pale-red: #c37070;
 $pale-blue: #7caad8;
 $pale-green: #69b977;
 $pale-yellow: #fae524;
 // BORDERS
-$light-grey-border: 1px solid $light-grey;
-$light-thick-grey-border: 2px solid $light-grey;
+$light-grey-border: 1px solid $light-grey-seethrough;
+$light-thick-grey-border: 2px solid $light-grey-seethrough;
 $black-border: 1px solid $black;
 // FONTS
 $font-S: 0.8rem;

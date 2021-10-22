@@ -15,7 +15,7 @@
   }
 }
 .menu-item-clickable:hover {
-  background: $light-grey;
+  background: $light-grey-seethrough;
 }
 
 .menu-items-container {
@@ -35,7 +35,6 @@
   width: 500%;
   height: 500vh;
   cursor: pointer;
-  transition: 1s;
 }
 .menu-overlay:hover {
   // background: rgba(0,0,0,0.2);

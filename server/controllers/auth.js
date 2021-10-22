@@ -116,7 +116,7 @@ const handleSignUp = async (req, res) => {
     };
     transport.sendMail(emailOptions, (error) => {
       if (error) {
-        res.json(error);
+        res.json(`${error}: Please contanct support at powerhydratoni@gmail.com`);
       } else {
         res.json({
           message: `Verification email was sent to ${email}, please verify by clicking the activation link`,
@@ -124,7 +124,7 @@ const handleSignUp = async (req, res) => {
       }
     });
   } catch (error) {
-    res.json(error);
+    res.json(`${error}: Please contanct support at powerhydratoni@gmail.com`);
   }
 };
 
@@ -248,7 +248,6 @@ const handleVerificationLink = async (req, res) => {
 };
 
 const handleDeleteAccount = async (req, res) => {
-
   const email = req.body.email;
 
   AWS.config.update({
@@ -259,13 +258,15 @@ const handleDeleteAccount = async (req, res) => {
 
   const docClient = new AWS.DynamoDB.DocumentClient();
 
-  await docClient.delete({
+  await docClient
+    .delete({
       TableName: `${process.env.AUTH_TABLE_NAME}`,
       Key: { email: `${email}` },
     })
     .promise();
 
-  await docClient.delete({
+  await docClient
+    .delete({
       TableName: `${process.env.EXPENSES_TABLE_NAME}`,
       Key: { email: `${email}` },
     })
