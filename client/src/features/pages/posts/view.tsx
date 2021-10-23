@@ -27,7 +27,7 @@ export const PostsContent = ({
         );
         postId?.scrollIntoView({ behavior: 'smooth' });
         postElement?.classList.toggle('is-open');
-      }, 300);
+      }, 0);
     }
   }, [data]);
 
@@ -67,7 +67,7 @@ export const PostsContent = ({
             </div>
 
             <div className="post-container-data-cell-container">
-              <div className="post-container-data-cell-value post-container-data-cell-value--description">
+              <div className="post-container-data-cell-value post-container-data-cell-value--date">
                 {post.date}
               </div>
             </div>
@@ -130,64 +130,80 @@ export const PostsContent = ({
   };
 
   return (
-    <div className="posts-wrapper">
-      {isAdmin() && (
-        <div className="posts-form-container">
-          <div className="posts-form-input-container">
-            <label
-              className="posts-form-input-container-input-label"
-              htmlFor="title"
-            >
-              Title
-            </label>
-            <input
-              value={inputsValue?.title}
-              onChange={(e) => handleInputChange(e.target.name, e.target.value)}
-              name="title"
-              type="text"
-              className="posts-form-input-container-input"
-            />
-          </div>
-
-          <div className="posts-form-input-container">
-            <label
-              className="posts-form-input-container-input-label"
-              htmlFor="description"
-            >
-              Description
-            </label>
-            <input
-              value={inputsValue?.description}
-              onChange={(e) => handleInputChange(e.target.name, e.target.value)}
-              name="description"
-              type="text"
-              className="posts-form-input-container-input"
-            />
-          </div>
-
-          <div className="posts-form-input-container">
-            <label
-              className="posts-form-input-container-input-label"
-              htmlFor="html"
-            >
-              HTML
-            </label>
-            <textarea
-              name="html"
-              className="posts-editable-html posts-form-input-container-input posts-form-input-container-input--textarea"
-              placeholder="Content of your post in HTML code"
-              onChange={(e) => handleInputChange(e.target.name, e.target.value)}
-              id="posts-editable-html-input"
-              value={inputsValue?.html}
-            />
-          </div>
-
-          <Button handleClick={handlePostPost} label="⚡️ SAVE" />
+    <>
+      <div className="posts-page-description-container">
+      <div className="posts-page-description-title force-shadow">Page description</div>
+        <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+        praesentium veniam, voluptate sed, ipsa amet eos esse accusamus
+        voluptates nisi ut quo eius ad a harum consectetur eum blanditiis porro.
         </div>
-      )}
-      <div className="posts-output-container">
-        {postsData.length > 0 ? renderPostsData() : renderSpinner()}
       </div>
-    </div>
+      <div className="posts-wrapper">
+        {isAdmin() && (
+          <div className="posts-form-container">
+            <div className="posts-form-input-container">
+              <label
+                className="posts-form-input-container-input-label"
+                htmlFor="title"
+              >
+                Title
+              </label>
+              <input
+                value={inputsValue?.title}
+                onChange={(e) =>
+                  handleInputChange(e.target.name, e.target.value)
+                }
+                name="title"
+                type="text"
+                className="posts-form-input-container-input"
+              />
+            </div>
+
+            <div className="posts-form-input-container">
+              <label
+                className="posts-form-input-container-input-label"
+                htmlFor="description"
+              >
+                Description
+              </label>
+              <input
+                value={inputsValue?.description}
+                onChange={(e) =>
+                  handleInputChange(e.target.name, e.target.value)
+                }
+                name="description"
+                type="text"
+                className="posts-form-input-container-input"
+              />
+            </div>
+
+            <div className="posts-form-input-container">
+              <label
+                className="posts-form-input-container-input-label"
+                htmlFor="html"
+              >
+                HTML
+              </label>
+              <textarea
+                name="html"
+                className="posts-editable-html posts-form-input-container-input posts-form-input-container-input--textarea"
+                placeholder="Content of your post in HTML code"
+                onChange={(e) =>
+                  handleInputChange(e.target.name, e.target.value)
+                }
+                id="posts-editable-html-input"
+                value={inputsValue?.html}
+              />
+            </div>
+
+            <Button handleClick={handlePostPost} label="⚡️ SAVE" />
+          </div>
+        )}
+        <div className="posts-output-container">
+          {postsData.length > 0 ? renderPostsData() : renderSpinner()}
+        </div>
+      </div>
+    </>
   );
 };

@@ -2,6 +2,27 @@
   display: flex;
 }
 
+.expenses-container-group {
+  margin: 20px 0;
+}
+.expenses-container-group.center {
+  font-size: $font-L;
+  line-height: 2rem;
+  width: 60%;
+
+  margin: 20px auto;
+  text-align: center;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.expenses-container-group-title {
+  font-size: $font-XL;
+}
+
 .expenses-container-1 {
   background: $white;
   border: $light-grey-border;

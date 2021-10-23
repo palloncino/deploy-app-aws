@@ -16,6 +16,7 @@ export const Logout = () => {
     dispatch(removeAuthentication());
     dispatch(changeRoute('/'));
     dispatch(toggleMenu());
+    setTimeout(() => window.location.reload(), 0);
   };
 
   return (

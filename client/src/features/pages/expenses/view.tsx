@@ -234,50 +234,93 @@ export const ExpensesContent = ({
   // +-------------------------------------------------------------------+
 
   return (
-    <div className="expenses-wrapper">
-      <div className="expenses-container-1">
-        <form onSubmit={(event) => handlePreSubmit(event)}>
-          <div className="expenses-container-1-content">
-            <div className="expenses-container-1-title-container">
-              <div className="expenses-container-1-title-container-title-tag">
-                Monthly TOTAL € {total} 💸
+    <>
+      <div className="expenses-container-group center">
+        <div className="expenses-container-group-title force-shadow">Page description</div>
+        <div>
+
+          With this form you can conviniently keep track of monthly expenses and
+          subsciptions that perhaps you might not want to keep any more!
+        </div>
+      </div>
+      <div className="expenses-wrapper">
+        <div className="expenses-container-1">
+          <form onSubmit={(event) => handlePreSubmit(event)}>
+            <div className="expenses-container-1-content">
+              <div className="expenses-container-1-title-container">
+                <div className="expenses-container-1-title-container-title-tag">
+                  Monthly TOTAL € {total} 💸
+                </div>
               </div>
-            </div>
-            <div className="expenses-container-1-form-container">
-              <div className="expenses-container-1-form-inputs-container">
-                {FORM_INPUTS_SCHEMA.map(
-                  ({ name, label, type, required, placeholder, options = [] }, index) => {
-                    if (type === 'select') {
-                      return (
-                        <div
-                          key={index}
-                          className="expenses-container-1-form-input-container"
-                        >
-                          <label
-                            className="expenses-container-1-form-input-label expenses-container-1-form-input-label-select"
-                            htmlFor={name}
+              <div className="expenses-container-1-form-container">
+                <div className="expenses-container-1-form-inputs-container">
+                  {FORM_INPUTS_SCHEMA.map(
+                    (
+                      {
+                        name,
+                        label,
+                        type,
+                        required,
+                        placeholder,
+                        options = [],
+                      },
+                      index
+                    ) => {
+                      if (type === 'select') {
+                        return (
+                          <div
+                            key={index}
+                            className="expenses-container-1-form-input-container"
                           >
-                            {label}
-                          </label>
-                          <select
-                            name={name}
-                            onChange={(e) =>
-                              handleInputChange(name, e.target.value)
-                            }
-                            className="expenses-container-1-form-input-tag-input expenses-container-1-form-input-tag-input-select"
-                            required={required}
-                            placeholder={placeholder}
-                          >
-                            {options.map((option, index) => (
-                              <option key={index} value={option.value}>
-                                {option.label}
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                      );
-                    } else {
-                      if (name === 'details') {
+                            <label
+                              className="expenses-container-1-form-input-label expenses-container-1-form-input-label-select"
+                              htmlFor={name}
+                            >
+                              {label}
+                            </label>
+                            <select
+                              name={name}
+                              onChange={(e) =>
+                                handleInputChange(name, e.target.value)
+                              }
+                              className="expenses-container-1-form-input-tag-input expenses-container-1-form-input-tag-input-select"
+                              required={required}
+                              placeholder={placeholder}
+                            >
+                              {options.map((option, index) => (
+                                <option key={index} value={option.value}>
+                                  {option.label}
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+                        );
+                      } else {
+                        if (name === 'details') {
+                          return (
+                            <div
+                              key={index}
+                              className="expenses-container-1-form-input-container"
+                            >
+                              <label
+                                className="expenses-container-1-form-input-label"
+                                htmlFor={name}
+                              >
+                                {label}
+                              </label>
+                              <textarea
+                                name={name}
+                                onChange={(e) =>
+                                  handleInputChange(name, e.target.value)
+                                }
+                                className="expenses-container-1-form-input-tag-input"
+                                value={currentInputs['details']}
+                                required={required}
+                                placeholder={placeholder}
+                              />
+                            </div>
+                          );
+                        }
                         return (
                           <div
                             key={index}
@@ -289,82 +332,62 @@ export const ExpensesContent = ({
                             >
                               {label}
                             </label>
-                            <textarea
+                            <input
                               name={name}
                               onChange={(e) =>
                                 handleInputChange(name, e.target.value)
                               }
                               className="expenses-container-1-form-input-tag-input"
-                              value={currentInputs['details']}
+                              type={type}
+                              value={
+                                currentInputs[name === 'name' ? 'label' : name]
+                              }
                               required={required}
                               placeholder={placeholder}
+                              disabled={
+                                name === 'renewalDay' &&
+                                Number(currentInputs.period) === 1
+                              }
                             />
                           </div>
                         );
                       }
-                      return (
-                        <div
-                          key={index}
-                          className="expenses-container-1-form-input-container"
-                        >
-                          <label
-                            className="expenses-container-1-form-input-label"
-                            htmlFor={name}
-                          >
-                            {label}
-                          </label>
-                          <input
-                            name={name}
-                            onChange={(e) =>
-                              handleInputChange(name, e.target.value)
-                            }
-                            className="expenses-container-1-form-input-tag-input"
-                            type={type}
-                            value={
-                              currentInputs[name === 'name' ? 'label' : name]
-                            }
-                            required={required}
-                            placeholder={placeholder}
-                            disabled={
-                              name === 'renewalDay' &&
-                              Number(currentInputs.period) === 1
-                            }
-                          />
-                        </div>
-                      );
                     }
-                  }
-                )}
-              </div>
-              <div className="expenses-container-1-form-buttons-container">
-                <Button
-                  customStyle={{ width: '150px', height: '40px' }}
-                  handleClick={handleClear}
-                  label="🧹 CLEAR"
-                />
-                <Button
-                  customStyle={{ width: '150px', height: '40px' }}
-                  type="submit"
-                  label={isLoading ? <Spinner /> : '⚡️ SAVE'}
-                />
+                  )}
+                </div>
+                <div className="expenses-container-1-form-buttons-container">
+                  <Button
+                    customStyle={{ width: '150px', height: '40px' }}
+                    handleClick={handleClear}
+                    label="🧹 CLEAR"
+                  />
+                  <Button
+                    customStyle={{ width: '150px', height: '40px' }}
+                    type="submit"
+                    label={isLoading ? <Spinner /> : '⚡️ SAVE'}
+                  />
+                </div>
               </div>
             </div>
+          </form>
+        </div>
+        <div className="expenses-container-2">
+          <div className="expenses-container-2-expenses-container">
+            {Object.keys(expensesData).length ? (
+              handleRenderExpenses(expensesData)
+            ) : isLoading ? (
+              renderSpinner()
+            ) : (
+              <div
+                className="spinner-container"
+                style={{ background: 'white' }}
+              >
+                ⬅️ add one item to the list ✨
+              </div>
+            )}
           </div>
-        </form>
-      </div>
-      <div className="expenses-container-2">
-        <div className="expenses-container-2-expenses-container">
-          {Object.keys(expensesData).length ? (
-            handleRenderExpenses(expensesData)
-          ) : isLoading ? (
-            renderSpinner()
-          ) : (
-            <div className="spinner-container" style={{ background: 'white' }}>
-              ⬅️ add one item to the list ✨
-            </div>
-          )}
         </div>
       </div>
-    </div>
+    </>
   );
 };

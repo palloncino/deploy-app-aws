@@ -54,7 +54,7 @@ export function Homepage() {
 
         <div className="homepage-group homepage-group--1">
           <div className="homepage-text-container-title--XXXL">
-            Welcome {name}
+            Welcome {name==='false'?'guest':name}
           </div>
           <div className="homepage-text-container-paragraph">
             {INITIAL_PARAGRAPH}

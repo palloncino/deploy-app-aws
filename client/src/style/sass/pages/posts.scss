@@ -1,7 +1,7 @@
 .post-container {
   background: $white;
   margin: 0 0 20px 0;
-  padding: 20px;
+  padding: 10px;
   border-radius: 3px;
 }
 .posts-form-container {
@@ -16,33 +16,36 @@
 .post-container-data-cell {
 
   &-container {
+    flex: 1;
     &-info {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      padding: 10px 10px;
+      // padding: 10px 10px;
     }
   }
   &-label {
   }
   &-value {
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
 
     &--title {
       font-family: 'force-shadow';
       font-size: $font-XL;
     }
 
-    &--description {
+    &--date {
       font-size: $font-M;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &--description {
+      font-size: $font-S;
     }
 
     &--see-more {
-
-    }
-
-    &--image {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
@@ -55,15 +58,20 @@
   padding: 10px 10px;
   border: $light-grey-border;
   border-radius: 3px;
-  display: none;
   margin-bottom: 20px;
-}
-.posts-output-container {
-  
+  // display: none;
+  transition: .5s;
+  visibility: hidden;
+  opacity: 0;
+  height: 0px;
 }
 
 .posts-output-wrapper.is-open {
-  display: block;
+  margin-top: 20px;
+  // display: block;
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
 }
 
 
@@ -99,4 +107,21 @@
   &--textarea {
     height: 200px;
   }
+}
+.posts-page-description-container {
+  font-size: $font-L;
+  line-height: 2rem;
+  width: 60%;
+
+  margin: 20px auto;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts-page-description-title {
+  font-size: $font-XL;
 }

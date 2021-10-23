@@ -309,6 +309,26 @@
   display: flex;
 }
 
+.expenses-container-group {
+  margin: 20px 0;
+}
+
+.expenses-container-group.center {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  width: 60%;
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.expenses-container-group-title {
+  font-size: 1.4rem;
+}
+
 .expenses-container-1 {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -499,7 +519,7 @@
 .post-container {
   background: #fff;
   margin: 0 0 20px 0;
-  padding: 20px;
+  padding: 10px;
   border-radius: 3px;
 }
 
@@ -514,23 +534,30 @@
   height: 200px;
 }
 
+.post-container-data-cell-container {
+  flex: 1;
+}
 .post-container-data-cell-container-info {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 10px 10px;
-}
-.post-container-data-cell-value {
-  margin-bottom: 10px;
 }
 .post-container-data-cell-value--title {
   font-family: "force-shadow";
   font-size: 1.4rem;
 }
-.post-container-data-cell-value--description {
+.post-container-data-cell-value--date {
   font-size: 1rem;
+  display: flex;
+  justify-content: flex-end;
 }
+.post-container-data-cell-value--description {
+  font-size: 0.8rem;
+}
+.post-container-data-cell-value--see-more {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .post-container-buttons-group {
   display: flex;
 }
@@ -539,12 +566,18 @@
   padding: 10px 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  display: none;
   margin-bottom: 20px;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  height: 0px;
 }
 
 .posts-output-wrapper.is-open {
-  display: block;
+  margin-top: 20px;
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
 }
 
 .posts-form-input-container {
@@ -581,6 +614,22 @@
 }
 .posts-form-input-container-input--textarea {
   height: 200px;
+}
+
+.posts-page-description-container {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  width: 60%;
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts-page-description-title {
+  font-size: 1.4rem;
 }
 
 .homepage-wrapper {
