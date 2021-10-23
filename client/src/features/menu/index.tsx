@@ -46,10 +46,10 @@ export function Menu() {
     if (isAdmin()) {
       menuItems = [
         { label: '🏠 Homepage', path: '/', disabled: false },
-        { label: '🗂 Portfolio', path: '/portfolio', disabled: false },
-        { label: '🎨 Artworks', path: '/artwork', disabled: false },
+        // { label: '🗂 Portfolio', path: '/portfolio', disabled: false },
+        // { label: '🎨 Artworks', path: '/artwork', disabled: false },
         { label: '🏞 Posts', path: '/posts', disabled: false },
-        { label: '📍 Map', path: '/map', disabled: false },
+        // { label: '📍 Map', path: '/map', disabled: false },
         { label: '💸 Expenses', path: '/expenses', disabled: false },
         { label: '🙋🏻‍♂️ Account', path: '/account', disabled: false },
       ];
@@ -57,20 +57,20 @@ export function Menu() {
       if (isAuthenticated) {
         menuItems = [
           { label: '🏠 Homepage', path: '/', disabled: false },
-          { label: '🗂 Portfolio', path: '/portfolio', disabled: false },
-          { label: '🎨 Artworks', path: '/artwork', disabled: false },
+          // { label: '🗂 Portfolio', path: '/portfolio', disabled: false },
+          // { label: '🎨 Artworks', path: '/artwork', disabled: false },
           { label: '🏞 Posts', path: '/posts', disabled: false },
-          { label: '📍 Map', path: '/map', disabled: false },
+          // { label: '📍 Map', path: '/map', disabled: false },
           { label: '💸 Expenses', path: '/expenses', disabled: false },
           { label: '🙋🏻‍♂️ Account', path: '/account', disabled: false },
         ];
       } else {
         menuItems = [
           { label: '🏠 Homepage', path: '/', disabled: false },
-          { label: '🗂 Portfolio', path: '/portfolio', disabled: false },
-          { label: '🎨 Artworks', path: '/artwork', disabled: false },
+          // { label: '🗂 Portfolio', path: '/portfolio', disabled: false },
+          // { label: '🎨 Artworks', path: '/artwork', disabled: false },
           { label: '🏞 Posts', path: '/posts', disabled: false },
-          { label: '📍 Map', path: '/map', disabled: true },
+          // { label: '📍 Map', path: '/map', disabled: true },
           { label: '💸 Expenses', path: '/expenses', disabled: true },
           { label: '🙋🏻‍♂️ Account', path: '/account', disabled: true },
         ];

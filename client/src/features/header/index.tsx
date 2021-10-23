@@ -58,7 +58,8 @@ export function Header() {
                 <Breadcrumb />
               </div>
 
-              <div className="header-logo-space-1">
+              {/* <div className="header-logo-space-1">
+
                 <div className="header-logo-space-1-2-logo">
                   <div className="header-logo-space-1-2-logo-inner">
                     {isAuthenticated && '✍🏻'}
@@ -91,7 +92,8 @@ export function Header() {
                     </div>
                   )}
                 </div>
-              </div>
+                
+              </div> */}
 
               <div className="header-user-space-1">
                 <div className="header-user-space-2-profile-container">

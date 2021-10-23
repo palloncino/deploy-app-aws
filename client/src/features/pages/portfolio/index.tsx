@@ -35,7 +35,7 @@ export function Portfolio() {
 
       case 'pdf':
         window.open(
-          `https://antonioguiotto-pdf-storage.s3.amazonaws.com/pdf/portfolio.pdf`,
+          `${process.env.REACT_APP_PORTFOLIO_S3_PATH}`,
           '_blank'
         ); // TODO: env variable
         break;
