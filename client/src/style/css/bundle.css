@@ -577,17 +577,12 @@
 .posts-output-wrapper {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  transition: 0.5s;
-  visibility: hidden;
-  opacity: 0;
-  height: 0px;
+  display: none;
 }
 
 .posts-output-wrapper.is-open {
+  display: block;
   margin-top: 10px;
-  visibility: visible;
-  opacity: 1;
-  height: 100%;
 }
 
 .posts-output-container {
@@ -773,7 +768,7 @@
 }
 
 body {
-  background: #f0f0f0;
+  background-image: url(../../images/svg/bg.svg);
   background-attachment: fixed;
   background-position: fixed;
   background-size: cover;

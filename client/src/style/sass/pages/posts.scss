@@ -72,18 +72,19 @@
 .posts-output-wrapper {
   border: $light-grey-border;
   border-radius: 3px;
-  // display: none;
-  transition: .5s;
-  visibility: hidden;
-  opacity: 0;
-  height: 0px;
+  display: none;
+  // transition: .5s;
+  // visibility: hidden;
+  // opacity: 0;
+  // height: 0px;
 }
 
 .posts-output-wrapper.is-open {
+  display: block;
   margin-top: 10px;
-  visibility: visible;
-  opacity: 1;
-  height: 100%;
+  // visibility: visible;
+  // opacity: 1;
+  // height: 100%;
 }
 
 .posts-output-container {
