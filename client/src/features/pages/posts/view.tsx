@@ -47,78 +47,114 @@ export const PostsContent = ({
   };
 
   const renderPostsData = () => {
-    return postsData.map((post: any, index: number) => {
-      return (
-        <div
-          id={post.id}
-          key={index}
-          className={`post-container selector-${post.id}`}
-        >
-          <div className="post-container-data-cell-container-info">
-            <div className="post-container-data-cell-container">
-              <div className="post-container-data-cell-value post-container-data-cell-value--title">
-                {post.title}
-              </div>
-            </div>
-            <div className="post-container-data-cell-container">
-              <div className="post-container-data-cell-value post-container-data-cell-value--description">
-                {post.description}
-              </div>
-            </div>
-
-            <div className="post-container-data-cell-container">
-              <div className="post-container-data-cell-value post-container-data-cell-value--date">
-                {post.date}
-              </div>
-            </div>
-
-            <div className="post-container-data-cell-container">
-              <div className="post-container-data-cell-value post-container-data-cell-value--see-more">
-                <Button
-                  customStyle={{
-                    width: '150px',
-                    border: 'none',
-                    background: 'transparent',
-                  }}
-                  handleClick={() => handleTogglePost(post.id)}
-                  label={'👁 Toggle Post'}
-                />
-              </div>
+    return (
+      <div>
+        {/* <div className="post-container-data-cell-container-info-header">
+          <div className="post-container-data-cell-container post-container-data-cell-container--title">
+            <div className="post-container-data-cell-value post-container-data-cell-value--title">
+              Title
             </div>
           </div>
-          <div className="posts-output-wrapper">
+          <div className="post-container-data-cell-container post-container-data-cell-container--description">
+            <div className="post-container-data-cell-value post-container-data-cell-value--description">
+              Description
+            </div>
+          </div>
+
+          <div className="post-container-data-cell-container post-container-data-cell-container--date">
+            <div className="post-container-data-cell-value post-container-data-cell-value--date">
+              Date
+            </div>
+          </div>
+
+          <div className="post-container-data-cell-container post-container-data-cell-container--see-more">
+            <div className="post-container-data-cell-value post-container-data-cell-value--see-more">
+              <Button
+                customStyle={{
+                  width: '150px',
+                  border: 'none',
+                  background: 'transparent',
+                }}
+                handleClick={() => {}}
+                label={'Filter'}
+              />
+            </div>
+          </div>
+        </div> */}
+        {postsData.map((post: any, index: number) => {
+          return (
             <div
-              className="posts-output-container"
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            ></div>
-          </div>
+              id={post.id}
+              key={index}
+              className={`post-container selector-${post.id}`}
+            >
+              <div className="post-container-data-cell-container-info">
+                <div className="post-container-data-cell-container post-container-data-cell-container--title">
+                  <div className="post-container-data-cell-value post-container-data-cell-value--title">
+                    {post.title}
+                  </div>
+                </div>
+                <div className="post-container-data-cell-container post-container-data-cell-container--description">
+                  <div className="post-container-data-cell-value post-container-data-cell-value--description">
+                    {post.description}
+                  </div>
+                </div>
 
-          {isAdmin() && (
-            <div className="post-container-buttons-group">
-              <Button
-                customStyle={{
-                  width: '150px',
-                  border: 'none',
-                  background: 'transparent',
-                }}
-                handleClick={() => {}}
-                label="❌ DELETE POST"
-              />
-              <Button
-                customStyle={{
-                  width: '150px',
-                  border: 'none',
-                  background: 'transparent',
-                }}
-                disabled
-                handleClick={() => {}}
-                label="✏️ EDIT POST"
-              />
+                <div className="post-container-data-cell-container post-container-data-cell-container--date">
+                  <div className="post-container-data-cell-value post-container-data-cell-value--date">
+                    {post.date}
+                  </div>
+                </div>
+
+                <div className="post-container-data-cell-container post-container-data-cell-container--see-more">
+                  <div className="post-container-data-cell-value post-container-data-cell-value--see-more">
+                    <Button
+                      customStyle={{
+                        width: '150px',
+                        border: 'none',
+                        background: 'transparent',
+                      }}
+                      handleClick={() => handleTogglePost(post.id)}
+                      label={'👁 Toggle Post'}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="posts-output-wrapper">
+                <div
+                  className="posts-output-container"
+                  dangerouslySetInnerHTML={{ __html: post.html }}
+                ></div>
+              </div>
+
+              {isAdmin() && (
+                <div className="post-container-buttons-group">
+                  <Button
+                    customStyle={{
+                      width: '150px',
+                      border: 'none',
+                      background: 'transparent',
+                    }}
+                    handleClick={() => {}}
+                    label="❌ DELETE POST"
+                  />
+                  <Button
+                    customStyle={{
+                      width: '150px',
+                      border: 'none',
+                      background: 'transparent',
+                    }}
+                    disabled
+                    handleClick={() => {}}
+                    label="✏️ EDIT POST"
+                  />
+                </div>
+              )}
             </div>
-          )}
-        </div>
-      );
-    });
+          );
+        })}
+      </div>
+    );
   };
 
   const renderSpinner = () => {
@@ -132,11 +168,14 @@ export const PostsContent = ({
   return (
     <>
       <div className="posts-page-description-container">
-      <div className="posts-page-description-title force-shadow">Page description</div>
+        <div className="posts-page-description-title force-shadow">
+          Page description
+        </div>
         <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
-        praesentium veniam, voluptate sed, ipsa amet eos esse accusamus
-        voluptates nisi ut quo eius ad a harum consectetur eum blanditiis porro.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+          praesentium veniam, voluptate sed, ipsa amet eos esse accusamus
+          voluptates nisi ut quo eius ad a harum consectetur eum blanditiis
+          porro.
         </div>
       </div>
       <div className="posts-wrapper">

@@ -1,6 +1,6 @@
 .post-container {
   background: $white;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
   padding: 10px;
   border-radius: 3px;
 }
@@ -22,6 +22,21 @@
       align-items: center;
       // padding: 10px 10px;
     }
+    &--title {
+      flex: 1;
+    }
+
+    &--description {
+      flex: 3;
+    }
+    
+    &--date {
+      flex: 1;
+    }
+
+    &--see-more {
+      flex: 1;
+    }
   }
   &-label {
   }
@@ -33,14 +48,14 @@
       font-size: $font-XL;
     }
 
+    &--description {
+      font-size: $font-S;
+    }
+    
     &--date {
       font-size: $font-M;
       display: flex;
       justify-content: flex-end;
-    }
-
-    &--description {
-      font-size: $font-S;
     }
 
     &--see-more {
@@ -125,4 +140,9 @@
 
 .posts-page-description-title {
   font-size: $font-XL;
+}
+
+.post-container-data-cell-container-info-header {
+  display: flex;
+  align-items: center;
 }
