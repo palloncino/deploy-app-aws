@@ -54,7 +54,7 @@ export function Homepage() {
 
         <div className="homepage-group homepage-group--1">
           <div className="homepage-text-container-title--XXXL">
-            Welcome {name==='false'?'guest':name}
+            Welcome {name === 'false' ? 'guest' : name}
           </div>
           <div className="homepage-text-container-paragraph">
             {INITIAL_PARAGRAPH}
@@ -72,9 +72,12 @@ export function Homepage() {
 
         <div className="homepage-group homepage-group--3">
           <div className="homepage-text-container-title--XXL force-shadow">
-            Antonio Guiotto
+            Personal Information
           </div>
-          <img src="https://antonioguiotto-images.s3.amazonaws.com/me2.png" alt="Antonio Guiotto" />
+          <img
+            src="https://antonioguiotto-images.s3.amazonaws.com/me2.png"
+            alt="Antonio Guiotto"
+          />
           <p>Full Stack Javascript Developer</p>
           <Button
             customStyle={{ width: '300px', marginRight: '20px' }}
@@ -87,11 +90,7 @@ export function Homepage() {
   };
 
   const renderOutsider = () => {
-    return (
-      <div className="homepage-container">
-        
-      </div>
-    );
+    return <div className="homepage-container"></div>;
   };
 
   return (

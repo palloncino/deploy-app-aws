@@ -563,10 +563,8 @@
 }
 
 .posts-output-wrapper {
-  padding: 10px 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  margin-bottom: 20px;
   transition: 0.5s;
   visibility: hidden;
   opacity: 0;
@@ -574,10 +572,14 @@
 }
 
 .posts-output-wrapper.is-open {
-  margin-top: 20px;
+  margin-top: 10px;
   visibility: visible;
   opacity: 1;
   height: 100%;
+}
+
+.posts-output-container {
+  padding: 10px;
 }
 
 .posts-form-input-container {
