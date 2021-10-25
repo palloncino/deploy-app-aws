@@ -253,7 +253,6 @@
   top: -2000;
   left: -2000;
   transition: 0.5s;
-  background: rgba(0, 0, 0, 0.2);
   width: 500%;
   height: 500vh;
   cursor: pointer;
@@ -671,6 +670,9 @@
   justify-content: center;
   align-items: center;
 }
+.homepage-group--3--img {
+  width: 200px;
+}
 
 .homepage-text-container-title--XXXL {
   border-radius: 5px;
@@ -768,7 +770,7 @@
 }
 
 body {
-  background-image: url(../../images/svg/bg.svg);
+  background: #e0d4c3;
   background-attachment: fixed;
   background-position: fixed;
   background-size: cover;
@@ -842,7 +844,6 @@ body {
   width: 500%;
   height: 500vh;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.2);
 }
 .custom-modal-form {
   display: flex;

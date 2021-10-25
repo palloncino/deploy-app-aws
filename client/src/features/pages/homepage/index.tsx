@@ -45,6 +45,7 @@ export function Homepage() {
   const renderInsider = () => {
     return (
       <div className="homepage-container">
+
         <h3
           style={{ textAlign: 'center', margin: '-30px 0 30px 0' }}
           className="homepage-group homepage-group-banner-h3"
@@ -53,11 +54,18 @@ export function Homepage() {
         </h3>
 
         <div className="homepage-group homepage-group--1">
-          <div className="homepage-text-container-title--XXXL">
-            Welcome {name === 'false' ? 'guest' : name}
+          <div className="homepage-group--1--left">
+            <div className="homepage-text-container-title--XXXL">
+              Welcome {name === 'false' ? 'guest' : name}
+            </div>
+            <div className="homepage-text-container-paragraph">
+              {INITIAL_PARAGRAPH}
+            </div>
           </div>
-          <div className="homepage-text-container-paragraph">
-            {INITIAL_PARAGRAPH}
+          <div className="homepage-group--1--right">
+            <div className="homepage-text-container-title--XXL">
+              Welcome {name === 'false' ? 'guest' : name}
+            </div>
           </div>
         </div>
 
@@ -75,8 +83,9 @@ export function Homepage() {
             Personal Information
           </div>
           <img
-            src="https://antonioguiotto-images.s3.amazonaws.com/me2.png"
+            src="https://antonioguiotto-images.s3.amazonaws.com/me3.png"
             alt="Antonio Guiotto"
+            className="homepage-group--3--img"
           />
           <p>Full Stack Javascript Developer</p>
           <Button

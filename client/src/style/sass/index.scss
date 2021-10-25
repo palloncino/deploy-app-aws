@@ -43,8 +43,8 @@
 
 body {
   // background: $dark-white;
-  // background: #D6D6D6;
-  background-image: url(../../images/svg/bg.svg);
+  background: #e0d4c3;
+  // background-image: url(../../images/svg/bg.svg);
   background-attachment: fixed;
   background-position: fixed;
   background-size: cover;
@@ -125,7 +125,7 @@ body {
     width: 500%;
     height: 500vh;
     cursor: pointer;
-    background: $light-grey-seethrough;
+    // background: $light-grey-seethrough;
   }
 
   &-form {
