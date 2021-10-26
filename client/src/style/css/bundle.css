@@ -282,7 +282,7 @@
 }
 .artwork-summary-container-text-title {
   font-size: 1.4rem;
-  font-family: "Force-Shadow";
+  font-family: "Custom-Font-Titles";
   margin-bottom: 10px;
 }
 .artwork-summary-container-text-description {
@@ -346,7 +346,7 @@
 }
 .expenses-container-1-title-container-title-tag {
   font-size: 2rem;
-  font-family: "Force-Shadow";
+  font-family: "Custom-Font-Titles";
 }
 .expenses-container-1-form-input-container {
   position: relative;
@@ -389,7 +389,7 @@
 }
 .expenses-container-2-expenses-container-title {
   font-size: 2rem;
-  font-family: "Force-Shadow";
+  font-family: "Custom-Font-Titles";
   margin: 10px 0 10px 0;
   padding: 0 10px;
 }
@@ -469,7 +469,7 @@
 }
 .account-information-container-1-title-tag {
   font-size: 2rem;
-  font-family: "force-shadow";
+  font-family: "Custom-Font-Titles";
 }
 .account-information-container-1-informations {
   margin: 10px 0;
@@ -553,7 +553,7 @@
   flex: 1;
 }
 .post-container-data-cell-value--title {
-  font-family: "force-shadow";
+  font-family: "Custom-Font-Titles";
   font-size: 1.4rem;
 }
 .post-container-data-cell-value--description {
@@ -677,7 +677,7 @@
 .homepage-text-container-title--XXXL {
   border-radius: 5px;
   padding: 10px;
-  font-family: "Force-Shadow";
+  font-family: "Custom-Font-Titles";
   font-size: 3rem;
   display: flex;
   justify-content: center;
@@ -749,14 +749,8 @@
 }
 
 @font-face {
-  font-family: "Force-Shadow";
-  src: url("../../fonts/ForceShadow/font.woff") format("truetype"), url("../../fonts/ForceShadow/font.woff") format("woff");
-  /* Modern 
-  Browsers */
-}
-@font-face {
-  font-family: "Staatliches";
-  src: url("../../fonts/Staatliches/Staatliches-Regular.ttf") format("truetype"), url("../../fonts/Staatliches/Staatliches-Regular.ttf") format("ttf");
+  font-family: "Custom-Font-Titles";
+  src: url("../../fonts/Custom-Font-Title/Melted Monster.ttf") format("truetype"), url("../../fonts/Custom-Font-Title/Melted Monster.ttf") format("ttf");
   /* Modern 
   Browsers */
 }
@@ -772,7 +766,7 @@
 }
 
 .force-shadow {
-  font-family: "Force-Shadow";
+  font-family: "Custom-Font-Titles";
 }
 
 body {

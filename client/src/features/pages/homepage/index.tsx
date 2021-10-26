@@ -2,7 +2,6 @@ import { useSelector } from 'react-redux';
 import { selectAuth } from '../../../auth/authSlice';
 import { Carousel } from '../../carousel';
 import { Singleton as Authentication } from '../../../auth';
-import { useDispatch } from 'react-redux';
 import { Button } from '../../button';
 import { Spinner } from '../../spinner';
 
