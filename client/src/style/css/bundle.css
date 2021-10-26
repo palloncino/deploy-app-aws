@@ -1,5 +1,5 @@
 .header-container {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.75);
   border: 2px solid rgba(0, 0, 0, 0.2);
   color: rgba(255, 255, 255, 0.9);
   position: fixed;
@@ -89,7 +89,7 @@
 }
 
 .footer-container {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.75);
   border: 2px solid rgba(0, 0, 0, 0.2);
   color: rgba(255, 255, 255, 0.9);
   position: fixed;
@@ -134,7 +134,7 @@
 }
 
 .carousel-item-cell--box {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.75);
   color: rgba(255, 255, 255, 0.9);
   border: 2px solid rgba(0, 0, 0, 0.2);
   display: flex;
@@ -215,7 +215,6 @@
 
 .btn-grad:hover {
   transform: scale(0.95);
-  border: none;
 }
 
 .btn-grad--disabled {
@@ -228,7 +227,6 @@
   background-position: top center;
   /* change the direction of the change here */
   text-decoration: none;
-  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .menu-item-clickable {
@@ -253,6 +251,8 @@
 }
 
 .menu-items-container {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 40px black;
   z-index: 105;
   position: absolute;
   top: 85px;
@@ -341,7 +341,7 @@
 }
 
 .expenses-container-1 {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.75);
   color: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(0, 0, 0, 0.2);
   width: 50%;
@@ -370,7 +370,7 @@
   margin-bottom: 40px;
 }
 .expenses-container-1-form-input-label {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.75);
   color: rgba(255, 255, 255, 0.9);
   padding: 0 5px;
   border-radius: 5px;
@@ -382,7 +382,7 @@
   top: -12px;
 }
 .expenses-container-1-form-input-tag-input {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.75);
   color: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.85);
   flex: 1;
@@ -414,7 +414,7 @@
   padding: 0 10px;
 }
 .expenses-container-2-expense-container {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.75);
   color: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.85);
   position: relative;
@@ -426,7 +426,7 @@
   margin: 0;
 }
 .expenses-container-2-expense-output {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.75);
   padding: 5px 20px;
   margin-bottom: 5px;
   z-index: 2;
@@ -447,12 +447,12 @@
   padding-top: 0;
 }
 .expenses-container-2-expense-output--period {
+  color: #454749;
   width: 80px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   z-index: 1;
-  color: rgba(255, 255, 255, 0.9);
   position: absolute;
   top: 0;
   right: 5px;
@@ -533,7 +533,7 @@
 }
 
 .post-container {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.75);
   color: rgba(255, 255, 255, 0.9);
   margin: 0 0 10px 0;
   padding: 10px;
@@ -788,6 +788,7 @@
 
 body {
   background: #0c0b0bb2;
+  background-image: url(../../images/patterns/bg-pattern.svg);
   background-attachment: fixed;
   background-position: fixed;
   background-size: cover;
@@ -837,6 +838,8 @@ body {
 }
 
 .custom-modal-container {
+  background: rgba(0, 0, 0, 0.75);
+  color: rgba(255, 255, 255, 0.9);
   height: 200px;
   width: 33.33%;
   max-width: 500px;
@@ -844,9 +847,7 @@ body {
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.9);
   padding: 20px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   z-index: 105;
@@ -889,10 +890,12 @@ body {
   justify-content: center;
 }
 .custom-modal-form-box-input-input {
+  background: rgba(0, 0, 0, 0.75);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   height: 100%;
   padding: 0 20px;
   width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .custom-modal-form-error-box {
   margin-top: 20px;

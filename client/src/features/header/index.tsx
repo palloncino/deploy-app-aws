@@ -53,9 +53,14 @@ export function Header() {
                   src={logo}
                   alt="logo"
                 /> */}
-                <div style={{ fontSize: '2rem' }} className="logo-font custom-font-title">
-
-                antonioguiotto.com
+                <div
+                  style={{ fontSize: '2rem' }}
+                  onClick={() => {
+                    dispatch(changeRoute('/'));
+                  }}
+                  className="logo-font custom-font-title"
+                >
+                  antonioguiotto.com
                 </div>
               </div>
 

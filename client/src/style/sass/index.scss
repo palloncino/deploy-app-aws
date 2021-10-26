@@ -44,7 +44,7 @@
 body {
   // background: $dark-white;
   background: #0c0b0bb2;
-  // background-image: url(../../images/svg/bg.svg);
+  background-image: url(../../images/patterns/bg-pattern.svg);
   background-attachment: fixed;
   background-position: fixed;
   background-size: cover;
@@ -99,6 +99,10 @@ body {
 // login
 
 .custom-modal-container {
+  background: $seethrough-black;
+  color: $white;
+  // border: $light-thick-grey-border;
+  
   height: 200px;
   width: 33.33%;
   max-width: 500px;
@@ -106,9 +110,7 @@ body {
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  background: $white;
   padding: 20px;
-  border: $light-thick-grey-border;
   display: flex;
   flex-direction: column;
   z-index: 105;
@@ -156,10 +158,13 @@ body {
         justify-content: center;
 
         &-input {
-          height: 100%;
+          background: $seethrough-black;
+          color: $white;
+          border: 1px solid $seethrough-white;
+          
+            height: 100%;
           padding: 0 20px;
           width: 100%;
-          border: $light-grey-border;
         }
       }
     }

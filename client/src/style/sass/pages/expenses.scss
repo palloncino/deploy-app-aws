@@ -132,7 +132,7 @@
   }
 
   &-expense-output {
-    background: $white;
+    background: $seethrough-black;
     // border: $light-grey-border;
     padding: 5px 20px;
     margin-bottom: 5px;
@@ -156,12 +156,13 @@
     }
 
     &--period {
+      color: $black;
+      
       width: 80px;
       display: flex;
       justify-content: space-around;
       align-items: center;
       z-index: 1;
-      color: $white;
       position: absolute;
       top: 0;
       right: 5px;
