@@ -64,7 +64,7 @@ export function Homepage() {
         </div>
 
         <div className="homepage-group homepage-group--2">
-          <div className="homepage-text-container-title--XXL force-shadow">
+          <div className="homepage-text-container-title--XXL custom-font-title">
             Latest posts
           </div>
           <div className="homepage-carousel-container">
@@ -73,7 +73,7 @@ export function Homepage() {
         </div>
 
         <div className="homepage-group homepage-group--3">
-          <div className="homepage-text-container-title--XXL force-shadow">
+          <div className="homepage-text-container-title--XXL custom-font-title">
             Personal Information
           </div>
           <img
@@ -83,7 +83,7 @@ export function Homepage() {
           />
           <p>Full Stack Javascript Developer</p>
           <Button
-            customStyle={{ width: '300px', marginRight: '20px' }}
+            customStyle={{ width: '250px', marginRight: '20px' }}
             handleClick={() => handleDownloadFile('pdf')}
             label="⤵️ DOWNLOAD PDF 📄"
           />

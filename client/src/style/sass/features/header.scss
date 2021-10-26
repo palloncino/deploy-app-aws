@@ -1,6 +1,10 @@
 $header-height: 80px;
 
 .header-container {
+  background: $seethrough-black;
+  border: $light-thick-grey-border;
+  color: $white;
+
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -11,9 +15,7 @@ $header-height: 80px;
   align-items: center;
   height: $header-height;
   padding: 0 20px;
-  background: $seethrough-white;
   margin-bottom: 20px;
-  border: $light-thick-grey-border;
   border-top: none;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -80,4 +82,13 @@ $header-height: 80px;
       display: flex;
     }
   }
+}
+
+.logo-font {
+  transition: .3s;
+  
+}
+
+.logo-font:hover {
+  transform: scale(.95);  
 }

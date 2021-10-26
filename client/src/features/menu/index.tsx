@@ -81,7 +81,10 @@ export function Menu() {
         {menuItems.map(({ path, label, disabled }, index) => {
           const menuButtonStyle = {
             textAlign: 'left',
-            padding: '0 10px'
+            padding: '0 10px',
+            background: 'black',
+            color: 'orange',
+            marginBottom: '5px'
           }
           return (
             <Button

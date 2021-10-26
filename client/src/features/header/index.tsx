@@ -9,7 +9,8 @@ import { Singleton as Authorization } from '../../auth';
 import { Spinner } from '../spinner';
 import { useState } from 'react';
 import { changeRoute } from '../routes';
-import logo from '../../images/svg/logo-1-double.svg';
+// import logo from '../../images/svg/logo-1-double.svg';
+import logo from '../../images/svg/logo-1-double-white-01.svg';
 
 export function Header() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -44,14 +45,18 @@ export function Header() {
           ) : (
             <>
               <div className="header-user-space-1 header-user-space-1--logo">
-                <img
+                {/* <img
                   onClick={() => {
                     dispatch(changeRoute('/'));
                   }}
                   height="50"
                   src={logo}
                   alt="logo"
-                />
+                /> */}
+                <div style={{ fontSize: '2rem' }} className="logo-font custom-font-title">
+
+                antonioguiotto.com
+                </div>
               </div>
 
               <div className="header-user-space-1">

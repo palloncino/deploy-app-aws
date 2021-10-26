@@ -24,8 +24,10 @@
 }
 
 .expenses-container-1 {
-  background: $white;
+  background: $seethrough-black;
+  color: $white;
   border: $light-grey-border;
+
   width: 50%;
   margin-right: 20px;
 
@@ -59,7 +61,9 @@
   }
 
   &-form-input-label {
-    background: $white;
+    background: $seethrough-black;
+    color: $white;
+
     padding: 0 5px;
     border-radius: 5px;
     position: absolute;
@@ -71,10 +75,13 @@
   }
 
   &-form-input-tag-input {
+    background: $seethrough-black;
+    color: $white;
+    border: 1px solid $seethrough-white;
+
     flex: 1;
     height: 100%;
     padding: 5px 15px;
-    border: $light-grey-border;
     border-radius: 5px;
 
     &-select {
@@ -110,9 +117,11 @@
   }
 
   &-expense-container {
+    background: $seethrough-black;
+    color: $white;
+    border: 1px solid $seethrough-white;
+    
     position: relative;
-    background: $white;
-    border: $light-grey-border;
     padding: 5px;
     border-radius: 5px;
     margin: 0 0 10px 0;

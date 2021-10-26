@@ -1,14 +1,17 @@
 // button
 .btn-grad {
-  background: $white;
+  background: $orange;
+  color: $black;
+
+  border-radius: 3px;
   height: 40px;
+  font-weight: 700;
   font-size: $font-M;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
   transition: 0.25s;
   background-size: 200% auto;
-  color: $black;
   // border: $light-grey-border;
   border: none;
   display: block;

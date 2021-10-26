@@ -2,14 +2,16 @@ $footer-height: 60px;
 
 // footer
 .footer-container {
-  background: $seethrough-white;
+  background: $seethrough-black;
+  border: $light-thick-grey-border;
+  color: $white;
+
   position: fixed;
   bottom: 0;
   z-index: 95;
   width: $page-width;
   font-size: $font-M;
 
-  border: $light-thick-grey-border;
   border-bottom: none;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;

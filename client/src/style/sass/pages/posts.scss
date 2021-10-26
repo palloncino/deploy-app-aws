@@ -1,12 +1,14 @@
 .post-container {
-  background: $white;
+  background: $seethrough-black;
+  color: $white;
+
   margin: 0 0 10px 0;
   padding: 10px;
   border-radius: 3px;
 }
 .posts-form-container {
+  // border: $light-thick-grey-border;
   padding: 10px;
-  border: $light-thick-grey-border;
   width: 50%;
   margin: 20px 0;
 }

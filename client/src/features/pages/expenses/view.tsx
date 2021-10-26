@@ -236,7 +236,7 @@ export const ExpensesContent = ({
   return (
     <>
       <div className="expenses-container-group center">
-        <div className="expenses-container-group-title force-shadow">Page description</div>
+        <div className="expenses-container-group-title custom-font-title">Page description</div>
         <div>
 
           With this form you can conviniently keep track of monthly expenses and
@@ -380,7 +380,6 @@ export const ExpensesContent = ({
             ) : (
               <div
                 className="spinner-container"
-                style={{ background: 'white' }}
               >
                 ⬅️ add one item to the list ✨
               </div>

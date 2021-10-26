@@ -111,8 +111,6 @@ export const PostsContent = ({
                     <Button
                       customStyle={{
                         width: '150px',
-                        border: 'none',
-                        background: 'transparent',
                       }}
                       handleClick={() => handleTogglePost(post.id)}
                       label={'👁 Toggle Post'}
@@ -132,8 +130,6 @@ export const PostsContent = ({
                   <Button
                     customStyle={{
                       width: '150px',
-                      border: 'none',
-                      background: 'transparent',
                     }}
                     handleClick={() => {}}
                     label="❌ DELETE POST"
@@ -141,8 +137,6 @@ export const PostsContent = ({
                   <Button
                     customStyle={{
                       width: '150px',
-                      border: 'none',
-                      background: 'transparent',
                     }}
                     disabled
                     handleClick={() => {}}
@@ -168,7 +162,7 @@ export const PostsContent = ({
   return (
     <>
       <div className="posts-page-description-container">
-        <div className="posts-page-description-title force-shadow">
+        <div className="posts-page-description-title custom-font-title">
           Page description
         </div>
         <div>
