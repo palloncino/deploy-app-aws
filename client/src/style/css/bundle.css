@@ -344,6 +344,7 @@
   background: rgba(0, 0, 0, 0.75);
   color: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
   width: 50%;
   margin-right: 20px;
 }
@@ -352,7 +353,7 @@
   width: 90%;
 }
 .expenses-container-1-title-container {
-  height: 140px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -382,19 +383,23 @@
   top: -12px;
 }
 .expenses-container-1-form-input-tag-input {
-  background: rgba(0, 0, 0, 0.75);
+  background: #454749;
   color: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   flex: 1;
   height: 100%;
   padding: 5px 15px;
   border-radius: 5px;
 }
+.expenses-container-1-form-input-tag-input-select {
+  appearance: none;
+  min-height: 52px;
+}
 .expenses-container-1-form-buttons-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .expenses-container-1-form-errors-container {
   color: #c37070;
@@ -416,7 +421,6 @@
 .expenses-container-2-expense-container {
   background: rgba(0, 0, 0, 0.75);
   color: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.85);
   position: relative;
   padding: 5px;
   border-radius: 5px;
@@ -788,7 +792,6 @@
 
 body {
   background: #0c0b0bb2;
-  background-image: url(../../images/patterns/bg-pattern.svg);
   background-attachment: fixed;
   background-position: fixed;
   background-size: cover;

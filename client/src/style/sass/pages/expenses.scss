@@ -28,6 +28,7 @@
   color: $white;
   border: $light-grey-border;
 
+  border-radius: 5px;
   width: 50%;
   margin-right: 20px;
 
@@ -37,7 +38,7 @@
   }
 
   &-title-container {
-    height: 140px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,9 +76,9 @@
   }
 
   &-form-input-tag-input {
-    background: $seethrough-black;
+    background: $black;
     color: $white;
-    border: 1px solid $seethrough-white;
+    border: 1px solid rgba(255,255,255,0.2);
 
     flex: 1;
     height: 100%;
@@ -85,7 +86,11 @@
     border-radius: 5px;
 
     &-select {
+      appearance: none;
+      min-height: 52px;
       // code ...
+    }
+    &--textarea {
     }
   }
 
@@ -93,7 +98,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   &-form-errors-container {
     color: $pale-red;
@@ -119,7 +124,7 @@
   &-expense-container {
     background: $seethrough-black;
     color: $white;
-    border: 1px solid $seethrough-white;
+    // border: 1px solid $seethrough-white;
     
     position: relative;
     padding: 5px;

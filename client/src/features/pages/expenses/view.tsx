@@ -206,6 +206,7 @@ export const ExpensesContent = ({
                       fontSize: '.8rem',
                       border: 'none',
                       color: '#c37070',
+                      background: 'transparent'
                     }}
                     handleClick={() => handleDeleteCard(id)}
                     label="❌ DELETE"
@@ -215,6 +216,7 @@ export const ExpensesContent = ({
                       width: '150px',
                       height: '30px',
                       fontSize: '.8rem',
+                      background: 'transparent'
                     }}
                     handleClick={() => {}}
                     disabled={true} // TODO: modal
@@ -313,7 +315,7 @@ export const ExpensesContent = ({
                                 onChange={(e) =>
                                   handleInputChange(name, e.target.value)
                                 }
-                                className="expenses-container-1-form-input-tag-input"
+                                className="expenses-container-1-form-input-tag-input expenses-container-1-form-input-tag-input--textarea"
                                 value={currentInputs['details']}
                                 required={required}
                                 placeholder={placeholder}
