@@ -24,6 +24,16 @@
 }
 
 @font-face {
+  font-family: 'Staatliches';
+  src: url('../../fonts/Staatliches/Staatliches-Regular.ttf')
+      format('truetype'),
+    /* 
+  Safari, Android, iOS */
+      url('../../fonts/Staatliches/Staatliches-Regular.ttf') format('ttf'); /* Modern 
+  Browsers */
+}
+
+@font-face {
   font-family: 'Niveau Grotesk';
   src: url('../../fonts/NiveauGrotesk/NiveauGroteskRegular.woff')
       format('truetype'),
@@ -43,7 +53,7 @@
 
 body {
   // background: $dark-white;
-  background: #e0d4c3;
+  background: #e0d4c3b2;
   // background-image: url(../../images/svg/bg.svg);
   background-attachment: fixed;
   background-position: fixed;

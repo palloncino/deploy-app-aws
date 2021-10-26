@@ -62,11 +62,6 @@ export function Homepage() {
               {INITIAL_PARAGRAPH}
             </div>
           </div>
-          <div className="homepage-group--1--right">
-            <div className="homepage-text-container-title--XXL">
-              Welcome {name === 'false' ? 'guest' : name}
-            </div>
-          </div>
         </div>
 
         <div className="homepage-group homepage-group--2">
