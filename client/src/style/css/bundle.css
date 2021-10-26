@@ -1,5 +1,5 @@
 .header-container {
-  background: rgba(0, 0, 0, 0.75);
+  background: #333333;
   border: 2px solid rgba(0, 0, 0, 0.2);
   color: rgba(255, 255, 255, 0.9);
   position: fixed;
@@ -89,7 +89,7 @@
 }
 
 .footer-container {
-  background: rgba(0, 0, 0, 0.75);
+  background: #333333;
   border: 2px solid rgba(0, 0, 0, 0.2);
   color: rgba(255, 255, 255, 0.9);
   position: fixed;
@@ -134,7 +134,7 @@
 }
 
 .carousel-item-cell--box {
-  background: rgba(0, 0, 0, 0.75);
+  background: #333333;
   color: rgba(255, 255, 255, 0.9);
   border: 2px solid rgba(0, 0, 0, 0.2);
   display: flex;
@@ -198,7 +198,7 @@
 
 .btn-grad {
   background: orange;
-  color: #454749;
+  color: #333333;
   border-radius: 3px;
   height: 40px;
   font-weight: 700;
@@ -383,7 +383,7 @@
   top: -12px;
 }
 .expenses-container-1-form-input-tag-input {
-  background: #454749;
+  background: #333333;
   color: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.2);
   flex: 1;
@@ -419,7 +419,7 @@
   padding: 0 10px;
 }
 .expenses-container-2-expense-container {
-  background: rgba(0, 0, 0, 0.75);
+  background: #333333;
   color: rgba(255, 255, 255, 0.9);
   position: relative;
   padding: 5px;
@@ -430,7 +430,6 @@
   margin: 0;
 }
 .expenses-container-2-expense-output {
-  background: rgba(0, 0, 0, 0.75);
   padding: 5px 20px;
   margin-bottom: 5px;
   z-index: 2;
@@ -451,7 +450,7 @@
   padding-top: 0;
 }
 .expenses-container-2-expense-output--period {
-  color: #454749;
+  color: #333333;
   width: 80px;
   display: flex;
   justify-content: space-around;
@@ -537,7 +536,7 @@
 }
 
 .post-container {
-  background: rgba(0, 0, 0, 0.75);
+  background: #333333;
   color: rgba(255, 255, 255, 0.9);
   margin: 0 0 10px 0;
   padding: 10px;
@@ -791,7 +790,7 @@
 }
 
 body {
-  background: #0c0b0bb2;
+  background: #000;
   background-attachment: fixed;
   background-position: fixed;
   background-size: cover;
