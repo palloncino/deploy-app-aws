@@ -15,11 +15,11 @@
 
 @font-face {
   font-family: 'Custom-Font-Titles';
-  src: url('../../fonts/Custom-Font-Title/Melted\ Monster.ttf')
+  src: url('../../fonts/Custom-Font-Title/font.woff2')
       format('truetype'),
     /* 
   Safari, Android, iOS */
-      url('../../fonts/Custom-Font-Title/Melted\ Monster.ttf') format('ttf'); /* Modern 
+      url('../../fonts/Custom-Font-Title/font.woff2') format('ttf'); /* Modern 
   Browsers */
 }
 
@@ -43,7 +43,7 @@
 
 body {
   // background: $dark-white;
-  background: #000;
+  background: #161616;
   // background-image: url(../../images/patterns/bg-pattern.svg);
   background-attachment: fixed;
   background-position: fixed;
@@ -99,8 +99,9 @@ body {
 // login
 
 .custom-modal-container {
-  background: $seethrough-black;
+  background: $black;
   color: $white;
+  border-radius: 3px;
   // border: $light-thick-grey-border;
   
   height: 200px;
@@ -160,9 +161,10 @@ body {
         &-input {
           background: $seethrough-black;
           color: $white;
-          border: 1px solid $seethrough-white;
+          border: none;
+          border-radius: 3px;
           
-            height: 100%;
+          height: 100%;
           padding: 0 20px;
           width: 100%;
         }

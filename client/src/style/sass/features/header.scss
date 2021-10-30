@@ -1,8 +1,9 @@
 $header-height: 80px;
 
 .header-container {
+  transition: .3s;
   background: $black;
-  border: $light-thick-grey-border;
+  border: $thick-black-border;
   color: $white;
 
   position: fixed;
@@ -90,5 +91,5 @@ $header-height: 80px;
 }
 
 .logo-font:hover {
-  transform: scale(.95);  
+  transform: scale(.98);  
 }

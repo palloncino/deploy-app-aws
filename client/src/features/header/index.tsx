@@ -9,7 +9,7 @@ import { Singleton as Authorization } from '../../auth';
 import { Spinner } from '../spinner';
 import { useState } from 'react';
 import { changeRoute } from '../routes';
-// import logo from '../../images/svg/logo-1-double.svg';
+// // import logo from '../../images/svg/logo-1-double.svg';
 import logo from '../../images/svg/logo-1-double-white-01.svg';
 
 export function Header() {
@@ -45,15 +45,15 @@ export function Header() {
           ) : (
             <>
               <div className="header-user-space-1 header-user-space-1--logo">
-                {/* <img
+                <img
                   onClick={() => {
                     dispatch(changeRoute('/'));
                   }}
                   height="50"
                   src={logo}
                   alt="logo"
-                /> */}
-                <div
+                />
+                {/* <div
                   style={{ fontSize: '2rem' }}
                   onClick={() => {
                     dispatch(changeRoute('/'));
@@ -61,7 +61,7 @@ export function Header() {
                   className="logo-font custom-font-title"
                 >
                   antonioguiotto.com
-                </div>
+                </div> */}
               </div>
 
               <div className="header-user-space-1">
@@ -131,7 +131,7 @@ export function Header() {
             </>
           )}
         </div>
-        <div className="header-container-hidden-twin">I</div>
+        <div className="header-container-hidden-twin"></div>
       </>
     );
   };

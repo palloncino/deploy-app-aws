@@ -24,7 +24,6 @@
 }
 
 .expenses-container-1 {
-  background: $seethrough-black;
   color: $white;
   border: $light-grey-border;
 
@@ -157,6 +156,10 @@
       font-size: $font-S;
       margin-top: 0;
       padding-top: 0;
+    }
+    &--website a {
+      color: $orange;
+      text-decoration: none;
     }
 
     &--period {

@@ -194,7 +194,6 @@ export const ExpensesContent = ({
                     {details}
                   </div>
                 )}
-                <hr />
                 <div className="expenses-container-2-expense-output expenses-container-2-expense-output--price">
                   - {Number(price).toFixed(2)} €
                 </div>

@@ -64,7 +64,7 @@ export function Homepage() {
         </div>
 
         <div className="homepage-group homepage-group--2">
-          <div className="homepage-text-container-title--XXL custom-font-title">
+          <div className="homepage-text-container-title--XXL">
             Latest posts
           </div>
           <div className="homepage-carousel-container">
@@ -73,7 +73,7 @@ export function Homepage() {
         </div>
 
         <div className="homepage-group homepage-group--3">
-          <div className="homepage-text-container-title--XXL custom-font-title">
+          <div className="homepage-text-container-title--XXL">
             Personal Information
           </div>
           <img

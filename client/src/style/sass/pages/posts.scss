@@ -25,7 +25,8 @@
       // padding: 10px 10px;
     }
     &--title {
-      flex: 1;
+      padding-left: 10px;
+      flex: 2;
     }
 
     &--description {
@@ -103,14 +104,18 @@
 }
 
 .posts-form-input-container-input-label {
-  background: $white;
-    padding: 0 5px;
-    border-radius: 5px;
-    position: absolute;
-    top: -18px;
-    left: 12px;
+  background: $black;
+  padding: 0 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: -18px;
+  left: 12px;
 }
 .posts-form-input-container-input {
+  background: $black;
+  color: $white;
+  border: 1px solid rgba(255,255,255,0.2);
+
   border-radius: 5px;
   border: none;
   flex: 1;

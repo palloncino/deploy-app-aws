@@ -22,8 +22,8 @@
 .carousel-item-cell {
   &--box {
     background: $black;
+    border: $thick-black-border;
     color: $white;
-    border: $light-thick-grey-border;
     
     display: flex;
     flex-direction: column;

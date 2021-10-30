@@ -125,7 +125,7 @@ export const PostsContent = ({
                 ></div>
               </div>
 
-              {isAdmin() && (
+              {/* {isAdmin() && (
                 <div className="post-container-buttons-group">
                   <Button
                     customStyle={{
@@ -143,7 +143,7 @@ export const PostsContent = ({
                     label="✏️ EDIT POST"
                   />
                 </div>
-              )}
+              )} */}
             </div>
           );
         })}
@@ -166,10 +166,7 @@ export const PostsContent = ({
           Page description
         </div>
         <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
-          praesentium veniam, voluptate sed, ipsa amet eos esse accusamus
-          voluptates nisi ut quo eius ad a harum consectetur eum blanditiis
-          porro.
+          These are a list of articles that I write every once in a while, when I do some interesting stuff.
         </div>
       </div>
       <div className="posts-wrapper">
