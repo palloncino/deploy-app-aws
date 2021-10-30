@@ -275,6 +275,22 @@ const handleDeleteAccount = async (req, res) => {
   res.json({ message: `Account deleted: ${email}` });
 };
 
+const handleUploadImage = async (req, res) => {
+
+  const image = req.files.image;
+  const fileName = `${req.user.email}-${image.name}`;
+
+  image.mv(`${__dirname}/../images/${fileName}`, err => {
+    console.log(err)
+  })
+
+  console.log({image: req.files.image})
+
+  res.json('ok')
+
+}
+
+
 module.exports = {
   handleSignUp,
   handleSignIn,
@@ -283,4 +299,5 @@ module.exports = {
   isEmailVerified,
   handleVerificationLink,
   handleDeleteAccount,
+  handleUploadImage,
 };

@@ -1,7 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const { getBaseUrls, authenticateJWT } = require("./utils/getEnvBaseUrls");
+const fileupload = require('express-fileupload')
+const { /* getBaseUrls, */ authenticateJWT } = require("./utils/getEnvBaseUrls");
 const { handleGetFields, handleEditField } = require("./controllers/portfolio");
 const { handleGetPosts, handlePostPost } = require("./controllers/posts");
 const {
@@ -12,6 +13,7 @@ const {
   isEmailVerified,
   handleVerificationLink,
   handleDeleteAccount,
+  handleUploadImage,
 } = require("./controllers/auth");
 const {
   handlePostExpense,
@@ -19,7 +21,7 @@ const {
   handleDeleteExpense,
 } = require("./controllers/expenses");
 
-const baseUrls = getBaseUrls();
+// const baseUrls = getBaseUrls();
 const app = express();
 
 // +------------------------------------------------+
@@ -28,6 +30,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(fileupload());
 
 // +------------------------------------------------+
 // |  APIS                                          |
@@ -50,6 +53,7 @@ app.post("/auth/check-email-verified", isEmailVerified);
 app.post("/auth/sign-up", handleSignUp);
 app.post("/auth/sign-in", handleSignIn);
 app.get("/auth/verify_email", handleVerificationLink);
+app.post("/auth/uploadImage", authenticateJWT, handleUploadImage);
 // REDIRECT
 // app.get("/", (req, res) => res.redirect(`${baseUrls.ENV_CLIENT_URL}`));
 // PING
