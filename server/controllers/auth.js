@@ -5,6 +5,8 @@ const nodemailer = require("nodemailer");
 const { google } = require("googleapis");
 const { getBaseUrls } = require("../utils/getEnvBaseUrls");
 const baseUrls = getBaseUrls();
+const fs = require('fs');
+const { S3 } = require("aws-sdk");
 
 // +----------------------------------------------------------------------------------------------------+
 // |                                           TABLE SCHEMA                                             |
@@ -277,14 +279,40 @@ const handleDeleteAccount = async (req, res) => {
 
 const handleUploadImage = async (req, res) => {
 
+  const S3 = new AWS.S3({
+    accessKeyId: `${process.env.AWS_PROFILE_KEY}`,
+    secretAccessKey: `${process.env.AWS_PROFILE_SECRET}`,
+  });
+
   const image = req.files.image;
   const fileName = `${req.user.email}-${image.name}`;
 
-  image.mv(`${__dirname}/../images/${fileName}`, err => {
-    console.log(err)
+  const path = `${__dirname}/../temp/${fileName}`
+
+  image.mv(path, error => {
+    if (error) {
+      console.log(error)
+      return res.json({message: 'Unable to upload', error})
+    }
   })
 
-  console.log({image: req.files.image})
+  fs.readFile(path, (err, data) => {
+    
+    if (err) return console.log(err)
+
+    S3.upload({
+      Bucket: process.env.AVATARS_BUCKET_NAME,
+      Key: fileName,
+      Body: data
+    }, (error, data) => {
+      if (error) {
+        console.log(1.53, {error})
+        return res.end({message: 'Unable to upload', error})
+      }
+      res.json('Image succesfully uploaded.', { data })
+    })
+
+  });
 
   res.json('ok')
 
