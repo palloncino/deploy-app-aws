@@ -1,4 +1,4 @@
-import { MapContent } from './view'
+import { MapContent } from './view';
 
 // DeckGL react component
 export const Map = () => {
@@ -7,4 +7,4 @@ export const Map = () => {
       <MapContent />
     </div>
   );
-}
+};

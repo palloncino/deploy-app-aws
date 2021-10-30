@@ -24,20 +24,19 @@
     background: $black;
     border: $thick-black-border;
     color: $white;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: .5s;
+    transition: 0.5s;
     width: 200px;
     height: 200px;
     box-sizing: border-box;
     border-radius: 3px;
     overflow: hidden;
     box-sizing: border-box;
-
 
     margin-right: 10px;
 
@@ -48,15 +47,14 @@
     &--content {
       margin-top: 20px;
       height: 100%;
-      width: 160px;  
+      width: 160px;
     }
-
   }
   &--box:last-child {
     margin-right: 0px;
   }
   &--box:hover {
-    transform: scale(.95);
+    transform: scale(0.95);
     // background: $white;
   }
   &--title {

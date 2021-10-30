@@ -34,10 +34,7 @@ export function Portfolio() {
       //   break;
 
       case 'pdf':
-        window.open(
-          `${process.env.REACT_APP_PORTFOLIO_S3_PATH}`,
-          '_blank'
-        ); // TODO: env variable
+        window.open(`${process.env.REACT_APP_PORTFOLIO_S3_PATH}`, '_blank'); // TODO: env variable
         break;
 
       default:

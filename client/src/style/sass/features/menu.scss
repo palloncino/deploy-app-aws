@@ -19,9 +19,9 @@
 }
 
 .menu-items-container {
-  background: rgba(0, 0, 0, .5);
+  background: rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 1);
-  
+
   z-index: 105;
   position: absolute;
   top: 85px;
@@ -33,7 +33,7 @@
   position: absolute;
   top: -2000;
   left: -2000;
-  transition: .5s;
+  transition: 0.5s;
   // background: $light-grey-seethrough;
   width: 500%;
   height: 500vh;

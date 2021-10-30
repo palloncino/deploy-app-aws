@@ -16,7 +16,6 @@
   height: 200px;
 }
 .post-container-data-cell {
-
   &-container {
     flex: 1;
     &-info {
@@ -32,7 +31,7 @@
     &--description {
       flex: 3;
     }
-    
+
     &--date {
       flex: 1;
     }
@@ -54,7 +53,7 @@
     &--description {
       font-size: $font-S;
     }
-    
+
     &--date {
       font-size: $font-M;
       display: flex;
@@ -94,7 +93,6 @@
   padding: 10px;
 }
 
-
 .posts-form-input-container {
   position: relative;
   display: flex;
@@ -114,7 +112,7 @@
 .posts-form-input-container-input {
   background: $black;
   color: $white;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
   border-radius: 5px;
   border: none;

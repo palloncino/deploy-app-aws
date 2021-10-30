@@ -1,7 +1,7 @@
 $header-height: 80px;
 
 .header-container {
-  transition: .3s;
+  transition: 0.3s;
   background: $black;
   border: $thick-black-border;
   color: $white;
@@ -86,10 +86,9 @@ $header-height: 80px;
 }
 
 .logo-font {
-  transition: .3s;
-  
+  transition: 0.3s;
 }
 
 .logo-font:hover {
-  transform: scale(.98);  
+  transform: scale(0.98);
 }

@@ -5,7 +5,8 @@ process.env.NODE_ENV = 'development';
 
 require('../config/env');
 
-process.env.REACT_APP_SERVER_DOMAIN = process.env.REACT_APP_DEVELOPMENT_SERVER_DOMAIN;
+process.env.REACT_APP_SERVER_DOMAIN =
+  process.env.REACT_APP_DEVELOPMENT_SERVER_DOMAIN;
 
 process.on('unhandledRejection', (err) => {
   throw err;

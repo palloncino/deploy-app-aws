@@ -7,7 +7,7 @@ export interface RouteState {
 
 const initialState: RouteState = {
   current: '/',
-  focusedItem: ''
+  focusedItem: '',
 };
 
 export const routeSlice = createSlice({

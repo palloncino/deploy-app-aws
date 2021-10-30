@@ -4,7 +4,6 @@ import { Carousel } from '../../carousel';
 import { Singleton as Authentication } from '../../../auth';
 import { Button } from '../../button';
 import { Spinner } from '../../spinner';
-import { useState } from 'react';
 
 export function Homepage() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -42,41 +41,9 @@ export function Homepage() {
     }
   };
 
-  const [image, setImage] = useState({ ...new Blob(), name: '' });
-
-  const handleUploadImage = (event: any) => {
-    setImage(event.target.files[0]);
-  };
-
-  const sendUploadedImage = () => {
-    if (!image.name) return;
-
-    const token = auth.getProp('token');
-
-    const formData = new FormData();
-    formData.append('image', image);
-
-    fetch('http://localhost:8080/auth/uploadImage', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      body: formData,
-    });
-  };
-
   const renderInsider = () => {
     return (
       <div className="homepage-container">
-        <div>
-          <input
-            onChange={handleUploadImage}
-            type="file"
-            name="profile_image"
-          />
-          <button onClick={sendUploadedImage}>click</button>
-        </div>
-
         <h3
           style={{ textAlign: 'center', margin: '-30px 0 30px 0' }}
           className="homepage-group homepage-group-banner-h3"

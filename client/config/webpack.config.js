@@ -322,7 +322,7 @@ module.exports = function (webpackEnv) {
                     { helpers: true },
                   ],
                 ],
-                ignore: [ './node_modules/mapbox-gl/dist/mapbox-gl.js' ],
+                ignore: ['./node_modules/mapbox-gl/dist/mapbox-gl.js'],
                 cacheDirectory: true,
                 cacheCompression: false,
 

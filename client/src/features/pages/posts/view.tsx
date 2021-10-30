@@ -166,7 +166,8 @@ export const PostsContent = ({
           Page description
         </div>
         <div>
-          These are a list of articles that I write every once in a while, when I do some interesting stuff.
+          These are a list of articles that I write every once in a while, when
+          I do some interesting stuff.
         </div>
       </div>
       <div className="posts-wrapper">

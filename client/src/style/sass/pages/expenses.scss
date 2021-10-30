@@ -12,7 +12,7 @@
 
   margin: 20px auto;
   text-align: center;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,7 +77,7 @@
   &-form-input-tag-input {
     background: $black;
     color: $white;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
     flex: 1;
     height: 100%;
@@ -124,7 +124,7 @@
     background: $black;
     color: $white;
     // border: 1px solid $seethrough-white;
-    
+
     position: relative;
     padding: 5px;
     border-radius: 5px;
@@ -164,7 +164,7 @@
 
     &--period {
       color: $black;
-      
+
       width: 80px;
       display: flex;
       justify-content: space-around;

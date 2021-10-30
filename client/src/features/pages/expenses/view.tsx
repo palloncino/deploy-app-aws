@@ -205,7 +205,7 @@ export const ExpensesContent = ({
                       fontSize: '.8rem',
                       border: 'none',
                       color: '#c37070',
-                      background: 'transparent'
+                      background: 'transparent',
                     }}
                     handleClick={() => handleDeleteCard(id)}
                     label="❌ DELETE"
@@ -215,7 +215,7 @@ export const ExpensesContent = ({
                       width: '150px',
                       height: '30px',
                       fontSize: '.8rem',
-                      background: 'transparent'
+                      background: 'transparent',
                     }}
                     handleClick={() => {}}
                     disabled={true} // TODO: modal
@@ -237,9 +237,10 @@ export const ExpensesContent = ({
   return (
     <>
       <div className="expenses-container-group center">
-        <div className="expenses-container-group-title custom-font-title">Page description</div>
+        <div className="expenses-container-group-title custom-font-title">
+          Page description
+        </div>
         <div>
-
           With this form you can conviniently keep track of monthly expenses and
           subsciptions that perhaps you might not want to keep any more!
         </div>
@@ -379,9 +380,7 @@ export const ExpensesContent = ({
             ) : isLoading ? (
               renderSpinner()
             ) : (
-              <div
-                className="spinner-container"
-              >
+              <div className="spinner-container">
                 ⬅️ add one item to the list ✨
               </div>
             )}

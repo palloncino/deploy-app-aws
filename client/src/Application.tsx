@@ -31,9 +31,9 @@ export function Application() {
         dispatch(setAuthentication());
       }
 
-      setTimeout(()=> {
+      setTimeout(() => {
         return dispatch(setAuthLoading(false));
-      }, 500)
+      }, 500);
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -47,7 +47,6 @@ export function Application() {
   };
 
   const renderApplication = () => {
-    
     if (window.innerWidth <= 600) {
       return (
         <div className="mobile-container">
@@ -73,9 +72,9 @@ export function Application() {
         case '/account':
           return <Account />;
 
-          case '/map':
-            return <Map />;
-            
+        case '/map':
+          return <Map />;
+
         case '/posts':
           return <Posts />;
 

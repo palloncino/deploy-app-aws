@@ -12,6 +12,7 @@
   align-items: center;
 
   &-1 {
+    margin-bottom: 40px;
 
     &-title-tag {
       font-size: $font-XXL;
@@ -25,12 +26,15 @@
       justify-content: center;
       align-items: center;
     }
-    
   }
-
 
   &-2 {
-    
+    margin-bottom: 40px;
   }
 
+  &-3 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
 }

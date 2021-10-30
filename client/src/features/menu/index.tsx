@@ -84,17 +84,21 @@ export function Menu() {
             padding: '0 10px',
             background: 'black',
             color: 'orange',
-            marginBottom: '5px'
-          }
+            marginBottom: '5px',
+          };
           return (
             <Button
               key={index}
               disabled={disabled}
-              customStyle={disabled ? { ...menuButtonStyle, color: 'lightgrey' } : { ...menuButtonStyle }}
+              customStyle={
+                disabled
+                  ? { ...menuButtonStyle, color: 'lightgrey' }
+                  : { ...menuButtonStyle }
+              }
               handleClick={() => handleDirect(path)}
               label={disabled ? `🔒 ${label.split(' ')[1]}` : `${label}`}
             />
-          )
+          );
         })}
         {isAuthenticated && <Logout />}
       </div>

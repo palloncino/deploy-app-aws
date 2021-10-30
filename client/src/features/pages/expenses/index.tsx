@@ -97,8 +97,8 @@ export const Expenses = () => {
       await response.json();
 
       await getDataFromDB();
-      
-      handleClear()
+
+      handleClear();
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);

@@ -9,7 +9,7 @@ import { toggleMenu } from '../../menu/menuSlice';
 export function Account() {
   const auth = Authentication.getInstance();
   const clientId = auth.getProp('email');
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -22,7 +22,6 @@ export function Account() {
   };
 
   const handleDeleteAccount = async () => {
-
     setIsLoading(true);
 
     const access_token = auth.getProp('token');
@@ -37,31 +36,33 @@ export function Account() {
       method: 'POST',
       headers: {
         ...defaultHeaders,
-        authorization: `Bearer ${access_token}`
+        authorization: `Bearer ${access_token}`,
       },
-      body: JSON.stringify({email: clientId}),
+      body: JSON.stringify({ email: clientId }),
     };
 
     try {
-
       const response = await fetch(URL, options);
 
       const json = await response.json();
 
       setIsLoading(false);
-      
-      handleLogout();
 
+      handleLogout();
     } catch (error) {
       setIsLoading(false);
 
       console.error(error);
     }
-  }
+  };
 
   return (
     <div className="account-container">
-      <AccountContent isLoading={isLoading} clientId={clientId} handleDeleteAccount={handleDeleteAccount} />
+      <AccountContent
+        isLoading={isLoading}
+        clientId={clientId}
+        handleDeleteAccount={handleDeleteAccount}
+      />
     </div>
   );
 }

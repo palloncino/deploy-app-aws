@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { PostsContent } from './view';
 import { Singleton as Authorization } from '../../../auth';
 import { useDispatch } from 'react-redux';
-import { getPosts } from './postsSLice'
+import { getPosts } from './postsSLice';
 
 export const Posts = () => {
   const auth = Authorization.getInstance();
@@ -40,13 +40,11 @@ export const Posts = () => {
       }),
     };
     try {
-      
       await fetch(URL, options);
 
       dispatch(getPosts());
 
       return;
-
     } catch (error) {
       console.error(error);
     }

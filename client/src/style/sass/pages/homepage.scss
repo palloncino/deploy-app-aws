@@ -16,8 +16,10 @@
       padding: 0;
     }
   }
-  &--1 {}
-  &--2 {}
+  &--1 {
+  }
+  &--2 {
+  }
   &--3 {
     display: flex;
     flex-direction: column;
@@ -52,7 +54,7 @@
       align-items: center;
     }
   }
-  
+
   &-paragraph {
     font-size: $font-M;
     line-height: 2rem;
@@ -61,7 +63,7 @@
     text-align: center;
   }
 }
-.homepage-big-buttons  {
+.homepage-big-buttons {
   display: flex;
   flex-direction: column;
 
@@ -72,13 +74,12 @@
   }
 }
 .homepage-big-button-container {
-  
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 200px;
-  transition: .5s;
+  transition: 0.5s;
 
   padding: 20px;
   box-sizing: border-box;
@@ -87,7 +88,6 @@
   border: $light-thick-grey-border;
   background: $seethrough-white;
   font-size: $font-L;
-  
 }
 
 .homepage-big-button-container.disabled {
@@ -99,7 +99,7 @@
 
 .homepage-big-button-container:hover {
   background: $white;
-  transform: scale(.95);
+  transform: scale(0.95);
 }
 .homepage-big-button-container-title {
   // font-family: 'Custom-Font-Titles';
