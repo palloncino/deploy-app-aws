@@ -8,6 +8,7 @@ const { handleGetPosts, handlePostPost } = require("./controllers/posts");
 const {
   handleSignUp,
   handleSignIn,
+  handleGetUserData,
   handleEmailCheckExistance,
   isAuthorized,
   isEmailVerified,
@@ -52,6 +53,7 @@ app.post("/auth/check-token-validity", authenticateJWT, isAuthorized);
 app.post("/auth/check-email-verified", isEmailVerified);
 app.post("/auth/sign-up", handleSignUp);
 app.post("/auth/sign-in", handleSignIn);
+app.get("/auth/user-data", authenticateJWT, handleGetUserData);
 app.get("/auth/verify_email", handleVerificationLink);
 app.post("/auth/uploadImage", authenticateJWT, handleUploadImage);
 // REDIRECT

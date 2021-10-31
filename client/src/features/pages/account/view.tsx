@@ -1,7 +1,7 @@
 import { IAccountProps } from './account-interfaces';
 import { Button } from '../../button';
 import { Spinner } from '../../spinner';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Singleton as Authentication } from '../../../auth';
 
 export function AccountContent({

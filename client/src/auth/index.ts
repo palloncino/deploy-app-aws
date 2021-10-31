@@ -143,23 +143,18 @@ export class Authentication {
     }
   }
 
-  getUserData() {
-    // store user table's data in redux
-  }
-
-  fetchAvatar(email: string) {
-    try {
-      // request for user avatar_url value
-      // await fetch('https://google.com');
-      return 'https://picsum.photos/200';
-    } catch (error) {
-      console.log(error)
-    }
+  async getUserData(token: string): Promise<any> {
+    return await fetch(`${process.env.REACT_APP_SERVER_DOMAIN}/auth/user-data`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token ?? this.token}`,
+      },
+    })
   }
 
   async hasAuthCookies(): Promise<boolean | undefined> {
     try {
-      // setIsLoading(true)
 
       const string = document.cookie;
       const array = string.split(';');
@@ -195,6 +190,7 @@ export class Authentication {
   removeCookies() {
     document.cookie = 'email=undefined';
     document.cookie = 'token=undefined';
+    document.cookie = 'avatar_url=undefined';
   }
 }
 

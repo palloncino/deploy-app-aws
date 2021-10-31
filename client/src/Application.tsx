@@ -21,6 +21,7 @@ export function Application() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+
     (async function () {
       dispatch(setAuthLoading(true));
 

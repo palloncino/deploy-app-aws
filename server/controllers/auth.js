@@ -5,8 +5,7 @@ const nodemailer = require("nodemailer");
 const { google } = require("googleapis");
 const { getBaseUrls } = require("../utils/getEnvBaseUrls");
 const baseUrls = getBaseUrls();
-const fs = require('fs');
-const { S3 } = require("aws-sdk");
+const fs = require("fs");
 
 // +----------------------------------------------------------------------------------------------------+
 // |                                           TABLE SCHEMA                                             |
@@ -119,7 +118,9 @@ const handleSignUp = async (req, res) => {
     };
     transport.sendMail(emailOptions, (error) => {
       if (error) {
-        res.json(`${error}: Please contanct support at powerhydratoni@gmail.com`);
+        res.json(
+          `${error}: Please contanct support at powerhydratoni@gmail.com`
+        );
       } else {
         res.json({
           message: `Verification email was sent to ${email}, please verify by clicking the activation link`,
@@ -179,6 +180,33 @@ const handleSignIn = async (req, res) => {
     res.json(error);
   }
 };
+
+const handleGetUserData = async (req, res) => {
+  const clientId = req.user.email;
+
+  AWS.config.update({
+    region: `${process.env.AWS_REGION}`,
+    accessKeyId: `${process.env.AWS_PROFILE_KEY}`,
+    secretAccessKey: `${process.env.AWS_PROFILE_SECRET}`,
+  });
+
+  const docClient = new AWS.DynamoDB.DocumentClient();
+
+  const data = await docClient.get({
+    TableName: process.env.AUTH_TABLE_NAME,
+    Key: {
+      "email": clientId
+    }
+  }, (err, data) => {
+    if (err) console.log({err})
+    if (data) console.log({data})
+  }).promise();
+
+  console.log({ data })
+
+  res.json({data})
+
+}
 
 const isAuthorized = async (req, res) => {
   const user = req.user;
@@ -279,65 +307,70 @@ const handleDeleteAccount = async (req, res) => {
 };
 
 const handleUploadImage = async (req, res) => {
-
-  console.log(1.1);
-
   const S3 = new AWS.S3({
     accessKeyId: `${process.env.AWS_PROFILE_KEY}`,
     secretAccessKey: `${process.env.AWS_PROFILE_SECRET}`,
   });
 
-  console.log(1.2);
+  const docClient = new AWS.DynamoDB.DocumentClient();
 
   const image = req.files.image;
   const fileName = `${req.user.email}-${image.name}`;
 
-  console.log(1.3);
+  const path = `${__dirname}/../temp/${fileName}`;
 
-  const path = `${__dirname}/../temp/${fileName}`
-
-  console.log(1.4, { path });
-
-  image.mv(path, error => {
+  image.mv(path, (error) => {
     if (error) {
-      console.log(error)
-      return res.json({message: 'Unable to upload', error})
+      console.log(error);
+      return res.json({ message: "Unable to upload", error });
     }
-  })
-
-  console.log(1.5);
-
-  fs.readFile(path, (err, data) => {
-    
-    if (err) {
-      return console.log(err)
-    };
-
-    console.log(1.6)
-
-    S3.upload({
-      Bucket: process.env.AVATARS_BUCKET_NAME,
-      Key: fileName,
-      Body: data
-    }, (error, data) => {
-      if (error) {
-        console.log(1.53, {error})
-        return res.end({message: 'Unable to upload', error})
-      } else {
-        res.json({ image_url: data.Location })
-      }
-    })
-
-    // set image inside user table
-
   });
 
-}
+  fs.readFile(path, (err, data) => {
+    if (err) {
+      return console.log(err);
+    }
 
+    S3.upload(
+      {
+        Bucket: process.env.AVATARS_BUCKET_NAME,
+        Key: fileName,
+        Body: data,
+      },
+      (error, data) => {
+        if (error) {
+          return res.end({ message: "Unable to upload", error });
+        } else {
+
+          try {
+            console.log(1.1, req.user.email, data.Location)
+            docClient.update({
+              TableName: process.env.AUTH_TABLE_NAME,
+              Key: {
+                "email": `${req.user.email}`,
+              },
+              UpdateExpression:
+                "set avatar_url = :url",
+              ExpressionAttributeValues: {
+                ":url": data.Location,
+              }
+            }, (err) => {
+              if (err) console.log(err)
+            })
+            res.json({ image_url: data.Location });
+          } catch (error) {
+            res.json({ error });
+          }
+        }
+      }
+    );
+  });
+};
 
 module.exports = {
   handleSignUp,
   handleSignIn,
+  handleGetUserData,
   handleEmailCheckExistance,
   isAuthorized,
   isEmailVerified,
