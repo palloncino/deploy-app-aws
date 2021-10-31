@@ -54,7 +54,7 @@ const handleSignUp = async (req, res) => {
   // const confirmPassword = req.body.confirmPassword; // TODO: to implement
 
   const dateISOString = new Date().toISOString();
-  const email_verified = false;
+  const email_verified = true; // TODO: should be false
 
   const salt = bcrypt.genSaltSync(10);
   var hashedPassword = bcrypt.hashSync(password, salt);
@@ -322,14 +322,13 @@ const handleUploadImage = async (req, res) => {
 
   image.mv(path, (error) => {
     if (error) {
-      console.log(error);
       return res.json({ message: "Unable to upload", error });
     }
   });
 
   fs.readFile(path, (err, data) => {
     if (err) {
-      return console.log(err);
+      return console.log(1.1, err);
     }
 
     S3.upload(
@@ -340,6 +339,7 @@ const handleUploadImage = async (req, res) => {
       },
       (error, data) => {
         if (error) {
+          console.log(1.2, error);
           return res.end({ message: "Unable to upload", error });
         } else {
           try {
@@ -355,7 +355,7 @@ const handleUploadImage = async (req, res) => {
                 },
               },
               (err) => {
-                if (err) console.log(err);
+                if (err) console.log(1.3, err);
               }
             );
             res.json({ image_url: data.Location });
