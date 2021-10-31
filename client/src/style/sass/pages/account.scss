@@ -30,12 +30,40 @@
 
   &-2 {
     margin-bottom: 40px;
+    
+    &-title-tag {
+      font-size: $font-XXL;
+      font-family: 'Custom-Font-Titles';
+    }
   }
 
   &-3 {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     margin-bottom: 40px;
-    max-width: 200px;
+
+    &-title-tag {
+      font-size: $font-XXL;
+      font-family: 'Custom-Font-Titles';
+    }
+    &-inputs-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      input {
+        margin-bottom: 10px;
+      }
+    }
+    &-information-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      img {
+        max-width: 200px;
+      }
+    }
   }
 }

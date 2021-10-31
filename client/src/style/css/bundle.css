@@ -295,7 +295,7 @@
 }
 .artwork-summary-container-text-title {
   font-size: 1.4rem;
-  font-family: 'Custom-Font-Titles';
+  font-family: "Custom-Font-Titles";
   margin-bottom: 10px;
 }
 .artwork-summary-container-text-description {
@@ -360,7 +360,7 @@
 }
 .expenses-container-1-title-container-title-tag {
   font-size: 2rem;
-  font-family: 'Custom-Font-Titles';
+  font-family: "Custom-Font-Titles";
 }
 .expenses-container-1-form-input-container {
   position: relative;
@@ -410,7 +410,7 @@
 }
 .expenses-container-2-expenses-container-title {
   font-size: 2rem;
-  font-family: 'Custom-Font-Titles';
+  font-family: "Custom-Font-Titles";
   margin: 10px 0 10px 0;
   padding: 0 10px;
 }
@@ -496,7 +496,7 @@
 }
 .account-information-container-1-title-tag {
   font-size: 2rem;
-  font-family: 'Custom-Font-Titles';
+  font-family: "Custom-Font-Titles";
 }
 .account-information-container-1-informations {
   margin: 10px 0;
@@ -508,10 +508,36 @@
 .account-information-container-2 {
   margin-bottom: 40px;
 }
+.account-information-container-2-title-tag {
+  font-size: 2rem;
+  font-family: "Custom-Font-Titles";
+}
 .account-information-container-3 {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   margin-bottom: 40px;
+}
+.account-information-container-3-title-tag {
+  font-size: 2rem;
+  font-family: "Custom-Font-Titles";
+}
+.account-information-container-3-inputs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.account-information-container-3-inputs-container input {
+  margin-bottom: 10px;
+}
+.account-information-container-3-information-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.account-information-container-3-information-container img {
   max-width: 200px;
 }
 
@@ -591,7 +617,7 @@
   flex: 1;
 }
 .post-container-data-cell-value--title {
-  font-family: 'Custom-Font-Titles';
+  font-family: "Custom-Font-Titles";
   font-size: 1.4rem;
 }
 .post-container-data-cell-value--description {
@@ -718,7 +744,7 @@
 .homepage-text-container-title--XXXL {
   border-radius: 5px;
   padding: 10px;
-  font-family: 'Custom-Font-Titles';
+  font-family: "Custom-Font-Titles";
   font-size: 3rem;
   display: flex;
   justify-content: center;
@@ -790,27 +816,24 @@
 }
 
 @font-face {
-  font-family: 'Custom-Font-Titles';
-  src: url('../../fonts/Custom-Font-Title/font.woff2') format('truetype'),
-    url('../../fonts/Custom-Font-Title/font.woff2') format('ttf');
+  font-family: "Custom-Font-Titles";
+  src: url("../../fonts/Custom-Font-Title/font.woff2") format("truetype"), url("../../fonts/Custom-Font-Title/font.woff2") format("ttf");
   /* Modern 
   Browsers */
 }
 @font-face {
-  font-family: 'Niveau Grotesk';
-  src: url('../../fonts/NiveauGrotesk/NiveauGroteskRegular.woff')
-      format('truetype'),
-    url('../../fonts/NiveauGrotesk/NiveauGroteskRegular.woff') format('woff');
+  font-family: "Niveau Grotesk";
+  src: url("../../fonts/NiveauGrotesk/NiveauGroteskRegular.woff") format("truetype"), url("../../fonts/NiveauGrotesk/NiveauGroteskRegular.woff") format("woff");
   /* Modern 
   Browsers */
 }
 * {
-  box-sizing: 'border-box';
-  font-family: 'Niveau Grotesk';
+  box-sizing: "border-box";
+  font-family: "Niveau Grotesk";
 }
 
 .custom-font-title {
-  font-family: 'Custom-Font-Titles';
+  font-family: "Custom-Font-Titles";
 }
 
 body {

@@ -54,28 +54,41 @@ export function AccountContent({
       <div className="account-information-container-1">
         <div className="account-information-container-1-title">
           <div className="account-information-container-1-title-tag">
-            Account page
+            Account information
           </div>
         </div>
         <div className="account-information-container-1-informations">
-          <div className="account-information-container-1-information">
+        <div className="account-information-container-1-information">
             {clientId}
           </div>
         </div>
       </div>
 
       <div className="account-information-container-3">
-        <h3>Change Profile image</h3>
-        <input onChange={handleUploadImage} type="file" name="profile_image" />
-        <button onClick={sendUploadedImage}>click</button>
-        <img src={getAvatarUrl()} alt="user avatar" />
+        <div className="account-information-container-3-title-tag" style={{ marginBottom: '10px' }}>
+          Change Profile Image
+        </div>
+        <div className="account-information-container-3-information-container">
+          <div className="account-information-container-3-inputs-container" >
+            <input onChange={handleUploadImage} type="file" name="profile_image"/>
+            <Button
+            handleClick={sendUploadedImage}
+            customStyle={{ color: 'white', background: 'transparent', marginBottom: '10px' }}
+            label={isLoading ? <Spinner /> : 'Set image'}
+          />
+          </div>
+          <img src={getAvatarUrl()} alt="user avatar" />
+        </div>
       </div>
 
       <div className="account-information-container-2">
         <div className="account-information-container-2-buttons-container">
+          <div className="account-information-container-2-title-tag">
+            Erease data
+          </div>
           <Button
             handleClick={handleDeleteAccount}
-            customStyle={{ width: '150px' }}
+            customStyle={{ background: 'orangered', color: 'white', width: '150px', margin: '0 auto' }}
             label={isLoading ? <Spinner /> : 'delete account'}
           />
         </div>
