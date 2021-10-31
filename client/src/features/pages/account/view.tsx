@@ -12,6 +12,13 @@ export function AccountContent({
   const [image, setImage] = useState({ ...new Blob(), name: '' });
   const auth = Authentication.getInstance();
 
+  const getAvatarUrl = () => {
+    const src = auth.getProp('avatar_url');
+    if (src) {
+      return String(src);
+    }
+  };
+
   const handleUploadImage = (event: any) => {
     setImage(event.target.files[0]);
   };
@@ -33,12 +40,10 @@ export function AccountContent({
         body: formData,
       });
 
-
       if (response.status == 200) {
         const data = await response.json();
         auth.setProp('avatar_url', data.image_url);
       }
-
     } catch (error) {
       console.log(error);
     }
@@ -63,10 +68,7 @@ export function AccountContent({
         <h3>Change Profile image</h3>
         <input onChange={handleUploadImage} type="file" name="profile_image" />
         <button onClick={sendUploadedImage}>click</button>
-        <img
-          src="https://antonioguiotto-images.s3.amazonaws.com/users/antonio.guiotto.dev%40gmail.com-avatar.jpeg"
-          alt="user avatar"
-        />
+        <img src={getAvatarUrl()} alt="user avatar" />
       </div>
 
       <div className="account-information-container-2">

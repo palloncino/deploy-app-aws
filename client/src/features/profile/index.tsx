@@ -2,7 +2,9 @@ import { useSelector } from 'react-redux';
 import { selectAuth } from '../../auth/authSlice';
 import { Singleton as Authorization } from '../../auth';
 
-export const Profile = ({avatarUrl}: any) => {
+export const Profile = ({
+  avatarUrl = `${process.env.REACT_APP_DEFAULT_AVATAR_IMAGE}`,
+}: any) => {
   const { isAuthenticated } = useSelector(selectAuth);
   const auth = Authorization.getInstance();
 
@@ -29,7 +31,7 @@ export const Profile = ({avatarUrl}: any) => {
           <div className="profile-box-logo">
             <img
               className="profile-box-logo-img"
-              src={avatarUrl}
+              src={process.env.REACT_APP_DEFAULT_AVATAR_IMAGE}
               alt="avatar"
             />
           </div>

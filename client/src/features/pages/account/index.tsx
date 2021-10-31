@@ -41,16 +41,12 @@ export function Account() {
     };
 
     try {
-      
       await fetch(URL, options);
       setIsLoading(false);
       handleLogout();
-
     } catch (error) {
-
       setIsLoading(false);
       console.error(error);
-
     }
   };
 

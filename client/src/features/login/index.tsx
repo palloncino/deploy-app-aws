@@ -89,22 +89,18 @@ export const Login = ({ setOpenModals, isOpen }: IModalProp) => {
         const message = json.message ?? false;
 
         if (email && token) {
-          
           const res = await auth.getUserData(token);
 
-          const { data } = await res.json()
-
-          console.log({ data })
+          const { data } = await res.json();
 
           const user = data.Item;
-          
+
           dispatch(setAuthentication());
           auth.setProp('token', token);
           auth.setProp('email', email);
           if (user.avatar_url) {
             auth.setProp('avatar_url', user.avatar_url);
           }
-
 
           return;
         } else if (message) {

@@ -9,9 +9,7 @@ const { v4 } = require("uuid");
 // | example_email@gm...  | [ { "M" : { "descrip... |
 // +----------------------+-------------------------+
 
-
 async function handleGetPosts(req, res) {
-
   AWS.config.update({
     region: `${process.env.AWS_REGION}`,
   });
@@ -25,25 +23,19 @@ async function handleGetPosts(req, res) {
       .promise();
 
     if (Item?.posts) {
-
-      res.json(Item.posts)
-      
-    } else (
-      res.json({message: 'No posts available'})
-    )
-
+      res.json(Item.posts);
+    } else res.json({ message: "No posts available" });
   } catch (error) {
     res.json(error);
   }
 }
 
 async function handlePostPost(req, res) {
-  
   const { email: userEmail, title, description, html } = req.body;
   const id = v4();
-  const date = new Date().toISOString().split('T')[0]
+  const date = new Date().toISOString().split("T")[0];
 
-  if (!userEmail===process.env.ADMIN_EMAIL) {
+  if (!userEmail === process.env.ADMIN_EMAIL) {
     return res.json(403);
   }
 
@@ -55,10 +47,9 @@ async function handlePostPost(req, res) {
 
   const docClient = new AWS.DynamoDB.DocumentClient();
 
-  let posts = {}
+  let posts = {};
 
   try {
-
     const response = await docClient
       .get({
         TableName: `${process.env.POSTS_TABLE_NAME}`,
@@ -66,34 +57,35 @@ async function handlePostPost(req, res) {
       })
       .promise();
 
-      const retrievedPosts = response?.Item?.posts;
+    const retrievedPosts = response?.Item?.posts;
 
-      if (retrievedPosts) {
+    if (retrievedPosts) {
+      posts = [
+        ...retrievedPosts,
+        { id: id, title: title, description: description, html: html, date },
+      ];
+    } else {
+      posts = [
+        { id: id, title: title, description: description, html: html, date },
+      ];
+    }
 
-        posts = [ ...retrievedPosts, { id: id, title: title, description: description, html: html, date } ]
-
-      } else {
-
-        posts = [ { id: id, title: title, description: description, html: html, date } ]
-
+    docClient.put(
+      {
+        TableName: `${process.env.POSTS_TABLE_NAME}`,
+        Item: { email: userEmail, posts },
+      },
+      (err) => {
+        if (err) {
+          console.error(`FAILED: ${err}`);
+          res.json(`FAILED: ${err}`);
+        } else {
+          res.json({ message: `Item succefully created: ${id}: ${html}` });
+        }
       }
-
-    docClient.put({
-      TableName: `${process.env.POSTS_TABLE_NAME}`,
-      Item: { email: userEmail, posts }
-    }, (err) => {
-      if (err) {
-        console.error(`FAILED: ${err}`);
-        res.json(`FAILED: ${err}`);
-      } else {
-        res.json({ message: `Item succefully created: ${id}: ${html}` });
-      }
-    });
-
+    );
   } catch (error) {
-
     res.json(error);
-
   }
 }
 

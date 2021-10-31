@@ -1,8 +1,10 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const fileupload = require('express-fileupload')
-const { /* getBaseUrls, */ authenticateJWT } = require("./utils/getEnvBaseUrls");
+const fileupload = require("express-fileupload");
+const {
+  /* getBaseUrls, */ authenticateJWT,
+} = require("./utils/getEnvBaseUrls");
 const { handleGetFields, handleEditField } = require("./controllers/portfolio");
 const { handleGetPosts, handlePostPost } = require("./controllers/posts");
 const {

@@ -18,30 +18,26 @@ export class Authentication {
   }
 
   getProp(key: 'email' | 'token' | 'avatar_url') {
-    
     if (this[key]) {
-
-      console.log(3.1)
-      return this[key]
-
+      return this[key];
     } else {
-
       const cookies = document.cookie;
-      const wholeCookies = cookies.split(';').map(str => str.trim());
-      const keyValueCookies = wholeCookies.map(str => str.split('='));
-      const theWholeCookie = keyValueCookies.find(cookie => cookie[0]===`${key}`);
+      const wholeCookies = cookies.split(';').map((str) => str.trim());
+      const keyValueCookies = wholeCookies.map((str) => str.split('='));
+      const theWholeCookie = keyValueCookies.find(
+        (cookie) => cookie[0] === `${key}`
+      );
       if (theWholeCookie) {
         return theWholeCookie[1];
       }
     }
 
     return false;
-
   }
 
   setProp(key: 'email' | 'token' | 'avatar_url', value: string) {
     document.cookie = `${key}=${value}`;
-    return this[key] = value;
+    return (this[key] = value);
   }
 
   async checkTokenValidity(token?: string): Promise<boolean> {
@@ -144,18 +140,20 @@ export class Authentication {
   }
 
   async getUserData(token: string): Promise<any> {
-    return await fetch(`${process.env.REACT_APP_SERVER_DOMAIN}/auth/user-data`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token ?? this.token}`,
-      },
-    })
+    return await fetch(
+      `${process.env.REACT_APP_SERVER_DOMAIN}/auth/user-data`,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token ?? this.token}`,
+        },
+      }
+    );
   }
 
   async hasAuthCookies(): Promise<boolean | undefined> {
     try {
-
       const string = document.cookie;
       const array = string.split(';');
 

@@ -192,21 +192,22 @@ const handleGetUserData = async (req, res) => {
 
   const docClient = new AWS.DynamoDB.DocumentClient();
 
-  const data = await docClient.get({
-    TableName: process.env.AUTH_TABLE_NAME,
-    Key: {
-      "email": clientId
-    }
-  }, (err, data) => {
-    if (err) console.log({err})
-    if (data) console.log({data})
-  }).promise();
+  const data = await docClient
+    .get(
+      {
+        TableName: process.env.AUTH_TABLE_NAME,
+        Key: {
+          email: clientId,
+        },
+      },
+      (err) => {
+        if (err) console.log({ err });
+      }
+    )
+    .promise();
 
-  console.log({ data })
-
-  res.json({data})
-
-}
+  res.json({ data });
+};
 
 const isAuthorized = async (req, res) => {
   const user = req.user;
@@ -341,22 +342,22 @@ const handleUploadImage = async (req, res) => {
         if (error) {
           return res.end({ message: "Unable to upload", error });
         } else {
-
           try {
-            console.log(1.1, req.user.email, data.Location)
-            docClient.update({
-              TableName: process.env.AUTH_TABLE_NAME,
-              Key: {
-                "email": `${req.user.email}`,
+            docClient.update(
+              {
+                TableName: process.env.AUTH_TABLE_NAME,
+                Key: {
+                  email: `${req.user.email}`,
+                },
+                UpdateExpression: "set avatar_url = :url",
+                ExpressionAttributeValues: {
+                  ":url": data.Location,
+                },
               },
-              UpdateExpression:
-                "set avatar_url = :url",
-              ExpressionAttributeValues: {
-                ":url": data.Location,
+              (err) => {
+                if (err) console.log(err);
               }
-            }, (err) => {
-              if (err) console.log(err)
-            })
+            );
             res.json({ image_url: data.Location });
           } catch (error) {
             res.json({ error });

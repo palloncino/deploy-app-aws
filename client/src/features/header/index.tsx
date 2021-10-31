@@ -92,7 +92,13 @@ export function Header() {
 
               <div className="header-user-space-1">
                 <div className="header-user-space-2-profile-container">
-                  <Profile avatarUrl={auth.getProp('avatar_url') ? auth.getProp('avatar_url') : 'https://antonioguiotto-images.s3.amazonaws.com/avatar.png'} />
+                  <Profile
+                    avatarUrl={
+                      auth.getProp('avatar_url')
+                        ? auth.getProp('avatar_url')
+                        : `${process.env.REACT_APP_DEFAULT_AVATAR_IMAGE}`
+                    }
+                  />
                 </div>
 
                 <div className="header-user-space-2-buttons-container">
