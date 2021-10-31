@@ -152,7 +152,7 @@ export const Register = ({ setOpenModals, isOpen }: IModalProp) => {
         return (
           <InfoRegisterModal
             handleCloseModal={handleCloseModal}
-            paragraphValue={'Registration unsuccesful, please try again'}
+            paragraphValue={'Due to technical issues, we will not validate your email at this time. You are free to login now.'} // Registration unsuccesful, please try again
           />
         );
     }

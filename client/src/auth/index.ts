@@ -173,8 +173,18 @@ export class Authentication {
       const bool = await this.checkTokenValidity(jsCookies.token);
 
       if (bool) {
+
+        const res = await this.getUserData(jsCookies.token);
+        const { data } = await res.json();
+        const user = data.Item;
+
         this.setProp('token', jsCookies.token);
         this.setProp('email', jsCookies.email);
+
+        if (user.avatar_url) {
+          this.setProp('avatar_url', user.avatar_url);
+        }
+
         return true;
       } else {
         return false;

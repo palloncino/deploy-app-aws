@@ -94,9 +94,10 @@ export function Header() {
                 <div className="header-user-space-2-profile-container">
                   <Profile
                     avatarUrl={
-                      auth.getProp('avatar_url')
-                        ? auth.getProp('avatar_url')
-                        : `${process.env.REACT_APP_DEFAULT_AVATAR_IMAGE}`
+                      auth.getProp('avatar_url') === 'undefined' ||
+                      !auth.getProp('avatar_url')
+                        ? `${process.env.REACT_APP_DEFAULT_AVATAR_IMAGE}`
+                        : auth.getProp('avatar_url')
                     }
                   />
                 </div>
