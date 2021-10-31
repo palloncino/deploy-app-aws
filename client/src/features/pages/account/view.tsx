@@ -16,7 +16,7 @@ export function AccountContent({
     setImage(event.target.files[0]);
   };
 
-  const sendUploadedImage = () => {
+  const sendUploadedImage = async () => {
     if (!image.name) return;
 
     const token = auth.getProp('token');
@@ -24,13 +24,24 @@ export function AccountContent({
     const formData = new FormData();
     formData.append('image', image);
 
-    fetch('http://localhost:8080/auth/uploadImage', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      body: formData,
-    });
+    try {
+      const response = await fetch('http://localhost:8080/auth/uploadImage', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        body: formData,
+      });
+
+
+      if (response.status == 200) {
+        const data = await response.json();
+        auth.setProp('avatar_url', data.image_url);
+      }
+
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -52,7 +63,10 @@ export function AccountContent({
         <h3>Change Profile image</h3>
         <input onChange={handleUploadImage} type="file" name="profile_image" />
         <button onClick={sendUploadedImage}>click</button>
-        <img src="" alt="user avatar" />
+        <img
+          src="https://antonioguiotto-images.s3.amazonaws.com/users/antonio.guiotto.dev%40gmail.com-avatar.jpeg"
+          alt="user avatar"
+        />
       </div>
 
       <div className="account-information-container-2">

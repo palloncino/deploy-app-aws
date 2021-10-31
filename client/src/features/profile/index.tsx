@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectAuth } from '../../auth/authSlice';
 import { Singleton as Authorization } from '../../auth';
 
-export const Profile = () => {
+export const Profile = ({avatarUrl}: any) => {
   const { isAuthenticated } = useSelector(selectAuth);
   const auth = Authorization.getInstance();
 
@@ -18,7 +18,7 @@ export const Profile = () => {
           <div className="profile-box-logo">
             <img
               className="profile-box-logo-img"
-              src="https://antonioguiotto-images.s3.amazonaws.com/avatar.png"
+              src={avatarUrl}
               alt="avatar"
             />
           </div>
@@ -29,7 +29,7 @@ export const Profile = () => {
           <div className="profile-box-logo">
             <img
               className="profile-box-logo-img"
-              src="https://antonioguiotto-images.s3.amazonaws.com/avatar.png"
+              src={avatarUrl}
               alt="avatar"
             />
           </div>

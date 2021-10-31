@@ -14,7 +14,6 @@ export function Account() {
   const dispatch = useDispatch();
 
   const handleLogout = () => {
-    // TODO:  open a modal with quote, "are you sure you want to log out?" buttons: cancel, logout
     auth.removeCookies();
     dispatch(removeAuthentication());
     dispatch(changeRoute('/'));
@@ -42,17 +41,16 @@ export function Account() {
     };
 
     try {
-      const response = await fetch(URL, options);
-
-      const json = await response.json();
-
+      
+      await fetch(URL, options);
       setIsLoading(false);
-
       handleLogout();
-    } catch (error) {
-      setIsLoading(false);
 
+    } catch (error) {
+
+      setIsLoading(false);
       console.error(error);
+
     }
   };
 

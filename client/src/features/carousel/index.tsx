@@ -28,7 +28,7 @@ export const Carousel = () => {
     dispatch(setFocusItemId(id));
   };
 
-  return data.length > 0 ? (
+  return data?.length > 0 ? (
     <CarouselContent handleRedirectToPost={handleRedirectToPost} data={data} />
   ) : (
     renderSpinner()

@@ -77,6 +77,7 @@ const handleSignUp = async (req, res) => {
           password: hashedPassword,
           created_when: dateISOString,
           email_verified: email_verified,
+          avatar_url: null,
         },
       })
       .promise();
@@ -279,15 +280,23 @@ const handleDeleteAccount = async (req, res) => {
 
 const handleUploadImage = async (req, res) => {
 
+  console.log(1.1);
+
   const S3 = new AWS.S3({
     accessKeyId: `${process.env.AWS_PROFILE_KEY}`,
     secretAccessKey: `${process.env.AWS_PROFILE_SECRET}`,
   });
 
+  console.log(1.2);
+
   const image = req.files.image;
   const fileName = `${req.user.email}-${image.name}`;
 
+  console.log(1.3);
+
   const path = `${__dirname}/../temp/${fileName}`
+
+  console.log(1.4, { path });
 
   image.mv(path, error => {
     if (error) {
@@ -296,9 +305,15 @@ const handleUploadImage = async (req, res) => {
     }
   })
 
+  console.log(1.5);
+
   fs.readFile(path, (err, data) => {
     
-    if (err) return console.log(err)
+    if (err) {
+      return console.log(err)
+    };
+
+    console.log(1.6)
 
     S3.upload({
       Bucket: process.env.AVATARS_BUCKET_NAME,
@@ -308,13 +323,14 @@ const handleUploadImage = async (req, res) => {
       if (error) {
         console.log(1.53, {error})
         return res.end({message: 'Unable to upload', error})
+      } else {
+        res.json({ image_url: data.Location })
       }
-      res.json('Image succesfully uploaded.', { data })
     })
 
-  });
+    // set image inside user table
 
-  res.json('ok')
+  });
 
 }
 

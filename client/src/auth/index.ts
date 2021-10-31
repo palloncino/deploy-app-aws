@@ -9,25 +9,39 @@ import { IFormData } from './auth-interfaces';
 export class Authentication {
   email: boolean | string;
   token: boolean | string;
-  isLoading: boolean;
+  avatar_url: boolean | string;
 
   constructor() {
     this.token = false;
     this.email = false;
-    this.isLoading = false;
+    this.avatar_url = false;
   }
 
-  getProp(key: 'email' | 'token' | 'isLoading') {
-    return this[key];
+  getProp(key: 'email' | 'token' | 'avatar_url') {
+    
+    if (this[key]) {
+
+      console.log(3.1)
+      return this[key]
+
+    } else {
+
+      const cookies = document.cookie;
+      const wholeCookies = cookies.split(';').map(str => str.trim());
+      const keyValueCookies = wholeCookies.map(str => str.split('='));
+      const theWholeCookie = keyValueCookies.find(cookie => cookie[0]===`${key}`);
+      if (theWholeCookie) {
+        return theWholeCookie[1];
+      }
+    }
+
+    return false;
+
   }
 
-  setProp(key: 'email' | 'token', value: string) {
+  setProp(key: 'email' | 'token' | 'avatar_url', value: string) {
     document.cookie = `${key}=${value}`;
-    return (this[key] = value);
-  }
-
-  setIsLoading(value: boolean) {
-    return (this.isLoading = value);
+    return this[key] = value;
   }
 
   async checkTokenValidity(token?: string): Promise<boolean> {
@@ -126,6 +140,20 @@ export class Authentication {
       );
     } catch (error) {
       console.error(error); // TODO: handle error
+    }
+  }
+
+  getUserData() {
+    // store user table's data in redux
+  }
+
+  fetchAvatar(email: string) {
+    try {
+      // request for user avatar_url value
+      // await fetch('https://google.com');
+      return 'https://picsum.photos/200';
+    } catch (error) {
+      console.log(error)
     }
   }
 

@@ -9,7 +9,6 @@ import { Singleton as Authorization } from '../../auth';
 import { Spinner } from '../spinner';
 import { useState } from 'react';
 import { changeRoute } from '../routes';
-// // import logo from '../../images/svg/logo-1-double.svg';
 import logo from '../../images/svg/logo-1-double-white-01.svg';
 
 export function Header() {
@@ -19,11 +18,6 @@ export function Header() {
 
   const openModalsInitialState = { login: false, register: false };
   const [openModals, setOpenModals] = useState(openModalsInitialState);
-
-  const clientId = auth.getProp('email');
-
-  const isAdmin = () =>
-    clientId === process.env.REACT_APP_ADMIN_EMAIL ? true : false;
 
   const handleSetOpenModals = (key: string, value: boolean) =>
     setOpenModals({ ...openModalsInitialState, [key]: value });
@@ -53,15 +47,6 @@ export function Header() {
                   src={logo}
                   alt="logo"
                 />
-                {/* <div
-                  style={{ fontSize: '2rem' }}
-                  onClick={() => {
-                    dispatch(changeRoute('/'));
-                  }}
-                  className="logo-font custom-font-title"
-                >
-                  antonioguiotto.com
-                </div> */}
               </div>
 
               <div className="header-user-space-1">
@@ -107,7 +92,7 @@ export function Header() {
 
               <div className="header-user-space-1">
                 <div className="header-user-space-2-profile-container">
-                  <Profile />
+                  <Profile avatarUrl={auth.getProp('avatar_url') ? auth.getProp('avatar_url') : 'https://antonioguiotto-images.s3.amazonaws.com/avatar.png'} />
                 </div>
 
                 <div className="header-user-space-2-buttons-container">
@@ -137,5 +122,4 @@ export function Header() {
   };
 
   return renderNavigation();
-  // return renderNavigation();
 }
