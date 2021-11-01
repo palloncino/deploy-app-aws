@@ -88,7 +88,7 @@ export function AccountContent({
           </div>
           <Button
             handleClick={handleDeleteAccount}
-            customStyle={{ width: '150px', margin: '0 auto' }}
+            customStyle={{ width: '150px' }}
             label={isLoading ? <Spinner /> : 'delete account'}
           />
         </div>
