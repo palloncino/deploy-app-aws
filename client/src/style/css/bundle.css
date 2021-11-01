@@ -753,6 +753,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Custom-Font-Titles";
 }
 .homepage-text-container-paragraph {
   font-size: 1rem;

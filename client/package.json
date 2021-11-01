@@ -83,6 +83,7 @@
     "terser-webpack-plugin": "4.2.3",
     "ts-pnp": "1.2.0",
     "typescript": "~4.1.5",
+    "typewriter-effect": "^2.18.2",
     "url-loader": "4.1.1",
     "webpack": "4.44.2",
     "webpack-dev-server": "3.11.1",
