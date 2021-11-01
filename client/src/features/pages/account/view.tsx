@@ -83,12 +83,12 @@ export function AccountContent({
 
       <div className="account-information-container-2">
         <div className="account-information-container-2-buttons-container">
-          <div className="account-information-container-2-title-tag">
+          <div className="account-information-container-2-title-tag" style={{ marginBottom: '10px' }}>
             Erease data
           </div>
           <Button
             handleClick={handleDeleteAccount}
-            customStyle={{ background: 'orangered', color: 'white', width: '150px', margin: '0 auto' }}
+            customStyle={{ background: 'whitered', color: 'white', width: '150px', margin: '0 auto' }}
             label={isLoading ? <Spinner /> : 'delete account'}
           />
         </div>

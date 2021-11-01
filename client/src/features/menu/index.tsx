@@ -83,7 +83,7 @@ export function Menu() {
             textAlign: 'left',
             padding: '0 10px',
             background: 'black',
-            color: 'orange',
+            color: 'white',
             marginBottom: '5px',
           };
           return (

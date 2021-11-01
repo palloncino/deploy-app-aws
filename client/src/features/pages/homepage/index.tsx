@@ -51,13 +51,30 @@ export function Homepage() {
           ⚠️ Work in progress, some features might be out of service.
         </h3>
 
-        <div className="homepage-group homepage-group--1">
-          <div className="homepage-group--1--left">
-            <div className="homepage-text-container-title--XXXL">
-              Welcome {name === 'false' ? 'guest' : name}
-            </div>
-            <div className="homepage-text-container-paragraph">
-              {INITIAL_PARAGRAPH}
+        <div style={{ display: 'flex' }}>
+          <div className="homepage-group homepage-group--3">
+            <p>Javascript Developer</p>
+            <img
+              src="https://antonioguiotto-images.s3.amazonaws.com/me3.png"
+              alt="Antonio Guiotto"
+              className="homepage-group--3--img"
+              style={{ marginBottom: '20px' }}
+            />
+            <Button
+              customStyle={{ width: '200px', margin: '0 auto', background: 'transparent', color: 'white', border: '2px solid white' }}
+              handleClick={() => handleDownloadFile('pdf')}
+              label="⤵️ DOWNLOAD CV 📄"
+            />
+          </div>
+
+          <div className="homepage-group homepage-group--1">
+            <div className="homepage-group--1--left">
+              <div className="homepage-text-container-title--XXXL">
+                Welcome {name === 'false' ? 'guest' : name}
+              </div>
+              <div className="homepage-text-container-paragraph">
+                {INITIAL_PARAGRAPH}
+              </div>
             </div>
           </div>
         </div>
@@ -67,23 +84,6 @@ export function Homepage() {
           <div className="homepage-carousel-container">
             <Carousel />
           </div>
-        </div>
-
-        <div className="homepage-group homepage-group--3">
-          <div className="homepage-text-container-title--XXL">
-            Personal Information
-          </div>
-          <img
-            src="https://antonioguiotto-images.s3.amazonaws.com/me3.png"
-            alt="Antonio Guiotto"
-            className="homepage-group--3--img"
-          />
-          <p>Full Stack Javascript Developer</p>
-          <Button
-            customStyle={{ width: '250px', marginRight: '20px' }}
-            handleClick={() => handleDownloadFile('pdf')}
-            label="⤵️ DOWNLOAD PDF 📄"
-          />
         </div>
       </div>
     );
