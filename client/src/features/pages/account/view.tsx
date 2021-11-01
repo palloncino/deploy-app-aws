@@ -73,7 +73,7 @@ export function AccountContent({
             <input onChange={handleUploadImage} type="file" name="profile_image"/>
             <Button
             handleClick={sendUploadedImage}
-            customStyle={{ color: 'white', background: 'transparent', marginBottom: '10px' }}
+            customStyle={{ width: '150px', marginBottom: '10px' }}
             label={isLoading ? <Spinner /> : 'Set image'}
           />
           </div>
@@ -88,7 +88,7 @@ export function AccountContent({
           </div>
           <Button
             handleClick={handleDeleteAccount}
-            customStyle={{ background: 'whitered', color: 'white', width: '150px', margin: '0 auto' }}
+            customStyle={{ width: '150px', margin: '0 auto' }}
             label={isLoading ? <Spinner /> : 'delete account'}
           />
         </div>

@@ -44,12 +44,12 @@ export function Homepage() {
   const renderInsider = () => {
     return (
       <div className="homepage-container">
-        <h3
+        {/* <h3
           style={{ textAlign: 'center', margin: '-30px 0 30px 0' }}
           className="homepage-group homepage-group-banner-h3"
         >
           ⚠️ Work in progress, some features might be out of service.
-        </h3>
+        </h3> */}
 
         <div style={{ display: 'flex' }}>
           <div className="homepage-group homepage-group--3">
@@ -61,7 +61,7 @@ export function Homepage() {
               style={{ marginBottom: '20px' }}
             />
             <Button
-              customStyle={{ width: '200px', margin: '0 auto', background: 'transparent', color: 'white', border: '2px solid white' }}
+              customStyle={{ width: '200px', margin: '0 auto' }}
               handleClick={() => handleDownloadFile('pdf')}
               label="⤵️ DOWNLOAD CV 📄"
             />
