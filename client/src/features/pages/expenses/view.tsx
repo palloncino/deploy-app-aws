@@ -141,7 +141,7 @@ export const ExpensesContent = ({
     const tw = new Typewriter(div, {
       autoStart: true,
       loop: false,
-      delay: 50,
+      delay: 20,
     });
 
     tw

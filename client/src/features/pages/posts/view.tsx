@@ -22,11 +22,13 @@ export const PostsContent = ({
   const tw = new Typewriter(div, {
     autoStart: true,
     loop: false,
-    delay: 50,
+    delay: 20,
   });
 
   tw
-    .typeString(`These are a list of articles that I write every once in a while, when I do some interesting stuff.`)
+    .typeString(`These are a list of articles that I write every once in a while`)
+    .pauseFor(1000)
+    .typeString(`They are about various topics, programming, life experience and more.`)
     .pauseFor(5000)
     .start();
 
