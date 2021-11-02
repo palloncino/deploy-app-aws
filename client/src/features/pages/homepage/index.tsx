@@ -12,32 +12,43 @@ export function Homepage() {
   const auth = Authentication.getInstance();
   const clientId = auth.getProp('email');
   const name = String(clientId).split('@')[0];
-  var div = document.getElementById('typewriter-paragraph');
-  const tw = new Typewriter(div, {
-    autoStart: true,
-    loop: true,
-    delay: 50,
-  });
+  setTimeout(() => {
+    var div = document.getElementById('homepage-typewriter-paragraph');
+    if (div) {
+      const tw = new Typewriter(div, {
+        autoStart: true,
+        loop: false,
+        delay: 20,
+      });
 
-  tw
-  .pauseFor(100)
-  .typeString(`This website was initially created as a CV public storage, only
-  later I started to add functionalities that I find useful myself. `)
-  .pauseFor(500)
-  .typeString(`Certain services can be used publicly: taking for example
-  expenses, where you can conviniently keep track of monthly
-  expenses and subsciptions that perhaps you might not want to keep
-  any more. `)
-  .pauseFor(500)
-  .typeString(`I also post stuff about programming or just interesting piece 
-  of personal experience. `)
-  .pauseFor(500)
-  .typeString(`Other services are in progress. `, )
-  .pauseFor(500)
-  .typeString(`Finally I wanna say, I am open to work in new projects, so therefore
-  feel free to reach me anytime, cya 👋`)
-  .pauseFor(5000)
-  .start();
+      tw.typeString(
+        `This website was initially created as a CV public storage, only later I started to add functionalities that I find useful myself. `
+      )
+        .pauseFor(500)
+        .typeString(
+          `Certain services can be used publicly: taking for example expenses, where you can conviniently keep track of monthly expenses and subsciptions that perhaps you might not want to keep any more. `
+        )
+        .pauseFor(500)
+        .typeString(
+          `I also post stuff about programming or just interesting piece of personal experience. `
+        )
+        .pauseFor(500)
+        .typeString(`Other services are in progress. `)
+        .pauseFor(500)
+        .typeString(
+          `Finally I wanna say, I am open to work in new projects, so therefore feel free to reach me anytime, cya 👋`
+        )
+        .pauseFor(500)
+        .start();
+    }
+  }, 0);
+
+  const parseNameValue = (name: string | undefined | false | null) => {
+    if (typeof name === 'string' && name !== 'undefined' && name !== 'false') {
+      return name;
+    }
+    return 'guest';
+  }
 
   const renderSpinner = () => {
     return (
@@ -87,13 +98,12 @@ export function Homepage() {
           <div className="homepage-group homepage-group--1">
             <div className="homepage-group--1--left">
               <div className="homepage-text-container-title--XXXL">
-                Welcome {name === 'false' ? 'guest' : name}
+                Welcome {parseNameValue(name)}
               </div>
               <div
-                id="typewriter-paragraph"
+                id="homepage-typewriter-paragraph"
                 className="homepage-text-container-paragraph"
               >
-                {/* {INITIAL_PARAGRAPH} */}
               </div>
             </div>
           </div>

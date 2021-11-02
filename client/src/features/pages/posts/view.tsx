@@ -6,6 +6,8 @@ import { selectPosts } from './postsSLice';
 import { selectFocusedItem } from '../../routes';
 import { Singleton as Authorization } from '../../../auth';
 import { Spinner } from '../../spinner';
+// @ts-ignore
+import Typewriter from 'typewriter-effect/dist/core';
 
 export const PostsContent = ({
   handleInputChange,
@@ -15,6 +17,18 @@ export const PostsContent = ({
   const data = useSelector(selectPosts);
   const focusedElement = useSelector(selectFocusedItem);
   const [postsData, setPostsData] = useState([]);
+
+  var div = document.getElementById('posts-typewriter-paragraph');
+  const tw = new Typewriter(div, {
+    autoStart: true,
+    loop: false,
+    delay: 50,
+  });
+
+  tw
+    .typeString(`These are a list of articles that I write every once in a while, when I do some interesting stuff.`)
+    .pauseFor(5000)
+    .start();
 
   useEffect(() => {
     setPostsData(data);
@@ -165,9 +179,7 @@ export const PostsContent = ({
         <div className="posts-page-description-title custom-font-title">
           Page description
         </div>
-        <div>
-          These are a list of articles that I write every once in a while, when
-          I do some interesting stuff.
+        <div id="posts-typewriter-paragraph">
         </div>
       </div>
       <div className="posts-wrapper">

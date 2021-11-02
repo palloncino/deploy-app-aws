@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { Button } from '../../button';
 import { Spinner } from '../../spinner';
 import { IExpensesProps, IExpenses } from './expenses-interfaces';
+// @ts-ignore
+import Typewriter from 'typewriter-effect/dist/core';
 
 const FORM_INPUTS_SCHEMA = [
   {
@@ -135,6 +137,18 @@ export const ExpensesContent = ({
       expensesArray.push({ id: id, ...expenses[id] });
     });
 
+    var div = document.getElementById('expenses-typewriter-paragraph');
+    const tw = new Typewriter(div, {
+      autoStart: true,
+      loop: false,
+      delay: 50,
+    });
+
+    tw
+    .typeString(`With this form you can conviniently keep track of monthly expenses and subsciptions that perhaps you might not want to keep any more!`)
+    .pauseFor(5000)
+    .start();
+
     return (
       <div>
         <div>
@@ -240,9 +254,7 @@ export const ExpensesContent = ({
         <div className="expenses-container-group-title custom-font-title">
           Page description
         </div>
-        <div>
-          With this form you can conviniently keep track of monthly expenses and
-          subsciptions that perhaps you might not want to keep any more!
+        <div id="expenses-typewriter-paragraph">
         </div>
       </div>
       <div className="expenses-wrapper">
