@@ -1,6 +1,6 @@
 {
   "name": "antonioguiotto-client",
-  "version": "5.3",
+  "version": "5.4",
   "private": true,
   "scripts": {
     "start": "node scripts/start.js",
