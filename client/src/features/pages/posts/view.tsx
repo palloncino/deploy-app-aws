@@ -6,7 +6,7 @@ import { selectPosts } from './postsSLice';
 import { selectFocusedItem } from '../../routes';
 import { Singleton as Authorization } from '../../../auth';
 import { Spinner } from '../../spinner';
-import { TypewriterComponent } from '../../typewriter';
+import Typewriter from 'typewriter-effect';
 
 export const PostsContent = ({
   handleInputChange,
@@ -131,12 +131,23 @@ export const PostsContent = ({
   return (
     <>
       <div className="posts-page-description-container">
-        <TypewriterComponent
-          element_id="posts-typewriter-paragraph"
-          strings={[
-            `These are a list of articles that I write every once in a while`,
-            `They are about various topics, programming, life experience and more.`,
-          ]}
+        <Typewriter
+          options={{
+            delay: 20,
+            wrapperClassName: 'homepage-typewriter-wrapper',
+          }}
+          onInit={(typewriter) => {
+            typewriter
+              .typeString(
+                `These are a list of articles that I write every once in a while ... `
+              )
+              .pauseFor(3000)
+              .typeString(
+                `They are about various topics, programming, life experience and more.`
+              )
+              .pauseFor(3000)
+              .start();
+          }}
         />
       </div>
       <div className="posts-wrapper">

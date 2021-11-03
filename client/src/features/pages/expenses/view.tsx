@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '../../button';
 import { Spinner } from '../../spinner';
 import { IExpensesProps, IExpenses } from './expenses-interfaces';
-import { TypewriterComponent } from '../../typewriter';
+import Typewriter from 'typewriter-effect';
 
 const FORM_INPUTS_SCHEMA = [
   {
@@ -238,12 +238,16 @@ export const ExpensesContent = ({
   return (
     <>
       <div className="expenses-container-group center">
-        <TypewriterComponent
-          element_id="expenses-typewriter-paragraph"
-          strings={[
-            `With this form you can conviniently keep track of monthly expenses and subsciptions that perhaps you might not want to keep any more!`,
-          ]}
-        />
+      <Typewriter
+                options={{delay: 20, wrapperClassName: "homepage-typewriter-wrapper" }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString(
+                      `With this form you can conviniently keep track of monthly expenses and subsciptions that perhaps you might not want to keep any more!`
+                    )
+                    .start();
+                }}
+              />
       </div>
       <div className="expenses-wrapper">
         <div className="expenses-container-1">

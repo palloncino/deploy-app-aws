@@ -328,7 +328,7 @@
 .expenses-container-group.center {
   font-size: 1.2rem;
   line-height: 2rem;
-  width: 80%;
+  width: 90%;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
@@ -687,7 +687,7 @@
 .posts-page-description-container {
   font-size: 1.2rem;
   line-height: 2rem;
-  width: 80%;
+  width: 90%;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
@@ -804,6 +804,11 @@
   justify-content: center;
   font-size: 3rem;
   cursor: pointer;
+}
+
+.homepage-typewriter-wrapper {
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
 @font-face {

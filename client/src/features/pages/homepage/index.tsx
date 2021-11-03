@@ -1,5 +1,4 @@
-// @ts-ignore
-import { TypewriterComponent } from '../../typewriter';
+import Typewriter from 'typewriter-effect';
 import { useSelector } from 'react-redux';
 import { selectAuth } from '../../../auth/authSlice';
 import { Carousel } from '../../carousel';
@@ -42,7 +41,6 @@ export function Homepage() {
   const renderInsider = () => {
     return (
       <div className="homepage-container">
-
         <div style={{ display: 'flex' }}>
           <div className="homepage-group homepage-group--3">
             <p>Javascript Developer</p>
@@ -64,19 +62,30 @@ export function Homepage() {
               <div className="homepage-text-container-title--XXXL">
                 Welcome {parseNameValue(name)}
               </div>
-              <TypewriterComponent
-                element_id="homepage-typewriter-output-container"
-                strings={[
-                  `This website was initially created as a CV public storage, only later I started to add functionalities that I find useful myself. `,
-                  `Certain services can be used publicly: taking for example expenses, where you can conviniently keep track of monthly expenses and subsciptions that perhaps you might not want to keep any more. `,
-                  `I also post stuff about programming or just interesting piece of personal experience. `,
-                  `Finally I wanna say, I am open to work in new projects, so therefore feel free to reach me anytime, cya 👋`,
-                ]}
-                delay={30}
-                loop={true}
-                auto_start={true}
-                delete_speed={10}
-                pause_for={5000}
+              <Typewriter
+                options={{delay: 20, wrapperClassName: "homepage-typewriter-wrapper" }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString(
+                      `This website was initially created as a CV public storage, only later I started to add functionalities that I find useful myself. `
+                    )
+                    .pauseFor(3000)
+                    .typeString(
+                      `Certain services can be used publicly: taking for example expenses, where you can conviniently keep track of monthly expenses and subsciptions that perhaps you might not want to keep any more. `
+                    )
+                    .pauseFor(3000)
+                    .typeString(
+                      `I also post stuff about programming or just interesting piece of personal experience. `
+                    )
+                    .pauseFor(3000)
+                    .typeString(`Other services are in progress. `)
+                    .pauseFor(3000)
+                    .typeString(
+                      `Finally I wanna say, I am open to work in new projects, so therefore feel free to reach me anytime, cya 👋`
+                    )
+                    .pauseFor(3000)
+                    .start();
+                }}
               />
             </div>
           </div>
