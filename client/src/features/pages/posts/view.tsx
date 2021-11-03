@@ -6,8 +6,7 @@ import { selectPosts } from './postsSLice';
 import { selectFocusedItem } from '../../routes';
 import { Singleton as Authorization } from '../../../auth';
 import { Spinner } from '../../spinner';
-// @ts-ignore
-import Typewriter from 'typewriter-effect/dist/core';
+import { TypewriterComponent } from '../../typewriter';
 
 export const PostsContent = ({
   handleInputChange,
@@ -17,20 +16,6 @@ export const PostsContent = ({
   const data = useSelector(selectPosts);
   const focusedElement = useSelector(selectFocusedItem);
   const [postsData, setPostsData] = useState([]);
-
-  var div = document.getElementById('posts-typewriter-paragraph');
-  const tw = new Typewriter(div, {
-    autoStart: true,
-    loop: false,
-    delay: 20,
-  });
-
-  tw
-    .typeString(`These are a list of articles that I write every once in a while`)
-    .pauseFor(1000)
-    .typeString(`They are about various topics, programming, life experience and more.`)
-    .pauseFor(5000)
-    .start();
 
   useEffect(() => {
     setPostsData(data);
@@ -65,38 +50,6 @@ export const PostsContent = ({
   const renderPostsData = () => {
     return (
       <div>
-        {/* <div className="post-container-data-cell-container-info-header">
-          <div className="post-container-data-cell-container post-container-data-cell-container--title">
-            <div className="post-container-data-cell-value post-container-data-cell-value--title">
-              Title
-            </div>
-          </div>
-          <div className="post-container-data-cell-container post-container-data-cell-container--description">
-            <div className="post-container-data-cell-value post-container-data-cell-value--description">
-              Description
-            </div>
-          </div>
-
-          <div className="post-container-data-cell-container post-container-data-cell-container--date">
-            <div className="post-container-data-cell-value post-container-data-cell-value--date">
-              Date
-            </div>
-          </div>
-
-          <div className="post-container-data-cell-container post-container-data-cell-container--see-more">
-            <div className="post-container-data-cell-value post-container-data-cell-value--see-more">
-              <Button
-                customStyle={{
-                  width: '150px',
-                  border: 'none',
-                  background: 'transparent',
-                }}
-                handleClick={() => {}}
-                label={'Filter'}
-              />
-            </div>
-          </div>
-        </div> */}
         {postsData.map((post: any, index: number) => {
           return (
             <div
@@ -178,11 +131,13 @@ export const PostsContent = ({
   return (
     <>
       <div className="posts-page-description-container">
-        <div className="posts-page-description-title custom-font-title">
-          Page description
-        </div>
-        <div id="posts-typewriter-paragraph">
-        </div>
+        <TypewriterComponent
+          element_id="posts-typewriter-paragraph"
+          strings={[
+            `These are a list of articles that I write every once in a while`,
+            `They are about various topics, programming, life experience and more.`,
+          ]}
+        />
       </div>
       <div className="posts-wrapper">
         {isAdmin() && (

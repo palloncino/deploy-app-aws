@@ -328,13 +328,11 @@
 .expenses-container-group.center {
   font-size: 1.2rem;
   line-height: 2rem;
-  width: 60%;
+  width: 80%;
   margin: 20px auto;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .expenses-container-group-title {
@@ -689,13 +687,11 @@
 .posts-page-description-container {
   font-size: 1.2rem;
   line-height: 2rem;
-  width: 60%;
+  width: 80%;
   margin: 20px auto;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .posts-page-description-title {
