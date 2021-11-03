@@ -1,7 +1,7 @@
 .account-container {
-  display: flex;
-  justify-content: center;
-  min-height: 500px;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
 }
 
 .account-information-container {
@@ -14,7 +14,7 @@
 
     &-title-tag {
       font-size: $font-XXL;
-      font-family: 'Custom-Font-Titles';
+      // font-family: 'Custom-Font-Titles';
     }
 
     &-informations {
@@ -30,7 +30,7 @@
     
     &-title-tag {
       font-size: $font-XXL;
-      font-family: 'Custom-Font-Titles';
+      // font-family: 'Custom-Font-Titles';
     }
   }
 
@@ -42,7 +42,7 @@
 
     &-title-tag {
       font-size: $font-XXL;
-      font-family: 'Custom-Font-Titles';
+      // font-family: 'Custom-Font-Titles';
     }
     &-inputs-container {
       display: flex;

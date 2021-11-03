@@ -135,8 +135,8 @@
 }
 
 .carousel-item-cell--box {
-  background: #333;
-  border: 2px solid #333;
+  background-image: url(../../images/svg/article.svg);
+  background-size: cover;
   color: white;
   display: flex;
   flex-direction: column;
@@ -167,10 +167,17 @@
   transform: scale(0.95);
 }
 .carousel-item-cell--title {
-  margin-bottom: 10px;
+  display: inline;
+  background: rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 0px #000;
+  padding: 5px;
   font-size: 1.4rem;
 }
 .carousel-item-cell--description {
+  display: block;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 0px #000;
   font-size: 1rem;
 }
 .carousel-item-cell-arrow {
@@ -477,9 +484,9 @@
 }
 
 .account-container {
-  display: flex;
-  justify-content: center;
-  min-height: 500px;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
 }
 
 .account-information-container {
@@ -492,7 +499,6 @@
 }
 .account-information-container-1-title-tag {
   font-size: 2rem;
-  font-family: "Custom-Font-Titles";
 }
 .account-information-container-1-informations {
   margin: 10px 0;
@@ -505,7 +511,6 @@
 }
 .account-information-container-2-title-tag {
   font-size: 2rem;
-  font-family: "Custom-Font-Titles";
 }
 .account-information-container-3 {
   display: flex;
@@ -515,7 +520,6 @@
 }
 .account-information-container-3-title-tag {
   font-size: 2rem;
-  font-family: "Custom-Font-Titles";
 }
 .account-information-container-3-inputs-container {
   display: flex;
@@ -749,7 +753,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Custom-Font-Titles";
 }
 .homepage-text-container-paragraph {
   font-size: 1rem;

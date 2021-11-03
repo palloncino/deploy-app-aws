@@ -68,6 +68,7 @@ export const CarouselContent = ({
                   <div className="carousel-item-cell carousel-item-cell--title">
                     {item.title}
                   </div>
+                  <br /><br />
                   <div className="carousel-item-cell carousel-item-cell--description">
                     {item.description}
                   </div>

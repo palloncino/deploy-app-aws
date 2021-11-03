@@ -41,7 +41,7 @@ export function Homepage() {
   const renderInsider = () => {
     return (
       <div className="homepage-container">
-        <div style={{ display: 'flex' }}>
+        <div style={{ display: 'flex', marginBottom: '40px' }}>
           <div className="homepage-group homepage-group--3">
             <p>Javascript Developer</p>
             <img
