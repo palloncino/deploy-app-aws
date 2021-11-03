@@ -833,10 +833,7 @@
 }
 
 body {
-  background: #161616;
-  background-attachment: fixed;
-  background-position: fixed;
-  background-size: cover;
+  background: linear-gradient(#161616, #333);
   overflow-y: scroll;
   color: white;
 }
