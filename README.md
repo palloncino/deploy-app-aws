@@ -220,18 +220,6 @@ For more information on the available scripts, refer to *./client/README.md*
 - `DB-1.1` - in this case we just need to create a table
 
 
-<br><br>
-<hr>
-
-
-# 🔨 **WORK IN PROGRESS**
-
-  - Spinner while Loading Posts
-  - Posts page should be more readable, add a filter
-  - Add date to posts
-  - Map features
-
-
 <br>
 <br>
 <hr>
