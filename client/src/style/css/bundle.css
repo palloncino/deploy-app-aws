@@ -2,7 +2,7 @@
   transition: 0.3s;
   background: #161616;
   border: 2px solid #333;
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -92,7 +92,7 @@
 .footer-container {
   background: #333;
   border: 2px solid #000;
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   position: fixed;
   bottom: 0;
   z-index: 95;
@@ -137,7 +137,7 @@
 .carousel-item-cell--box {
   background-image: url(../../images/svg/article.svg);
   background-size: cover;
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,7 +199,7 @@
 
 .btn-grad {
   background: rgba(255, 255, 255, 0.05);
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   border: 2px solid rgba(255, 255, 255, 0.4);
   border-radius: 3px;
   height: 40px;
@@ -276,7 +276,7 @@
   margin-bottom: 20px;
   display: flex;
   align-items: start;
-  background: white;
+  background: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .artwork-summary-container-img {
@@ -308,7 +308,7 @@
   margin-bottom: 20px;
 }
 .artwork-items-title {
-  background: white;
+  background: rgba(255, 255, 255, 0.85);
   padding: 0px 20px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   height: 40px;
@@ -340,8 +340,7 @@
 }
 
 .expenses-container-1 {
-  color: white;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.85);
   border-radius: 5px;
   width: 50%;
   margin-right: 20px;
@@ -369,8 +368,9 @@
   margin-bottom: 40px;
 }
 .expenses-container-1-form-input-label {
-  background: rgba(0, 0, 0, 0.75);
-  color: white;
+  background: #333;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.85);
   padding: 0 5px;
   border-radius: 5px;
   position: absolute;
@@ -382,7 +382,7 @@
 }
 .expenses-container-1-form-input-tag-input {
   background: #333;
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.2);
   flex: 1;
   height: 100%;
@@ -418,7 +418,7 @@
 }
 .expenses-container-2-expense-container {
   background: #333;
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   position: relative;
   padding: 5px;
   border-radius: 5px;
@@ -448,7 +448,7 @@
   padding-top: 0;
 }
 .expenses-container-2-expense-output--website a {
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
 }
 .expenses-container-2-expense-output--period {
@@ -474,12 +474,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.account-container {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
 }
 
 .account-information-container {
@@ -532,7 +526,7 @@
 }
 
 .content-editable-summary-container {
-  background: white;
+  background: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 20px;
   margin: 20px 0 40px 0;
@@ -570,7 +564,7 @@
 
 .post-container {
   background: #333;
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   margin: 0 0 10px 0;
   padding: 10px;
   border-radius: 3px;
@@ -661,7 +655,7 @@
 
 .posts-form-input-container-input {
   background: #333;
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   border: none;
@@ -787,7 +781,7 @@
 }
 
 .homepage-big-button-container:hover {
-  background: white;
+  background: rgba(255, 255, 255, 0.85);
   transform: scale(0.95);
 }
 
@@ -832,7 +826,7 @@ body {
   background: linear-gradient(#161616, #333);
   background-attachment: fixed;
   overflow-y: scroll;
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .page-wrapper {
@@ -878,7 +872,7 @@ body {
 
 .custom-modal-container {
   background: #333;
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   border-radius: 3px;
   height: 200px;
   width: 33.33%;
@@ -931,7 +925,7 @@ body {
 }
 .custom-modal-form-box-input-input {
   background: rgba(0, 0, 0, 0.75);
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   border: none;
   border-radius: 3px;
   height: 100%;
@@ -961,7 +955,7 @@ body {
   max-width: 400px;
   box-sizing: border-box;
   border-radius: 3px;
-  background: white;
+  background: rgba(255, 255, 255, 0.85);
   position: absolute;
   z-index: 999;
   top: 50px;

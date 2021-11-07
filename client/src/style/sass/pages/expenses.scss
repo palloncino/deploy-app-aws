@@ -25,7 +25,6 @@
 
 .expenses-container-1 {
   color: $white;
-  border: $light-grey-border;
 
   border-radius: 5px;
   width: 50%;
@@ -61,7 +60,8 @@
   }
 
   &-form-input-label {
-    background: $seethrough-black;
+    background: $black;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: $white;
 
     padding: 0 5px;
