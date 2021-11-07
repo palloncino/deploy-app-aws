@@ -91,7 +91,7 @@
 
 .footer-container {
   background: #333;
-  border: 2px solid #333;
+  border: 2px solid #000;
   color: white;
   position: fixed;
   bottom: 0;
@@ -804,7 +804,7 @@
 
 .homepage-typewriter-wrapper {
   font-size: 1.2rem;
-  line-height: 2rem;
+  line-height: 2.4rem;
 }
 
 @font-face {

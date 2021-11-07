@@ -62,7 +62,15 @@ export function Homepage() {
               <div className="homepage-text-container-title--XXXL">
                 Welcome {parseNameValue(name)}
               </div>
-              <Typewriter
+              <div className="homepage-typewriter-wrapper">
+              This website was initially created as a CV public storage, only later I started to add functionalities that I find useful myself. 
+              Certain services can be used publicly: taking for example expenses, where you can conviniently keep track of monthly expenses and subsciptions that perhaps you might not want to keep any more. 
+              I also post stuff about programming or just interesting piece of personal experience. 
+              Other services are in progress. 
+              Finally I wanna say, I am open to work in new projects, so therefore feel free to reach me anytime, cya 👋
+              </div>
+
+              {/* <Typewriter
                 options={{delay: 20, wrapperClassName: "homepage-typewriter-wrapper" }}
                 onInit={(typewriter) => {
                   typewriter
@@ -86,13 +94,13 @@ export function Homepage() {
                     .pauseFor(3000)
                     .start();
                 }}
-              />
+              /> */}
             </div>
           </div>
         </div>
 
         <div className="homepage-group homepage-group--2">
-          <div className="homepage-text-container-title--XXL">Latest posts</div>
+          {/* <div className="homepage-text-container-title--XXL">Latest posts</div> */}
           <div className="homepage-carousel-container">
             <Carousel />
           </div>
