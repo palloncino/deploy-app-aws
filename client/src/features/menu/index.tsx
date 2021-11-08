@@ -80,9 +80,10 @@ export function Menu() {
       <div className="menu-items-container">
         {menuItems.map(({ path, label, disabled }, index) => {
           const menuButtonStyle = {
+            border: 'none',
             textAlign: 'left',
             padding: '0 10px',
-            background: 'black',
+            background: '#161616',
             color: 'white',
             marginBottom: '5px',
           };

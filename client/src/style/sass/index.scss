@@ -15,10 +15,11 @@
 
 @font-face {
   font-family: 'Custom-Font-Titles';
-  src: url('../../fonts/Custom-Font-Title/font.woff2') format('truetype'),
+  src: url('../../fonts/NiveauGrotesk/NiveauGroteskRegular.woff')
+      format('truetype'),
     /* 
-  Safari, Android, iOS */ url('../../fonts/Custom-Font-Title/font.woff2')
-      format('ttf'); /* Modern 
+  Safari, Android, iOS */
+      url('../../fonts/NiveauGrotesk/NiveauGroteskRegular.woff') format('woff'); /* Modern 
   Browsers */
 }
 

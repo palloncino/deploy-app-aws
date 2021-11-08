@@ -99,12 +99,11 @@ export function Homepage() {
           </div>
         </div>
 
-        <div className="homepage-group homepage-group--2">
-          {/* <div className="homepage-text-container-title--XXL">Latest posts</div> */}
+        {/* <div className="homepage-group homepage-group--2">
           <div className="homepage-carousel-container">
             <Carousel />
           </div>
-        </div>
+        </div> */}
       </div>
     );
   };
