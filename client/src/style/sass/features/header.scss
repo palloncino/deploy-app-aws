@@ -1,11 +1,11 @@
-$header-height: 80px;
+$header-height: 60px;
 
 .header-container {
   transition: 0.3s;
-  // background: $black;
   background: #161616;
-  border: $thick-black-border;
   color: $white;
+  // background: $black;
+  // border: $thick-black-border;
 
   position: fixed;
   z-index: 999;

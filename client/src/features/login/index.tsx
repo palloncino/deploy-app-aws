@@ -186,7 +186,7 @@ export const Login = ({ setOpenModals, isOpen }: IModalProp) => {
   return (
     <div className="Login-content-container">
       <Button
-        customStyle={{ width: '150px', marginRight: '10px' }}
+        customStyle={{ width: '100px', marginRight: '10px', background: 'transparent', fontSize: '.8rem' }}
         handleClick={handleOpenModal}
         label="LOGIN"
       />

@@ -9,7 +9,6 @@ import { Singleton as Authorization } from '../../auth';
 import { Spinner } from '../spinner';
 import { useState } from 'react';
 import { changeRoute } from '../routes';
-import logo from '../../images/svg/logo-1-double-white-01.svg';
 
 export function Header() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -110,6 +109,7 @@ export function Header() {
                 <div className="header-user-space-2-buttons-container">
                   {!isAuthenticated ? (
                     <>
+                      <Menu />
                       <Login
                         isOpen={openModals.login}
                         setOpenModals={handleSetOpenModals}
@@ -118,7 +118,6 @@ export function Header() {
                         isOpen={openModals.register}
                         setOpenModals={handleSetOpenModals}
                       />
-                      <Menu />
                     </>
                   ) : (
                     <Menu />

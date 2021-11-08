@@ -40,7 +40,7 @@ export function Homepage() {
     return (
       <div className="homepage-container">
 
-        <div className="homepage-group homepage-group--1">
+        {/* <div className="homepage-group homepage-group--1">
           <div className="homepage-group--1--left">
             <div className="homepage-text-container-title--XXXL">
               Welcome {parseNameValue(name)}
@@ -57,9 +57,9 @@ export function Homepage() {
               therefore feel free to reach me anytime, cya 👋
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <br /><br />
+        {/* <br /><br /> */}
 
         <div className="homepage-group homepage-group--3">
           <p>Antonio Guiotto, Software Developer</p>
