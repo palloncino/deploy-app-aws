@@ -3,7 +3,8 @@
 }
 .homepage-container {
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
+  max-width: 500px; 
 }
 .homepage-group {
   margin: 0 0 0px 0;
@@ -17,6 +18,8 @@
     }
   }
   &--1 {
+    max-width: 500px;
+    margin: 0 auto;
   }
   &--2 {
   }
@@ -114,6 +117,7 @@
   cursor: pointer;
 }
 .homepage-typewriter-wrapper {
-  font-size: $font-L;
+  text-align: justify;
+  font-size: $font-M;
   line-height: 2.4rem;
 }
