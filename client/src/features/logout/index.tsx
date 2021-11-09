@@ -21,7 +21,6 @@ export const Logout = () => {
 
   return (
     <Button
-      customStyle={{ color: '#c37070' }}
       handleClick={handleLogout}
       label="🔙 LOGOUT"
     />

@@ -165,14 +165,6 @@ export const Login = ({ setOpenModals, isOpen }: IModalProp) => {
           />
         );
 
-      // case 3:
-      //   return (
-      //     <InfoLoginModal
-      //       handleCloseModal={handleCloseModal}
-      //       paragraphValue={"Registration succesful"}
-      //     />
-      //   );
-
       case 0:
         return (
           <InfoLoginModal
@@ -186,7 +178,6 @@ export const Login = ({ setOpenModals, isOpen }: IModalProp) => {
   return (
     <div className="Login-content-container">
       <Button
-        customStyle={{ width: '100px', marginRight: '10px', background: 'transparent', fontSize: '.8rem' }}
         handleClick={handleOpenModal}
         label="LOGIN"
       />

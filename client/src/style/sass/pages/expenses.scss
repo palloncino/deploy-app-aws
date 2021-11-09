@@ -26,7 +26,6 @@
 .expenses-container-1 {
   color: $white;
 
-  border-radius: 5px;
   width: 50%;
   margin-right: 20px;
 
@@ -65,7 +64,6 @@
     color: $white;
 
     padding: 0 5px;
-    border-radius: 5px;
     position: absolute;
     top: -18px;
     left: 12px;
@@ -82,7 +80,6 @@
     flex: 1;
     height: 100%;
     padding: 5px 15px;
-    border-radius: 5px;
 
     &-select {
       appearance: none;
@@ -127,7 +124,6 @@
 
     position: relative;
     padding: 5px;
-    border-radius: 5px;
     margin: 0 0 10px 0;
   }
 
@@ -181,7 +177,7 @@
       }
 
       &-2 {
-        background: $pale-blue;
+        background: $blue;
       }
     }
   }

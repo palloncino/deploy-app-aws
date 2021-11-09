@@ -4,7 +4,6 @@
 
   margin: 0 0 10px 0;
   padding: 10px;
-  border-radius: 3px;
 }
 .posts-form-container {
   // border: $light-thick-grey-border;
@@ -73,7 +72,6 @@
 
 .posts-output-wrapper {
   border: $light-grey-border;
-  border-radius: 3px;
   display: none;
   // transition: .5s;
   // visibility: hidden;
@@ -104,7 +102,6 @@
 .posts-form-input-container-input-label {
   background: $black;
   padding: 0 5px;
-  border-radius: 5px;
   position: absolute;
   top: -18px;
   left: 12px;
@@ -114,14 +111,12 @@
   color: $white;
   border: 1px solid rgba(255, 255, 255, 0.2);
 
-  border-radius: 5px;
   border: none;
   flex: 1;
   height: 100%;
   padding: 5px 15px;
 }
 .posts-form-input-container-input {
-  border-radius: 5px;
   border: none;
   flex: 1;
   height: 100%;

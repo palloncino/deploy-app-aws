@@ -38,14 +38,6 @@ export function Header() {
           ) : (
             <>
               <div className="header-user-space-1 header-user-space-1--logo">
-                {/* <img
-                  onClick={() => {
-                    dispatch(changeRoute('/'));
-                  }}
-                  height="50"
-                  src={logo}
-                  alt="logo"
-                /> */}
                 <h3 onClick={() => {
                     dispatch(changeRoute('/'));
                   }}>

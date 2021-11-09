@@ -75,17 +75,13 @@ export const Modal = ({
 
         <div className="custom-modal-buttons">
           <Button
-            customStyle={{
-              width: '150px',
-              background: '#c37070',
-              color: 'white',
-            }}
+            className="btn--150"
             handleClick={cancelCallback}
             label={cancelLabel ?? 'CANCEL'}
           />
           {type === 'form' && (
             <Button
-              customStyle={{ width: '150px' }}
+              className="btn--150"
               handleClick={nextCallback}
               label={submitLabel ?? 'PROCEED'}
             />

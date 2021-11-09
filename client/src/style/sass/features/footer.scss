@@ -2,13 +2,8 @@ $footer-height: 40px;
 
 // footer
 .footer-container {
-  background: $black;
-  // border: $thick-000-border;\
-  color: $white;
-
-  position: fixed;
-  bottom: 0;
-  z-index: 95;
+  background: $white;
+  color: $black;
   width: $page-width;
   font-size: $font-M;
 
@@ -16,7 +11,6 @@ $footer-height: 40px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   box-sizing: border-box;
-  // box-shadow: 0px -2px 5px 0px $light-grey;
 
   &-hidden-twin {
   }

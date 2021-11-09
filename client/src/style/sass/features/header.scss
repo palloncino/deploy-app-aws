@@ -2,10 +2,9 @@ $header-height: 60px;
 
 .header-container {
   transition: 0.3s;
-  background: #161616;
-  color: $white;
-  // background: $black;
-  // border: $thick-black-border;
+  background: $white;
+  color: $black;
+  border-bottom: $thick-black-border;
 
   position: fixed;
   z-index: 999;
@@ -67,6 +66,9 @@ $header-height: 60px;
 
     &--logo {
       cursor: pointer;
+      h3 {
+        // font-family: 'Custom-Font-Title';
+      }
     }
   }
 

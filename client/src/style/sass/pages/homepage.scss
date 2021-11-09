@@ -2,122 +2,19 @@
   margin: 40px 0 40px 0;
 }
 .homepage-container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 500px; 
+  height: 100vh;
 }
 .homepage-group {
   margin: 0 0 0px 0;
-
-  &-banner {
-    padding: 10px;
-
-    &-h3 {
-      margin: 0;
-      padding: 0;
-    }
-  }
+  
   &--1 {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  &--2 {
-  }
-  &--3 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    margin-right: 20px;
-    &--img {
-      width: 200px;
+    
+    &__title-container {
+      font-family: 'Custom-Font-Title';
+      font-size: $font-XXXXXXXL;
     }
   }
-}
-.homepage-carousel-container {
-}
-.homepage-text-container {
-  &-title {
-    &--XXXL {
-      border-radius: 5px;
-      // padding: 10px;
-      font-family: 'Custom-Font-Titles';
-      font-size: $font-XXL;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      margin: 10px 0;
-      // height: 100px;
-    }
-    &--XXL {
-      border-radius: 5px;
-      padding: 10px;
-      font-size: $font-XXL;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      // font-family: 'Custom-Font-Titles';
-    }
-  }
-
-  &-paragraph {
-    font-size: $font-M;
-    line-height: 2rem;
-    // max-width: 60%;
-    margin: 0 auto;
-    // text-align: center;
-  }
-}
-.homepage-big-buttons {
-  display: flex;
-  flex-direction: column;
-
-  &__group {
-    display: flex;
-    justify-content: center;
-    height: 200px;
-  }
-}
-.homepage-big-button-container {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 200px;
-  transition: 0.5s;
-
-  padding: 20px;
-  box-sizing: border-box;
-  margin: 5px;
-
-  border: $light-thick-grey-border;
-  background: $seethrough-white;
-  font-size: $font-L;
-}
-
-.homepage-big-button-container.disabled {
-  opacity: 0.5;
-}
-.homepage-big-button-container.disabled:hover {
-  transform: unset;
-}
-
-.homepage-big-button-container:hover {
-  background: $white;
-  transform: scale(0.95);
-}
-.homepage-big-button-container-title {
-  // font-family: 'Custom-Font-Titles';
-  text-align: center;
-}
-.homepage-big-button-container-image {
-  display: flex;
-  justify-content: center;
-  font-size: 3rem;
-  cursor: pointer;
-}
-.homepage-typewriter-wrapper {
-  text-align: justify;
-  font-size: $font-M;
-  line-height: 2.4rem;
 }

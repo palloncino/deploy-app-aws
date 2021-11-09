@@ -161,7 +161,6 @@ export const Register = ({ setOpenModals, isOpen }: IModalProp) => {
   return (
     <div className="register-content-container">
       <Button
-        customStyle={{ width: '100px', marginRight: '10px', background: 'transparent', fontSize: '.8rem' }}
         handleClick={handleOpenModal}
         label="REGISTER"
       />

@@ -4,6 +4,7 @@ interface ButtonProps {
   customStyle?: any;
   disabled?: boolean;
   type?: 'submit' | 'button';
+  className?: string;
 }
 
 export const Button = ({
@@ -12,16 +13,20 @@ export const Button = ({
   label,
   disabled,
   type,
+  className,
 }: ButtonProps) => {
   const style = {
     button: {
       cursor: 'pointer',
     },
   };
+  const getClassName = () => {
+    return className ? `btn ${className}` : `btn`;
+  }
 
   return (
     <button
-      className={disabled ? 'btn-grad btn-grad--disabled' : 'btn-grad'}
+      className={getClassName()}
       style={{ ...style.button, ...customStyle }}
       onClick={handleClick}
       disabled={disabled ?? false}

@@ -79,21 +79,14 @@ export function Menu() {
     return (
       <div className="menu-items-container">
         {menuItems.map(({ path, label, disabled }, index) => {
-          const menuButtonStyle = {
-            border: 'none',
-            textAlign: 'left',
-            padding: '0 10px',
-            background: '#161616',
-            color: 'white',
-            marginBottom: '5px',
-          };
+          const menuButtonStyle = {};
           return (
             <Button
               key={index}
               disabled={disabled}
               customStyle={
                 disabled
-                  ? { ...menuButtonStyle, color: 'lightgrey' }
+                  ? { ...menuButtonStyle }
                   : { ...menuButtonStyle }
               }
               handleClick={() => handleDirect(path)}
