@@ -263,3 +263,15 @@
 }
 
 .homepage-typewriter-wrapper {font-family: 'Custom-Font-Title';}
+
+.marquee-icon {
+  margin-right: 100px;
+  height: 200px;
+}
+
+@media only screen and (max-width: 1700px) {
+  .marquee-icon {
+    margin-right: 50px;
+    height: 60px;
+  } 
+}

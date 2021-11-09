@@ -936,6 +936,17 @@
   font-family: "Custom-Font-Title";
 }
 
+.marquee-icon {
+  margin-right: 100px;
+  height: 200px;
+}
+
+@media only screen and (max-width: 1700px) {
+  .marquee-icon {
+    margin-right: 50px;
+    height: 60px;
+  }
+}
 @font-face {
   font-family: "Custom-Font-Title";
   src: url("../../fonts/Custom-Font-Title/Heavitas.ttf") format("truetype"), url("../../fonts/Custom-Font-Title/Heavitas.ttf") format("ttf");
