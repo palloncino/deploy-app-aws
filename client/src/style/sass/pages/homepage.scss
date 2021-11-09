@@ -5,40 +5,83 @@
   height: 100vh;
 }
 .homepage-group {
-  margin: 0 0 0px 0;
+  margin: 0 0 40px 0;
   
   &--1 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-    width: 80%;
-    margin: 0 auto;
-
-    text-shadow: 5px 5px $yellow;
-    color: $violet;
     
     &__title-container {
       font-family: 'Custom-Font-Title';
-      font-size: $font-XXXXXXXXXL;
       &--1 {
+        font-size: $font-XXXXXXXXXXXL;
+        line-height: $font-XXXXXXXXXXXXL;
+        transform: rotate(-1deg);
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        margin: 0;
+        padding: 0 0 0 20px;
+        margin: 0 0 0 -20px;
+        color: white;
+        text-shadow: 10px 10px $blue-dark-4;
+        background: $blue-dark-1;
+        box-shadow: 10px 10px #ececec;
       }
       &--2 {
+        font-size: $font-XXXXXXXXXXXXL;
+        line-height: $font-XXXXXXXXXXL;
+        transform: rotate(0.55deg);
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        margin: 0;
+        margin: -10px  0 0 0;
+        padding: 0 20px 0 0;
+        color: $blue-light-3;
+        text-shadow: 10px 10px $blue-dark-1;
+        box-shadow: 10px 10px #ececec;
+        background: $blue-dark-4;
       }
       &--3 {
+        font-size: $font-XXXXXXXXXL;
+        line-height: $font-XXXXXXXXXXXL;
+        // transform: rotate(-0.5deg);
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        margin: 0;
+        padding: 0 0 0 20px;
+        margin: 0px 0 0 -20px;
+        color: $blue-dark-4;
+        text-shadow: 10px 10px $blue-light-1;
+        background: $blue-light-5;
+        box-shadow: 10px 10px #ececec;
       }
+    }
+  }
+  &--2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: red;
+
+    &__1 {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      background: green;
+    }
+    &__2 {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      background: yellow;
     }
   }
 }

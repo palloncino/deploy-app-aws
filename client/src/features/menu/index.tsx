@@ -17,21 +17,6 @@ export function Menu() {
     return false;
   };
 
-  const styles: any = {
-    menuContainer: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      width: '150px',
-    },
-    menuListItemContainer: {
-      padding: '10px',
-      width: '100%',
-      cursor: 'pointer',
-    },
-  };
-
   const handleOpenMenu = () => {
     dispatch(toggleMenu());
   };
@@ -98,7 +83,7 @@ export function Menu() {
   };
 
   return (
-    <div style={styles.menuContainer}>
+    <div className="menu-container">
       <Button handleClick={handleOpenMenu} label={isOpen ? 'CLOSE' : 'MENU'} />
       {isOpen && (
         <div

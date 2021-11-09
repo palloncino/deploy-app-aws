@@ -21,6 +21,8 @@
 
 .header-user-space--2__container {
   display: flex;
+  align-items: center;
+  background: rgba(255, 0, 12, 0.1);
 }
 
 .profile-box {
@@ -156,8 +158,7 @@
 }
 
 .btn {
-  background: #99fffd;
-  padding: 10px 10px 10px 10px;
+  background: #dcdcdc;
   border: none;
 }
 .btn--150 {
@@ -626,38 +627,78 @@
 }
 
 .homepage-group {
-  margin: 0 0 0px 0;
+  margin: 0 0 40px 0;
 }
 .homepage-group--1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 80%;
-  margin: 0 auto;
-  text-shadow: 5px 5px #f5ff2e;
-  color: #ff2eff;
 }
 .homepage-group--1__title-container {
   font-family: "Custom-Font-Title";
-  font-size: 9rem;
 }
 .homepage-group--1__title-container--1 {
+  font-size: 11rem;
+  line-height: 12rem;
+  transform: rotate(-1deg);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 0;
+  padding: 0 0 0 20px;
+  margin: 0 0 0 -20px;
+  color: white;
+  text-shadow: 10px 10px #327FC2;
+  background: #223D78;
+  box-shadow: 10px 10px #ececec;
 }
 .homepage-group--1__title-container--2 {
+  font-size: 12rem;
+  line-height: 10rem;
+  transform: rotate(0.55deg);
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: 0;
+  margin: -10px 0 0 0;
+  padding: 0 20px 0 0;
+  color: #A3DCF6;
+  text-shadow: 10px 10px #223D78;
+  box-shadow: 10px 10px #ececec;
+  background: #327FC2;
 }
 .homepage-group--1__title-container--3 {
+  font-size: 9rem;
+  line-height: 11rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 0;
+  padding: 0 0 0 20px;
+  margin: 0px 0 0 -20px;
+  color: #327FC2;
+  text-shadow: 10px 10px #64B5E4;
+  background: #EBF7FF;
+  box-shadow: 10px 10px #ececec;
+}
+.homepage-group--2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: red;
+}
+.homepage-group--2__1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: green;
+}
+.homepage-group--2__2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: yellow;
 }
 
 @font-face {
