@@ -3,6 +3,7 @@
   transition: 0.3s;
   background: $white;
   color: $black;
+  box-shadow: 0 10px rgba(0, 0, 0, 0.1);
 
   font-size: $font-XL;
 
@@ -16,10 +17,10 @@
   align-items: center;
   height: 80px;
   padding: 0 2.5vw 0 2.5vw;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
 
   &-hidden-twin {
-    height: calc(80px + 20px);
+    height: 80px;
   }
 }
 
@@ -63,7 +64,7 @@
       &__item {
         margin-left: 10px;
         // background: red;
-        flex-basis: 200px;
+        flex-basis: 100px;
       
       }
 
