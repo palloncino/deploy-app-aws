@@ -11,12 +11,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectRoute } from './features/routes';
 import { Footer } from './features/footer';
 import { ErrorPage } from './features/pages/error';
-import { setAuthentication, setAuthLoading } from './auth/authSlice';
+import { setAuthentication, setAuthLoading, selectAuthIsLoading } from './auth/authSlice';
 import { Singleton as Authentication } from './auth';
 import { useEffect } from 'react';
 
 export function Application() {
   const route = useSelector(selectRoute);
+  const isLoading = useSelector(selectAuthIsLoading);
 
   const dispatch = useDispatch();
 
@@ -40,7 +41,7 @@ export function Application() {
 
   const renderSpinner = () => {
     return (
-      <div className="spinner-container">
+      <div className="spinner-container spinner-container__homepage">
         <Spinner />
       </div>
     );
@@ -88,13 +89,17 @@ export function Application() {
 
     return (
       <>
-        <div className="page-wrapper">
-          <div className="page-container">
-            <Header />
-            {returnView(route)}
-            <Footer />
+        {isLoading ? (
+          renderSpinner()
+        ) : (
+          <div className="page-wrapper">
+            <div className="page-container">
+              <Header />
+              {returnView(route)}
+              <Footer />
+            </div>
           </div>
-        </div>
+        )}
       </>
     );
   };

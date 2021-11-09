@@ -21,9 +21,8 @@ export const EmailRegisterModal = ({
     <Modal
       cancelCallback={handleCloseModal}
       nextCallback={handleEmailNext}
-      label="👇 Register"
+      label="Signup > Email"
       fieldType="email"
-      inputPlaceholder="test@example.com"
       handleInputChange={(e: any) =>
         handleInputChanged('email', e.target.value)
       }

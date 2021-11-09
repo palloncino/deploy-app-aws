@@ -73,6 +73,15 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100px;
+
+  &__homepage {
+    min-height: 500px;
+    
+    .loader.loader--style2 {
+      
+      transform: scale(4)
+    }
+  }
 }
 
 // mobile
@@ -97,8 +106,9 @@ body {
 }
 
 .custom-modal-container {
-  background: $black;
-  color: $white;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+  background: $white;
+  color: $black;
 
   height: 200px;
   width: 33.33%;
@@ -154,9 +164,10 @@ body {
         justify-content: center;
 
         &-input {
-          background: $seethrough-black;
+          background: $blue-dark-1;
           color: $white;
           border: none;
+          font-size: $font-L;
 
           height: 100%;
           padding: 0 20px;

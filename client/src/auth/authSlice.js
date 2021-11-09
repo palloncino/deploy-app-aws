@@ -35,5 +35,6 @@ export const authSlice = createSlice({
 export const { removeAuthentication, setAuthLoading } = authSlice.actions;
 
 export const selectAuth = (state) => state.auth;
+export const selectAuthIsLoading = (state) => state.auth.isLoading;
 
 export default authSlice.reducer;

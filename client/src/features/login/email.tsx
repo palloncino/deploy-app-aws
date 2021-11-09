@@ -21,9 +21,8 @@ export const EmailLoginModal = ({
     <Modal
       cancelCallback={handleCloseModal}
       nextCallback={handleEmailNext}
-      label="Login ➡️"
+      label="Login > Email"
       fieldType="email"
-      inputPlaceholder="test@example.com"
       handleInputChange={(e: any) =>
         handleInputChanged('email', e.target.value)
       }
