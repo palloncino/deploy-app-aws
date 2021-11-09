@@ -33,6 +33,15 @@
       justify-content: space-around;
       flex: 1;
     }
+    &-icon {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+    &-icon:last-child {
+      margin-right: 0;
+    }
 
   }
   &__info-container {

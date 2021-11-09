@@ -5,7 +5,7 @@ export const Footer = () => {
         <div className="footer-content__social-icons-container">
           <div className="footer-content__social-icons-title">Find me on</div>
           <div className="footer-content__social-icons-icons">
-            <div style={{ marginRight: '15px', width: '50px', height: '50px' }}>
+            <div className="footer-content__social-icons-icon" onClick={() => window.open('https://wa.me/00393474943221')}>
               <svg
                 role="img"
                 viewBox="0 0 24 24"
@@ -18,7 +18,7 @@ export const Footer = () => {
                 />
               </svg>
             </div>
-            <div style={{ marginRight: '15px', width: '50px', height: '50px' }}>
+            <div className="footer-content__social-icons-icon" onClick={() => window.open('https://www.linkedin.com/in/antonioguiotto/')}>
               <svg
                 role="img"
                 viewBox="0 0 24 24"
@@ -31,7 +31,7 @@ export const Footer = () => {
                 />
               </svg>
             </div>
-            <div style={{ width: '50px', height: '50px' }}>
+            <div className="footer-content__social-icons-icon" onClick={() => window.open('https://github.com/palloncino/antonioguiotto.com')}>
               <svg
                 role="img"
                 viewBox="0 0 24 24"
@@ -48,7 +48,7 @@ export const Footer = () => {
         </div>
 
         <div className="footer-content__info-container">
-          <div className="footer-content__info-container__title">Contants</div>
+          <div className="footer-content__info-container__title">Contacts</div>
           <div className="footer-content__info-container__info">
             powerhydratony@gmail.com
           </div>

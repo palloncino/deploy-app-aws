@@ -22,7 +22,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        padding: 40px 0 0 100px;
+        padding: 20px 0 0 100px;
         margin: 0 0 0 -20px;
         color: white;
         text-shadow: 10px 10px $blue-dark-4;
@@ -32,7 +32,7 @@
       &--2 {
         font-size: $font-XXXXXXXXXXXXL;
         line-height: 12rem;
-        transform: rotate(0.55deg);
+        transform: rotate(0.7deg);
         z-index: 2;
         display: flex;
         align-items: center;
@@ -54,8 +54,8 @@
         justify-content: center;
         padding: 40px 0 0 100px;
         margin: -20px 0 0 -20px;
-        color: $blue-dark-4;
-        text-shadow: 10px 10px $blue-light-1;
+        color: $blue-dark-3;
+        text-shadow: 5px 5px $blue-light-3;
         background: $blue-light-5;
         box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
       }
@@ -148,7 +148,7 @@
         &--3 {
           font-size: $font-XXXXXL;
           line-height: 8rem;
-          text-shadow: 5px 5px $blue-light-1;
+          text-shadow: 5px 5px $blue-light-3;
         }
       }
     }
@@ -180,7 +180,7 @@
         &--3 {
           font-size: $font-XXXXL;
           line-height: 6rem;
-          text-shadow: 5px 5px $blue-light-1;
+          text-shadow: 5px 5px $blue-light-3;
         }
       }
     }
@@ -214,7 +214,7 @@
         &--3 {
           font-size: $font-XXXXL;
           line-height: 6rem;
-          text-shadow: 3px 3px $blue-light-1;
+          text-shadow: 5px 5px $blue-light-3;
           box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
         }
       }
@@ -250,7 +250,7 @@
         &--3 {
           font-size: $font-XL;
           line-height: 3rem;
-          text-shadow: 3px 3px $blue-light-1;
+          text-shadow: 5px 5px $blue-light-3;
           box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
           padding: 20px 0 0 20px;
           margin: -20px 0 0 0;
@@ -261,3 +261,5 @@
   }
   
 }
+
+.homepage-typewriter-wrapper {font-family: 'Custom-Font-Title';}

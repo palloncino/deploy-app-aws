@@ -109,6 +109,7 @@ body {
   box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
   background: $white;
   color: $black;
+  border: 1px solid grey;
 
   height: 200px;
   width: 33.33%;
@@ -164,7 +165,7 @@ body {
         justify-content: center;
 
         &-input {
-          background: $blue-dark-1;
+          background: $grey;
           color: $white;
           border: none;
           font-size: $font-L;

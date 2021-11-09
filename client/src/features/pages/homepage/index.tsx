@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectAuth } from '../../../auth/authSlice';
 import { Button } from '../../button';
 import { Spinner } from '../../spinner';
-import { Posts } from '../posts';
+import Typewriter from 'typewriter-effect';
 
 export function Homepage() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -31,15 +31,45 @@ export function Homepage() {
       <div className="homepage-container">
         <div className="homepage-group homepage-group--1">
           <div className="homepage-group--1__title-container homepage-group--1__title-container--1">
-            que paso homie!
+          <Typewriter
+              options={{delay: 100, wrapperClassName: "homepage-typewriter-wrapper", loop: true }}
+              onInit={(typewriter) => {
+                typewriter
+                .typeString(
+                  `che si dice!?`
+                )
+                .pauseFor(5000)
+                .deleteChars(20)
+                .typeString(
+                  `what's good!?`
+                )
+                .pauseFor(5000)
+                .deleteChars(20)
+                .typeString(
+                  `que paso homie!?`
+                )
+                .pauseFor(5000)
+                .deleteChars(20)
+                .typeString(
+                  `Как дела?`
+                )
+                .pauseFor(5000)
+                .deleteChars(20)
+                .start();
+              }}
+              />
           </div>
           <div className="homepage-group--1__title-container homepage-group--1__title-container--2">
             I make websites
           </div>
           <div className="homepage-group--1__title-container homepage-group--1__title-container--3">
-            This is what I do 🤷🏻‍♂️
+            with javascript 🤷🏻‍♂️
           </div>
         </div>
+
+        <Marquee>
+          Howdy!
+        </Marquee>
 
         <div className="homepage-group homepage-group--2">
           <div className="homepage-group homepage-group--2__1">
