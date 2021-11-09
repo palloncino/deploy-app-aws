@@ -2,7 +2,7 @@
   transition: 0.3s;
   background: #fff;
   color: #000;
-  border-bottom: 2px solid #000;
+  border-bottom: 4px solid #000;
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -11,51 +11,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  padding: 0 20px;
+  height: 80px;
+  padding: 0 2.5vw 0 2.5vw;
   margin-bottom: 20px;
-  border-top: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
 }
 .header-container-hidden-twin {
-  height: 80px;
+  height: 100px;
 }
 
-.header-logo-space-1 {
+.header-user-space--2__container {
   display: flex;
-}
-.header-logo-space-1-2-logo {
-  font-size: 2rem;
-  margin-right: 10px;
-}
-.header-logo-space-1-2-textual {
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-}
-.header-user-space-1 {
-  display: flex;
-}
-.header-user-space-1--logo {
-  cursor: pointer;
-}
-.header-user-space-2-profile-container {
-  margin-right: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header-user-space-2-buttons-container {
-  display: flex;
-}
-
-.logo-font {
-  transition: 0.3s;
-}
-
-.logo-font:hover {
-  transform: scale(0.98);
 }
 
 .profile-box {
@@ -191,7 +156,7 @@
 }
 
 .btn {
-  background: #dadada;
+  background: #99fffd;
   padding: 10px 10px 10px 10px;
   border: none;
 }
@@ -667,10 +632,32 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 80%;
+  margin: 0 auto;
+  text-shadow: 5px 5px #f5ff2e;
+  color: #ff2eff;
 }
 .homepage-group--1__title-container {
   font-family: "Custom-Font-Title";
-  font-size: 7rem;
+  font-size: 9rem;
+}
+.homepage-group--1__title-container--1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+}
+.homepage-group--1__title-container--2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+}
+.homepage-group--1__title-container--3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
 }
 
 @font-face {

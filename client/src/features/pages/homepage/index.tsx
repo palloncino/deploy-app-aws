@@ -30,8 +30,9 @@ export function Homepage() {
       <div className="homepage-container">
 
         <div className="homepage-group homepage-group--1">
-        <div className="homepage-group--1__title-container">Hi, I am a</div>
-        <div className="homepage-group--1__title-container">Software Developer</div>
+        <div className="homepage-group--1__title-container homepage-group--1__title-container--1">que paso homie</div>
+        <div className="homepage-group--1__title-container homepage-group--1__title-container--2">I make websites</div>
+        <div className="homepage-group--1__title-container homepage-group--1__title-container--3">This is what I do</div>
           <Button
             className=""
             customStyle={{}}

@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleMenu, selectIsOpen } from './menuSlice';
 import { changeRoute } from '../routes';
 import { Button } from '../button';
-import { Logout } from '../logout';
 import { Singleton as Authorization } from '../../auth';
 import { selectAuth } from '../../auth/authSlice';
 
@@ -94,7 +93,6 @@ export function Menu() {
             />
           );
         })}
-        {isAuthenticated && <Logout />}
       </div>
     );
   };

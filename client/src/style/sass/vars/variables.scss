@@ -10,14 +10,15 @@ $seethrough-black: rgba(0, 0, 0, 0.75);
 $grey: #9e9e9e;
 $dark-white: rgb(240, 240, 240);
 $light-grey-seethrough: rgba(0, 0, 0, 0.2);
-$pale-red: #c37070;
+$red: #c37070;
 $blue: #1a72c9;
-$pale-green: #69b977;
-$pale-yellow: #fae524;
+$aqua: #99fffd;
+$violet: #ff2eff;
+$yellow: #f5ff2e;
 // BORDERS
 $light-grey-border: 1px solid $light-grey-seethrough;
 $light-thick-grey-border: 2px solid $light-grey-seethrough;
-$thick-black-border: 2px solid $black;
+$thick-black-border: 4px solid $black;
 $thick-000-border: 2px solid #000;
 $black-border: 1px solid $black;
 
@@ -32,3 +33,5 @@ $font-XXXXL: 4rem;
 $font-XXXXXL: 5rem;
 $font-XXXXXXL: 6rem;
 $font-XXXXXXXL: 7rem;
+$font-XXXXXXXXL: 8rem;
+$font-XXXXXXXXXL: 9rem;

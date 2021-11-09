@@ -1,6 +1,6 @@
 import { Register } from '../register';
 import { Login } from '../login';
-import { Breadcrumb } from '../breadcrumb';
+import { Logout } from '../logout';
 import { Profile } from '../profile';
 import { Menu } from '../menu';
 import { useDispatch, useSelector } from 'react-redux';
@@ -37,57 +37,18 @@ export function Header() {
             renderSpinner()
           ) : (
             <>
-              <div className="header-user-space-1 header-user-space-1--logo">
-                <h3 onClick={() => {
+              <div className="header-user-space--1 header-user-space--1__logo">
+                <h3
+                  onClick={() => {
                     dispatch(changeRoute('/'));
-                  }}>
-                    antonioguiotto.com
-                  </h3>
+                  }}
+                >
+                  antonioguiotto.com
+                </h3>
               </div>
 
-              <div className="header-user-space-1">
-                <Breadcrumb />
-              </div>
-
-              {/* <div className="header-logo-space-1">
-
-                <div className="header-logo-space-1-2-logo">
-                  <div className="header-logo-space-1-2-logo-inner">
-                    {isAuthenticated && '✍🏻'}
-                    {!isAuthenticated && '👁'}
-                  </div>
-                </div>
-
-                <div className="header-logo-space-1-2-textual">
-                  {isAuthenticated &&
-                    (isAdmin() ? (
-                      <div className="header-logo-space-1-2-textual-box">
-                        <div className="header-logo-space-1-2-textual-box-title">
-                          You are the admin.
-                        </div>
-                        <div className="header-logo-space-1-2-textual-box-subtitle"></div>
-                      </div>
-                    ) : (
-                      <div className="header-logo-space-1-2-textual-box">
-                        <div className="header-logo-space-1-2-textual-box-subtitle">
-                          You have write permissions.
-                        </div>
-                      </div>
-                    ))}
-
-                  {!isAuthenticated && (
-                    <div className="header-logo-space-1-2-textual-box">
-                      <div className="header-logo-space-1-2-textual-box-subtitle">
-                        You have limited read permissions.
-                      </div>
-                    </div>
-                  )}
-                </div>
-                
-              </div> */}
-
-              <div className="header-user-space-1">
-                <div className="header-user-space-2-profile-container">
+              <div className="header-user-space--2">
+                <div className="header-user-space--2__container">
                   <Profile
                     avatarUrl={
                       auth.getProp('avatar_url') === 'undefined' ||
@@ -96,9 +57,6 @@ export function Header() {
                         : auth.getProp('avatar_url')
                     }
                   />
-                </div>
-
-                <div className="header-user-space-2-buttons-container">
                   {!isAuthenticated ? (
                     <>
                       <Menu />
@@ -112,7 +70,10 @@ export function Header() {
                       />
                     </>
                   ) : (
+                    <>
+                    <Logout />
                     <Menu />
+                    </>
                   )}
                 </div>
               </div>

@@ -1,6 +1,7 @@
-$header-height: 60px;
+$header-height: 80px;
 
 .header-container {
+
   transition: 0.3s;
   background: $white;
   color: $black;
@@ -15,83 +16,23 @@ $header-height: 60px;
   justify-content: space-between;
   align-items: center;
   height: $header-height;
-  padding: 0 20px;
+  padding: 0 2.5vw 0 2.5vw;
   margin-bottom: 20px;
-  border-top: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+
   &-hidden-twin {
     height: calc($header-height + 20px);
   }
 }
 
-.header-logo {
-  // code..
+.header-user-space {
+  &--1 {
 
-  &-space-1 {
-    display: flex;
-
-    &-2 {
-      &-logo {
-        font-size: $font-XXL;
-        margin-right: 10px;
-      }
-
-      &-inner {
-      }
-
-      &-textual {
-        display: flex;
-        align-items: center;
-        font-size: $font-M;
-
-        &-box {
-          &-title {
-            // code..
-          }
-          &-subtitle {
-            // code..
-          }
-        }
-      }
-    }
   }
-}
+  &--2 {
 
-.header-user {
-  // code..
-
-  &-space-1 {
-    display: flex;
-
-    &--logo {
-      cursor: pointer;
-      h3 {
-        // font-family: 'Custom-Font-Title';
-      }
-    }
-  }
-
-  &-space-2 {
-    // code..
-
-    &-profile-container {
-      margin-right: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    &-buttons-container {
+    &__container {
       display: flex;
     }
+
   }
-}
-
-.logo-font {
-  transition: 0.3s;
-}
-
-.logo-font:hover {
-  transform: scale(0.98);
 }

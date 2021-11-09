@@ -97,7 +97,7 @@
     margin-bottom: 20px;
   }
   &-form-errors-container {
-    color: $pale-red;
+    color: $red;
   }
 }
 
@@ -142,7 +142,7 @@
       margin-bottom: 0;
     }
     &--price {
-      color: $pale-red;
+      color: $red;
       font-size: $font-XXL;
       text-align: right;
     }
