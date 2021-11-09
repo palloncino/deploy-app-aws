@@ -1,19 +1,14 @@
-$footer-height: 40px;
+$footer-height: 400px;
 
 // footer
 .footer-container {
-  background: $white;
-  color: $black;
+  background: $blue-dark-1;
+  color: $white;
   width: $page-width;
-  font-size: $font-M;
+  font-size: $font-XL;
 
-  border-bottom: none;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   box-sizing: border-box;
-
-  &-hidden-twin {
-  }
+  box-shadow: 0 -10px rgba(0,0,0,0.1);
 }
 .footer-content {
   display: flex;

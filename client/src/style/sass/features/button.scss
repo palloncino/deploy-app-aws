@@ -1,10 +1,20 @@
 // button
 .btn {
+  width: 100%;
   background: transparent;
   border: none;
   cursor: pointer;
+  transition: .2s;
+  font-size: $font-XL;
 
-  &--150 {
+  &--w150 {
     max-width: 150px;
   }
+
+}
+
+.btn:hover {
+  color: $blue-dark-4;
+  font-weight: 900;
+  transform: scale(1.1);
 }

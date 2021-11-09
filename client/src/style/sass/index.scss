@@ -51,7 +51,6 @@ body {
 // application
 .page-wrapper {
   background-size: 100px;
-  height: 100vh;
 }
 .page-container {
   max-width: $page-width;
@@ -92,6 +91,10 @@ body {
   justify-content: center;
 }
 // login
+
+.login-container, .register-container {
+  width: 100%;
+}
 
 .custom-modal-container {
   background: $black;

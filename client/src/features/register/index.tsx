@@ -159,7 +159,7 @@ export const Register = ({ setOpenModals, isOpen }: IModalProp) => {
   };
 
   return (
-    <div className="register-content-container">
+    <div className="register-container">
       <Button
         handleClick={handleOpenModal}
         label="Signup"

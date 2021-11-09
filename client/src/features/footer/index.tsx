@@ -15,7 +15,6 @@ export const Footer = () => {
           App: <span>v{version}</span>
         </div>
       </div>
-      <div className="footer-container-hidden-twin"></div>
     </div>
   );
 };

@@ -2,6 +2,7 @@
   transition: 0.3s;
   background: #fff;
   color: #000;
+  font-size: 1.4rem;
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -18,11 +19,44 @@
   height: 100px;
 }
 
-.header-user-space--2__container {
+.header-user-space--1 {
+  flex: 2;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+.header-user-space--1__logo {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.header-user-space--2 {
+  flex: 12;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+.header-user-space--2__container {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header-user-space--2__container__item {
+  margin-left: 10px;
+  flex-basis: 200px;
 }
 
+.profile-container {
+  width: 100%;
+}
 .profile-box {
   display: flex;
   align-items: center;
@@ -36,6 +70,7 @@
 }
 .profile-box-logo-img {
   height: 100%;
+  border-radius: 5px;
 }
 
 .breadcrumb-wrapper {
@@ -54,20 +89,19 @@
 }
 
 .footer-container {
-  background: #fff;
-  color: #000;
+  background: #223D78;
+  color: #fff;
   width: 100%;
-  font-size: 1rem;
-  border-bottom: none;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  font-size: 1.4rem;
   box-sizing: border-box;
+  box-shadow: 0 -10px rgba(0, 0, 0, 0.1);
 }
+
 .footer-content {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 40px;
+  height: 400px;
   padding: 0px 20px;
 }
 .carousel-wrapper {
@@ -156,12 +190,21 @@
 }
 
 .btn {
+  width: 100%;
   background: transparent;
   border: none;
   cursor: pointer;
+  transition: 0.2s;
+  font-size: 1.4rem;
 }
-.btn--150 {
+.btn--w150 {
   max-width: 150px;
+}
+
+.btn:hover {
+  color: #327FC2;
+  font-weight: 900;
+  transform: scale(1.1);
 }
 
 .menu-item-clickable {
@@ -201,6 +244,10 @@
   width: 500%;
   height: 500vh;
   cursor: pointer;
+}
+
+.menu-container {
+  width: 100%;
 }
 
 .artwork-summary-container {
@@ -499,7 +546,6 @@
 
 .posts-form-container {
   padding: 10px;
-  width: 50%;
   margin: 20px 0;
 }
 
@@ -601,7 +647,6 @@
 .posts-page-description-container {
   font-size: 1.2rem;
   line-height: 2rem;
-  width: 90%;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
@@ -621,10 +666,6 @@
   margin: 40px 0 40px 0;
 }
 
-.homepage-container {
-  height: 100vh;
-}
-
 .homepage-group {
   margin: 0 0 40px 0;
 }
@@ -638,13 +679,13 @@
 }
 .homepage-group--1__title-container--1 {
   font-size: 11rem;
-  line-height: 16rem;
+  line-height: 12rem;
   transform: rotate(-1deg);
   z-index: 3;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 0 0 20px;
+  padding: 40px 0 0 100px;
   margin: 0 0 0 -20px;
   color: white;
   text-shadow: 10px 10px #327FC2;
@@ -653,14 +694,14 @@
 }
 .homepage-group--1__title-container--2 {
   font-size: 12rem;
-  line-height: 16rem;
+  line-height: 12rem;
   transform: rotate(0.55deg);
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin: -70px 0 0 0;
-  padding: 100px 20px 0 0;
+  padding: 100px 100px 0 0;
   color: #A3DCF6;
   text-shadow: 10px 10px #223D78;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
@@ -668,12 +709,12 @@
 }
 .homepage-group--1__title-container--3 {
   font-size: 9rem;
-  line-height: 16rem;
+  line-height: 12rem;
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 0 0 0 20px;
+  justify-content: center;
+  padding: 40px 0 0 100px;
   margin: -20px 0 0 -20px;
   color: #327FC2;
   text-shadow: 10px 10px #64B5E4;
@@ -684,7 +725,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: red;
 }
 .homepage-group--2__1 {
   flex: 1;
@@ -692,7 +732,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: green;
+}
+.homepage-group--2__1__image {
+  font-size: 14rem;
 }
 .homepage-group--2__2 {
   flex: 1;
@@ -700,7 +742,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: yellow;
 }
 
 @font-face {
@@ -732,7 +773,6 @@ body {
 
 .page-wrapper {
   background-size: 100px;
-  height: 100vh;
 }
 
 .page-container {
@@ -768,6 +808,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.login-container, .register-container {
+  width: 100%;
 }
 
 .custom-modal-container {

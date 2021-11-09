@@ -37,42 +37,55 @@ export function Header() {
             renderSpinner()
           ) : (
             <>
-              <div className="header-user-space--1 header-user-space--1__logo">
-                <h3
+              <div className="header-user-space--1">
+                <div
+                  className="header-user-space--1__logo"
                   onClick={() => {
                     dispatch(changeRoute('/'));
                   }}
                 >
                   antonioguiotto.com
-                </h3>
+                </div>
               </div>
 
               <div className="header-user-space--2">
                 <div className="header-user-space--2__container">
-                  <Profile
-                    avatarUrl={
-                      auth.getProp('avatar_url') === 'undefined' ||
-                      !auth.getProp('avatar_url')
-                        ? `${process.env.REACT_APP_DEFAULT_AVATAR_IMAGE}`
-                        : auth.getProp('avatar_url')
-                    }
-                  />
+                  <div className="header-user-space--2__container__item header-user-space--2__container__item--profile">
+                    <Profile
+                      avatarUrl={
+                        auth.getProp('avatar_url') === 'undefined' ||
+                        !auth.getProp('avatar_url')
+                          ? `${process.env.REACT_APP_DEFAULT_AVATAR_IMAGE}`
+                          : auth.getProp('avatar_url')
+                      }
+                    />
+                  </div>
                   {!isAuthenticated ? (
                     <>
-                      <Menu />
-                      <Login
-                        isOpen={openModals.login}
-                        setOpenModals={handleSetOpenModals}
-                      />
-                      <Register
-                        isOpen={openModals.register}
-                        setOpenModals={handleSetOpenModals}
-                      />
+                      {/* <div className="header-user-space--2__container__item">
+                        <Menu />
+                      </div> */}
+                      <div className="header-user-space--2__container__item">
+                        <Login
+                          isOpen={openModals.login}
+                          setOpenModals={handleSetOpenModals}
+                        />
+                      </div>
+                      <div className="header-user-space--2__container__item">
+                        <Register
+                          isOpen={openModals.register}
+                          setOpenModals={handleSetOpenModals}
+                        />
+                      </div>
                     </>
                   ) : (
                     <>
-                    <Logout />
-                    <Menu />
+                      {/* <div className="header-user-space--2__container__item">
+                        <Menu />
+                      </div> */}
+                      <div className="header-user-space--2__container__item">
+                        <Logout />
+                      </div>
                     </>
                   )}
                 </div>

@@ -176,7 +176,7 @@ export const Login = ({ setOpenModals, isOpen }: IModalProp) => {
   };
 
   return (
-    <div className="Login-content-container">
+    <div className="login-container">
       <Button
         handleClick={handleOpenModal}
         label="Login"

@@ -6,6 +6,8 @@ $header-height: 80px;
   background: $white;
   color: $black;
 
+  font-size: $font-XL;
+
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -24,15 +26,47 @@ $header-height: 80px;
 }
 
 .header-user-space {
-  &--1 {
 
+  &--1 {
+    flex: 2;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+
+    &__logo {
+      padding: 0;
+      margin: 0;
+      font-size: $font-XXL;
+
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
   &--2 {
+    flex: 12;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
 
     &__container {
       display: flex;
+      justify-content: flex-end;
+      
+      height: 100%;
+      width: 100%;
+      display: flex;
       align-items: center;
-    }
+      justify-content: flex-end;
 
+      &__item {
+        margin-left: 10px;
+        // background: red;
+        flex-basis: 200px;
+      
+      }
+
+    }
   }
 }

@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectAuth } from '../../../auth/authSlice';
 import { Button } from '../../button';
 import { Spinner } from '../../spinner';
+import { Posts } from '../posts';
 
 export function Homepage() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -37,30 +38,26 @@ export function Homepage() {
             I make websites
           </div>
           <div className="homepage-group--1__title-container homepage-group--1__title-container--3">
-            This is what I do
+            This is what I do 🤷🏻‍♂️
           </div>
         </div>
 
         <div className="homepage-group homepage-group--2">
           <div className="homepage-group homepage-group--2__1">
-            <h3>placeholder</h3>
-            <img src="https://picsum.photos/200/300" alt="" />
+            <h3>Full Stack NodeJs Developer</h3>
+            <img
+              src="https://antonioguiotto-images.s3.amazonaws.com/profile1.webp"
+              alt="Antonio Guiotto"
+              className="homepage-group--3--img"
+            />
             <Button
-              className=""
               customStyle={{}}
               handleClick={() => handleDownloadFile('pdf')}
               label="⤵️ Download CV 📄"
             />
           </div>
           <div className="homepage-group homepage-group--2__2">
-            <h3>placeholder</h3>
-            <img src="https://picsum.photos/200/300" alt="" />
-            <Button
-              className=""
-              customStyle={{}}
-              handleClick={() => handleDownloadFile('pdf')}
-              label="⤵️ Download CV 📄"
-            />
+            <Posts />
           </div>
         </div>
       </div>
