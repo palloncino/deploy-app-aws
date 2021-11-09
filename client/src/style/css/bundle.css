@@ -204,7 +204,7 @@
 .btn:hover {
   color: #327FC2;
   font-weight: 900;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .menu-item-clickable {
@@ -537,9 +537,15 @@
   margin-bottom: 40px;
 }
 
+.posts-wrapper {
+  width: 100%;
+  background: #223D78;
+}
+
 .post-container {
-  background: #000;
   color: #fff;
+  background: #327FC2;
+  border-radius: 5px;
   margin: 0 0 10px 0;
   padding: 10px;
 }
@@ -560,18 +566,21 @@
   display: flex;
   align-items: center;
 }
+.post-container-data-cell-container--index {
+  flex: 1;
+}
 .post-container-data-cell-container--title {
   padding-left: 10px;
-  flex: 2;
+  flex: 8;
 }
 .post-container-data-cell-container--description {
-  flex: 3;
+  flex: 12;
 }
 .post-container-data-cell-container--date {
-  flex: 1;
+  flex: 4;
 }
 .post-container-data-cell-container--see-more {
-  flex: 1;
+  flex: 4;
 }
 .post-container-data-cell-value--title {
   font-family: "Custom-Font-Titles";
@@ -605,7 +614,7 @@
 }
 
 .posts-output-container {
-  padding: 10px;
+  padding: 10px 0 10px 10px;
 }
 
 .posts-form-input-container {
@@ -729,14 +738,50 @@
 .homepage-group--2__1 {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
-.homepage-group--2__1__image {
-  font-size: 14rem;
+.homepage-group--2__1__1 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.homepage-group--2__1__1__img {
+  border-radius: 5px;
+}
+.homepage-group--2__1__2 {
+  flex: 1;
+}
+.homepage-group--2__1__2__common {
+  margin-bottom: 20px;
+}
+.homepage-group--2__1__2__common:last-child {
+  margin-bottom: 0px;
+}
+.homepage-group--2__1__2__title {
+  font-size: 2rem;
+  margin-left: 0;
+}
+.homepage-group--2__1__2__subtitle {
+  font-size: 1.2rem;
+  margin-left: 0;
+}
+.homepage-group--2__1__2__description {
+  font-size: 1.2rem;
+}
+.homepage-group--2__1__2__button {
+  width: 200px;
+  border-radius: 5px;
+  background: #327FC2;
+  color: #fff;
+  padding: 10px 15px;
+}
+.homepage-group--2__1__2__button:hover {
+  color: #fff;
 }
 .homepage-group--2__2 {
+  background: yellow;
   flex: 1;
   display: flex;
   flex-direction: column;

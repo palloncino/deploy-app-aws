@@ -58,6 +58,11 @@ export const PostsContent = ({
               className={`post-container selector-${post.id}`}
             >
               <div className="post-container-data-cell-container-info">
+                <div className="post-container-data-cell-container post-container-data-cell-container--index">
+                  <div className="post-container-data-cell-value post-container-data-cell-value--index">
+                    {index+1}
+                  </div>
+                </div>
                 <div className="post-container-data-cell-container post-container-data-cell-container--title">
                   <div className="post-container-data-cell-value post-container-data-cell-value--title">
                     {post.title}
@@ -74,18 +79,6 @@ export const PostsContent = ({
                     {post.date}
                   </div>
                 </div>
-
-                <div className="post-container-data-cell-container post-container-data-cell-container--see-more">
-                  <div className="post-container-data-cell-value post-container-data-cell-value--see-more">
-                    <Button
-                      customStyle={{
-                        width: '150px',
-                      }}
-                      handleClick={() => handleTogglePost(post.id)}
-                      label={'👁 Toggle Post'}
-                    />
-                  </div>
-                </div>
               </div>
               <div className="posts-output-wrapper">
                 <div
@@ -93,26 +86,6 @@ export const PostsContent = ({
                   dangerouslySetInnerHTML={{ __html: post.html }}
                 ></div>
               </div>
-
-              {/* {isAdmin() && (
-                <div className="post-container-buttons-group">
-                  <Button
-                    customStyle={{
-                      width: '150px',
-                    }}
-                    handleClick={() => {}}
-                    label="❌ DELETE POST"
-                  />
-                  <Button
-                    customStyle={{
-                      width: '150px',
-                    }}
-                    disabled
-                    handleClick={() => {}}
-                    label="✏️ EDIT POST"
-                  />
-                </div>
-              )} */}
             </div>
           );
         })}
@@ -130,26 +103,6 @@ export const PostsContent = ({
 
   return (
     <>
-      <div className="posts-page-description-container">
-        <Typewriter
-          options={{
-            delay: 20,
-            wrapperClassName: 'homepage-typewriter-wrapper',
-          }}
-          onInit={(typewriter) => {
-            typewriter
-              .typeString(
-                `These are a list of articles that I write every once in a while ... `
-              )
-              .pauseFor(3000)
-              .typeString(
-                `They are about various topics, programming, life experience and more.`
-              )
-              .pauseFor(3000)
-              .start();
-          }}
-        />
-      </div>
       <div className="posts-wrapper">
         {isAdmin() && (
           <div className="posts-form-container">

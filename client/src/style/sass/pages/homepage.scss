@@ -5,12 +5,12 @@
 }
 .homepage-group {
   margin: 0 0 40px 0;
-  
+
   &--1 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
+
     &__title-container {
       font-family: 'Custom-Font-Title';
       &--1 {
@@ -68,14 +68,53 @@
     &__1 {
       flex: 1;
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      &__image {
-        font-size: 14rem;
+
+      &__1 {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        &__img {
+          border-radius: 5px;
+        }
+      }
+      &__2 {
+        flex: 1;
+
+        &__common {
+          margin-bottom: 20px;
+        }
+        &__common:last-child {
+          margin-bottom: 0px;
+        }
+
+        &__title {
+          font-size: $font-XXL;
+          margin-left: 0;
+        }
+        &__subtitle {
+          font-size: $font-L;
+          margin-left: 0;
+        }
+        &__description {
+          font-size: $font-L;
+        }
+        &__button {
+          width: 200px;
+          border-radius: 5px;
+          background: $blue-dark-4;
+          color: $white;
+          padding: 10px 15px;
+        }
+        &__button:hover {
+          color: $white;
+        } 
       }
     }
     &__2 {
+      background: yellow;
       flex: 1;
       display: flex;
       flex-direction: column;
