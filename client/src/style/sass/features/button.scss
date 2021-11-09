@@ -1,7 +1,8 @@
 // button
 .btn {
-  background: $light-grey;
+  background: transparent;
   border: none;
+  cursor: pointer;
 
   &--150 {
     max-width: 150px;

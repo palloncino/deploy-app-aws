@@ -2,7 +2,6 @@
   transition: 0.3s;
   background: #fff;
   color: #000;
-  border-bottom: 4px solid #000;
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -158,8 +157,9 @@
 }
 
 .btn {
-  background: #dcdcdc;
+  background: transparent;
   border: none;
+  cursor: pointer;
 }
 .btn--150 {
   max-width: 150px;

@@ -162,7 +162,7 @@ export const Register = ({ setOpenModals, isOpen }: IModalProp) => {
     <div className="register-content-container">
       <Button
         handleClick={handleOpenModal}
-        label="REGISTER"
+        label="Signup"
       />
       {isOpen && handleStep()}
     </div>

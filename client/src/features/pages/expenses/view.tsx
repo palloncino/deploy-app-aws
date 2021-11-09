@@ -200,27 +200,14 @@ export const ExpensesContent = ({
                 </div>
                 <div className="expenses-container-2-expense-buttons-container">
                   <Button
-                    customStyle={{
-                      width: '150px',
-                      height: '30px',
-                      fontSize: '.8rem',
-                      border: 'none',
-                      color: '#c37070',
-                      background: 'transparent',
-                    }}
+                    customStyle={{}}
                     handleClick={() => handleDeleteCard(id)}
-                    label="❌ DELETE"
+                    label="Delete"
                   />
                   <Button
-                    customStyle={{
-                      width: '150px',
-                      height: '30px',
-                      fontSize: '.8rem',
-                      background: 'transparent',
-                    }}
                     handleClick={() => {}}
                     disabled={true} // TODO: modal
-                    label="✏️ EDIT"
+                    label="Edit"
                   />
                 </div>
               </div>
@@ -365,12 +352,12 @@ export const ExpensesContent = ({
                   <Button
                     customStyle={{ width: '150px', height: '40px' }}
                     handleClick={handleClear}
-                    label="🧹 CLEAR"
+                    label="Clear fields"
                   />
                   <Button
                     customStyle={{ width: '150px', height: '40px' }}
                     type="submit"
-                    label={isLoading ? <Spinner /> : '⚡️ SAVE'}
+                    label={isLoading ? <Spinner /> : 'Save item'}
                   />
                 </div>
               </div>

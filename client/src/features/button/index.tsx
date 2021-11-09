@@ -15,11 +15,6 @@ export const Button = ({
   type,
   className,
 }: ButtonProps) => {
-  const style = {
-    button: {
-      cursor: 'pointer',
-    },
-  };
   const getClassName = () => {
     return className ? `btn ${className}` : `btn`;
   }
@@ -27,7 +22,7 @@ export const Button = ({
   return (
     <button
       className={getClassName()}
-      style={{ ...style.button, ...customStyle }}
+      style={{ ...customStyle }}
       onClick={handleClick}
       disabled={disabled ?? false}
       type={type}

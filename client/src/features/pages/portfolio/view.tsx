@@ -32,13 +32,13 @@ export const PortfolioContent = ({
             <Button
               customStyle={{ width: '150px' }}
               handleClick={handleClearInput}
-              label="🧹 CLEAR"
+              label="Clear fields"
             />
             <Button
               customStyle={{ width: '150px', marginTop: '10px' }}
               handleClick={handleSaveInput}
               // label={`${isSaved ? "🔴" : "🟢"} SAVE`} TODO: like editor
-              label="⚡️ SAVE"
+              label="Save items"
             />
           </div>
           <div className="content-editable-summary-code-container">

@@ -77,13 +77,13 @@ export const Modal = ({
           <Button
             className="btn--150"
             handleClick={cancelCallback}
-            label={cancelLabel ?? 'CANCEL'}
+            label={cancelLabel ?? 'Cancel'}
           />
           {type === 'form' && (
             <Button
               className="btn--150"
               handleClick={nextCallback}
-              label={submitLabel ?? 'PROCEED'}
+              label={submitLabel ?? 'Next'}
             />
           )}
         </div>

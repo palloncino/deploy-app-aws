@@ -49,7 +49,7 @@ export function Homepage() {
               className=""
               customStyle={{}}
               handleClick={() => handleDownloadFile('pdf')}
-              label="⤵️ DOWNLOAD CV 📄"
+              label="⤵️ Download CV 📄"
             />
           </div>
           <div className="homepage-group homepage-group--2__2">
@@ -59,7 +59,7 @@ export function Homepage() {
               className=""
               customStyle={{}}
               handleClick={() => handleDownloadFile('pdf')}
-              label="⤵️ DOWNLOAD CV 📄"
+              label="⤵️ Download CV 📄"
             />
           </div>
         </div>

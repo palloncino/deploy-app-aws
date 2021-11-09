@@ -84,7 +84,7 @@ export function Menu() {
 
   return (
     <div className="menu-container">
-      <Button handleClick={handleOpenMenu} label={isOpen ? 'CLOSE' : 'MENU'} />
+      <Button handleClick={handleOpenMenu} label={isOpen ? 'Close' : 'Menu'} />
       {isOpen && (
         <div
           onClick={() => dispatch(toggleMenu())}

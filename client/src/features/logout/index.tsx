@@ -22,7 +22,7 @@ export const Logout = () => {
   return (
     <Button
       handleClick={handleLogout}
-      label="🔙 LOGOUT"
+      label="Logout"
     />
   );
 };
