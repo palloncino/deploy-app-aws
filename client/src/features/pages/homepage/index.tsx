@@ -43,14 +43,14 @@ export function Homepage() {
 
         <div className="homepage-group homepage-group--2">
           <div className="homepage-group homepage-group--2__1">
-            <div className="homepage-group homepage-group--2__1__1">
+            <div className="homepage-group--2__1__1">
               <img
                 src="https://antonioguiotto-images.s3.amazonaws.com/profile1.webp"
                 alt="Antonio Guiotto"
-                className="homepage-group homepage-group--2__1__1__img"
+                className="homepage-group--2__1__1__img"
               />
             </div>
-            <div className="homepage-group homepage-group--2__1__2">
+            <div className="homepage-group--2__1__2">
 
             <div className="homepage-group--2__1__2__common homepage-group--2__1__2__title">
                 Antonio Guiotto
@@ -69,10 +69,12 @@ export function Homepage() {
               />
             </div>
           </div>
-          <div className="homepage-group homepage-group--2__2">
-            <Posts />
-          </div>
         </div>
+
+        {/* <div className="homepage-group homepage-group--2">
+          <Posts />
+        </div> */}
+        
       </div>
     );
   };

@@ -18,3 +18,9 @@
   font-weight: 900;
   transform: scale(1.05);
 }
+
+@media only screen and (max-width: 1700px) {
+  .btn {
+    font-size: $font-L;
+  } 
+}

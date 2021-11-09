@@ -1,12 +1,8 @@
-$footer-height: 400px;
-
 // footer
 .footer-container {
   background: $blue-dark-1;
   color: $white;
   width: $page-width;
-  font-size: $font-XL;
-
   box-sizing: border-box;
   box-shadow: 0 -10px rgba(0,0,0,0.1);
 }
@@ -14,8 +10,14 @@ $footer-height: 400px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: $footer-height;
+  height: 400px;
   padding: 0px 20px;
-  &-textual {
+  font-size: $font-XL;
+}
+
+@media only screen and (max-width: 1700px) {
+  .footer-content {
+    height: 200px;
+    font-size: $font-L;
   }
 }
