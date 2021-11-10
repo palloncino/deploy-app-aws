@@ -2,7 +2,6 @@
   transition: 0.3s;
   background: #fff;
   color: #333;
-  box-shadow: 0 10px rgba(0, 0, 0, 0.1);
   font-size: 1.4rem;
   position: fixed;
   z-index: 999;
@@ -1029,8 +1028,8 @@
 }
 
 .marquee-icon {
-  margin-right: 100px;
-  height: 200px;
+  margin-right: 80px;
+  height: 100px;
 }
 
 @media only screen and (max-width: 1700px) {
