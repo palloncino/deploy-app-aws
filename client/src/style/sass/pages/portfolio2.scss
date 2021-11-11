@@ -59,6 +59,13 @@
           box-shadow: 5px 5px rgba(0,0,0,0.1);
           color: white;
         }
+        &__btn-header {
+          width: 200px;
+          color: $white;
+          background: $blue-dark-4; 
+          padding: 10px;
+          border-radius: 8px;
+        }
       }
 
     }

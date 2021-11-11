@@ -3,6 +3,7 @@ import { Login } from '../login';
 import { Logout } from '../logout';
 import { Profile } from '../profile';
 import { Menu } from '../menu';
+import { Button } from '../button';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectAuth } from '../../auth/authSlice';
 import { Singleton as Authorization } from '../../auth';
@@ -27,6 +28,17 @@ export function Header() {
         <Spinner />
       </div>
     );
+  };
+
+  const handleDownloadFile = async (type: 'png' | 'pdf' | 'docx') => {
+    switch (type) {
+      case 'pdf':
+        window.open(`${process.env.REACT_APP_PORTFOLIO_S3_PATH}`, '_blank');
+        break;
+
+      default:
+        break;
+    }
   };
 
   const renderNavigation = () => {
@@ -62,9 +74,6 @@ export function Header() {
                   </div>
                   {!isAuthenticated ? (
                     <>
-                      {/* <div className="header-user-space--2__container__item">
-                        <Menu />
-                      </div> */}
                       <div className="header-user-space--2__container__item">
                         <Login
                           isOpen={openModals.login}
@@ -76,6 +85,9 @@ export function Header() {
                           isOpen={openModals.register}
                           setOpenModals={handleSetOpenModals}
                         />
+                      </div>
+                      <div className="header-user-space--2__container__item">
+                        <Button handleClick={() => handleDownloadFile('pdf')} label="Download CV" className="portfolio2__group portfolio2__group--2__button-container__btn-header" />
                       </div>
                     </>
                   ) : (

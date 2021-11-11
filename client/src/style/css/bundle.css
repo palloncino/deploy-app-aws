@@ -632,6 +632,13 @@
   box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   color: white;
 }
+.portfolio2__group--2__button-container__btn-header {
+  width: 200px;
+  color: #fff;
+  background: #327fc2;
+  padding: 10px;
+  border-radius: 8px;
+}
 
 .posts-wrapper {
   width: 100%;

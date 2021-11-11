@@ -27,7 +27,7 @@ export function Portfolio2() {
             Web Developer
           </div>
           <div className="portfolio2__group portfolio2__group--2__description">
-            I had only this small blurred pic, there you go!
+            It's a small blurred pic but is a happy face!
           </div>
           <div className="portfolio2__group portfolio2__group--2__button__container">
             <Button handleClick={() => handleDownloadFile('pdf')} label="Download CV" className="portfolio2__group portfolio2__group--2__button-container__btn" />
