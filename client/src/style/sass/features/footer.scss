@@ -4,7 +4,7 @@
   color: $white;
   width: $page-width;
   box-sizing: border-box;
-  box-shadow: 0 -10px rgba(0,0,0,0.1);
+  box-shadow: 0 -10px rgba(0, 0, 0, 0.1);
   height: 100%;
   display: flex;
   align-items: center;
@@ -19,16 +19,14 @@
   padding: 0px 20px;
   font-size: $font-XL;
   &__social-icons {
-
     &-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
       flex: 1;
-
     }
-    &-title{
+    &-title {
       margin-bottom: 10px;
     }
 
@@ -47,7 +45,6 @@
     &-icon:last-child {
       margin-right: 0;
     }
-
   }
   &__info-container {
     display: flex;
@@ -59,7 +56,6 @@
       margin-bottom: 10px;
     }
     &__info {
-
     }
   }
 }

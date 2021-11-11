@@ -67,15 +67,13 @@
     padding: 0;
     height: 100vh;
     display: flex;
-    transition: .2s;
+    transition: 0.2s;
 
     &__items {
-
-        overflow-x: hidden;
-        display: flex;
-        position: sticky;
-        top:0;
-
+      overflow-x: hidden;
+      display: flex;
+      position: sticky;
+      top: 0;
     }
 
     &__item-container {
@@ -96,21 +94,17 @@
         justify-content: center;
       }
       &--1 {
-
         .homepage-group--3__item-container__inner-page {
           background: $dark-orange;
           border: 20px solid $black;
         }
       }
       &--2 {
-
         .homepage-group--3__item-container__inner-page {
           background: $dark-orange;
           border: 20px solid $black;
         }
       }
-      
-
     }
   }
   &--4 {
@@ -131,33 +125,35 @@
       margin-bottom: 6rem;
     }
 
-    @media only screen and (max-width: 1700px) {}
+    @media only screen and (max-width: 1700px) {
+    }
     @media only screen and (max-width: 1300px) {
       &__description {
         width: 33%;
         font-size: $font-XL;
       }
     }
-    @media only screen and (max-width: 1000px) {}
-    @media only screen and (max-width: 800px) {}
-    @media only screen and (max-width: 700px) {}
-    @media only screen and (max-width: 550px) {}
+    @media only screen and (max-width: 1000px) {
+    }
+    @media only screen and (max-width: 800px) {
+    }
+    @media only screen and (max-width: 700px) {
+    }
+    @media only screen and (max-width: 550px) {
+    }
   }
   &--5 {
     margin-bottom: 0;
   }
 }
 
-
 // LAPTOP
 
 @media only screen and (max-width: 1700px) {
-
   .homepage-group {
     min-height: 400px;
-  
+
     &--1 {
-  
       &__title-container {
         &--1 {
           font-size: $font-XXXXXXXL;
@@ -176,20 +172,16 @@
         }
       }
     }
-    
   }
-  
 }
 
 // TABLET
 
 @media only screen and (max-width: 1300px) {
-
   .homepage-group {
     min-height: 400px;
-  
+
     &--1 {
-  
       &__title-container {
         &--1 {
           font-size: $font-XXXXXL;
@@ -208,21 +200,17 @@
         }
       }
     }
-    
   }
-  
 }
 
 // MOBILE XL
 
 @media only screen and (max-width: 1000px) {
-
   .homepage-group {
     min-height: 400px;
     padding: 20px;
-  
+
     &--1 {
-  
       &__title-container {
         &--1 {
           font-size: $font-XXXXL;
@@ -244,18 +232,14 @@
         }
       }
     }
-    
   }
-  
 }
 
 @media only screen and (max-width: 800px) {
-
   .homepage-group {
     min-height: 300px;
-  
+
     &--1 {
-  
       &__title-container {
         &--1 {
           font-size: $font-XXXXL;
@@ -283,19 +267,15 @@
         }
       }
     }
-    
   }
-  
 }
 
 @media only screen and (max-width: 700px) {
-
   .homepage-group {
     min-height: 300px;
     padding: 10px;
-  
+
     &--1 {
-  
       &__title-container {
         &--1 {
           font-size: $font-XXXL;
@@ -323,18 +303,14 @@
         }
       }
     }
-    
   }
-  
 }
 
 @media only screen and (max-width: 550px) {
-
   .homepage-group {
     min-height: 300px;
-  
+
     &--1 {
-  
       &__title-container {
         &--1 {
           font-size: $font-XXL;
@@ -362,13 +338,15 @@
         }
       }
     }
-    
   }
-  
 }
 
-.homepage-typewriter-wrapper {font-family: 'Custom-Font-Title';}
-.homepage-typewriter-cursor {visibility: hidden;}
+.homepage-typewriter-wrapper {
+  font-family: 'Custom-Font-Title';
+}
+.homepage-typewriter-cursor {
+  visibility: hidden;
+}
 
 .marquee-icon {
   margin-right: 80px;
@@ -379,7 +357,7 @@
   .marquee-icon {
     margin-right: 50px;
     height: 60px;
-  } 
+  }
 }
 
 // @media only screen and (max-width: 1700px) {}
@@ -389,11 +367,9 @@
 // @media only screen and (max-width: 700px) {}
 // @media only screen and (max-width: 550px) {}
 
-// DOWNLOAD CV  
+// DOWNLOAD CV
 .download-cv {
-
   &__wrapper {
-
   }
   &__container {
     display: flex;
@@ -430,5 +406,4 @@
       }
     }
   }
-
 }

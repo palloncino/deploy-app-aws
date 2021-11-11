@@ -225,16 +225,19 @@ export const ExpensesContent = ({
   return (
     <>
       <div className="expenses-container-group center">
-      <Typewriter
-                options={{delay: 20, wrapperClassName: "homepage-typewriter-wrapper" }}
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(
-                      `With this form you can conviniently keep track of monthly expenses and subsciptions that perhaps you might not want to keep any more!`
-                    )
-                    .start();
-                }}
-              />
+        <Typewriter
+          options={{
+            delay: 20,
+            wrapperClassName: 'homepage-typewriter-wrapper',
+          }}
+          onInit={(typewriter) => {
+            typewriter
+              .typeString(
+                `With this form you can conviniently keep track of monthly expenses and subsciptions that perhaps you might not want to keep any more!`
+              )
+              .start();
+          }}
+        />
       </div>
       <div className="expenses-wrapper">
         <div className="expenses-container-1">

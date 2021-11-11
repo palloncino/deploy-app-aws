@@ -19,10 +19,5 @@ export const Logout = () => {
     setTimeout(() => window.location.reload(), 0);
   };
 
-  return (
-    <Button
-      handleClick={handleLogout}
-      label="Logout"
-    />
-  );
+  return <Button handleClick={handleLogout} label="Logout" />;
 };

@@ -7,7 +7,7 @@ import _ from 'lodash';
 import { useEffect } from 'react';
 import { Footer } from '../../footer';
 import { Button } from '../../button';
-import { useSpring, animated } from 'react-spring'
+import { useSpring, animated } from 'react-spring';
 
 export function Homepage() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -32,35 +32,35 @@ export function Homepage() {
   };
 
   function getVal(num: number) {
-    return Math.floor(Math.random()*num)-(num/2)
+    return Math.floor(Math.random() * num) - num / 2;
   }
 
   function getDuration(max: number, min: number) {
-    const a = Math.floor(Math.random()*max)
+    const a = Math.floor(Math.random() * max);
     const b = min;
-    return a+b;
+    return a + b;
   }
 
   const movingLabel1 = useSpring({
     loop: { reverse: true },
     from: { x: getVal(20), y: getVal(20) },
     to: { x: getVal(20), y: getVal(20) },
-    config: { duration: getDuration(5000, 3000) }
-  })
+    config: { duration: getDuration(5000, 3000) },
+  });
 
   const movingLabel2 = useSpring({
     loop: { reverse: true },
     from: { x: getVal(20), y: getVal(20) },
     to: { x: getVal(20), y: getVal(20) },
-    config: { duration: getDuration(5000, 3000) }
-  })
+    config: { duration: getDuration(5000, 3000) },
+  });
 
   const movingLabel3 = useSpring({
     loop: { reverse: true },
     from: { x: getVal(20), y: getVal(20) },
     to: { x: getVal(20), y: getVal(20) },
-    config: { duration: getDuration(5000, 3000) }
-  })
+    config: { duration: getDuration(5000, 3000) },
+  });
 
   useEffect(() => {
     (function () {
@@ -80,8 +80,9 @@ export function Homepage() {
         document
           .querySelectorAll('#sticky-container')
           .forEach(function (container) {
-            // @ts-ignore
-            const stikyContainerHeight = container.querySelector('#sticky-container-child').offsetWidth +
+            const stikyContainerHeight =
+              // @ts-ignore
+              container.querySelector('#sticky-container-child').offsetWidth +
               window.innerHeight;
             container.setAttribute(
               'style',
@@ -108,10 +109,12 @@ export function Homepage() {
           return;
         }
 
-        // @ts-ignore
-        var isPlaceHolderBelowTop = containerInViewPort.offsetTop < document.documentElement.scrollTop;
-        // @ts-ignore
-        var isPlaceHolderBelowBottom = containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
+        var isPlaceHolderBelowTop =
+          // @ts-ignore
+          containerInViewPort.offsetTop < document.documentElement.scrollTop;
+        var isPlaceHolderBelowBottom =
+          // @ts-ignore
+          containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
           document.documentElement.scrollTop;
         let g_canScrollHorizontally =
           isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
@@ -134,7 +137,10 @@ export function Homepage() {
     return (
       <div className="homepage-container">
         <div className="homepage-group homepage-group--1">
-          <animated.div style={{ ...movingLabel1 }} className="homepage-group--1__title-container homepage-group--1__title-container--1">
+          <animated.div
+            style={{ ...movingLabel1 }}
+            className="homepage-group--1__title-container homepage-group--1__title-container--1"
+          >
             <Typewriter
               options={{
                 delay: 50,
@@ -181,10 +187,16 @@ export function Homepage() {
               }}
             />
           </animated.div>
-          <animated.div style={{ ...movingLabel2 }} className="homepage-group--1__title-container homepage-group--1__title-container--2">
+          <animated.div
+            style={{ ...movingLabel2 }}
+            className="homepage-group--1__title-container homepage-group--1__title-container--2"
+          >
             I make websites
           </animated.div>
-          <animated.div style={{ ...movingLabel3 }} className="homepage-group--1__title-container homepage-group--1__title-container--3">
+          <animated.div
+            style={{ ...movingLabel3 }}
+            className="homepage-group--1__title-container homepage-group--1__title-container--3"
+          >
             with javascript 🤷🏻‍♂️
           </animated.div>
         </div>
@@ -198,7 +210,10 @@ export function Homepage() {
               style={{ minWidth: window.innerWidth }}
               className="homepage-group--3__item-container homepage-group--3__item-container--1"
             >
-              <animated.div style={{ ...movingLabel1 }} className="homepage-group--3__item-container__inner-page">
+              <animated.div
+                style={{ ...movingLabel1 }}
+                className="homepage-group--3__item-container__inner-page"
+              >
                 <div className="download-cv__wrapper">
                   <div className="download-cv__container">
                     <div className="download-cv__group download-cv__group--1">
@@ -209,9 +224,15 @@ export function Homepage() {
                       />
                     </div>
                     <div className="download-cv__group download-cv__group--2">
-                      <div className="download-cv__group download-cv__group--2__title">Antonio Guiotto</div>
-                      <div className="download-cv__group download-cv__group--2__subtitle">Web Developer</div>
-                      <div className="download-cv__group download-cv__group--2__cit">cit. "sorry for the blurred pic"</div>
+                      <div className="download-cv__group download-cv__group--2__title">
+                        Antonio Guiotto
+                      </div>
+                      <div className="download-cv__group download-cv__group--2__subtitle">
+                        Web Developer
+                      </div>
+                      <div className="download-cv__group download-cv__group--2__cit">
+                        cit. "sorry for the blurred pic"
+                      </div>
                       <Button
                         customStyle={{}}
                         handleClick={() => handleDownloadFile('pdf')}
@@ -228,9 +249,11 @@ export function Homepage() {
               style={{ minWidth: window.innerWidth }}
               className="homepage-group--3__item-container homepage-group--3__item-container--2"
             >
-              <animated.div style={{ ...movingLabel2 }} className="homepage-group--3__item-container__inner-page">
-              <h1>BOX 2</h1>
-
+              <animated.div
+                style={{ ...movingLabel2 }}
+                className="homepage-group--3__item-container__inner-page"
+              >
+                <h1>BOX 2</h1>
               </animated.div>
             </div>
 

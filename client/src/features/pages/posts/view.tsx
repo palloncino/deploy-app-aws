@@ -60,7 +60,7 @@ export const PostsContent = ({
               <div className="post-container-data-cell-container-info">
                 <div className="post-container-data-cell-container post-container-data-cell-container--index">
                   <div className="post-container-data-cell-value post-container-data-cell-value--index">
-                    {index+1}
+                    {index + 1}
                   </div>
                 </div>
                 <div className="post-container-data-cell-container post-container-data-cell-container--title">

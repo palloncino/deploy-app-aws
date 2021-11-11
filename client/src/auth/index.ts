@@ -173,7 +173,6 @@ export class Authentication {
       const bool = await this.checkTokenValidity(jsCookies.token);
 
       if (bool) {
-
         const res = await this.getUserData(jsCookies.token);
         const { data } = await res.json();
         const user = data.Item;

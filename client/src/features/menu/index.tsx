@@ -69,9 +69,7 @@ export function Menu() {
               key={index}
               disabled={disabled}
               customStyle={
-                disabled
-                  ? { ...menuButtonStyle }
-                  : { ...menuButtonStyle }
+                disabled ? { ...menuButtonStyle } : { ...menuButtonStyle }
               }
               handleClick={() => handleDirect(path)}
               label={disabled ? `🔒 ${label.split(' ')[1]}` : `${label}`}

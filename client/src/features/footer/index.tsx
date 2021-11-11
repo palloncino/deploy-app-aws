@@ -5,7 +5,10 @@ export const Footer = () => {
         <div className="footer-content__social-icons-container">
           <div className="footer-content__social-icons-title">Find me on</div>
           <div className="footer-content__social-icons-icons">
-            <div className="footer-content__social-icons-icon" onClick={() => window.open('https://wa.me/00393474943221')}>
+            <div
+              className="footer-content__social-icons-icon"
+              onClick={() => window.open('https://wa.me/00393474943221')}
+            >
               <svg
                 role="img"
                 viewBox="0 0 24 24"
@@ -18,7 +21,12 @@ export const Footer = () => {
                 />
               </svg>
             </div>
-            <div className="footer-content__social-icons-icon" onClick={() => window.open('https://www.linkedin.com/in/antonioguiotto/')}>
+            <div
+              className="footer-content__social-icons-icon"
+              onClick={() =>
+                window.open('https://www.linkedin.com/in/antonioguiotto/')
+              }
+            >
               <svg
                 role="img"
                 viewBox="0 0 24 24"
@@ -31,7 +39,12 @@ export const Footer = () => {
                 />
               </svg>
             </div>
-            <div className="footer-content__social-icons-icon" onClick={() => window.open('https://github.com/palloncino/antonioguiotto.com')}>
+            <div
+              className="footer-content__social-icons-icon"
+              onClick={() =>
+                window.open('https://github.com/palloncino/antonioguiotto.com')
+              }
+            >
               <svg
                 role="img"
                 viewBox="0 0 24 24"

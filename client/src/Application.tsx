@@ -11,7 +11,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectRoute } from './features/routes';
 import { Footer } from './features/footer';
 import { ErrorPage } from './features/pages/error';
-import { setAuthentication, setAuthLoading, selectAuthIsLoading } from './auth/authSlice';
+import {
+  setAuthentication,
+  setAuthLoading,
+  selectAuthIsLoading,
+} from './auth/authSlice';
 import { Singleton as Authentication } from './auth';
 import { useEffect } from 'react';
 

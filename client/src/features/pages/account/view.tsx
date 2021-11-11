@@ -58,24 +58,31 @@ export function AccountContent({
           </div>
         </div>
         <div className="account-information-container-1-informations">
-        <div className="account-information-container-1-information">
+          <div className="account-information-container-1-information">
             {clientId}
           </div>
         </div>
       </div>
 
       <div className="account-information-container-3">
-        <div className="account-information-container-3-title-tag" style={{ marginBottom: '10px' }}>
+        <div
+          className="account-information-container-3-title-tag"
+          style={{ marginBottom: '10px' }}
+        >
           Change Profile Image
         </div>
         <div className="account-information-container-3-information-container">
-          <div className="account-information-container-3-inputs-container" >
-            <input onChange={handleUploadImage} type="file" name="profile_image"/>
+          <div className="account-information-container-3-inputs-container">
+            <input
+              onChange={handleUploadImage}
+              type="file"
+              name="profile_image"
+            />
             <Button
-            handleClick={sendUploadedImage}
-            customStyle={{ width: '150px', marginBottom: '10px' }}
-            label={isLoading ? <Spinner /> : 'Set image'}
-          />
+              handleClick={sendUploadedImage}
+              customStyle={{ width: '150px', marginBottom: '10px' }}
+              label={isLoading ? <Spinner /> : 'Set image'}
+            />
           </div>
           <img src={getAvatarUrl()} alt="user avatar" />
         </div>
@@ -83,7 +90,10 @@ export function AccountContent({
 
       <div className="account-information-container-2">
         <div className="account-information-container-2-buttons-container">
-          <div className="account-information-container-2-title-tag" style={{ marginBottom: '10px' }}>
+          <div
+            className="account-information-container-2-title-tag"
+            style={{ marginBottom: '10px' }}
+          >
             Erease data
           </div>
           <Button

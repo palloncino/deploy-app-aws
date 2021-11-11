@@ -15,8 +15,7 @@
 
 @font-face {
   font-family: 'Custom-Font-Title';
-  src: url('../../fonts/Custom-Font-Title/Heavitas.ttf')
-      format('truetype'),
+  src: url('../../fonts/Custom-Font-Title/Heavitas.ttf') format('truetype'),
     /* 
   Safari, Android, iOS */
       url('../../fonts/Custom-Font-Title/Heavitas.ttf') format('ttf'); /* Modern 
@@ -76,10 +75,9 @@ body {
 
   &__homepage {
     min-height: 500px;
-    
+
     .loader.loader--style2 {
-      
-      transform: scale(4)
+      transform: scale(4);
     }
   }
 }
@@ -101,7 +99,8 @@ body {
 }
 // login
 
-.login-container, .register-container {
+.login-container,
+.register-container {
   width: 100%;
 }
 

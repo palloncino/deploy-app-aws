@@ -17,7 +17,7 @@ export const Button = ({
 }: ButtonProps) => {
   const getClassName = () => {
     return className ? `btn ${className}` : `btn`;
-  }
+  };
 
   return (
     <button
