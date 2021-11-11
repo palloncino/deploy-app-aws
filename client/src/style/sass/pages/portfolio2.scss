@@ -1,0 +1,68 @@
+.portfolio2 {
+  
+  &__wrapper {
+
+  }
+
+  &__container {
+
+    display: flex;
+    margin: 30px;
+    height: 100%;
+
+  }
+
+  &__group {
+
+    &--1 {
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      
+      &__img {
+
+      }
+
+    }
+
+    &--2 {
+
+      padding: 0 30px;
+
+      &__title {
+        font-family: 'Custom-Font-Title';
+        font-size: $font-XXXXL;
+        line-height: $font-XXXXL;
+      }
+
+      &__subtitle {
+        font-family: 'Custom-Font-Title';
+        font-size: $font-XXL;
+        line-height: $font-XXXXL;
+      }
+
+      &__description {
+        font-size: $font-XXL;
+        line-height: $font-XXXL;
+        margin-bottom: 20px;
+      }
+
+      &__button-container {
+
+        &__btn {
+          width: auto;
+          font-size: $font-XXL;
+          border-radius: 10px;
+          padding: 20px;
+          background: $blue-dark-4;
+          box-shadow: 5px 5px rgba(0,0,0,0.1);
+          color: white;
+        }
+      }
+
+    }
+
+  }
+
+}

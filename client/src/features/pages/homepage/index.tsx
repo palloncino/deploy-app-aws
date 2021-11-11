@@ -6,7 +6,7 @@ import Typewriter from 'typewriter-effect';
 import _ from 'lodash';
 import { useEffect } from 'react';
 import { Footer } from '../../footer';
-import { Button } from '../../button';
+import { Portfolio2 } from '../portfolio2';
 import { useSpring, animated } from 'react-spring';
 
 export function Homepage() {
@@ -18,17 +18,6 @@ export function Homepage() {
         <Spinner />
       </div>
     );
-  };
-
-  const handleDownloadFile = async (type: 'png' | 'pdf' | 'docx') => {
-    switch (type) {
-      case 'pdf':
-        window.open(`${process.env.REACT_APP_PORTFOLIO_S3_PATH}`, '_blank');
-        break;
-
-      default:
-        break;
-    }
   };
 
   function getVal(num: number) {
@@ -191,34 +180,7 @@ export function Homepage() {
                 style={{ ...movingLabel1 }}
                 className="homepage-group--3__item-container__inner-page"
               >
-                <div className="download-cv__wrapper">
-                  <div className="download-cv__container">
-                    <div className="download-cv__group download-cv__group--1">
-                      <img
-                        src="https://antonioguiotto-images.s3.amazonaws.com/profile1.webp"
-                        alt="Antonio Guiotto"
-                        className="download-cv__group download-cv__group--1__img"
-                      />
-                    </div>
-                    <div className="download-cv__group download-cv__group--2">
-                      <div className="download-cv__group download-cv__group--2__title">
-                        Antonio Guiotto
-                      </div>
-                      <div className="download-cv__group download-cv__group--2__subtitle">
-                        Web Developer
-                      </div>
-                      <div className="download-cv__group download-cv__group--2__cit">
-                        cit. "sorry for the blurred pic"
-                      </div>
-                      <Button
-                        customStyle={{}}
-                        handleClick={() => handleDownloadFile('pdf')}
-                        label="Download CV"
-                        className="download-cv__group download-cv__group--2__button"
-                      />
-                    </div>
-                  </div>
-                </div>
+                <Portfolio2 />
               </animated.div>
             </div>
 
@@ -234,12 +196,6 @@ export function Homepage() {
               </animated.div>
             </div>
 
-            {/* <div
-              style={{ minWidth: window.innerWidth }}
-              className="homepage-group--3__item-container homepage-group--3__item-container--3"
-            >
-              <h1>BOX 3</h1>
-            </div> */}
           </div>
         </div>
 
