@@ -844,7 +844,6 @@
 }
 .homepage-group--3 {
   padding: 0;
-  background: rgba(255, 0, 0, 0.548);
   height: 100vh;
   display: flex;
   transition: 0.2s;
@@ -1062,6 +1061,31 @@
 .download-cv__container {
   display: flex;
 }
+.download-cv__group--2__title {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-left: 0;
+}
+.download-cv__group--2__subtitle {
+  font-size: 1.2rem;
+  line-height: 3rem;
+  margin-left: 0;
+}
+.download-cv__group--2__cit {
+  font-size: 1.2rem;
+  line-height: 3rem;
+}
+.download-cv__group--2__button {
+  width: 200px;
+  border-radius: 5px;
+  background: #327FC2;
+  color: #fff;
+  padding: 10px 15px;
+}
+.download-cv__group--2__button:hover {
+  color: #fff;
+}
+
 @font-face {
   font-family: "Custom-Font-Title";
   src: url("../../fonts/Custom-Font-Title/Heavitas.ttf") format("truetype"), url("../../fonts/Custom-Font-Title/Heavitas.ttf") format("ttf");

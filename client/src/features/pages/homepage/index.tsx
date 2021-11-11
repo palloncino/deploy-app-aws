@@ -171,22 +171,22 @@ export function Homepage() {
             >
               <div className="download-cv__wrapper">
                 <div className="download-cv__container">
-                  <div className="download-cv____group download-cv____group--1">
+                  <div className="download-cv__group download-cv__group--1">
                     <img
                       src="https://antonioguiotto-images.s3.amazonaws.com/profile1.webp"
                       alt="Antonio Guiotto"
-                      className="download-cv____group download-cv____group--1__img"
+                      className="download-cv__group download-cv__group--1__img"
                     />
                   </div>
-                  <div className="download-cv____group download-cv____group--2">
-                    <div className="download-cv____group download-cv____group--2__title">Antonio Guiotto</div>
-                    <div className="download-cv____group download-cv____group--2__subtitle">Web Developer</div>
-                    <div className="download-cv____group download-cv____group--2__cit">cit. "sorry for the blurred pic"</div>
+                  <div className="download-cv__group download-cv__group--2">
+                    <div className="download-cv__group download-cv__group--2__title">Antonio Guiotto</div>
+                    <div className="download-cv__group download-cv__group--2__subtitle">Web Developer</div>
+                    <div className="download-cv__group download-cv__group--2__cit">cit. "sorry for the blurred pic"</div>
                     <Button
                       customStyle={{}}
                       handleClick={() => handleDownloadFile('pdf')}
                       label="Download CV"
-                      className="download-cv____group download-cv____group--2__button"
+                      className="download-cv__group download-cv__group--2__button"
                     />
                   </div>
                 </div>

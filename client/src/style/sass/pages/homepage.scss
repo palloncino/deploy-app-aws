@@ -124,7 +124,6 @@
   }
   &--3 {
     padding: 0;
-    background: rgba(255, 0, 0, 0.548);
     height: 100vh;
     display: flex;
     transition: .2s;
@@ -143,6 +142,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
     }
   }
   &--4 {
@@ -421,6 +421,7 @@
 // @media only screen and (max-width: 700px) {}
 // @media only screen and (max-width: 550px) {}
 
+// DOWNLOAD CV  
 .download-cv {
 
   &__wrapper {
@@ -432,14 +433,33 @@
   &__group {
     &--1 {
       &__img {
-
       }
     }
     &--2 {
-      &__title {}
-      &__subtitle {}
-      &__cit {}
-      &__button {}
+      &__title {
+        font-size: $font-XXL;
+        line-height: $font-XXXL;
+        margin-left: 0;
+      }
+      &__subtitle {
+        font-size: $font-L;
+        line-height: $font-XXXL;
+        margin-left: 0;
+      }
+      &__cit {
+        font-size: $font-L;
+        line-height: $font-XXXL;
+      }
+      &__button {
+        width: 200px;
+        border-radius: 5px;
+        background: $blue-dark-4;
+        color: $white;
+        padding: 10px 15px;
+      }
+      &__button:hover {
+        color: $white;
+      }
     }
   }
 
