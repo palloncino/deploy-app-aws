@@ -10,8 +10,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    height: 100%;
 
     &__title-container {
+      display: flex;
+      align-items: center;
       font-family: 'Custom-Font-Title';
       &--1 {
         font-size: $font-XXXXXXXXXXXL;
@@ -60,68 +63,6 @@
       }
     }
   }
-  &--2 {
-    background: rgba(255, 255, 0, 0.454);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &__1 {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      &__1 {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        &__img {
-          border-radius: 5px;
-        }
-      }
-      &__2 {
-        flex: 1;
-
-        &__common {
-          margin-bottom: 20px;
-        }
-        &__common:last-child {
-          margin-bottom: 0px;
-        }
-
-        &__title {
-          font-size: $font-XXL;
-          margin-left: 0;
-        }
-        &__subtitle {
-          font-size: $font-L;
-          margin-left: 0;
-        }
-        &__description {
-          font-size: $font-L;
-        }
-        &__button {
-          width: 200px;
-          border-radius: 5px;
-          background: $blue-dark-4;
-          color: $white;
-          padding: 10px 15px;
-        }
-        &__button:hover {
-          color: $white;
-        } 
-      }
-    }
-    &__2 {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-  }
   &--3 {
     padding: 0;
     height: 100vh;
@@ -142,8 +83,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
       &__inner-page {
-        background: rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        border-radius: 20px;
+        box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
         margin: 50px auto;
         width: 80%;
         height: 100%;
@@ -152,14 +96,20 @@
         justify-content: center;
       }
       &--1 {
-        background: transparent;
+
+        .homepage-group--3__item-container__inner-page {
+          background: $blue-light-2;
+          border: 20px solid $blue-light-3;
+        }
       }
       &--2 {
-        background: transparent;
+
+        .homepage-group--3__item-container__inner-page {
+          background: $blue-dark-1;
+          border: 20px solid $blue-dark-3;
+        }
       }
-      &--3 {
-        background: transparent;
-      }
+      
 
     }
   }
