@@ -1,14 +1,16 @@
 .expenses-wrapper {
+  min-width: 100%;
   display: flex;
 }
 
 .expenses-container-group {
+  min-width: 100%;
   margin: 20px 0;
 }
 .expenses-container-group.center {
   font-size: $font-L;
   line-height: 2rem;
-  width: 90%;
+  min-width: 100%;
 
   margin: 20px auto;
   // text-align: center;

@@ -1,12 +1,13 @@
 import { useSelector } from 'react-redux';
 import { selectAuth } from '../../../auth/authSlice';
 import { Spinner } from '../../spinner';
-import Typewriter from 'typewriter-effect';
 import Marquee from 'react-fast-marquee';
+import Typewriter from 'typewriter-effect';
 import _ from 'lodash';
 import { useEffect } from 'react';
 import { Footer } from '../../footer';
 import { Button } from '../../button';
+import { useSpring, animated } from 'react-spring'
 
 export function Homepage() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -29,6 +30,37 @@ export function Homepage() {
         break;
     }
   };
+
+  function getVal() {
+    return Math.floor(Math.random()*20)-10
+  }
+
+  function getDuration() {
+    const a = Math.floor(Math.random()*5000)
+    const b = 3000;
+    return a+b;
+  }
+
+  const movingLabel1 = useSpring({
+    loop: { reverse: true },
+    from: { x: getVal(), y: getVal() },
+    to: { x: getVal(), y: getVal() },
+    config: { duration: getDuration() }
+  })
+
+  const movingLabel2 = useSpring({
+    loop: { reverse: true },
+    from: { x: getVal(), y: getVal() },
+    to: { x: getVal(), y: getVal() },
+    config: { duration: getDuration() }
+  })
+
+  const movingLabel3 = useSpring({
+    loop: { reverse: true },
+    from: { x: getVal(), y: getVal() },
+    to: { x: getVal(), y: getVal() },
+    config: { duration: getDuration() }
+  })
 
   useEffect(() => {
     (function () {
@@ -66,7 +98,6 @@ export function Homepage() {
       }
 
       function wheelHandler(evt: any) {
-        // console.log(1.1)
         const containerInViewPort = Array.from(
           document.querySelectorAll('#sticky-container')
         ).filter(function (container) {
@@ -74,7 +105,6 @@ export function Homepage() {
         })[0];
 
         if (!containerInViewPort) {
-          // console.log(1.2)
           return;
         }
 
@@ -87,7 +117,6 @@ export function Homepage() {
           isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
 
         if (g_canScrollHorizontally) {
-          // console.log(1.3)
           // @ts-ignore
           containerInViewPort.querySelector(
             '#sticky-container-child'
@@ -105,7 +134,7 @@ export function Homepage() {
     return (
       <div className="homepage-container">
         <div className="homepage-group homepage-group--1">
-          <div className="homepage-group--1__title-container homepage-group--1__title-container--1">
+          <animated.div style={{ ...movingLabel1 }} className="homepage-group--1__title-container homepage-group--1__title-container--1">
             <Typewriter
               options={{
                 delay: 50,
@@ -151,13 +180,13 @@ export function Homepage() {
                   .start();
               }}
             />
-          </div>
-          <div className="homepage-group--1__title-container homepage-group--1__title-container--2">
+          </animated.div>
+          <animated.div style={{ ...movingLabel2 }} className="homepage-group--1__title-container homepage-group--1__title-container--2">
             I make websites
-          </div>
-          <div className="homepage-group--1__title-container homepage-group--1__title-container--3">
+          </animated.div>
+          <animated.div style={{ ...movingLabel3 }} className="homepage-group--1__title-container homepage-group--1__title-container--3">
             with javascript 🤷🏻‍♂️
-          </div>
+          </animated.div>
         </div>
 
         <div className="homepage-group homepage-group--3" id="sticky-container">
@@ -167,27 +196,29 @@ export function Homepage() {
           >
             <div
               style={{ minWidth: window.innerWidth }}
-              className="homepage-group--3__item-container"
+              className="homepage-group--3__item-container homepage-group--3__item-container--1"
             >
-              <div className="download-cv__wrapper">
-                <div className="download-cv__container">
-                  <div className="download-cv__group download-cv__group--1">
-                    <img
-                      src="https://antonioguiotto-images.s3.amazonaws.com/profile1.webp"
-                      alt="Antonio Guiotto"
-                      className="download-cv__group download-cv__group--1__img"
-                    />
-                  </div>
-                  <div className="download-cv__group download-cv__group--2">
-                    <div className="download-cv__group download-cv__group--2__title">Antonio Guiotto</div>
-                    <div className="download-cv__group download-cv__group--2__subtitle">Web Developer</div>
-                    <div className="download-cv__group download-cv__group--2__cit">cit. "sorry for the blurred pic"</div>
-                    <Button
-                      customStyle={{}}
-                      handleClick={() => handleDownloadFile('pdf')}
-                      label="Download CV"
-                      className="download-cv__group download-cv__group--2__button"
-                    />
+              <div className="homepage-group--3__item-container__inner-page">
+                <div className="download-cv__wrapper">
+                  <div className="download-cv__container">
+                    <div className="download-cv__group download-cv__group--1">
+                      <img
+                        src="https://antonioguiotto-images.s3.amazonaws.com/profile1.webp"
+                        alt="Antonio Guiotto"
+                        className="download-cv__group download-cv__group--1__img"
+                      />
+                    </div>
+                    <div className="download-cv__group download-cv__group--2">
+                      <div className="download-cv__group download-cv__group--2__title">Antonio Guiotto</div>
+                      <div className="download-cv__group download-cv__group--2__subtitle">Web Developer</div>
+                      <div className="download-cv__group download-cv__group--2__cit">cit. "sorry for the blurred pic"</div>
+                      <Button
+                        customStyle={{}}
+                        handleClick={() => handleDownloadFile('pdf')}
+                        label="Download CV"
+                        className="download-cv__group download-cv__group--2__button"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -195,17 +226,20 @@ export function Homepage() {
 
             <div
               style={{ minWidth: window.innerWidth }}
-              className="homepage-group--3__item-container"
+              className="homepage-group--3__item-container homepage-group--3__item-container--2"
             >
+              <div className="homepage-group--3__item-container__inner-page">
               <h1>BOX 2</h1>
+
+              </div>
             </div>
 
-            <div
+            {/* <div
               style={{ minWidth: window.innerWidth }}
-              className="homepage-group--3__item-container"
+              className="homepage-group--3__item-container homepage-group--3__item-container--3"
             >
               <h1>BOX 3</h1>
-            </div>
+            </div> */}
           </div>
         </div>
 
