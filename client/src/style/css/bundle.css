@@ -1059,6 +1059,9 @@
     height: 60px;
   }
 }
+.download-cv__container {
+  display: flex;
+}
 @font-face {
   font-family: "Custom-Font-Title";
   src: url("../../fonts/Custom-Font-Title/Heavitas.ttf") format("truetype"), url("../../fonts/Custom-Font-Title/Heavitas.ttf") format("ttf");

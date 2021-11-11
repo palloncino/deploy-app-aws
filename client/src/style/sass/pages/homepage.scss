@@ -420,3 +420,27 @@
 // @media only screen and (max-width: 800px) {}
 // @media only screen and (max-width: 700px) {}
 // @media only screen and (max-width: 550px) {}
+
+.download-cv {
+
+  &__wrapper {
+
+  }
+  &__container {
+    display: flex;
+  }
+  &__group {
+    &--1 {
+      &__img {
+
+      }
+    }
+    &--2 {
+      &__title {}
+      &__subtitle {}
+      &__cit {}
+      &__button {}
+    }
+  }
+
+}

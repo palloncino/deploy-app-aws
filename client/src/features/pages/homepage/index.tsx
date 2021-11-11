@@ -6,6 +6,7 @@ import Marquee from 'react-fast-marquee';
 import _ from 'lodash';
 import { useEffect } from 'react';
 import { Footer } from '../../footer';
+import { Button } from '../../button';
 
 export function Homepage() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -66,7 +67,9 @@ export function Homepage() {
 
       function wheelHandler(evt: any) {
         // console.log(1.1)
-        const containerInViewPort = Array.from(document.querySelectorAll('#sticky-container')).filter(function (container) {
+        const containerInViewPort = Array.from(
+          document.querySelectorAll('#sticky-container')
+        ).filter(function (container) {
           return isElementInViewport(container);
         })[0];
 
@@ -78,13 +81,17 @@ export function Homepage() {
         // @ts-ignore
         var isPlaceHolderBelowTop = containerInViewPort.offsetTop < document.documentElement.scrollTop;
         // @ts-ignore
-        var isPlaceHolderBelowBottom = containerInViewPort.offsetTop + containerInViewPort.offsetHeight > document.documentElement.scrollTop;
-        let g_canScrollHorizontally = isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
+        var isPlaceHolderBelowBottom = containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
+          document.documentElement.scrollTop;
+        let g_canScrollHorizontally =
+          isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
 
         if (g_canScrollHorizontally) {
           // console.log(1.3)
           // @ts-ignore
-          containerInViewPort.querySelector('#sticky-container-child').scrollLeft += evt.deltaY;
+          containerInViewPort.querySelector(
+            '#sticky-container-child'
+          ).scrollLeft += evt.deltaY;
         }
       }
     })();
@@ -154,49 +161,53 @@ export function Homepage() {
         </div>
 
         <div className="homepage-group homepage-group--3" id="sticky-container">
-          <div className="homepage-group homepage-group--3__items" id="sticky-container-child">
-            <div style={{ minWidth: window.innerWidth }} className="homepage-group--3__item-container">
-              <h1>BOX 1</h1>
+          <div
+            className="homepage-group homepage-group--3__items"
+            id="sticky-container-child"
+          >
+            <div
+              style={{ minWidth: window.innerWidth }}
+              className="homepage-group--3__item-container"
+            >
+              <div className="download-cv__wrapper">
+                <div className="download-cv__container">
+                  <div className="download-cv____group download-cv____group--1">
+                    <img
+                      src="https://antonioguiotto-images.s3.amazonaws.com/profile1.webp"
+                      alt="Antonio Guiotto"
+                      className="download-cv____group download-cv____group--1__img"
+                    />
+                  </div>
+                  <div className="download-cv____group download-cv____group--2">
+                    <div className="download-cv____group download-cv____group--2__title">Antonio Guiotto</div>
+                    <div className="download-cv____group download-cv____group--2__subtitle">Web Developer</div>
+                    <div className="download-cv____group download-cv____group--2__cit">cit. "sorry for the blurred pic"</div>
+                    <Button
+                      customStyle={{}}
+                      handleClick={() => handleDownloadFile('pdf')}
+                      label="Download CV"
+                      className="download-cv____group download-cv____group--2__button"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div style={{ minWidth: window.innerWidth }} className="homepage-group--3__item-container">
+            <div
+              style={{ minWidth: window.innerWidth }}
+              className="homepage-group--3__item-container"
+            >
               <h1>BOX 2</h1>
             </div>
 
-            <div style={{ minWidth: window.innerWidth }} className="homepage-group--3__item-container">
+            <div
+              style={{ minWidth: window.innerWidth }}
+              className="homepage-group--3__item-container"
+            >
               <h1>BOX 3</h1>
             </div>
           </div>
         </div>
-
-        {/* <div className="homepage-group homepage-group--2">
-          <div className="homepage-group homepage-group--2__1">
-            <div className="homepage-group--2__1__1">
-              <img
-                src="https://antonioguiotto-images.s3.amazonaws.com/profile1.webp"
-                alt="Antonio Guiotto"
-                className="homepage-group--2__1__1__img"
-              />
-            </div>
-            <div className="homepage-group--2__1__2">
-              <div className="homepage-group--2__1__2__common homepage-group--2__1__2__title">
-                Antonio Guiotto
-              </div>
-              <div className="homepage-group--2__1__2__common homepage-group--2__1__2__subtitle">
-                Web Developer
-              </div>
-              <div className="homepage-group--2__1__2__common homepage-group--2__1__2__description">
-                cit. "work hard for your dreams"
-              </div>
-              <Button
-                customStyle={{}}
-                className="homepage-group--2__1__2__common homepage-group--2__1__2__button"
-                handleClick={() => handleDownloadFile('pdf')}
-                label="Download CV" 
-              />
-            </div>
-          </div>
-        </div> */}
 
         <div className="homepage-group homepage-group--4">
           <h1 className="homepage-group--4__title">My Tech Stack</h1>
