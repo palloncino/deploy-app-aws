@@ -31,35 +31,35 @@ export function Homepage() {
     }
   };
 
-  function getVal() {
-    return Math.floor(Math.random()*20)-10
+  function getVal(num: number) {
+    return Math.floor(Math.random()*num)-(num/2)
   }
 
-  function getDuration() {
-    const a = Math.floor(Math.random()*5000)
-    const b = 3000;
+  function getDuration(max: number, min: number) {
+    const a = Math.floor(Math.random()*max)
+    const b = min;
     return a+b;
   }
 
   const movingLabel1 = useSpring({
     loop: { reverse: true },
-    from: { x: getVal(), y: getVal() },
-    to: { x: getVal(), y: getVal() },
-    config: { duration: getDuration() }
+    from: { x: getVal(20), y: getVal(20) },
+    to: { x: getVal(20), y: getVal(20) },
+    config: { duration: getDuration(5000, 3000) }
   })
 
   const movingLabel2 = useSpring({
     loop: { reverse: true },
-    from: { x: getVal(), y: getVal() },
-    to: { x: getVal(), y: getVal() },
-    config: { duration: getDuration() }
+    from: { x: getVal(20), y: getVal(20) },
+    to: { x: getVal(20), y: getVal(20) },
+    config: { duration: getDuration(5000, 3000) }
   })
 
   const movingLabel3 = useSpring({
     loop: { reverse: true },
-    from: { x: getVal(), y: getVal() },
-    to: { x: getVal(), y: getVal() },
-    config: { duration: getDuration() }
+    from: { x: getVal(20), y: getVal(20) },
+    to: { x: getVal(20), y: getVal(20) },
+    config: { duration: getDuration(5000, 3000) }
   })
 
   useEffect(() => {
@@ -198,7 +198,7 @@ export function Homepage() {
               style={{ minWidth: window.innerWidth }}
               className="homepage-group--3__item-container homepage-group--3__item-container--1"
             >
-              <div className="homepage-group--3__item-container__inner-page">
+              <animated.div style={{ ...movingLabel1 }} className="homepage-group--3__item-container__inner-page">
                 <div className="download-cv__wrapper">
                   <div className="download-cv__container">
                     <div className="download-cv__group download-cv__group--1">
@@ -221,17 +221,17 @@ export function Homepage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </animated.div>
             </div>
 
             <div
               style={{ minWidth: window.innerWidth }}
               className="homepage-group--3__item-container homepage-group--3__item-container--2"
             >
-              <div className="homepage-group--3__item-container__inner-page">
+              <animated.div style={{ ...movingLabel2 }} className="homepage-group--3__item-container__inner-page">
               <h1>BOX 2</h1>
 
-              </div>
+              </animated.div>
             </div>
 
             {/* <div

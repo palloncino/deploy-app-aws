@@ -821,12 +821,12 @@
   justify-content: center;
 }
 .homepage-group--3__item-container--1 .homepage-group--3__item-container__inner-page {
-  background: #83C8EE;
-  border: 20px solid #A3DCF6;
+  background: #ff8c00;
+  border: 20px solid #333;
 }
 .homepage-group--3__item-container--2 .homepage-group--3__item-container__inner-page {
-  background: #223D78;
-  border: 20px solid #2068B2;
+  background: #ff8c00;
+  border: 20px solid #333;
 }
 .homepage-group--4 {
   display: flex;
@@ -1074,7 +1074,6 @@
 body {
   color: #333;
   background: url(../../images/patterns/bg-pattern.svg);
-  background-attachment: fixed;
   overflow-y: scroll;
 }
 
