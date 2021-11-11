@@ -18,7 +18,7 @@
       font-family: 'Custom-Font-Title';
       &--1 {
         font-size: $font-XXXXXXXXXXXL;
-        line-height: 12rem;
+        line-height: 14rem;
         transform: rotate(-1deg);
         z-index: 3;
         display: flex;
@@ -27,13 +27,13 @@
         padding: 80px 0 0 100px;
         margin: -100px 0 0 -20px;
         color: white;
-        text-shadow: 10px 10px $blue-dark-4;
-        background: $blue-dark-1;
+        text-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+        background: $green;
         box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
       }
       &--2 {
         font-size: $font-XXXXXXXXXXXXL;
-        line-height: 12rem;
+        line-height: 14rem;
         transform: rotate(0.7deg);
         z-index: 2;
         display: flex;
@@ -41,14 +41,14 @@
         justify-content: flex-end;
         margin: -70px 0 0 0;
         padding: 100px 100px 0 0;
-        color: $blue-light-3;
-        text-shadow: 10px 10px $blue-dark-1;
-        box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
-        background: $blue-dark-4;
+        color: $black;
+        text-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+        // box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+        background: transparent;
       }
       &--3 {
         font-size: $font-XXXXXXXXXL;
-        line-height: 12rem;
+        line-height: 14rem;
         // transform: rotate(-0.5deg);
         z-index: 1;
         display: flex;
@@ -56,9 +56,9 @@
         justify-content: center;
         padding: 40px 0 0 100px;
         margin: -20px 0 0 -20px;
-        color: $blue-dark-3;
-        text-shadow: 5px 5px $blue-light-3;
-        background: $blue-light-5;
+        color: $white;
+        text-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+        background: $red;
         // box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
       }
     }
@@ -88,7 +88,7 @@
         box-sizing: border-box;
         border-radius: 20px;
         box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
-        margin: 50px auto;
+        margin: 100px auto 50px auto;
         width: 80%;
         height: 100%;
         display: flex;

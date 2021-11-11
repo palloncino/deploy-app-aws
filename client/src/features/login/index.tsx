@@ -179,6 +179,7 @@ export const Login = ({ setOpenModals, isOpen }: IModalProp) => {
     <div className="login-container">
       <Button
         handleClick={handleOpenModal}
+        customStyle={{color: 'white'}}
         label="Login"
       />
       {isOpen && handleStep()}

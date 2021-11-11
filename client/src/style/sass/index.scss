@@ -43,6 +43,7 @@
 
 body {
   color: $black;
+  background: url(../../images/patterns/bg-pattern.svg);
   background-attachment: fixed;
   overflow-y: scroll; // prevent page to move when vertical scrollbar appears
 }

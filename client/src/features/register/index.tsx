@@ -162,6 +162,7 @@ export const Register = ({ setOpenModals, isOpen }: IModalProp) => {
     <div className="register-container">
       <Button
         handleClick={handleOpenModal}
+        customStyle={{color: 'white'}}
         label="Signup"
       />
       {isOpen && handleStep()}

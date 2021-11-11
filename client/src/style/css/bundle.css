@@ -1,7 +1,7 @@
 .header-container {
   transition: 0.3s;
-  background: #fff;
-  color: #333;
+  background: #333;
+  color: #fff;
   font-size: 1.4rem;
   position: fixed;
   z-index: 900;
@@ -253,7 +253,7 @@
 }
 
 .btn:hover {
-  color: #327FC2;
+  color: #fff;
   font-weight: 900;
   transform: scale(1.05);
 }
@@ -434,7 +434,7 @@
   margin-bottom: 20px;
 }
 .expenses-container-1-form-errors-container {
-  color: #c37070;
+  color: #f03e1f;
 }
 
 .expenses-container-2 {
@@ -470,7 +470,7 @@
   margin-bottom: 0;
 }
 .expenses-container-2-expense-output--price {
-  color: #c37070;
+  color: #f03e1f;
   font-size: 2rem;
   text-align: right;
 }
@@ -751,7 +751,7 @@
 }
 .homepage-group--1__title-container--1 {
   font-size: 11rem;
-  line-height: 12rem;
+  line-height: 14rem;
   transform: rotate(-1deg);
   z-index: 3;
   display: flex;
@@ -760,13 +760,13 @@
   padding: 80px 0 0 100px;
   margin: -100px 0 0 -20px;
   color: white;
-  text-shadow: 10px 10px #327FC2;
-  background: #223D78;
+  text-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+  background: #34944f;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
 }
 .homepage-group--1__title-container--2 {
   font-size: 12rem;
-  line-height: 12rem;
+  line-height: 14rem;
   transform: rotate(0.7deg);
   z-index: 2;
   display: flex;
@@ -774,23 +774,22 @@
   justify-content: flex-end;
   margin: -70px 0 0 0;
   padding: 100px 100px 0 0;
-  color: #A3DCF6;
-  text-shadow: 10px 10px #223D78;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
-  background: #327FC2;
+  color: #333;
+  text-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+  background: transparent;
 }
 .homepage-group--1__title-container--3 {
   font-size: 9rem;
-  line-height: 12rem;
+  line-height: 14rem;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px 0 0 100px;
   margin: -20px 0 0 -20px;
-  color: #2068B2;
-  text-shadow: 5px 5px #A3DCF6;
-  background: #EBF7FF;
+  color: #fff;
+  text-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+  background: #f03e1f;
 }
 .homepage-group--3 {
   padding: 0;
@@ -814,7 +813,7 @@
   box-sizing: border-box;
   border-radius: 20px;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
-  margin: 50px auto;
+  margin: 100px auto 50px auto;
   width: 80%;
   height: 100%;
   display: flex;
@@ -1074,6 +1073,7 @@
 
 body {
   color: #333;
+  background: url(../../images/patterns/bg-pattern.svg);
   background-attachment: fixed;
   overflow-y: scroll;
 }
@@ -1198,7 +1198,7 @@ body {
 }
 .custom-modal-form-error-box-error {
   margin-top: 3px;
-  color: #c37070;
+  color: #f03e1f;
 }
 .custom-modal-buttons {
   display: flex;
