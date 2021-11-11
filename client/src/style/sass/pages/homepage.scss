@@ -1,10 +1,10 @@
 .homepage-wrapper {
-  margin: 40px 0 40px 0;
+  margin: 40px 0 0 0;
 }
 .homepage-group {
   margin: 0 0 40px 0;
   min-height: 500px;
-  padding: 50px;
+  height: 100vh;
 
   &--1 {
     display: flex;
@@ -123,8 +123,27 @@
     }
   }
   &--3 {
+    padding: 0;
     background: rgba(255, 0, 0, 0.548);
     height: 100vh;
+    display: flex;
+    transition: .2s;
+
+    &__items {
+
+        overflow-x: hidden;
+        display: flex;
+        position: sticky;
+        top:0;
+
+    }
+
+    &__item-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
   &--4 {
     display: flex;
@@ -141,7 +160,7 @@
       line-height: 3rem;
       font-size: $font-XL;
       text-align: justify;
-      margin-bottom: 3rem;
+      margin-bottom: 6rem;
     }
 
     @media only screen and (max-width: 1700px) {}
@@ -155,6 +174,9 @@
     @media only screen and (max-width: 800px) {}
     @media only screen and (max-width: 700px) {}
     @media only screen and (max-width: 550px) {}
+  }
+  &--5 {
+    margin-bottom: 0;
   }
 }
 

@@ -96,7 +96,6 @@ export function Application() {
             <div className="page-container">
               <Header />
               {returnView(route)}
-              <Footer />
             </div>
           </div>
         )}
