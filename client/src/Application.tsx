@@ -9,7 +9,7 @@ import { Expenses } from './features/pages/expenses';
 import { Spinner } from './features/spinner';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectRoute } from './features/routes';
-import { Footer } from './features/footer';
+import 'react-whatsapp-chat-widget/index.css';
 import { ErrorPage } from './features/pages/error';
 import {
   setAuthentication,
@@ -18,6 +18,8 @@ import {
 } from './auth/authSlice';
 import { Singleton as Authentication } from './auth';
 import { useEffect } from 'react';
+// @ts-ignore
+import WhatsAppWidget from 'react-whatsapp-chat-widget';
 
 export function Application() {
   const route = useSelector(selectRoute);
@@ -100,6 +102,15 @@ export function Application() {
             <div className="page-container">
               <Header />
               {returnView(route)}
+              <WhatsAppWidget
+                phoneNo="00393474943221"
+                autoOpenTimer={5000}
+                iconSize="200"
+                headerTitle="Antonio Guiotto"
+                headerCaption="Online"
+                iconColor="#34944f"
+			          iconBgColor="transparent"
+              />
             </div>
           </div>
         )}

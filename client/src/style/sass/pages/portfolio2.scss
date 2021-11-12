@@ -73,10 +73,11 @@
         font-family: 'Custom-Font-Title';
         color: $black;
         font-size: $font-XXXL;
+        // display: none;
       }
 
       &__subtitle {
-        font-family: 'Custom-Font-Title';
+        // font-family: 'Custom-Font-Title';
         color: $grey;
         font-size: $font-XXL;
         line-height: $font-XXXL;
