@@ -601,8 +601,6 @@
   width: 100%;
 }
 .portfolio2__container {
-  background: #dcdcdc;
-  border: 15px solid #333;
   color: #333;
   border-radius: 20px;
   box-sizing: border-box;
@@ -611,10 +609,6 @@
   height: 100%;
   align-items: flex-start;
   justify-content: center;
-  background: #dcdcdc;
-  background-image: url(../../images/svg/bg04.svg);
-  background-position: center;
-  background-size: cover;
 }
 .portfolio2__group--1__container {
   height: 100%;
@@ -866,11 +860,11 @@
   font-family: "Custom-Font-Title";
   line-height: 11rem;
   font-size: 5rem;
-  color: #9e9e9e;
+  color: #dcdcdc;
 }
 .homepage-group--1 .marquee-intro a {
   font-family: "Custom-Font-Title";
-  color: #797979;
+  color: #9e9e9e;
   text-decoration: none;
 }
 .homepage-group--1 .marquee-container .overlay {
@@ -893,11 +887,8 @@
   padding: 80px 0 0 100px;
   margin: -100px 0 0 -20px;
   color: white;
-  text-shadow: 10px 10px rgba(0, 0, 0, 0.3);
-  background: url(../../images/svg/bg05-green.svg);
-  background-position: center;
-  background-size: cover;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+  text-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  background: #34944f;
 }
 .homepage-group--1__title-container--2 {
   font-size: 12rem;
@@ -910,8 +901,8 @@
   justify-content: flex-end;
   margin: -70px 0 0 0;
   padding: 100px 100px 0 0;
-  color: #333;
-  text-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   background: transparent;
 }
 .homepage-group--1__title-container--3 {
@@ -925,11 +916,8 @@
   padding: 40px 0 0 100px;
   margin: -20px 0 0 -20px;
   color: #fff;
-  text-shadow: 10px 10px rgba(0, 0, 0, 0.3);
-  background: url(../../images/svg/bg05-red.svg);
-  background-position: center;
-  background-size: cover;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+  text-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  background: #f03e1f;
 }
 .homepage-group--3 {
   padding: 0;
@@ -963,15 +951,10 @@
   justify-content: center;
 }
 .homepage-group--3__item-container--1 .homepage-group--3__item-container__inner-page {
-  position: relative;
-  box-sizing: border-box;
+  box-shadow: none;
 }
 .homepage-group--3__item-container--2 .homepage-group--3__item-container__inner-page {
-  background: url(../../images/svg/bg.svg);
-  background-position: center;
-  background-size: cover;
-  border: 20px solid #333;
-  color: #fff;
+  box-shadow: none;
 }
 .homepage-group--3__item-container--3 .homepage-group--3__item-container__inner-page {
   background-image: url(../../images/svg/bg02.svg);

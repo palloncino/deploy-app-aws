@@ -164,7 +164,7 @@ export function Homepage() {
             style={{ ...movingLabel3 }}
             className="homepage-group--1__title-container homepage-group--1__title-container--3"
           >
-            with javascript 🤷🏻‍♂️
+            with javascript
           </animated.div>
           <Marquee speed={160}>
                   <div className="marquee-intro"> 
@@ -194,17 +194,18 @@ export function Homepage() {
               style={{ minWidth: window.innerWidth }}
               className="homepage-group--3__item-container homepage-group--3__item-container--2"
             >
-              <animated.div
-                style={{ ...movingLabel2 }}
+              {/* <animated.div */}
+              <div
+                // style={{ ...movingLabel2 }}
                 className="homepage-group--3__item-container__inner-page"
               >
                 {/* <MusicCard /> */}
-                <img src={ShrekDancing} alt="" />
+                <img src={ShrekDancing} alt="shrek dancing" />
                 {/* <img src="https://antonioguiotto-artworks.s3.amazonaws.com/images/wes.png" alt="a. guiotto illustration" /> */}
-              </animated.div>
+              </div>
             </div>
 
-            <div
+            {/* <div
               style={{ minWidth: window.innerWidth }}
               className="homepage-group--3__item-container homepage-group--3__item-container--3"
             >
@@ -214,7 +215,7 @@ export function Homepage() {
               >
                 <h1>Hello</h1>
               </animated.div>
-            </div>
+            </div> */}
 
           </div>
         </div>
@@ -227,7 +228,7 @@ export function Homepage() {
             servers because it provides me with an arsenal of useful tools and
             make my projects very flexible.
           </div>
-          <Marquee>
+          <Marquee speed={60}>
             <svg
               fill="#333"
               className="marquee-icon"
