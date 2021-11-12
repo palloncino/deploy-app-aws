@@ -144,12 +144,6 @@ export function Homepage() {
                   .typeString(`Welcome :)`)
                   .pauseFor(4000)
                   .deleteChars(20)
-                  .typeString(`Che si dice!?`)
-                  .pauseFor(4000)
-                  .deleteChars(20)
-                  .typeString(`Benvenuto :)`)
-                  .pauseFor(4000)
-                  .deleteChars(20)
                   .start();
               }}
             />
