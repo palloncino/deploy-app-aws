@@ -17,7 +17,11 @@ export function Portfolio2() {
     <div className="portfolio2__wrapper">
       <div className="portfolio2__container">
         <div className="portfolio2__group portfolio2__group--1">
-          <img src="https://antonioguiotto-images.s3.amazonaws.com/profile1.png" alt="" className="portfolio2__group portfolio2__group--1__img"/>
+          <div className="portfolio2__group--1__container">
+            <img src="https://antonioguiotto-images.s3.amazonaws.com/profile1.png" alt="" className="portfolio2__group--1__container__img"/>
+            {/* <div className="portfolio2__group portfolio2__group--1__cit">"Sorry for the blurred pic"</div> */}
+            <Button handleClick={() => handleDownloadFile('pdf')} label="Download CV" className="portfolio2__group--1__container__btn" />
+          </div>
         </div>
         <div className="portfolio2__group portfolio2__group--2">
           <div className="portfolio2__group portfolio2__group--2__title">
@@ -43,15 +47,22 @@ export function Portfolio2() {
             My job
           </div>
           <div className="portfolio2__group portfolio2__group--2__description">
-            Since 2018 I am working as a Web Developer, I take care of all sides of web applications, meaning #front-end #back-end #dev-ops #project-managment #business-logic #graphic-design #content-manager #creator
+            Since 2018 I am working as a Web Developer, I take care of all sides of web applications, therefore you culd define me as &nbsp;
+            <span className="portfolio2__group--2__description__hashtag">#front-end</span> 
+            <span className="portfolio2__group--2__description__hashtag">#back-end</span>
+            <span className="portfolio2__group--2__description__hashtag">#project-managment</span> 
+            <span className="portfolio2__group--2__description__hashtag">#business-logic</span> 
+            <span className="portfolio2__group--2__description__hashtag">#graphic-design</span> 
+            <span className="portfolio2__group--2__description__hashtag">#content-manager</span>  
+            <span className="portfolio2__group--2__description__hashtag">#creator</span>
           </div>
 
-          <div className="portfolio2__group portfolio2__group--2__subtitle">
+          {/* <div className="portfolio2__group portfolio2__group--2__subtitle">
             Downloads
           </div>
           <div className="portfolio2__group portfolio2__group--2__button__container">
             <Button handleClick={() => handleDownloadFile('pdf')} label="Download CV" className="portfolio2__group portfolio2__group--2__button-container__btn" />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

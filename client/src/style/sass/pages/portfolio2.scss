@@ -10,7 +10,7 @@
   &__container {
 
     background: $light-grey;
-    border: 10px solid $grey;
+    border: 15px solid $black;
     color: $black;
     border-radius: 20px;
 
@@ -18,6 +18,7 @@
 
     display: flex;
     padding: 50px;
+    height: 100%;
 
     align-items: flex-start;
     justify-content: center;
@@ -29,13 +30,33 @@
 
     &--1 {
 
-      height: 100%;
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-end;
-      
-      &__img {
-        border-radius: 5px;
+      &__container {
+
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__img {
+          border-radius: 5px;
+          margin-bottom: 1rem;
+        }
+  
+        &__cit {
+          font-size: $font-L;
+        }
+  
+  
+        &__btn {
+          width: auto;
+          font-size: $font-L;
+          border-radius: 10px;
+          padding: 10px;
+          width: 100%;
+          background: $blue-dark-4;
+          color: white;
+        }
+        
       }
 
 
@@ -44,7 +65,7 @@
     &--2 {
 
       padding: 0 30px;
-      max-width: 50%;
+      width: 50%;
 
       &__title {
         margin: 0 0 20px 0;
@@ -55,7 +76,7 @@
 
       &__subtitle {
         font-family: 'Custom-Font-Title';
-        color: $dark-grey;
+        color: $black;
         font-size: $font-XL;
         line-height: $font-XXXL;
       }
@@ -64,6 +85,15 @@
         font-size: $font-XL;
         line-height: $font-XXXL;
         margin: 0 0 20px 20px;
+        &__hashtag {
+          display: inline-block;
+          // background: $blue-dark-1;
+          font-weight: 900;
+          padding: 0px 8px;
+          border-radius: 10px;
+          color: $blue-dark-1;
+          margin-right: 10px;
+        }
       }
 
       &__button-container {
@@ -91,3 +121,31 @@
   }
 
 }
+
+
+@media only screen and (max-width: 1700px) {
+  .portfolio2__group--2 {
+    &__title {
+      font-size: $font-XXL;
+    }
+    &__subtitle {
+      font-size: $font-L;
+      line-height: $font-XXL;
+    }
+    &__description {
+      font-size: $font-L;
+      line-height: $font-XXL;
+    }
+    &__button-container {
+      &__btn {
+        font-size: $font-L;
+        padding: 10px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1300px) {}
+@media only screen and (max-width: 1000px) {}
+@media only screen and (max-width: 800px) {}
+@media only screen and (max-width: 700px) {}
+@media only screen and (max-width: 550px) {}

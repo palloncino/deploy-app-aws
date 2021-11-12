@@ -601,27 +601,41 @@
 }
 .portfolio2__container {
   background: #dcdcdc;
-  border: 10px solid #9e9e9e;
+  border: 15px solid #333;
   color: #333;
   border-radius: 20px;
   box-sizing: border-box;
   display: flex;
   padding: 50px;
+  height: 100%;
   align-items: flex-start;
   justify-content: center;
 }
-.portfolio2__group--1 {
+.portfolio2__group--1__container {
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-end;
 }
-.portfolio2__group--1__img {
+.portfolio2__group--1__container__img {
   border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.portfolio2__group--1__container__cit {
+  font-size: 1.2rem;
+}
+.portfolio2__group--1__container__btn {
+  width: auto;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  background: #327fc2;
+  color: white;
 }
 .portfolio2__group--2 {
   padding: 0 30px;
-  max-width: 50%;
+  width: 50%;
 }
 .portfolio2__group--2__title {
   margin: 0 0 20px 0;
@@ -631,7 +645,7 @@
 }
 .portfolio2__group--2__subtitle {
   font-family: "Custom-Font-Title";
-  color: #797979;
+  color: #333;
   font-size: 1.4rem;
   line-height: 3rem;
 }
@@ -639,6 +653,14 @@
   font-size: 1.4rem;
   line-height: 3rem;
   margin: 0 0 20px 20px;
+}
+.portfolio2__group--2__description__hashtag {
+  display: inline-block;
+  font-weight: 900;
+  padding: 0px 8px;
+  border-radius: 10px;
+  color: #223d78;
+  margin-right: 10px;
 }
 .portfolio2__group--2__button-container__btn {
   width: auto;
@@ -657,6 +679,23 @@
   border-radius: 8px;
 }
 
+@media only screen and (max-width: 1700px) {
+  .portfolio2__group--2__title {
+    font-size: 2rem;
+  }
+  .portfolio2__group--2__subtitle {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  .portfolio2__group--2__description {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  .portfolio2__group--2__button-container__btn {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+}
 .music-card__wrapper {
   position: relative;
   height: 100%;
@@ -963,7 +1002,7 @@
   }
   .homepage-group--4 .marquee-icon {
     margin-right: 50px;
-    height: 60px;
+    height: 80px;
   }
 }
 @media only screen and (max-width: 1300px) {
