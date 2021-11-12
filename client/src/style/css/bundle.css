@@ -702,7 +702,6 @@
 .music-card__container {
   height: 100%;
   width: 100%;
-  background: url(../../images/svg/guitar.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -901,7 +900,7 @@
   justify-content: flex-end;
   margin: -70px 0 0 0;
   padding: 100px 100px 0 0;
-  color: #fff;
+  color: #333;
   text-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   background: transparent;
 }
@@ -1374,9 +1373,9 @@ body {
 }
 
 #sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container > div:nth-child(2) > svg {
-  height: 150px;
-  width: 150px;
-  margin-right: 30px;
+  height: 200px;
+  width: 200px;
+  margin-right: 100px;
 }
 
 /*# sourceMappingURL=bundle.css.map */
