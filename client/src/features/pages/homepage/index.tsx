@@ -9,6 +9,7 @@ import { Footer } from '../../footer';
 import { Portfolio2 } from '../portfolio2';
 import { useSpring, animated } from 'react-spring';
 import { MusicCard } from '../music';
+import ShrekDancing from '../../../images/gif/shrek-dancing.gif'
 
 export function Homepage() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -190,7 +191,7 @@ export function Homepage() {
                 className="homepage-group--3__item-container__inner-page"
               >
                 {/* <MusicCard /> */}
-                <h1>Placeholder</h1>
+                <img src={ShrekDancing} alt="" />
                 {/* <img src="https://antonioguiotto-artworks.s3.amazonaws.com/images/wes.png" alt="a. guiotto illustration" /> */}
               </animated.div>
             </div>
