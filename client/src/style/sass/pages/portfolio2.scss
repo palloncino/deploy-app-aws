@@ -2,20 +2,34 @@
   
   &__wrapper {
 
+    height: 100%;
+    width: 100%;
+
   }
 
   &__container {
 
+    background: $light-grey;
+    border: 10px solid $grey;
+    color: $black;
+    border-radius: 20px;
+
+    box-sizing: border-box;
+
     display: flex;
-    margin: 30px;
-    height: 100%;
+    padding: 50px;
+
+    align-items: flex-start;
+    justify-content: center;
 
   }
 
   &__group {
 
+
     &--1 {
 
+      height: 100%;
       display: flex;
       align-items: flex-start;
       justify-content: flex-end;
@@ -30,23 +44,26 @@
     &--2 {
 
       padding: 0 30px;
+      max-width: 50%;
 
       &__title {
+        margin: 0 0 20px 0;
         font-family: 'Custom-Font-Title';
-        font-size: $font-XXXXL;
-        line-height: $font-XXXXL;
+        color: $black;
+        font-size: $font-XXXL;
       }
 
       &__subtitle {
         font-family: 'Custom-Font-Title';
-        font-size: $font-XXL;
-        line-height: $font-XXXXL;
+        color: $dark-grey;
+        font-size: $font-XL;
+        line-height: $font-XXXL;
       }
 
       &__description {
-        font-size: $font-XXL;
+        font-size: $font-XL;
         line-height: $font-XXXL;
-        margin-bottom: 20px;
+        margin: 0 0 20px 20px;
       }
 
       &__button-container {
