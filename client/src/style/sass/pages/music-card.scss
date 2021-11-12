@@ -1,0 +1,18 @@
+.music-card {
+  &__wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__container {
+
+    height: 100%;
+    width: 100%;
+
+    background: url(../../images/svg/guitar.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+  

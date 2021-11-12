@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import { Footer } from '../../footer';
 import { Portfolio2 } from '../portfolio2';
 import { useSpring, animated } from 'react-spring';
+import { MusicCard } from '../music';
 
 export function Homepage() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -118,10 +119,6 @@ export function Homepage() {
     })();
   }, []);
 
-  const handleElementScroll = () => {
-    return console.log('scrolling');
-  };
-
   const renderInsider = () => {
     return (
       <div className="homepage-container">
@@ -192,7 +189,8 @@ export function Homepage() {
                 style={{ ...movingLabel2 }}
                 className="homepage-group--3__item-container__inner-page"
               >
-                <h1>BOX 2</h1>
+                <MusicCard />
+                {/* <img src="https://antonioguiotto-artworks.s3.amazonaws.com/images/wes.png" alt="a. guiotto illustration" /> */}
               </animated.div>
             </div>
 
