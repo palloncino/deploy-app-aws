@@ -835,6 +835,7 @@
   color: #fff;
   text-shadow: 10px 10px rgba(0, 0, 0, 0.3);
   background: #f03e1f;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
 }
 .homepage-group--3 {
   padding: 0;
@@ -907,17 +908,17 @@
   .homepage-group--1__title-container--1 {
     font-size: 7rem;
     line-height: 8rem;
-    text-shadow: 5px 5px #327fc2;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   }
   .homepage-group--1__title-container--2 {
     font-size: 8rem;
     line-height: 8rem;
-    text-shadow: 5px 5px #223d78;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   }
   .homepage-group--1__title-container--3 {
     font-size: 5rem;
     line-height: 8rem;
-    text-shadow: 5px 5px #a3dcf6;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   }
 }
 @media only screen and (max-width: 1300px) {
@@ -927,17 +928,17 @@
   .homepage-group--1__title-container--1 {
     font-size: 5rem;
     line-height: 6rem;
-    text-shadow: 5px 5px #327fc2;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   }
   .homepage-group--1__title-container--2 {
     font-size: 6rem;
     line-height: 6rem;
-    text-shadow: 5px 5px #223d78;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   }
   .homepage-group--1__title-container--3 {
     font-size: 4rem;
     line-height: 6rem;
-    text-shadow: 5px 5px #a3dcf6;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -948,19 +949,19 @@
   .homepage-group--1__title-container--1 {
     font-size: 4rem;
     line-height: 6rem;
-    text-shadow: 3px 3px #327fc2;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.1);
     box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   }
   .homepage-group--1__title-container--2 {
     font-size: 4rem;
     line-height: 6rem;
-    text-shadow: 3px 3px #223d78;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.1);
     box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   }
   .homepage-group--1__title-container--3 {
     font-size: 4rem;
     line-height: 6rem;
-    text-shadow: 5px 5px #a3dcf6;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.1);
   }
 }
 @media only screen and (max-width: 800px) {
@@ -970,7 +971,7 @@
   .homepage-group--1__title-container--1 {
     font-size: 4rem;
     line-height: 4.5rem;
-    text-shadow: 3px 3px #327fc2;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.1);
     box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
     padding: 50px 0 0 40px;
     margin: -70px 0 0 -20px;
@@ -978,7 +979,7 @@
   .homepage-group--1__title-container--2 {
     font-size: 4rem;
     line-height: 4.5rem;
-    text-shadow: 3px 3px #223d78;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.1);
     box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
     padding: 20px 20px 0 20px;
     margin: -10px 0 0 0;
@@ -986,7 +987,7 @@
   .homepage-group--1__title-container--3 {
     font-size: 3rem;
     line-height: 4.5rem;
-    text-shadow: 3px 3px #a3dcf6;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.1);
     padding: 20px 0 0 20px;
     margin: -20px 0 0 0;
   }
@@ -999,7 +1000,7 @@
   .homepage-group--1__title-container--1 {
     font-size: 3rem;
     line-height: 4rem;
-    text-shadow: 3px 3px #327fc2;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.1);
     box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
     padding: 50px 0 0 40px;
     margin: -70px 0 0 -20px;
@@ -1007,7 +1008,7 @@
   .homepage-group--1__title-container--2 {
     font-size: 3rem;
     line-height: 4rem;
-    text-shadow: 3px 3px #223d78;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.1);
     box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
     padding: 20px 20px 0 20px;
     margin: -10px 0 0 0;
@@ -1015,7 +1016,7 @@
   .homepage-group--1__title-container--3 {
     font-size: 2rem;
     line-height: 4rem;
-    text-shadow: 3px 3px #a3dcf6;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.1);
     padding: 20px 0 0 20px;
     margin: -20px 0 0 0;
   }
@@ -1027,7 +1028,7 @@
   .homepage-group--1__title-container--1 {
     font-size: 2rem;
     line-height: 3.5rem;
-    text-shadow: 2px 2px #327fc2;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
     box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
     padding: 50px 0 0 40px;
     margin: -70px 0 0 -20px;
@@ -1035,7 +1036,7 @@
   .homepage-group--1__title-container--2 {
     font-size: 2rem;
     line-height: 3.5rem;
-    text-shadow: 2px 2px #223d78;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
     box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 20px 0 10px;
     margin: -10px 0 0 0;
@@ -1043,7 +1044,7 @@
   .homepage-group--1__title-container--3 {
     font-size: 1.4rem;
     line-height: 3.5rem;
-    text-shadow: 2px 2px #a3dcf6;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
     padding: 20px 0 0 10px;
     margin: -20px 0 0 0;
   }
@@ -1087,7 +1088,7 @@
 .download-cv__group--2__button {
   width: 200px;
   border-radius: 5px;
-  background: #327fc2;
+  background: #223d78;
   color: #fff;
   padding: 10px 15px;
 }
