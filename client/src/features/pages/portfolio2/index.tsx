@@ -72,7 +72,7 @@ export function Portfolio2() {
             Who am I
           </div>
           <div className="portfolio2__group portfolio2__group--2__description">
-            I am an Italian man, but I love to talk in english and explore new cultures.
+            I am an Italian man who loves to talk in english and explore new cultures.
           </div>
 
           <div className="portfolio2__group portfolio2__group--2__subtitle">
@@ -91,11 +91,10 @@ export function Portfolio2() {
             Since 2018 I am working as a Web Developer, I take care of all sides of web applications, therefore you culd define me as &nbsp;
             <span className="portfolio2__group--2__description__hashtag">#front-end</span> 
             <span className="portfolio2__group--2__description__hashtag">#back-end</span>
-            <span className="portfolio2__group--2__description__hashtag">#project-managment</span> 
-            <span className="portfolio2__group--2__description__hashtag">#business-logic</span> 
             <span className="portfolio2__group--2__description__hashtag">#graphic-design</span> 
-            <span className="portfolio2__group--2__description__hashtag">#content-manager</span>  
-            <span className="portfolio2__group--2__description__hashtag">#creator</span>
+            <span className="portfolio2__group--2__description__hashtag">#project-manager</span> 
+            <span className="portfolio2__group--2__description__hashtag">#business-logic-developer</span> 
+            <span className="portfolio2__group--2__description__hashtag">#content-creator</span>  
           </div>
 
           {displaySvgs(1, window.innerWidth, ArtistSvg)}

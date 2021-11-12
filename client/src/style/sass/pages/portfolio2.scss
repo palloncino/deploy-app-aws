@@ -77,15 +77,15 @@
 
       &__subtitle {
         font-family: 'Custom-Font-Title';
-        color: $black;
-        font-size: $font-XL;
+        color: $grey;
+        font-size: $font-XXL;
         line-height: $font-XXXL;
       }
 
       &__description {
         font-size: $font-XL;
-        line-height: $font-XXXL;
-        margin: 0 0 20px 20px;
+        line-height: 2.5rem;
+        margin: 0 0 20px 0;
         &__hashtag {
           display: inline-block;
           // background: $blue-dark-1;

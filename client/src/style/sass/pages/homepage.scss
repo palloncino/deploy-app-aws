@@ -11,7 +11,27 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 100%;
+    height: auto;
+
+    .marquee-intro { 
+      font-family: 'Custom-Font-Title';
+      line-height: $font-XXXXXXXXXXXL;
+      font-size: $font-XXXXXL; 
+      color: $grey; 
+
+      a {
+        font-family: 'Custom-Font-Title';
+        color: $dark-grey; 
+        text-decoration: none;
+      }
+    }
+
+    .marquee-container {
+      .overlay {
+        display: none;
+      }
+
+    }
 
     &__title-container {
       display: flex;

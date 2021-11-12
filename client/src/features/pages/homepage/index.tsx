@@ -34,7 +34,7 @@ export function Homepage() {
 
   const movingLabel1 = useSpring({
     loop: { reverse: true },
-    from: { x: getVal(20), y: getVal(20) },
+    from: { x: getVal(30), y: getVal(20) },
     to: { x: getVal(20), y: getVal(20) },
     config: { duration: getDuration(5000, 3000) },
   });
@@ -138,14 +138,17 @@ export function Homepage() {
               }}
               onInit={(typewriter) => {
                 typewriter
-                  .typeString(`che si dice!?`)
-                  .pauseFor(6000)
-                  .deleteChars(20)
                   .typeString(`what's good!?`)
-                  .pauseFor(6000)
+                  .pauseFor(4000)
                   .deleteChars(20)
-                  .typeString(`que paso homie!?`)
-                  .pauseFor(6000)
+                  .typeString(`Welcome :)`)
+                  .pauseFor(4000)
+                  .deleteChars(20)
+                  .typeString(`Che si dice!?`)
+                  .pauseFor(4000)
+                  .deleteChars(20)
+                  .typeString(`Benvenuto :)`)
+                  .pauseFor(4000)
                   .deleteChars(20)
                   .start();
               }}
@@ -163,6 +166,11 @@ export function Homepage() {
           >
             with javascript 🤷🏻‍♂️
           </animated.div>
+          <Marquee speed={160}>
+                  <div className="marquee-intro"> 
+                  This website is a work in progress&nbsp;&nbsp;-&nbsp;&nbsp;Find my code on <a target="_blank" href="https://github.com/palloncino">Github</a>&nbsp;&nbsp;-&nbsp;&nbsp;Dicover more about my career path on <a target="_blank" href="https://linkedin.com/in/antonioguiotto">Linkedin</a>&nbsp;&nbsp;-&nbsp;&nbsp;Hear the sound of my guitar on <a target="_blank" href="https://www.youtube.com/channel/UC31Gz5YZuH-J5zuz5hZjzgA">Youtube</a>&nbsp;-&nbsp;
+                  </div>
+              </Marquee>
         </div>
 
         <div className="homepage-group homepage-group--3" id="sticky-container">

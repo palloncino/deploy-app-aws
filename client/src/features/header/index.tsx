@@ -2,7 +2,7 @@ import { Register } from '../register';
 import { Login } from '../login';
 import { Logout } from '../logout';
 import { Profile } from '../profile';
-import { Menu } from '../menu';
+import Marquee from 'react-fast-marquee';
 import { Button } from '../button';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectAuth } from '../../auth/authSlice';
