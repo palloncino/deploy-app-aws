@@ -1,6 +1,9 @@
 // footer
 .footer-container {
-  background: $black;
+  // background: $black;
+  background-image: url(../../images/svg/bg05.svg);
+  // background-position: center;
+  background-size: cover;
   color: $white;
   width: $page-width;
   box-sizing: border-box;

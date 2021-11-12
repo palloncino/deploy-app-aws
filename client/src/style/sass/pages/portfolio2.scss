@@ -23,6 +23,11 @@
     align-items: flex-start;
     justify-content: center;
 
+    background: $light-grey;
+    background-image: url(../../images/svg/bg04.svg);
+    background-position: center;
+    background-size: cover;
+
 
   }
 
@@ -78,7 +83,7 @@
 
       &__subtitle {
         // font-family: 'Custom-Font-Title';
-        color: $dark-grey;
+        color: $black;
         font-size: $font-XXL;
         line-height: $font-XXXL;
       }

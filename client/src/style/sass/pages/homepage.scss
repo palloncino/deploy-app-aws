@@ -52,7 +52,10 @@
         margin: -100px 0 0 -20px;
         color: white;
         text-shadow: 10px 10px rgba(0, 0, 0, 0.3);
-        background: $green;
+        // background: $green;
+        background: url(../../images/svg/bg05-green.svg); // https://www.svgbackgrounds.com/
+        background-position: center;
+        background-size: cover;
         box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
       }
       &--2 {
@@ -84,7 +87,10 @@
         margin: -20px 0 0 -20px;
         color: $white;
         text-shadow: 10px 10px rgba(0, 0, 0, 0.3);
-        background: $red;
+        // background: $red;
+        background: url(../../images/svg/bg05-red.svg);
+        background-position: center;
+        background-size: cover;
         box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
       }
     }
@@ -130,7 +136,19 @@
       }
       &--2 {
         .homepage-group--3__item-container__inner-page {
-          background: $light-grey;
+          // background: $light-grey;
+          background: url(../../images/svg/bg.svg);
+        background-position: center;
+        background-size: cover;
+          border: 20px solid $black;
+          color: $white;
+        }
+      }
+
+      &--3 {
+        .homepage-group--3__item-container__inner-page {
+          // background: $light-grey;
+          background-image: url(../../images/svg/bg02.svg);
           border: 20px solid $black;
           color: $white;
         }

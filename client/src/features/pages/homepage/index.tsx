@@ -204,6 +204,18 @@ export function Homepage() {
               </animated.div>
             </div>
 
+            <div
+              style={{ minWidth: window.innerWidth }}
+              className="homepage-group--3__item-container homepage-group--3__item-container--3"
+            >
+              <animated.div
+                style={{ ...movingLabel1 }}
+                className="homepage-group--3__item-container__inner-page"
+              >
+                <h1>Hello</h1>
+              </animated.div>
+            </div>
+
           </div>
         </div>
 
