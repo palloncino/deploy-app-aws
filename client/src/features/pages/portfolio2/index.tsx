@@ -1,4 +1,6 @@
 import { Button } from '../../button';
+import GuitarSvg2 from '../../../images/svg/guitar2.svg'
+import ArtistSvg from '../../../images/svg/artist.svg'
 
 export function Portfolio2() {
 
@@ -13,9 +15,48 @@ export function Portfolio2() {
     }
   };
 
+  const displaySvgs = (side: number, width: number, src: any) => {
+
+    if (width > 2200) {
+
+      return <img style={{
+        position: 'absolute',
+        height: '100%',
+        [side > 0 ? 'left': 'right']: '-200px',
+        bottom: '-200px',
+      }} src={src} alt="guitar" />
+
+    } else if (width < 2200 && width > 1700) {
+
+      return <img style={{
+        position: 'absolute',
+        height: '80%',
+        [side > 0 ? 'left': 'right']: '-200px',
+        bottom: '-120px',
+      }} src={src} alt="guitar" />
+
+    } else if (width < 1700 && width > 1300) {
+
+      return <img style={{
+        position: 'absolute',
+        height: '60%',
+        [side > 0 ? 'left': 'right']: '-100px',
+        bottom: '-80px',
+      }} src={src} alt="guitar" />
+
+    } else {
+      return;
+    }
+  }
+
   return (
     <div className="portfolio2__wrapper">
       <div className="portfolio2__container">
+
+      
+      {displaySvgs(0, window.innerWidth, GuitarSvg2)}
+
+
         <div className="portfolio2__group portfolio2__group--1">
           <div className="portfolio2__group--1__container">
             <img src="https://antonioguiotto-images.s3.amazonaws.com/profile1.png" alt="" className="portfolio2__group--1__container__img"/>
@@ -56,6 +97,8 @@ export function Portfolio2() {
             <span className="portfolio2__group--2__description__hashtag">#content-manager</span>  
             <span className="portfolio2__group--2__description__hashtag">#creator</span>
           </div>
+
+          {displaySvgs(1, window.innerWidth, ArtistSvg)}
 
           {/* <div className="portfolio2__group portfolio2__group--2__subtitle">
             Downloads

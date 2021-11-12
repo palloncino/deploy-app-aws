@@ -189,7 +189,8 @@ export function Homepage() {
                 style={{ ...movingLabel2 }}
                 className="homepage-group--3__item-container__inner-page"
               >
-                <MusicCard />
+                {/* <MusicCard /> */}
+                <h1>Placeholder</h1>
                 {/* <img src="https://antonioguiotto-artworks.s3.amazonaws.com/images/wes.png" alt="a. guiotto illustration" /> */}
               </animated.div>
             </div>
