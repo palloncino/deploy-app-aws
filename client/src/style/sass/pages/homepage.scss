@@ -6,6 +6,7 @@
   min-height: 500px;
   height: calc(100vh - $header-height);
 
+  // TITLES
   &--1 {
     display: flex;
     flex-direction: column;
@@ -63,6 +64,7 @@
       }
     }
   }
+  // FLOATING CARDS
   &--3 {
     padding: 0;
     height: 100vh;
@@ -95,14 +97,18 @@
       }
       &--1 {
         .homepage-group--3__item-container__inner-page {
-          background: $orange;
-          border: 20px solid $black;
+          background: $dark-orange;
+          border: 20px solid $orange;
+          text-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+          color: $white;
         }
       }
       &--2 {
         .homepage-group--3__item-container__inner-page {
-          background: $orange;
-          border: 20px solid $black;
+          background: $dark-purple;
+          border: 20px solid $purple;
+          text-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+          color: $white;
         }
       }
     }

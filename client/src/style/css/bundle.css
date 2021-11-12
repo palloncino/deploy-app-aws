@@ -605,6 +605,9 @@
   align-items: flex-start;
   justify-content: flex-end;
 }
+.portfolio2__group--1__img {
+  border-radius: 5px;
+}
 .portfolio2__group--2 {
   padding: 0 30px;
 }
@@ -867,12 +870,16 @@
   justify-content: center;
 }
 .homepage-group--3__item-container--1 .homepage-group--3__item-container__inner-page {
-  background: #ffa500;
-  border: 20px solid #333;
+  background: #ff8c00;
+  border: 20px solid #ffa500;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+  color: #fff;
 }
 .homepage-group--3__item-container--2 .homepage-group--3__item-container__inner-page {
-  background: #ffa500;
-  border: 20px solid #333;
+  background: purple;
+  border: 20px solid #a019a0;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+  color: #fff;
 }
 .homepage-group--4 {
   display: flex;
@@ -1120,6 +1127,7 @@
 body {
   color: #333;
   background: url(../../images/patterns/bg-pattern.svg);
+  background-attachment: fixed;
   overflow-y: scroll;
 }
 
