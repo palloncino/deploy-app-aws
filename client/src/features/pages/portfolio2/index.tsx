@@ -39,7 +39,7 @@ export function Portfolio2() {
 
       return <img style={{
         position: 'absolute',
-        height: '60%',
+        height: '75%',
         [side > 0 ? 'left': 'right']: '-100px',
         bottom: '0px',
       }} src={src} alt="guitar" />
