@@ -636,7 +636,8 @@
 }
 .portfolio2__group--2 {
   padding: 0 30px;
-  max-width: 50%;
+  max-width: 60%;
+  text-align: center;
 }
 .portfolio2__group--2__title {
   margin: 0 0 20px 0;
@@ -696,7 +697,7 @@
   }
   .portfolio2__group--2__description {
     font-size: 1.2rem;
-    line-height: 2rem;
+    line-height: 1.8rem;
   }
 }
 .music-card__wrapper {

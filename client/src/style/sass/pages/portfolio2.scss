@@ -60,7 +60,9 @@
     &--2 {
 
       padding: 0 30px;
-      max-width: 50%;
+      max-width: 60%;
+      // background: red;
+      text-align: center;
 
       &__title {
         margin: 0 0 20px 0;
@@ -196,7 +198,7 @@
   
         &__description {
           font-size: $font-L;
-          line-height: 2rem;
+          line-height: 1.8rem;
           // margin: 0 0 20px 0;
 
           &__hashtag {
