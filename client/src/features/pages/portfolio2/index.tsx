@@ -44,13 +44,6 @@ export function Portfolio2() {
       
       {displaySvgs(0, window.innerWidth, GuitarSvg2)}
 
-
-        {/* <div className="portfolio2__group portfolio2__group--1">
-          <div className="portfolio2__group--1__container">
-            <img src="https://antonioguiotto-images.s3.amazonaws.com/profile1.png" alt="" className="portfolio2__group--1__container__img"/>
-            <Button handleClick={() => handleDownloadFile('pdf')} label="Download CV" className="portfolio2__group--1__container__btn" />
-          </div>
-        </div> */}
         <div className="portfolio2__group portfolio2__group--2">
           <div className="portfolio2__group portfolio2__group--2__title">
             Introduction to the man
@@ -86,12 +79,6 @@ export function Portfolio2() {
 
           {displaySvgs(1, window.innerWidth, ArtistSvg)}
 
-          {/* <div className="portfolio2__group portfolio2__group--2__subtitle">
-            Downloads
-          </div>
-          <div className="portfolio2__group portfolio2__group--2__button__container">
-            <Button handleClick={() => handleDownloadFile('pdf')} label="Download CV" className="portfolio2__group portfolio2__group--2__button-container__btn" />
-          </div> */}
         </div>
       </div>
     </div>
