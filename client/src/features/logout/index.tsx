@@ -19,5 +19,5 @@ export const Logout = () => {
     setTimeout(() => window.location.reload(), 0);
   };
 
-  return <Button customStyle={{ color: 'white' }} handleClick={handleLogout} label="Logout" />;
+  return <Button className="btn btn__danger-button" handleClick={handleLogout} label="Logout" />;
 };

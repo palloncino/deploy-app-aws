@@ -1,8 +1,6 @@
 import { Register } from '../register';
 import { Login } from '../login';
-import { Logout } from '../logout';
 import { Profile } from '../profile';
-import Marquee from 'react-fast-marquee';
 import { Button } from '../button';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectAuth } from '../../auth/authSlice';
@@ -93,7 +91,7 @@ export function Header() {
                   ) : (
                     <>
                       <div className="header-user-space--2__container__item">
-                        <Logout />
+                        <Button handleClick={() => dispatch(changeRoute('/account'))} label="Account" customStyle={{ background: 'transparent', color: 'white' }} />
                       </div>
                       <div className="header-user-space--2__container__item">
                         <Button handleClick={() => handleDownloadFile('pdf')} label="Download CV" className="portfolio2__group portfolio2__group--2__button-container__btn-header" />

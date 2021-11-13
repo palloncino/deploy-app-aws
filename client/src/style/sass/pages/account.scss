@@ -1,4 +1,12 @@
 .account-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: $font-L;
 }
 
 .account-information-container {
@@ -45,16 +53,21 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      input {
+      height: 100%;
+      input[type=file] {
         margin-bottom: 10px;
+        border: none;
       }
+    }
+    &__img-container {
+      margin-right: 10px;
     }
     &-information-container {
       display: flex;
-      justify-content: center;
-      flex-direction: column;
+      // justify-content: center;
+      // flex-direction: column;
       img {
-        max-width: 200px;
+        max-width: 100px;
       }
     }
   }

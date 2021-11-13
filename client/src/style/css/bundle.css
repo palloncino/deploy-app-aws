@@ -248,9 +248,26 @@
   cursor: pointer;
   transition: 0.2s;
   font-size: 1.4rem;
+  border-radius: 10px;
 }
 .btn--w150 {
   max-width: 150px;
+}
+.btn__danger-button {
+  padding: 8px 10px;
+  width: 100%;
+  max-width: 150px;
+  font-size: 1.4rem;
+  background: #f03e1f;
+  color: #fff;
+}
+.btn__default {
+  padding: 8px 10px;
+  width: 100%;
+  max-width: 150px;
+  font-size: 1.4rem;
+  background: #327fc2;
+  color: #fff;
 }
 
 .btn:hover {
@@ -510,6 +527,17 @@
   align-items: center;
 }
 
+.account-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+}
+
 .account-information-container {
   display: flex;
   flex-direction: column;
@@ -546,17 +574,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 }
-.account-information-container-3-inputs-container input {
+.account-information-container-3-inputs-container input[type=file] {
   margin-bottom: 10px;
+  border: none;
+}
+.account-information-container-3__img-container {
+  margin-right: 10px;
 }
 .account-information-container-3-information-container {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 .account-information-container-3-information-container img {
-  max-width: 200px;
+  max-width: 100px;
 }
 
 .content-editable-summary-container {

@@ -3,6 +3,8 @@ import { Button } from '../../button';
 import { Spinner } from '../../spinner';
 import { useState } from 'react';
 import { Singleton as Authentication } from '../../../auth';
+import { Logout } from '../../logout';
+import { NONAME } from 'dns';
 
 export function AccountContent({
   handleDeleteAccount,
@@ -72,6 +74,9 @@ export function AccountContent({
           Change Profile Image
         </div>
         <div className="account-information-container-3-information-container">
+          <div className="account-information-container-3__img-container">
+            <img src={getAvatarUrl()} alt="user avatar" />
+          </div>
           <div className="account-information-container-3-inputs-container">
             <input
               onChange={handleUploadImage}
@@ -80,13 +85,32 @@ export function AccountContent({
             />
             <Button
               handleClick={sendUploadedImage}
-              customStyle={{ width: '150px', marginBottom: '10px' }}
-              label={isLoading ? <Spinner /> : 'Set image'}
+              className="btn btn__default"
+              customStyle={{ maxWidth: '150px', marginBottom: '10px' }}
+              label={isLoading ? <Spinner /> : 'Save'}
             />
           </div>
-          <img src={getAvatarUrl()} alt="user avatar" />
+        </div>
+        <div>
+          NOTE: after you click save, you won't see any changes, please re login to get the image.
         </div>
       </div>
+
+      <div className="account-information-container-3">
+        <div className="account-information-container-3-buttons-container">
+          <div
+            className="account-information-container-3-title-tag"
+            style={{ marginBottom: '10px' }}
+          >
+            Logout
+          </div>
+          <Logout />
+        </div>
+      </div>
+
+      <br />
+
+      danger zone
 
       <div className="account-information-container-2">
         <div className="account-information-container-2-buttons-container">
@@ -94,12 +118,14 @@ export function AccountContent({
             className="account-information-container-2-title-tag"
             style={{ marginBottom: '10px' }}
           >
-            Erease data
+            Delete Account
           </div>
+          
           <Button
             handleClick={handleDeleteAccount}
             customStyle={{ width: '150px' }}
-            label={isLoading ? <Spinner /> : 'Delete account'}
+            className="btn btn__danger-button"
+            label={isLoading ? <Spinner /> : 'Delete'}
           />
         </div>
       </div>

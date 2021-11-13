@@ -6,9 +6,27 @@
   cursor: pointer;
   transition: 0.2s;
   font-size: $font-XL;
+  border-radius: 10px;
 
   &--w150 {
     max-width: 150px;
+  }
+  &__danger-button {
+    padding: 8px 10px;
+    width: 100%;
+    max-width: 150px;
+    font-size: $font-XL;
+    
+    background: $red;
+    color: $white;
+  }
+  &__default {
+    padding: 8px 10px;
+    width: 100%;
+    max-width: 150px;
+    font-size: $font-XL;
+    background: $blue-dark-4;
+    color: $white;
   }
 }
 
