@@ -206,12 +206,11 @@ export function Homepage() {
               >
                 <h1 className="homepage-group--3__title">My Tech Stack</h1>
                 <div className="homepage-group--3__description">
-                  I like to work with a SAP for the client, therefore React with Typescript is my first choice.
+                  What I'd do: SAP for the client, therefore React with Typescript.
                   Common client side packages can be: Redux, Lodash, React Router, Material UI, 
-                  Storybook and more. For the server side I use Express with Typescript, and common modules are: 
+                  Storybook and more. For the server side I use Express or NestJs with Typescript, and common modules are: 
                   bcryptjs, aws-sdk, cors, dotenv, jsonwebtoken, uuid and more.
-                  I prefer using noSql databases as they are more flexible, and I started from 2020 to use AWS 
-                  as a cloud provider and i am very satisfacted by it.
+                  I have a preference for noSql databases, and my fav cloud provider is AWS.
                 </div>
                 <Marquee speed={40}>
                   <svg
