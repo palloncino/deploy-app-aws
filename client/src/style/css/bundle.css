@@ -528,23 +528,30 @@
 }
 
 .account-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 80%;
-  max-width: 600px;
   margin: 20px auto;
-  font-size: 1.2rem;
 }
 
 .account-information-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.account-information-container__box {
+  box-sizing: border-box;
+  min-height: 300px;
+  min-width: 300px;
+  background: #fff;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dcdcdc;
+  border-radius: 15px;
+  padding: 15px 30px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.account-information-container-1 {
-  margin-bottom: 40px;
+  align-items: center;
 }
 .account-information-container-1-title-tag {
   font-size: 2rem;
@@ -555,9 +562,6 @@
   flex-direction: column;
   justify-content: center;
 }
-.account-information-container-2 {
-  margin-bottom: 40px;
-}
 .account-information-container-2-title-tag {
   font-size: 2rem;
 }
@@ -565,7 +569,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 40px;
 }
 .account-information-container-3-title-tag {
   font-size: 2rem;
@@ -587,6 +590,33 @@
   display: flex;
 }
 .account-information-container-3-information-container img {
+  max-width: 100px;
+}
+.account-information-container-4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.account-information-container-4-title-tag {
+  font-size: 2rem;
+}
+.account-information-container-4-inputs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.account-information-container-4-inputs-container input[type=file] {
+  margin-bottom: 10px;
+  border: none;
+}
+.account-information-container-4__img-container {
+  margin-right: 10px;
+}
+.account-information-container-4-information-container {
+  display: flex;
+}
+.account-information-container-4-information-container img {
   max-width: 100px;
 }
 
@@ -1277,10 +1307,6 @@ body {
 .spinner-container__homepage {
   min-height: 500px;
 }
-.spinner-container__homepage .loader.loader--style2 {
-  transform: scale(4);
-}
-
 .mobile-container {
   display: flex;
   align-items: center;

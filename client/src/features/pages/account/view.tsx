@@ -53,7 +53,7 @@ export function AccountContent({
 
   return (
     <div className="account-information-container">
-      <div className="account-information-container-1">
+      <div className="account-information-container__box account-information-container-1">
         <div className="account-information-container-1-title">
           <div className="account-information-container-1-title-tag">
             Account information
@@ -66,7 +66,7 @@ export function AccountContent({
         </div>
       </div>
 
-      <div className="account-information-container-3">
+      <div className="account-information-container__box account-information-container-2">
         <div
           className="account-information-container-3-title-tag"
           style={{ marginBottom: '10px' }}
@@ -96,7 +96,7 @@ export function AccountContent({
         </div>
       </div>
 
-      <div className="account-information-container-3">
+      <div className="account-information-container__box account-information-container-3">
         <div className="account-information-container-3-buttons-container">
           <div
             className="account-information-container-3-title-tag"
@@ -108,11 +108,7 @@ export function AccountContent({
         </div>
       </div>
 
-      <br />
-
-      danger zone
-
-      <div className="account-information-container-2">
+      <div className="account-information-container__box account-information-container-4">
         <div className="account-information-container-2-buttons-container">
           <div
             className="account-information-container-2-title-tag"
