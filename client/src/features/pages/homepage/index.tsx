@@ -8,7 +8,6 @@ import { useEffect } from 'react';
 import { Footer } from '../../footer';
 import { Portfolio2 } from '../portfolio2';
 import { useSpring, animated } from 'react-spring';
-import HomeSvg from '../../../images/svg/grizzly.svg';
 
 export function Homepage() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -180,13 +179,6 @@ export function Homepage() {
               &nbsp;-&nbsp;
             </div>
           </Marquee>
-          <img style={{
-            position: 'absolute',
-            zIndex: 700,
-            height: '50%',
-            left: '0',
-            bottom: '0',
-          }} src={HomeSvg} alt="guitar" />
         </div>
 
         <div className="homepage-group homepage-group--3" id="sticky-container">

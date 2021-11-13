@@ -93,6 +93,16 @@ export function Application() {
       }
     };
 
+    const getIconSize = (width: number) => {
+      if (width >= 2200) {
+        return "200"
+      } else if (width < 2200 && width > 1700) {
+        return "150"
+      } else if (width < 1700 && width > 1300) {
+        return "100"
+      }
+    }
+
     return (
       <>
         {isLoading ? (
@@ -105,7 +115,7 @@ export function Application() {
               <WhatsAppWidget
                 phoneNo="00393474943221"
                 autoOpenTimer={5000}
-                iconSize="200"
+                iconSize={getIconSize(window.innerWidth)}
                 headerTitle="Antonio Guiotto"
                 headerCaption="Online"
                 iconColor="#34944f"

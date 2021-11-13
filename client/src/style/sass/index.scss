@@ -244,3 +244,22 @@ body {
   width: 200px;
   margin-right: 100px;
 }
+
+@media only screen and (max-width: 2200px) {
+
+  #sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container > div:nth-child(2) > svg {
+    height: 150px;
+    width: 150px;
+    margin-right: 100px;
+  }
+
+}
+@media only screen and (max-width: 1700px) {
+  #sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container > div:nth-child(2) > svg {
+    height: 100px;
+    width: 100px;
+    margin-right: 100px;
+  }
+}
+@media only screen and (max-width: 1700px) {}
+@media only screen and (max-width: 1700px) {}

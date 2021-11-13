@@ -678,20 +678,24 @@
 }
 
 @media only screen and (max-width: 1700px) {
+  .portfolio2__container {
+    padding: 0px;
+    margin: 30px 0;
+  }
+  .portfolio2__group--2 {
+    padding: 0 30px;
+  }
   .portfolio2__group--2__title {
+    margin: 0 0 10px 0;
     font-size: 2rem;
   }
   .portfolio2__group--2__subtitle {
-    font-size: 1.2rem;
-    line-height: 2rem;
+    font-size: 1.4rem;
+    line-height: 3rem;
   }
   .portfolio2__group--2__description {
     font-size: 1.2rem;
     line-height: 2rem;
-  }
-  .portfolio2__group--2__button-container__btn {
-    font-size: 1.2rem;
-    padding: 10px;
   }
 }
 .music-card__wrapper {
@@ -982,6 +986,9 @@
   .homepage-group--1__title-container--2 {
     font-size: 10rem;
   }
+  .homepage-group--3 .homepage-group--3__item-container__inner-page .homepage-group--3__description {
+    width: 33%;
+  }
 }
 @media only screen and (max-width: 1700px) {
   .homepage-group {
@@ -1006,6 +1013,13 @@
     font-size: 6rem;
     line-height: 8rem;
     text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+  }
+  .homepage-group--3 .homepage-group--3__item-container__inner-page .homepage-group--3__title {
+    font-size: 3rem;
+  }
+  .homepage-group--3 .homepage-group--3__item-container__inner-page .homepage-group--3__description {
+    width: 50%;
+    font-size: 1.2rem;
   }
 }
 @media only screen and (max-width: 1300px) {
@@ -1376,6 +1390,21 @@ body {
   height: 200px;
   width: 200px;
   margin-right: 100px;
+}
+
+@media only screen and (max-width: 2200px) {
+  #sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container > div:nth-child(2) > svg {
+    height: 150px;
+    width: 150px;
+    margin-right: 100px;
+  }
+}
+@media only screen and (max-width: 1700px) {
+  #sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container > div:nth-child(2) > svg {
+    height: 100px;
+    width: 100px;
+    margin-right: 100px;
+  }
 }
 
 /*# sourceMappingURL=bundle.css.map */

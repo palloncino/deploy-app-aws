@@ -41,7 +41,7 @@ export function Portfolio2() {
         position: 'absolute',
         height: '60%',
         [side > 0 ? 'left': 'right']: '-100px',
-        bottom: '-80px',
+        bottom: '0px',
       }} src={src} alt="guitar" />
 
     } else {
