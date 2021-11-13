@@ -15,8 +15,11 @@
     display: flex;
     padding: 50px;
     height: 100%;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+
+    background: rgb(247, 234, 234);
+    border: 20px solid rgb(235, 210, 210);
 
   }
 
@@ -62,12 +65,10 @@
       &__title {
         margin: 0 0 20px 0;
         font-family: 'Custom-Font-Title';
-        color: $black;
         font-size: $font-XXXL;
       }
 
       &__subtitle {
-        color: $black;
         font-size: $font-XXL;
         line-height: $font-XXXL;
       }

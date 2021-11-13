@@ -607,8 +607,10 @@
   display: flex;
   padding: 50px;
   height: 100%;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  background: #f7eaea;
+  border: 20px solid #ebd2d2;
 }
 .portfolio2__group--1__container {
   height: 100%;
@@ -639,11 +641,9 @@
 .portfolio2__group--2__title {
   margin: 0 0 20px 0;
   font-family: "Custom-Font-Title";
-  color: #333;
   font-size: 3rem;
 }
 .portfolio2__group--2__subtitle {
-  color: #333;
   font-size: 2rem;
   line-height: 3rem;
 }

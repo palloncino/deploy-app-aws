@@ -1,19 +1,7 @@
-import { Button } from '../../button';
 import GuitarSvg2 from '../../../images/svg/guitar2.svg'
 import ArtistSvg from '../../../images/svg/artist.svg'
 
 export function Portfolio2() {
-
-  const handleDownloadFile = async (type: 'png' | 'pdf' | 'docx') => {
-    switch (type) {
-      case 'pdf':
-        window.open(`${process.env.REACT_APP_PORTFOLIO_S3_PATH}`, '_blank');
-        break;
-
-      default:
-        break;
-    }
-  };
 
   const displaySvgs = (side: number, width: number, src: any) => {
 
@@ -39,8 +27,8 @@ export function Portfolio2() {
 
       return <img style={{
         position: 'absolute',
-        height: '75%',
-        [side > 0 ? 'left': 'right']: '-100px',
+        height: '80%',
+        [side > 0 ? 'left': 'right']: '-50px',
         bottom: '0px',
       }} src={src} alt="guitar" />
 
@@ -57,13 +45,12 @@ export function Portfolio2() {
       {displaySvgs(0, window.innerWidth, GuitarSvg2)}
 
 
-        <div className="portfolio2__group portfolio2__group--1">
+        {/* <div className="portfolio2__group portfolio2__group--1">
           <div className="portfolio2__group--1__container">
             <img src="https://antonioguiotto-images.s3.amazonaws.com/profile1.png" alt="" className="portfolio2__group--1__container__img"/>
-            {/* <div className="portfolio2__group portfolio2__group--1__cit">"Sorry for the blurred pic"</div> */}
             <Button handleClick={() => handleDownloadFile('pdf')} label="Download CV" className="portfolio2__group--1__container__btn" />
           </div>
-        </div>
+        </div> */}
         <div className="portfolio2__group portfolio2__group--2">
           <div className="portfolio2__group portfolio2__group--2__title">
             Introduction to the man
