@@ -92,11 +92,11 @@ export function Header() {
                     </>
                   ) : (
                     <>
-                      {/* <div className="header-user-space--2__container__item">
-                        <Menu />
-                      </div> */}
                       <div className="header-user-space--2__container__item">
                         <Logout />
+                      </div>
+                      <div className="header-user-space--2__container__item">
+                        <Button handleClick={() => handleDownloadFile('pdf')} label="Download CV" className="portfolio2__group portfolio2__group--2__button-container__btn-header" />
                       </div>
                     </>
                   )}

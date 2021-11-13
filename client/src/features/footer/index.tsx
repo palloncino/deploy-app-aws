@@ -2,17 +2,6 @@ import { Button } from '../button'
 
 export const Footer = () => {
 
-  const handleDownloadFile = async (type: 'png' | 'pdf' | 'docx') => {
-    switch (type) {
-      case 'pdf':
-        window.open(`${process.env.REACT_APP_PORTFOLIO_S3_PATH}`, '_blank');
-        break;
-
-      default:
-        break;
-    }
-  };
-
   return (
     <div className="footer-container">
       <div className="footer-content">
@@ -62,8 +51,7 @@ export const Footer = () => {
           
           <div className="portfolio2__group portfolio2__group--1">
           <div className="portfolio2__group--1__container">
-            <img src="https://antonioguiotto-images.s3.amazonaws.com/profile1.png" alt="" className="portfolio2__group--1__container__img"/>
-            <Button handleClick={() => handleDownloadFile('pdf')} label="Download CV" className="portfolio2__group--1__container__btn" />
+            <img style={{ maxHeight: '150px' }} src="https://antonioguiotto-images.s3.amazonaws.com/me1.jpeg" alt="" className="portfolio2__group--1__container__img"/>
           </div>
         </div>
         </div>
