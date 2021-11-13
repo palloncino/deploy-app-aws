@@ -119,7 +119,7 @@ export function AccountContent({
           
           <Button
             handleClick={handleDeleteAccount}
-            customStyle={{ width: '150px' }}
+            customStyle={{ maxWidth: '150px' }}
             className="btn btn__danger-button"
             label={isLoading ? <Spinner /> : 'Delete'}
           />

@@ -52,7 +52,7 @@
         margin: -100px 0 0 -20px;
         color: white;
         text-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-        background: $sand;
+        background: $darker-sand;
       }
       &--2 {
         font-size: $font-XXXXXXXXXXXXL;
@@ -65,9 +65,9 @@
         justify-content: flex-end;
         margin: -70px 0 0 0;
         padding: 100px 100px 0 0;
-        color: $black;
+        color: $white;
         text-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-        background: transparent;
+        background: $dark-sand;
       }
       &--3 {
         font-size: $font-XXXXXXXXXL;
@@ -81,7 +81,7 @@
         margin: -20px 0 0 -20px;
         color: $white;
         text-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-        background: $aqua;
+        background: $sand;
       }
     }
   }

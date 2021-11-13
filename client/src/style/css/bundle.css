@@ -258,7 +258,7 @@
   width: 100%;
   max-width: 150px;
   font-size: 1.4rem;
-  background: #f03e1f;
+  background: #dd573f;
   color: #fff;
 }
 .btn__default {
@@ -452,7 +452,7 @@
   margin-bottom: 20px;
 }
 .expenses-container-1-form-errors-container {
-  color: #f03e1f;
+  color: #dd573f;
 }
 
 .expenses-container-2 {
@@ -488,7 +488,7 @@
   margin-bottom: 0;
 }
 .expenses-container-2-expense-output--price {
-  color: #f03e1f;
+  color: #dd573f;
   font-size: 2rem;
   text-align: right;
 }
@@ -663,7 +663,6 @@
   width: 100%;
 }
 .portfolio2__container {
-  color: #333;
   border-radius: 20px;
   box-sizing: border-box;
   display: flex;
@@ -671,8 +670,8 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-  background: #f7eaea;
-  border: 20px solid #ebd2d2;
+  background: #f0ddc4;
+  border: 20px solid #cdb699;
 }
 .portfolio2__group--1__container {
   height: 100%;
@@ -955,7 +954,7 @@
   margin: -100px 0 0 -20px;
   color: white;
   text-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-  background: #f0ddc4;
+  background: #9e876b;
 }
 .homepage-group--1__title-container--2 {
   font-size: 12rem;
@@ -968,9 +967,9 @@
   justify-content: flex-end;
   margin: -70px 0 0 0;
   padding: 100px 100px 0 0;
-  color: #333;
+  color: #fff;
   text-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-  background: transparent;
+  background: #cdb699;
 }
 .homepage-group--1__title-container--3 {
   font-size: 9rem;
@@ -984,7 +983,7 @@
   margin: -20px 0 0 -20px;
   color: #fff;
   text-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-  background: #99fffd;
+  background: #f0ddc4;
 }
 .homepage-group--3 {
   padding: 0;
@@ -1399,7 +1398,7 @@ body {
 }
 .custom-modal-form-error-box-error {
   margin-top: 3px;
-  color: #f03e1f;
+  color: #dd573f;
 }
 .custom-modal-buttons {
   display: flex;
