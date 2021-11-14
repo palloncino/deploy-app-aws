@@ -1488,11 +1488,5 @@ body {
     margin-right: 100px;
   }
 }
-#sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container .overlay::before {
-  background: none;
-}
-#sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container .overlay::after {
-  background: none;
-}
 
 /*# sourceMappingURL=bundle.css.map */
