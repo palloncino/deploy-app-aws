@@ -10,7 +10,7 @@ export function Portfolio2() {
       return <img style={{
         position: 'absolute',
         height: '100%',
-        [side > 0 ? 'left': 'right']: '-200px',
+        [side > 0 ? 'left': 'right']: '-150px',
         bottom: '-200px',
       }} src={src} alt="guitar" />
 
@@ -19,7 +19,7 @@ export function Portfolio2() {
       return <img style={{
         position: 'absolute',
         height: '80%',
-        [side > 0 ? 'left': 'right']: '-200px',
+        [side > 0 ? 'left': 'right']: '-100px',
         bottom: '-120px',
       }} src={src} alt="guitar" />
 

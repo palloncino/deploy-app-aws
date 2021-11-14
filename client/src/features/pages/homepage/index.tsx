@@ -2,12 +2,14 @@ import { useSelector } from 'react-redux';
 import { selectAuth } from '../../../auth/authSlice';
 import { Spinner } from '../../spinner';
 import Marquee from 'react-fast-marquee';
+// @ts-ignore
 import Typewriter from 'typewriter-effect';
 import _ from 'lodash';
 import { useEffect } from 'react';
 import { Footer } from '../../footer';
 import { Portfolio2 } from '../portfolio2';
 import { useSpring, animated } from 'react-spring';
+import { Icon } from './icon'
 
 export function Homepage() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -116,49 +118,49 @@ export function Homepage() {
         }
       }
     })();
+
   }, []);
 
   const renderInsider = () => {
     return (
       <div className="homepage-container">
         <div className="homepage-group homepage-group--1">
-          <animated.div
-            style={{ ...movingLabel1 }}
-            className="homepage-group--1__title-container homepage-group--1__title-container--1"
-          >
-            <Typewriter
-              options={{
-                delay: 50,
-                deleteSpeed: 20,
-                wrapperClassName: 'homepage-typewriter-wrapper',
-                cursorClassName: 'homepage-typewriter-cursor',
-                loop: true,
-              }}
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString(`what's good!?`)
-                  .pauseFor(4000)
-                  .deleteChars(20)
-                  .typeString(`Welcome :)`)
-                  .pauseFor(4000)
-                  .deleteChars(20)
-                  .start();
-              }}
-            />
-          </animated.div>
-          <animated.div
-            style={{ ...movingLabel2 }}
-            className="homepage-group--1__title-container homepage-group--1__title-container--2"
-          >
-            I make websites
-          </animated.div>
-          <animated.div
-            style={{ ...movingLabel3 }}
-            className="homepage-group--1__title-container homepage-group--1__title-container--3"
-          >
-            with javascript
-          </animated.div>
-          <Marquee speed={160}>
+            <Icon animate={true} />
+
+          <div className="homepage-group homepage-group--1--titles-container">
+            
+            <animated.div
+              style={{ ...movingLabel1 }}
+              className="homepage-group--1__title-container homepage-group--1__title-container--1"
+            >
+              <Typewriter
+                options={{
+                  delay: 100,
+                  deleteSpeed: 20,
+                  wrapperClassName: 'homepage-typewriter-wrapper',
+                  cursorClassName: 'homepage-typewriter-cursor',
+                  loop: false,
+                }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString(`what's good!?`)
+                    .start();
+                }}
+              />
+            </animated.div>
+            <animated.div
+              style={{ ...movingLabel2 }}
+              className="homepage-group--1__title-container homepage-group--1__title-container--2"
+            >
+              I make websites
+            </animated.div>
+            <animated.div
+              style={{ ...movingLabel3 }}
+              className="homepage-group--1__title-container homepage-group--1__title-container--3"
+            >
+              with javascript
+            </animated.div>
+            <Marquee speed={160}>
             <div className="marquee-intro">
               This website is a work in progress&nbsp;&nbsp;-&nbsp;&nbsp;Find my
               code on{' '}
@@ -179,6 +181,8 @@ export function Homepage() {
               &nbsp;-&nbsp;
             </div>
           </Marquee>
+          </div>
+          
         </div>
 
         <div className="homepage-group homepage-group--3" id="sticky-container">

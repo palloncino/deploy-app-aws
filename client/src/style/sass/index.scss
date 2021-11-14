@@ -44,11 +44,11 @@
 
 body {
   color: $black;
-  // background-image: url(../../images/svg/bg04.svg);
-  // background-position: center;
-  // background-size: cover;
+  background-image: url(../../images/svg/bg05.svg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   // background: url(../../images/patterns/bg-pattern.svg);
-  // background-attachment: fixed;
   overflow-y: scroll; // prevent page to move when vertical scrollbar appears
 }
 
@@ -259,5 +259,15 @@ body {
     height: 100px;
     width: 100\px;
     margin-right: 100px;
+  }
+}
+
+
+#sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container .overlay {
+  &::before {
+    background: none;
+  }
+  &::after {
+    background: none;
   }
 }
