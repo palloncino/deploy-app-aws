@@ -746,6 +746,7 @@
   .portfolio2__container {
     padding: 0px;
     margin: 30px 0;
+    border: 5px solid #333;
   }
   .portfolio2__group--2 {
     padding: 0 30px;
@@ -1075,18 +1076,24 @@
   }
   .homepage-group--1__title-container--1 {
     font-size: 7rem;
+    -webkit-text-stroke: 2px #333;
     line-height: 9rem;
     text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   }
   .homepage-group--1__title-container--2 {
     font-size: 7rem;
+    -webkit-text-stroke: 2px #333;
     line-height: 9rem;
     text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   }
   .homepage-group--1__title-container--3 {
     font-size: 6rem;
+    -webkit-text-stroke: 2px #333;
     line-height: 8rem;
     text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+  }
+  .homepage-group--3 .homepage-group--3__item-container__inner-page--tech-stack {
+    border: 5px solid #333;
   }
   .homepage-group--3 .homepage-group--3__item-container__inner-page .homepage-group--3__title {
     font-size: 3rem;
@@ -1108,19 +1115,16 @@
   }
   .homepage-group--1__title-container--1 {
     font-size: 5rem;
-    -webkit-text-stroke: 2px #333;
     line-height: 6rem;
     text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   }
   .homepage-group--1__title-container--2 {
     font-size: 5rem;
-    -webkit-text-stroke: 2px #333;
     line-height: 8rem;
     text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   }
   .homepage-group--1__title-container--3 {
     font-size: 4rem;
-    -webkit-text-stroke: 2px #333;
     line-height: 6rem;
     text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
   }

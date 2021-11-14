@@ -230,16 +230,19 @@
       &__title-container {
         &--1 {
           font-size: $font-XXXXXXXL;
+          -webkit-text-stroke: 2px $black;
           line-height: 9rem;
           text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
         }
         &--2 {
           font-size: $font-XXXXXXXL;
+          -webkit-text-stroke: 2px $black;
           line-height: 9rem;
           text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
         }
         &--3 {
           font-size: $font-XXXXXXL;
+          -webkit-text-stroke: 2px $black;
           line-height: 8rem;
           text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
         }
@@ -247,6 +250,12 @@
     }
     &--3 {
       .homepage-group--3__item-container__inner-page {
+
+        &--tech-stack {
+          border: 5px solid $black;
+
+        }
+      
 
         .homepage-group--3 {
 
@@ -283,19 +292,16 @@
       &__title-container {
         &--1 {
           font-size: $font-XXXXXL;
-          -webkit-text-stroke: 2px $black;
           line-height: 6rem;
           text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
         }
         &--2 {
           font-size: $font-XXXXXL;
-          -webkit-text-stroke: 2px $black;
           line-height: 8rem;
           text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
         }
         &--3 {
           font-size: $font-XXXXL;
-          -webkit-text-stroke: 2px $black;
           line-height: 6rem;
           text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
         }

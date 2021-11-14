@@ -206,7 +206,7 @@ export function Homepage() {
               className="homepage-group--3__item-container homepage-group--3__item-container--3"
             >
               <div
-                className="homepage-group--3__item-container__inner-page"
+                className="homepage-group--3__item-container__inner-page  homepage-group--3__item-container__inner-page--tech-stack"
               >
                 <h1 className="homepage-group--3__title">My Tech Stack</h1>
                 <div className="homepage-group--3__description">
