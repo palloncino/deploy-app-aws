@@ -46,7 +46,8 @@ export function Header() {
           {isLoading ? (
             renderSpinner()
           ) : (
-            <>
+            <div className="header-container">
+
               <div className="header-user-space--1">
                 <div
                   className="header-user-space--1__logo"
@@ -56,6 +57,10 @@ export function Header() {
                 >
                   antonioguiotto.com
                 </div>
+              </div>
+
+              <div className="header-user-space__burger-container">
+                BURGHER
               </div>
 
               <div className="header-user-space--2">
@@ -100,7 +105,8 @@ export function Header() {
                   )}
                 </div>
               </div>
-            </>
+
+            </div>
           )}
         </div>
         <div className="header-container-hidden-twin"></div>

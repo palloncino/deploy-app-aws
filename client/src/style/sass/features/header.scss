@@ -71,3 +71,28 @@
     font-size: $font-L;
   }
 }
+
+@media only screen and (max-width: 700px) {
+  .header-container {
+    font-size: $font-M;
+  }
+  .header-user-space--2 {
+    display: none;
+  }
+  .header-user-space {
+    &--1 {
+      flex: 2;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100%;
+  
+      &__logo {
+
+        font-size: $font-M;
+      }
+    }
+    &__burger-container {
+      display: block;
+    }
+  }
+}
