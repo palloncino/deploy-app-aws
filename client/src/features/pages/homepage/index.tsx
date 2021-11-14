@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 import { Footer } from '../../footer';
 import { Portfolio2 } from '../portfolio2';
 import { useSpring, animated } from 'react-spring';
-import { Icon } from './icon'
+import { Icon } from './icon';
 
 export function Homepage() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -53,82 +53,84 @@ export function Homepage() {
     config: { duration: getDuration(5000, 3000) },
   });
 
+  function horizontalScroll() {
+    init();
+
+    var g_containerInViewport;
+    function init() {
+      setStickyContainersSize();
+      bindEvents();
+    }
+
+    function bindEvents() {
+      window.addEventListener('wheel', wheelHandler);
+    }
+
+    function setStickyContainersSize() {
+      document
+        .querySelectorAll('#sticky-container')
+        .forEach(function (container) {
+          const stikyContainerHeight =
+            // @ts-ignore
+            container.querySelector('#sticky-container-child').offsetWidth +
+            window.innerHeight;
+          container.setAttribute(
+            'style',
+            'height: ' + stikyContainerHeight + 'px'
+          );
+        });
+    }
+
+    function isElementInViewport(el: any) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top <= 0 && rect.bottom > document.documentElement.clientHeight
+      );
+    }
+
+    function wheelHandler(evt: any) {
+      const containerInViewPort = Array.from(
+        document.querySelectorAll('#sticky-container')
+      ).filter(function (container) {
+        return isElementInViewport(container);
+      })[0];
+
+      if (!containerInViewPort) {
+        return;
+      }
+
+      var isPlaceHolderBelowTop =
+        // @ts-ignore
+        containerInViewPort.offsetTop < document.documentElement.scrollTop;
+      var isPlaceHolderBelowBottom =
+        // @ts-ignore
+        containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
+        document.documentElement.scrollTop;
+      let g_canScrollHorizontally =
+        isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
+
+      if (g_canScrollHorizontally) {
+        // @ts-ignore
+        containerInViewPort.querySelector(
+          '#sticky-container-child'
+        ).scrollLeft += evt.deltaY;
+      }
+    }
+  }
+
   useEffect(() => {
-    (function () {
-      init();
-
-      var g_containerInViewport;
-      function init() {
-        setStickyContainersSize();
-        bindEvents();
-      }
-
-      function bindEvents() {
-        window.addEventListener('wheel', wheelHandler);
-      }
-
-      function setStickyContainersSize() {
-        document
-          .querySelectorAll('#sticky-container')
-          .forEach(function (container) {
-            const stikyContainerHeight =
-              // @ts-ignore
-              container.querySelector('#sticky-container-child').offsetWidth +
-              window.innerHeight;
-            container.setAttribute(
-              'style',
-              'height: ' + stikyContainerHeight + 'px'
-            );
-          });
-      }
-
-      function isElementInViewport(el: any) {
-        const rect = el.getBoundingClientRect();
-        return (
-          rect.top <= 0 && rect.bottom > document.documentElement.clientHeight
-        );
-      }
-
-      function wheelHandler(evt: any) {
-        const containerInViewPort = Array.from(
-          document.querySelectorAll('#sticky-container')
-        ).filter(function (container) {
-          return isElementInViewport(container);
-        })[0];
-
-        if (!containerInViewPort) {
-          return;
-        }
-
-        var isPlaceHolderBelowTop =
-          // @ts-ignore
-          containerInViewPort.offsetTop < document.documentElement.scrollTop;
-        var isPlaceHolderBelowBottom =
-          // @ts-ignore
-          containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
-          document.documentElement.scrollTop;
-        let g_canScrollHorizontally =
-          isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
-
-        if (g_canScrollHorizontally) {
-          // @ts-ignore
-          containerInViewPort.querySelector(
-            '#sticky-container-child'
-          ).scrollLeft += evt.deltaY;
-        }
-      }
-    })();
-
+    if (window.innerWidth > 700) {
+      horizontalScroll();
+    }
   }, []);
 
   const renderInsider = () => {
     return (
       <div className="homepage-container">
         <div className="homepage-group homepage-group--1">
-            <Icon animate={true} />
+          <Icon animate={true} />
 
           <div className="homepage-group homepage-group--1--titles-container">
-            
             <animated.div
               style={{ ...movingLabel1 }}
               className="homepage-group--1__title-container homepage-group--1__title-container--1"
@@ -142,9 +144,7 @@ export function Homepage() {
                   loop: false,
                 }}
                 onInit={(typewriter) => {
-                  typewriter
-                    .typeString(`what's good!?`)
-                    .start();
+                  typewriter.typeString(`what's good!?`).start();
                 }}
               />
             </animated.div>
@@ -161,28 +161,30 @@ export function Homepage() {
               with javascript
             </animated.div>
             <Marquee speed={160}>
-            <div className="marquee-intro">
-              This website is a work in progress&nbsp;&nbsp;-&nbsp;&nbsp;Find my
-              code on{' '}
-              <a target="_blank" href="https://github.com/palloncino">
-                Github
-              </a>
-              &nbsp;&nbsp;-&nbsp;&nbsp;Dicover more about my career path on{' '}
-              <a target="_blank" href="https://linkedin.com/in/antonioguiotto">
-                Linkedin
-              </a>
-              &nbsp;&nbsp;-&nbsp;&nbsp;Hear the sound of my guitar on{' '}
-              <a
-                target="_blank"
-                href="https://www.youtube.com/channel/UC31Gz5YZuH-J5zuz5hZjzgA"
-              >
-                Youtube
-              </a>
-              &nbsp;-&nbsp;
-            </div>
-          </Marquee>
+              <div className="marquee-intro">
+                This website is a work in progress&nbsp;&nbsp;-&nbsp;&nbsp;Find
+                my code on{' '}
+                <a target="_blank" href="https://github.com/palloncino">
+                  Github
+                </a>
+                &nbsp;&nbsp;-&nbsp;&nbsp;Dicover more about my career path on{' '}
+                <a
+                  target="_blank"
+                  href="https://linkedin.com/in/antonioguiotto"
+                >
+                  Linkedin
+                </a>
+                &nbsp;&nbsp;-&nbsp;&nbsp;Hear the sound of my guitar on{' '}
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/channel/UC31Gz5YZuH-J5zuz5hZjzgA"
+                >
+                  Youtube
+                </a>
+                &nbsp;-&nbsp;
+              </div>
+            </Marquee>
           </div>
-          
         </div>
 
         <div className="homepage-group homepage-group--3" id="sticky-container">
@@ -194,9 +196,7 @@ export function Homepage() {
               style={{ minWidth: window.innerWidth }}
               className="homepage-group--3__item-container homepage-group--3__item-container--1"
             >
-              <div
-                className="homepage-group--3__item-container__inner-page"
-              >
+              <div className="homepage-group--3__item-container__inner-page">
                 <Portfolio2 />
               </div>
             </div>
@@ -205,16 +205,16 @@ export function Homepage() {
               style={{ minWidth: window.innerWidth }}
               className="homepage-group--3__item-container homepage-group--3__item-container--3"
             >
-              <div
-                className="homepage-group--3__item-container__inner-page  homepage-group--3__item-container__inner-page--tech-stack"
-              >
+              <div className="homepage-group--3__item-container__inner-page  homepage-group--3__item-container__inner-page--tech-stack">
                 <h1 className="homepage-group--3__title">My Tech Stack</h1>
                 <div className="homepage-group--3__description">
-                  What I'd do: SAP for the client, therefore React with Typescript.
-                  Common client side packages can be: Redux, Lodash, React Router, Material UI, 
-                  Storybook and more. For the server side I use Express or NestJs with Typescript, and common modules are: 
-                  bcryptjs, aws-sdk, cors, dotenv, jsonwebtoken, uuid and more.
-                  I have a preference for noSql databases, and my fav cloud provider is AWS.
+                  What I'd do: SAP for the client, therefore React with
+                  Typescript. Common client side packages can be: Redux, Lodash,
+                  React Router, Material UI, Storybook and more. For the server
+                  side I use Express or NestJs with Typescript, and common
+                  modules are: bcryptjs, aws-sdk, cors, dotenv, jsonwebtoken,
+                  uuid and more. I have a preference for noSql databases, and my
+                  fav cloud provider is AWS.
                 </div>
                 <Marquee speed={40}>
                   <svg

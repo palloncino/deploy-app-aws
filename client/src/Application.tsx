@@ -54,13 +54,13 @@ export function Application() {
   };
 
   const renderApplication = () => {
-    if (window.innerWidth <= 600) {
-      return (
-        <div className="mobile-container">
-          Mobile version is not available 😅
-        </div>
-      );
-    }
+    // if (window.innerWidth <= 600) {
+    //   return (
+    //     <div className="mobile-container">
+    //       Mobile version is not available 😅
+    //     </div>
+    //   );
+    // }
 
     const returnView = (route: string) => {
       switch (route) {

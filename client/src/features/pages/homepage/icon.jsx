@@ -63,7 +63,7 @@ export const Icon = (animate) => {
 
     
     <svg
-      style={{ maxHeight: `calc(100vh - 80px)`, margin: '0 auto' }}
+      style={{ width: '100%', maxHeight: `calc(100vh - 80px)`, margin: '0 auto' }}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       id="svg"
