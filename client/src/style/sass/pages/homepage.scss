@@ -468,13 +468,14 @@
               &__title {
                 // font-family: 'Custom-Font-Title';
                 font-size: $font-XL;
-                // margin-bottom: 4vh;
+                margin-bottom: 2vh;
               }
               &__description {
                 width: 100%;
                 line-height: 1.8rem;
                 font-size: $font-M;
                 width: 90%;
+                margin-bottom: 2vh;
               }
   
             }
