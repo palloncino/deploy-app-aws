@@ -257,8 +257,24 @@ body {
 @media only screen and (max-width: 1700px) {
   #sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container > div:nth-child(2) > svg {
     height: 100px;
-    width: 100\px;
+    width: 100px;
     margin-right: 100px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container > div:nth-child(2) > svg {
+    height: 50px;
+    width: 50px;
+    margin-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container > div:nth-child(2) > svg {
+    height: 50px;
+    width: 50px;
+    margin-right: 25px;
   }
 }
 

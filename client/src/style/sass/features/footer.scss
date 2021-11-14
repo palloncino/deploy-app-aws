@@ -60,9 +60,17 @@
     align-items: center;
     justify-content: space-around;
     flex: 1;
+    
+    &__img {
+      border: 5px solid #acacac;
+      max-height: 200px; 
+      border-radius: 100%;
+    }
+    
     &__title {
       margin-bottom: 10px;
     }
+    
     &__info {
     }
   }
@@ -70,7 +78,30 @@
 
 @media only screen and (max-width: 1700px) {
   .footer-content {
-    height: 200px;
     font-size: $font-L;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .footer-container {
+    padding: 5vh 0;
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+
+    &__info-container {
+      margin-bottom: 5vh;
+
+      &__img {
+        border: 5px solid #acacac;
+        max-height: 120px; 
+        border-radius: 100%;
+      }
+    }
+
+    &__info-container:last-child {
+      margin-bottom: 0px;
+    }
   }
 }

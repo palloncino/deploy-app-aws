@@ -5,7 +5,8 @@ export const Footer = () => {
   return (
     <div className="footer-container">
       <div className="footer-content">
-        <div className="footer-content__social-icons-container">
+
+        <div className="footer-content__info-container">
           <div className="footer-content__social-icons-icons">
             <div
               className="footer-content__social-icons-icon"
@@ -30,9 +31,9 @@ export const Footer = () => {
 
         <div className="footer-content__info-container">
           
-          <div className="portfolio2__group portfolio2__group--1">
-          <div className="portfolio2__group--1__container">
-            <img style={{ border: '5px solid #acacac', maxHeight: '200px', borderRadius: '100%' }} src="https://antonioguiotto-images.s3.amazonaws.com/me1.jpeg" alt="A. Guiotto" />
+          <div className="">
+          <div className="">
+            <img className="footer-content__info-container__img" src="https://antonioguiotto-images.s3.amazonaws.com/me1.jpeg" alt="A. Guiotto" />
           </div>
         </div>
         </div>
