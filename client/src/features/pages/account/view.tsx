@@ -102,7 +102,7 @@ export function AccountContent({
             className="account-information-container-3-title-tag"
             style={{ marginBottom: '10px' }}
           >
-            Logout
+            See you later!
           </div>
           <Logout />
         </div>
@@ -119,9 +119,8 @@ export function AccountContent({
           
           <Button
             handleClick={handleDeleteAccount}
-            customStyle={{ maxWidth: '150px' }}
-            className="btn btn__danger-button"
-            label={isLoading ? <Spinner /> : 'Delete'}
+            className="btn btn__danger-button btn--w150"
+            label={isLoading ? <Spinner /> : 'Delete now'}
           />
         </div>
       </div>
