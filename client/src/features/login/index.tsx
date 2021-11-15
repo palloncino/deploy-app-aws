@@ -6,6 +6,7 @@ import { Button } from '../button';
 import { Singleton as Authentication } from '../../auth';
 import { setAuthentication } from '../../auth/authSlice';
 import { useDispatch } from 'react-redux';
+import { divide } from 'lodash';
 
 interface IModalProp {
   setOpenModals: (key: string, value: boolean) => void;
@@ -177,11 +178,7 @@ export const Login = ({ setOpenModals, isOpen }: IModalProp) => {
 
   return (
     <div className="login-container">
-      <Button
-        handleClick={handleOpenModal}
-        customStyle={{ color: 'white' }}
-        label="Login"
-      />
+      <Button handleClick={handleOpenModal} label="Login" />
       {isOpen && handleStep()}
     </div>
   );

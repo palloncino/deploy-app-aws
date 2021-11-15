@@ -8,7 +8,7 @@ import { Singleton as Authorization } from '../../auth';
 import { Spinner } from '../spinner';
 import { useState } from 'react';
 import { changeRoute } from '../routes';
-import { Menu } from '../menu'
+import { Menu } from '../menu';
 
 export function Header() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -48,7 +48,6 @@ export function Header() {
             renderSpinner()
           ) : (
             <>
-
               <div className="header-user-space--1">
                 <div
                   className="header-user-space--1__logo"
@@ -61,7 +60,11 @@ export function Header() {
               </div>
 
               <div className="header-user-space__burger-container">
-                <Menu />
+                <Menu
+                  openModals={openModals}
+                  handleSetOpenModals={handleSetOpenModals}
+                  handleDownloadFile={handleDownloadFile}
+                />
               </div>
 
               <div className="header-user-space--2">
@@ -91,22 +94,36 @@ export function Header() {
                         />
                       </div>
                       <div className="header-user-space--2__container__item">
-                        <Button handleClick={() => handleDownloadFile('pdf')} label="Download CV" className="portfolio2__group portfolio2__group--2__button-container__btn-header" />
+                        <Button
+                          handleClick={() => handleDownloadFile('pdf')}
+                          label="Download CV"
+                          className="portfolio2__group portfolio2__group--2__button-container__btn-header"
+                        />
                       </div>
                     </>
                   ) : (
                     <>
                       <div className="header-user-space--2__container__item">
-                        <Button handleClick={() => dispatch(changeRoute('/account'))} label="Account" customStyle={{ background: 'transparent', color: 'white' }} />
+                        <Button
+                          handleClick={() => dispatch(changeRoute('/account'))}
+                          label="Account"
+                          customStyle={{
+                            background: 'transparent',
+                            color: 'white',
+                          }}
+                        />
                       </div>
                       <div className="header-user-space--2__container__item">
-                        <Button handleClick={() => handleDownloadFile('pdf')} label="Download CV" className="portfolio2__group portfolio2__group--2__button-container__btn-header" />
+                        <Button
+                          handleClick={() => handleDownloadFile('pdf')}
+                          label="Download CV"
+                          className="portfolio2__group portfolio2__group--2__button-container__btn-header"
+                        />
                       </div>
                     </>
                   )}
                 </div>
               </div>
-
             </>
           )}
         </div>

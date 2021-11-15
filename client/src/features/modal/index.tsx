@@ -41,7 +41,7 @@ export const Modal = ({
     );
 
   return (
-    <>
+    <div className="custom-modal-wrapper">
       <div className="custom-modal-container">
         {type === 'form' && (
           <div className="custom-modal-form">
@@ -75,13 +75,13 @@ export const Modal = ({
 
         <div className="custom-modal-buttons">
           <Button
-            className="btn--w150"
+            className="btn--w150 btn__danger-button"
             handleClick={cancelCallback}
             label={cancelLabel ?? 'Cancel'}
           />
           {type === 'form' && (
             <Button
-              className="btn--w150"
+              className="btn--w150 btn__default"
               handleClick={nextCallback}
               label={submitLabel ?? 'Next'}
             />
@@ -89,6 +89,6 @@ export const Modal = ({
         </div>
       </div>
       <div onClick={cancelCallback} className="custom-modal-overlay"></div>
-    </>
+    </div>
   );
 };

@@ -86,14 +86,14 @@
   .footer-container {
     padding: 5vh 0;
   }
-  .footer-content__social-icons-icon__linkedin {
+  .footer-content__social-icons-icon {
     display: flex;
     justify-content: center;
     align-items: center;
 
     svg {
-      height: 90px;
-      width: 90px;
+      height: 60px;
+      width: 60px;
     }
   }
   .footer-content {
@@ -104,8 +104,8 @@
       margin-bottom: 5vh;
 
       &__img {
-        border: 5px solid #acacac;
-        max-height: 120px; 
+        border: 2px solid #acacac;
+        max-height: 80px; 
         border-radius: 100%;
       }
     }

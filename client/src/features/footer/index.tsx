@@ -5,7 +5,7 @@ export const Footer = () => {
       <div className="footer-content">
 
         <div className="footer-content__info-container">
-          <div className="footer-content__social-icons-icons">
+        <div className="footer-content__social-icons-icons">
             <div
               className="footer-content__social-icons-icon footer-content__social-icons-icon__linkedin"
               onClick={() =>
@@ -27,8 +27,9 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-content__info-container">
 
+        <div className="footer-content__info-container">
+        <div className="footer-content__social-icons-icons">
         <div
               className="footer-content__social-icons-icon footer-content__social-icons-icon"
               onClick={() =>
@@ -47,6 +48,7 @@ export const Footer = () => {
                 />
               </svg>
             </div>
+          </div>
         </div>
 
         <div className="footer-content__info-container">

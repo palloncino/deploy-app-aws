@@ -7,6 +7,8 @@
   transition: 0.2s;
   font-size: $font-XL;
   border-radius: 10px;
+  padding: 8px 10px;
+  color: $white;
 
   &--w100 {
     max-width: 100px;
@@ -18,7 +20,6 @@
     min-width: 150px;
   }
   &__danger-button {
-    padding: 8px 10px;
     width: 100%;
     max-width: 150px;
     font-size: $font-XL;
@@ -27,7 +28,6 @@
     color: $white;
   }
   &__default {
-    padding: 8px 10px;
     width: 100%;
     max-width: 150px;
     font-size: $font-XL;
@@ -37,13 +37,19 @@
 }
 
 .btn:hover {
-  color: $white;
+  // color: $white;
   font-weight: 900;
   transform: scale(1.05);
 }
 
-@media only screen and (max-width: 1700px) {
+@media only screen and (max-width: 700px) {
   .btn {
-    font-size: $font-L;
+    font-size: $font-M;
+    padding: 6px 10px;
+
+    &__danger-button {
+    }
+    &__default {
+    }
   }
 }
