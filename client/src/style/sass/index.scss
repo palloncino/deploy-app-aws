@@ -327,14 +327,14 @@ body {
       // max-height: 60px;
     }
   }
+
+  #sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container .overlay {
+    &::before {
+      --gradient-width: 75px;
+    }
+    &::after {
+      --gradient-width: 75px;
+    }
+  }
+
 }
-
-
-// #sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container .overlay {
-//   &::before {
-//     background: none;
-//   }
-//   &::after {
-//     background: none;
-//   }
-// }

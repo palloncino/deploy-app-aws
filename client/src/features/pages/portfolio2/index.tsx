@@ -46,7 +46,7 @@ export function Portfolio2() {
 
         <div className="portfolio2__group portfolio2__group--2">
           <div className="portfolio2__group portfolio2__group--2__title">
-            Introduction to the man
+            Introduction{window.innerWidth >= 700 && (' to the man')} 
           </div>
           <div className="portfolio2__group portfolio2__group--2__subtitle">
             Who am I
@@ -68,7 +68,7 @@ export function Portfolio2() {
             My job
           </div>
           <div className="portfolio2__group portfolio2__group--2__description">
-            Since 2018 I am working as a Web Developer, I take care of all sides of web applications, therefore you culd define me as &nbsp;
+            Since 2018 I am working as a Web Developer, I take care of all sides of web applications, therefore you culd define me as &nbsp;{window.innerWidth<=700 && (<br />)}
             <span className="portfolio2__group--2__description__hashtag">#front-end</span> 
             <span className="portfolio2__group--2__description__hashtag">#back-end</span>
             <span className="portfolio2__group--2__description__hashtag">#graphic-design</span> 

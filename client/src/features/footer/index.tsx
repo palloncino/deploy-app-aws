@@ -1,11 +1,9 @@
 export const Footer = () => {
-
   return (
     <div className="footer-container">
       <div className="footer-content">
-
         <div className="footer-content__info-container">
-        <div className="footer-content__social-icons-icons">
+          <div className="footer-content__social-icons-icons">
             <div
               className="footer-content__social-icons-icon footer-content__social-icons-icon__linkedin"
               onClick={() =>
@@ -27,10 +25,9 @@ export const Footer = () => {
           </div>
         </div>
 
-
         <div className="footer-content__info-container">
-        <div className="footer-content__social-icons-icons">
-        <div
+          <div className="footer-content__social-icons-icons">
+            <div
               className="footer-content__social-icons-icon footer-content__social-icons-icon"
               onClick={() =>
                 window.open('https://github.com/palloncino/antonioguiotto.com')
@@ -52,14 +49,19 @@ export const Footer = () => {
         </div>
 
         <div className="footer-content__info-container">
-          
-          <div className="">
-          <div className="">
-            <img className="footer-content__info-container__img" src="https://antonioguiotto-images.s3.amazonaws.com/me1.jpeg" alt="A. Guiotto" />
+          <div className="footer-content__social-icons-icons">
+            <div
+              className="footer-content__social-icons-icon footer-content__social-icons-icon"
+            >
+              <img
+                className="footer-content__info-container__img"
+                src="https://antonioguiotto-images.s3.amazonaws.com/me1.jpeg"
+                alt="A. Guiotto"
+              />
+            </div>
           </div>
         </div>
-        </div>
-        
+
       </div>
     </div>
   );

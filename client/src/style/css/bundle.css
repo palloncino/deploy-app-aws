@@ -199,6 +199,7 @@
 }
 @media only screen and (max-width: 700px) {
   .footer-container {
+    min-height: calc(100vh - 60px);
     padding: 5vh 0;
   }
 
@@ -932,6 +933,11 @@
     font-size: 1rem;
     line-height: 1.8rem;
   }
+  .portfolio2__group--2__description__hashtag {
+    background: #327fc2;
+    color: #fff;
+    margin-bottom: 10px;
+  }
 }
 .music-card__wrapper {
   position: relative;
@@ -1408,7 +1414,7 @@
     line-height: 1.8rem;
     font-size: 1rem;
     width: 90%;
-    margin-bottom: 2vh;
+    margin-bottom: 3vh;
   }
 }
 .homepage-typewriter-wrapper {
@@ -1664,6 +1670,13 @@ body {
   }
   .custom-modal-buttons {
     margin-top: 20px;
+  }
+
+  #sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container .overlay::before {
+    --gradient-width: 75px;
+  }
+  #sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container .overlay::after {
+    --gradient-width: 75px;
   }
 }
 
