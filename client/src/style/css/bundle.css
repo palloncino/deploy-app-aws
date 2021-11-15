@@ -107,6 +107,11 @@
   border-radius: 5px;
 }
 
+@media only screen and (max-width: 700px) {
+  .profile-box-textual {
+    color: #333;
+  }
+}
 .breadcrumb-wrapper {
   display: flex;
   align-items: center;
@@ -181,7 +186,7 @@
 }
 .footer-content__info-container__img {
   border: 5px solid #acacac;
-  max-height: 200px;
+  max-height: 100px;
   border-radius: 100%;
 }
 .footer-content__info-container__title {
@@ -216,7 +221,7 @@
   }
   .footer-content__info-container__img {
     border: 2px solid #acacac;
-    max-height: 80px;
+    max-height: 60px;
     border-radius: 100%;
   }
   .footer-content__info-container:last-child {
@@ -399,9 +404,11 @@
     right: 0px;
     left: 0px;
     width: 100%;
+    box-shadow: 0px 10px rgba(0, 0, 0, 0.1);
   }
 
   .burger-menu--2__container__item {
+    border-bottom: 1px solid #dcdcdc;
     height: 60px;
     display: flex;
     align-items: center;
@@ -725,6 +732,38 @@
   max-width: 100px;
 }
 
+@media only screen and (max-width: 700px) {
+  .account-container {
+    width: 90%;
+  }
+
+  .account-information-container {
+    grid-template-columns: 1fr;
+  }
+  .account-information-container__box {
+    min-height: 200px;
+    border-radius: 5px;
+  }
+  .account-information-container-1-title-tag {
+    font-size: 1.4rem;
+  }
+  .account-information-container-2-title-tag {
+    font-size: 1.4rem;
+  }
+  .account-information-container-3-title-tag {
+    font-size: 1.4rem;
+  }
+  .account-information-container-3-information-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .account-information-container-3-information-container img {
+    max-width: 50px;
+  }
+  .account-information-container-4-title-tag {
+    font-size: 1.4rem;
+  }
+}
 .content-editable-summary-container {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);

@@ -7,8 +7,13 @@ import { selectAuth } from '../../auth/authSlice';
 import { Login } from '../login';
 import { Profile } from '../profile';
 import { Register } from '../register';
+import { executeReducerBuilderCallback } from '@reduxjs/toolkit/dist/mapBuilders';
 
-export function Menu({ openModals, handleSetOpenModals, handleDownloadFile }: any) {
+export function Menu({
+  openModals,
+  handleSetOpenModals,
+  handleDownloadFile,
+}: any) {
   const dispatch = useDispatch();
   const isOpen = useSelector(selectIsOpen);
   const { isAuthenticated } = useSelector(selectAuth);
@@ -142,25 +147,56 @@ export function Menu({ openModals, handleSetOpenModals, handleDownloadFile }: an
               )}
             </div>
           </div>
-          <div className="burger-menu--2__container__item">
-            <Login
-              isOpen={openModals.login}
-              setOpenModals={handleSetOpenModals}
-            />
-          </div>
-          <div className="burger-menu--2__container__item">
-            <Register
-              isOpen={openModals.register}
-              setOpenModals={handleSetOpenModals}
-            />
-          </div>
-          <div className="burger-menu--2__container__item">
-            <Button
-              handleClick={() => handleDownloadFile('pdf')}
-              label="Download CV"
-              className="portfolio2__group portfolio2__group--2__button-container__btn-header"
-            />
-          </div>
+
+          {!isAuthenticated ? (
+            <>
+              <div className="burger-menu--2__container__item">
+                <Login
+                  isOpen={openModals.login}
+                  setOpenModals={handleSetOpenModals}
+                />
+              </div>
+              <div className="burger-menu--2__container__item">
+                <Register
+                  isOpen={openModals.register}
+                  setOpenModals={handleSetOpenModals}
+                />
+              </div>
+              <div className="burger-menu--2__container__item">
+                <Button
+                  handleClick={() => handleDownloadFile('pdf')}
+                  label="Download CV"
+                  className="portfolio2__group portfolio2__group--2__button-container__btn-header"
+                />
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="burger-menu--2__container__item">
+                <Profile
+                  avatarUrl={
+                    auth.getProp('avatar_url') === 'undefined' ||
+                    !auth.getProp('avatar_url')
+                      ? `${process.env.REACT_APP_DEFAULT_AVATAR_IMAGE}`
+                      : auth.getProp('avatar_url')
+                  }
+                />
+              </div>
+              <div className="burger-menu--2__container__item">
+                <Button
+                  handleClick={() => dispatch(changeRoute('/account'))}
+                  label="Account"
+                />
+              </div>
+              <div className="burger-menu--2__container__item">
+                <Button
+                  handleClick={() => handleDownloadFile('pdf')}
+                  label="Download CV"
+                  className="portfolio2__group portfolio2__group--2__button-container__btn-header"
+                />
+              </div>
+            </>
+          )}
         </>
       </div>
     );
@@ -172,14 +208,8 @@ export function Menu({ openModals, handleSetOpenModals, handleDownloadFile }: an
         className="btn btn__default btn--w100"
         handleClick={handleOpenMenu}
         customStyle={isOpen && { background: '#797979' }}
-        label={isOpen ? '< Back' : 'Menu >'}
+        label={isOpen ? '< Close' : 'Menu >'}
       />
-      {isOpen && (
-        <div
-          onClick={() => dispatch(toggleMenu())}
-          className="menu-overlay"
-        ></div>
-      )}
       {isOpen && renderNavigationOptions()}
     </div>
   );

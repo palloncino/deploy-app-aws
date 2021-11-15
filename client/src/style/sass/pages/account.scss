@@ -55,7 +55,6 @@
 
     &-title-tag {
       font-size: $font-XXL;
-      // font-family: 'Custom-Font-Titles';
     }
     &-inputs-container {
       display: flex;
@@ -72,8 +71,6 @@
     }
     &-information-container {
       display: flex;
-      // justify-content: center;
-      // flex-direction: column;
       img {
         max-width: 100px;
       }
@@ -108,6 +105,51 @@
       // flex-direction: column;
       img {
         max-width: 100px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 700px) {
+
+  .account-container {
+    width: 90%;
+  }
+
+  .account-information-container {
+    grid-template-columns: 1fr;
+
+    &__box {
+      min-height: 200px;
+      border-radius: 5px;
+    }
+
+    &-1 {
+      &-title-tag {
+        font-size: $font-XL;
+      }
+    }
+    &-2 {
+      &-title-tag {
+        font-size: $font-XL;
+      }
+    }
+    &-3 {
+      &-title-tag {
+        font-size: $font-XL;
+      }
+      &-information-container {
+        flex-direction: column;
+        justify-content: center;
+        img {
+          max-width: 50px;
+        }
+      }
+    }
+    &-4 {
+      &-title-tag {
+        font-size: $font-XL;
       }
     }
   }

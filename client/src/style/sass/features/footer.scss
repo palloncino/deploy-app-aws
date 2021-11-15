@@ -1,9 +1,5 @@
 // footer
 .footer-container {
-  // background: $black;
-  // background-position: center;
-  // background-size: cover;
-  // background: $true-black;
   background-image: url(../../images/svg/footer.svg);
   color: $white;
   width: $page-width;
@@ -63,7 +59,7 @@
     
     &__img {
       border: 5px solid #acacac;
-      max-height: 200px; 
+      max-height: 100px; 
       border-radius: 100%;
     }
     
@@ -105,7 +101,7 @@
 
       &__img {
         border: 2px solid #acacac;
-        max-height: 80px; 
+        max-height: 60px; 
         border-radius: 100%;
       }
     }
