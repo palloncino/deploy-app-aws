@@ -165,8 +165,8 @@
   flex: 1;
 }
 .footer-content__social-icons-icon {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   cursor: pointer;
   margin-right: 20px;
   transition: 0.2s;
@@ -186,7 +186,7 @@
 }
 .footer-content__info-container__img {
   border: 5px solid #acacac;
-  max-height: 100px;
+  max-height: 150px;
   border-radius: 100%;
 }
 .footer-content__info-container__title {
