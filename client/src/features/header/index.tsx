@@ -8,6 +8,7 @@ import { Singleton as Authorization } from '../../auth';
 import { Spinner } from '../spinner';
 import { useState } from 'react';
 import { changeRoute } from '../routes';
+import { Menu } from '../menu'
 
 export function Header() {
   const { isAuthenticated, isLoading } = useSelector(selectAuth);
@@ -46,7 +47,7 @@ export function Header() {
           {isLoading ? (
             renderSpinner()
           ) : (
-            <div className="header-container">
+            <>
 
               <div className="header-user-space--1">
                 <div
@@ -60,7 +61,7 @@ export function Header() {
               </div>
 
               <div className="header-user-space__burger-container">
-                BURGHER
+                <Menu />
               </div>
 
               <div className="header-user-space--2">
@@ -106,7 +107,7 @@ export function Header() {
                 </div>
               </div>
 
-            </div>
+            </>
           )}
         </div>
         <div className="header-container-hidden-twin"></div>

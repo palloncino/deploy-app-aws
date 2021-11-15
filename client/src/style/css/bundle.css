@@ -62,20 +62,24 @@
 @media only screen and (max-width: 700px) {
   .header-container {
     font-size: 1rem;
+    padding: 0px 5vw;
+    height: 60px;
   }
-
-  .header-user-space--2 {
-    display: none;
+  .header-container-hidden-twin {
+    height: 60px;
   }
 
   .header-user-space--1 {
     flex: 2;
     align-items: center;
-    justify-content: flex-start;
     height: 100%;
   }
   .header-user-space--1__logo {
+    justify-content: flex-start;
     font-size: 1rem;
+  }
+  .header-user-space--2 {
+    display: none;
   }
   .header-user-space__burger-container {
     display: block;
@@ -190,6 +194,16 @@
     padding: 5vh 0;
   }
 
+  .footer-content__social-icons-icon__linkedin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-content__social-icons-icon__linkedin svg {
+    height: 90px;
+    width: 90px;
+  }
+
   .footer-content {
     display: flex;
     flex-direction: column;
@@ -300,8 +314,13 @@
   font-size: 1.4rem;
   border-radius: 10px;
 }
+.btn--w100 {
+  max-width: 100px;
+  min-width: 100px;
+}
 .btn--w150 {
   max-width: 150px;
+  min-width: 150px;
 }
 .btn__danger-button {
   padding: 8px 10px;
@@ -356,6 +375,7 @@
   z-index: 105;
   position: absolute;
   top: 85px;
+  right: 10px;
   width: 190px;
 }
 

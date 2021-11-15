@@ -75,21 +75,26 @@
 @media only screen and (max-width: 700px) {
   .header-container {
     font-size: $font-M;
+    padding: 0px 5vw;
+    height: 60px;
+    &-hidden-twin {
+      height: 60px;
+    }
   }
-  .header-user-space--2 {
-    display: none;
-  }
+
   .header-user-space {
     &--1 {
       flex: 2;
       align-items: center;
-      justify-content: flex-start;
       height: 100%;
   
       &__logo {
-
+        justify-content: flex-start;
         font-size: $font-M;
       }
+    }
+    &--2 {
+      display: none;
     }
     &__burger-container {
       display: block;

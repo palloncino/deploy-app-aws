@@ -8,8 +8,14 @@
   font-size: $font-XL;
   border-radius: 10px;
 
+  &--w100 {
+    max-width: 100px;
+    min-width: 100px;
+  }
+
   &--w150 {
     max-width: 150px;
+    min-width: 150px;
   }
   &__danger-button {
     padding: 8px 10px;
