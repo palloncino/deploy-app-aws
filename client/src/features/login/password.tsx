@@ -31,7 +31,7 @@ export const PasswordLoginModal = ({
       type="form"
       isLoading={isLoading}
       error={error}
-      cancelLabel="BACK"
+      cancelLabel="Back"
     />
   );
 };

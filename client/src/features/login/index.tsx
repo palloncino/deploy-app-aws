@@ -178,8 +178,16 @@ export const Login = ({ setOpenModals, isOpen }: IModalProp) => {
 
   return (
     <div className="login-container">
-      <Button handleClick={handleOpenModal} label="Login" />
-      {isOpen && handleStep()}
+      <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '60px', height: 'auto' }}>
+        <Button handleClick={handleOpenModal} label="Login" />
+      </div>
+      {isOpen && (
+        <div
+          style={{ position: 'relative', height: 'auto' }}
+        >
+          {isOpen && handleStep()}
+        </div>
+      )}
     </div>
   );
 };

@@ -410,7 +410,8 @@
 
   .burger-menu--2__container__item {
     border-bottom: 1px solid #dcdcdc;
-    height: 60px;
+    height: auto;
+    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -427,6 +428,7 @@
   .burger-menu--2__container__item .register-container {
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -1558,6 +1560,8 @@ body {
   flex-direction: column;
   z-index: 105;
   width: 500px;
+  top: 18px;
+  left: 0;
 }
 .custom-modal-overlay {
   z-index: 0;
@@ -1656,6 +1660,9 @@ body {
     margin-right: 25px;
   }
 
+  .custom-modal-wrapper {
+    position: relative;
+  }
   .custom-modal-container {
     box-shadow: none;
     background: #fff;
@@ -1663,21 +1670,22 @@ body {
     border: none;
     border-bottom: 1px solid grey;
     box-shadow: 0px 10px rgba(0, 0, 0, 0.1);
-    height: auto;
-    width: 100%;
+    height: unset;
+    width: unset;
     max-width: unset;
-    position: absolute;
-    left: 0px;
+    position: unset;
+    left: unset;
+    top: 0px;
     transform: unset;
     display: unset;
-    flex-direction: column;
+    flex-direction: unset;
     z-index: 105;
-    padding: 20px;
+    padding: unset;
     margin: 0;
-    top: 60px;
+    position: relative;
   }
   .custom-modal-overlay {
-    display: block;
+    display: none;
   }
   .custom-modal-form-box {
     width: 100%;
@@ -1688,7 +1696,9 @@ body {
     border-radius: 5px;
   }
   .custom-modal-buttons {
-    margin-top: 20px;
+    margin-top: 0;
+    align-items: center;
+    min-height: 60px;
   }
 
   #sticky-container-child > div.homepage-group--3__item-container.homepage-group--3__item-container--3 > div > div.marquee-container .overlay::before {
