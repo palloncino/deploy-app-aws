@@ -169,6 +169,7 @@ export function Menu({
                   setOpenModals={handleSetOpenModals}
                 />
               </div>
+              <div onClick={() => dispatch(toggleMenu())} className="burger-menu--2__overlay"></div>
             </>
           ) : (
             <>

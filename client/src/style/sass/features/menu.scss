@@ -50,6 +50,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 60;
 
     .login-container {
       height: 100%;
@@ -71,5 +73,14 @@
       width: 100%;
       border-radius: 0;
     }
+  }
+  .burger-menu--2__overlay {
+    z-index: 50;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 500vw;
+    height: 500vh;
+    cursor: pointer;
   }
 }
