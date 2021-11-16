@@ -8,7 +8,7 @@
     "test": "node scripts/test.js",
     "deploy": "./deploy.sh",
     "format": "npx prettier --write .",
-    "sass:watch": "sass --watch ./src/style/sass/index.scss ./src/style/css/bundle.css",
+    "e": "sass --watch ./src/style/sass/index.scss ./src/style/css/bundle.css",
     "help": "For complete development experience, run server [cd ../server] 👉 npm run start:dev\nThen, back to the client [cd ../client] 👉 npm run sass:watch 👉 npm run start\nSometimes you want to - 👉 npm run format - the code\nThat's all ✨"
   },
   "dependencies": {

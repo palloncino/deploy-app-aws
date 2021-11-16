@@ -128,17 +128,19 @@ body {
     display: flex;
     flex-direction: column;
     z-index: 105;
+    width: 500px;
   }
   &-overlay {
-    z-index: 85;
+    z-index: 50;
     position: absolute;
-    top: -2000px;
-    left: -2000px;
-    background: transparent;
-    width: 500%;
+    top: 0px;
+    left: 0px;
+    width: 500vw;
     height: 500vh;
     cursor: pointer;
-    // background: $light-grey-seethrough;
+    background: $light-grey-seethrough;
+
+    display: none;
   }
 
   &-form {
@@ -245,7 +247,7 @@ body {
       background: $white;
       color: $black;
       border: none;
-      border-top: 1px solid grey;
+      // border-top: 1px solid grey;
       border-bottom: 1px solid grey;
       box-shadow: 0px 10px rgba(0, 0, 0, 0.1);
   
@@ -260,11 +262,12 @@ body {
       z-index: 105;
       padding: 20px;
       margin: 0;
+      top: 60px;
     }
 
     &-overlay {
 
-      display: none;
+      display: block;
     }
 
     &-form {
@@ -294,8 +297,9 @@ body {
           // justify-content: center;
   
           &-input {
-            // background: $light-grey;
-            // color: $black;
+            background: $white;
+            border: 2px solid $light-grey;
+            border-radius: 5px;
             // border: none;
             // font-size: $font-L;
   

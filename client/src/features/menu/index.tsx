@@ -151,6 +151,13 @@ export function Menu({
           {!isAuthenticated ? (
             <>
               <div className="burger-menu--2__container__item">
+                <Button
+                  handleClick={() => handleDownloadFile('pdf')}
+                  label="Download CV"
+                  className="portfolio2__group portfolio2__group--2__button-container__btn-header"
+                />
+              </div>
+              <div className="burger-menu--2__container__item">
                 <Login
                   isOpen={openModals.login}
                   setOpenModals={handleSetOpenModals}
@@ -160,13 +167,6 @@ export function Menu({
                 <Register
                   isOpen={openModals.register}
                   setOpenModals={handleSetOpenModals}
-                />
-              </div>
-              <div className="burger-menu--2__container__item">
-                <Button
-                  handleClick={() => handleDownloadFile('pdf')}
-                  label="Download CV"
-                  className="portfolio2__group portfolio2__group--2__button-container__btn-header"
                 />
               </div>
             </>
