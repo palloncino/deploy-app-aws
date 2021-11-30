@@ -8,8 +8,6 @@
 
 This is an application to keep my works updated and available to the public.<br />
 In this application you can find my portfolio and download it.<br />
-Futhermore there is a form to keep track of monthly expenses, you can login and use it.<br />
-Various artworks made with Adobe Illustrator are also present in the website.<br />
 Other services might be available at this time.<br />
 
 <br><br>
@@ -43,7 +41,7 @@ Other services might be available at this time.<br />
 
 > ⚠️ If you're using OSX and Terminal, you can try this shell script from root:
 
-> ⚠️ You will need to modified to fit your paths!
+> ⚠️ You will need to modify the path inside the file to fit your!
 
 - `./osx-start-dev.sh`
 
